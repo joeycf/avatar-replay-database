@@ -84,6 +84,124 @@ export default defineAppConfig({
       coOccurrence: false,
       rank: false,
     },
+    // THIRTY-THREE SOURCES, 1:1 WITH scripts/channels.ts AND HAND-KEPT IN STEP.
+    // Two TypeScript tracks and no compiler sees both, so the id/name pairs
+    // below are checked against CHANNELS by the NAME SYNC gate in
+    // scripts/e2e.ts — the only place both files are visible at once. An id here
+    // that channels.ts does not emit produces a chip nothing can ever select; a
+    // name that drifts produces two different labels for one source depending on
+    // which surface you are looking at.
+    //
+    // The order mirrors channels.ts, which is DEDUPE PRECEDENCE — committed-
+    // corpus size first, grammar quality breaking near-ties — so the two files
+    // read as one list. Nothing in the engine depends on that order; it is here
+    // so a reviewer can diff them by eye.
+    //
+    // Why thirty-three rather than a handful of tidy buckets: this game is eight
+    // weeks old, its largest single contributor is 57 of 367 records (15.5%),
+    // and the corpus is a long tail of small channels rather than a few big
+    // archives. Collapsing them into source tokens would throw away the
+    // per-channel deep link and the per-channel dedupe precedence. The CHIPS
+    // collapse instead — see sourceGroups.
+    sourceChannels: [
+      { id: 'aegisEsports', name: 'Aegis Esports' },
+      { id: 'still', name: 'STiLL' },
+      { id: 'ndyTv', name: 'NdyTV' },
+      { id: 'toledoLocals', name: 'Toledo Locals' },
+      { id: 'arinKarin', name: 'ArinKarin' },
+      { id: 'cow', name: 'Cow' },
+      { id: 'saltyRecoveryCenter', name: 'Salty Recovery Center FGC' },
+      { id: 'skeet', name: 'Skeet' },
+      { id: 'unrivaledTournaments', name: 'Unrivaled Tournaments' },
+      { id: 'normalMs', name: 'NORMAL MS' },
+      { id: 'rood', name: 'Rood' },
+      { id: 'an11Mo', name: 'An11-_-MO' },
+      { id: 'natsuXenoblade', name: 'Natsu_Xenoblade' },
+      { id: 'takeANappa', name: 'Take A Nappa' },
+      { id: 'versusFestival', name: 'The Versus Festival' },
+      { id: 'avianZebra', name: 'Avian Zebra' },
+      { id: 'kmlTournaments', name: 'KML Tournaments' },
+      { id: 'teo1029', name: 'teo1029' },
+      { id: 'mysteryRacer21', name: 'MysteryRacer21' },
+      { id: 'xcaliburBladez', name: 'XCalibur BladeZ' },
+      { id: 'schoolBus', name: 'SchoolBus' },
+      { id: 'superSalemFighters', name: 'Super Salem Fighters' },
+      { id: 'redVsFantasy', name: 'REDvsFantasy' },
+      { id: 'mikeyChiFgc', name: 'Mikey' },
+      { id: 'kang', name: 'KANG' },
+      { id: 'phoenixWrong', name: 'PhoenixWrongSSB' },
+      { id: 'kovac', name: 'Kovac' },
+      { id: 'atma00', name: 'Atma_00' },
+      { id: 'towito', name: 'Towito' },
+      { id: 'redblade', name: 'Redblade' },
+      { id: 'saxxiefone', name: 'saxxiefone' },
+      { id: 'drewShoto', name: 'drew Shoto' },
+      { id: 'replayTheater', name: 'Replay Theater' },
+    ],
+    // Two chips over thirty-three sources. Without this the filter row renders
+    // 33 chips and is unusable at every breakpoint; with it the badge, the data
+    // and the ?source= deep link stay per channel and only the chips collapse.
+    //
+    // THE GROUP IS THE UPLOADER'S KIND, NOT THE RECORD'S. A record already says
+    // where it was played — the engine prints Replay.event instead of the source
+    // name when one is present — so a tournament set from a player's own channel
+    // shows its event on the card while its chip stays under Online. Grouping by
+    // the record instead would need a second pass over the data and would still
+    // disagree with the badge on the same card.
+    //
+    // Tournament is the nine intakes that publish other people's brackets:
+    // seven event organisers, plus the index, whose rows are event-tagged on 170
+    // of 244. Online is the twenty-four player and creator channels publishing
+    // their own netplay sets. Where a channel does both — STiLL uploads Aegis
+    // tournament sets, REDvsFantasy a CEO grand final — it is filed by what it
+    // mostly is, and the event on the record carries the rest.
+    sourceGroups: [
+      {
+        id: 'online',
+        name: 'Online',
+        sources: [
+          'still',
+          'arinKarin',
+          'cow',
+          'skeet',
+          'normalMs',
+          'rood',
+          'an11Mo',
+          'natsuXenoblade',
+          'takeANappa',
+          'avianZebra',
+          'teo1029',
+          'mysteryRacer21',
+          'xcaliburBladez',
+          'schoolBus',
+          'redVsFantasy',
+          'mikeyChiFgc',
+          'kang',
+          'phoenixWrong',
+          'kovac',
+          'atma00',
+          'towito',
+          'redblade',
+          'saxxiefone',
+          'drewShoto',
+        ],
+      },
+      {
+        id: 'tournament',
+        name: 'Tournament',
+        sources: [
+          'aegisEsports',
+          'ndyTv',
+          'toledoLocals',
+          'saltyRecoveryCenter',
+          'unrivaledTournaments',
+          'versusFestival',
+          'kmlTournaments',
+          'superSalemFighters',
+          'replayTheater',
+        ],
+      },
+    ],
     // Top 8 of a 12-fighter roster, and the meta chart gets the whole row —
     // no GameStatsPanels override ships, so the `beside-timeline` anchor is
     // empty.

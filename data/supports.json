@@ -1,0 +1,210 @@
+[
+  {
+    "id": "gyatso",
+    "name": "Gyatso",
+    "owner": "aang",
+    "aliases": []
+  },
+  {
+    "id": "appa",
+    "name": "Appa",
+    "owner": "aang",
+    "aliases": []
+  },
+  {
+    "id": "momo",
+    "name": "Momo",
+    "owner": "aang",
+    "aliases": []
+  },
+  {
+    "id": "master-pakku",
+    "name": "Master Pakku",
+    "owner": "katara",
+    "aliases": []
+  },
+  {
+    "id": "kanna",
+    "name": "Kanna",
+    "owner": "katara",
+    "aliases": []
+  },
+  {
+    "id": "mai",
+    "name": "Mai",
+    "owner": "zuko",
+    "aliases": []
+  },
+  {
+    "id": "june",
+    "name": "June",
+    "owner": "zuko",
+    "aliases": []
+  },
+  {
+    "id": "ran-and-shaw",
+    "name": "Ran and Shaw",
+    "owner": "zuko",
+    "aliases": []
+  },
+  {
+    "id": "badgermole",
+    "name": "Badgermole",
+    "owner": "toph",
+    "aliases": []
+  },
+  {
+    "id": "the-boulder",
+    "name": "The Boulder",
+    "owner": "toph",
+    "aliases": []
+  },
+  {
+    "id": "the-hippo",
+    "name": "The Hippo",
+    "owner": "toph",
+    "aliases": []
+  },
+  {
+    "id": "naga",
+    "name": "Naga",
+    "owner": "korra",
+    "aliases": []
+  },
+  {
+    "id": "raava",
+    "name": "Raava",
+    "owner": "korra",
+    "aliases": []
+  },
+  {
+    "id": "tonraq",
+    "name": "Tonraq",
+    "owner": "korra",
+    "aliases": []
+  },
+  {
+    "id": "princess-yue",
+    "name": "Princess Yue",
+    "owner": "sokka",
+    "aliases": []
+  },
+  {
+    "id": "suki",
+    "name": "Suki",
+    "owner": "sokka",
+    "aliases": []
+  },
+  {
+    "id": "master-piandao",
+    "name": "Master Piandao",
+    "owner": "sokka",
+    "aliases": []
+  },
+  {
+    "id": "ursa",
+    "name": "Ursa",
+    "owner": "azula",
+    "aliases": []
+  },
+  {
+    "id": "lo-and-li",
+    "name": "Lo and Li",
+    "owner": "azula",
+    "aliases": []
+  },
+  {
+    "id": "joo-dee",
+    "name": "Joo Dee",
+    "owner": "azula",
+    "aliases": []
+  },
+  {
+    "id": "rangi",
+    "name": "Rangi",
+    "owner": "kyoshi",
+    "aliases": []
+  },
+  {
+    "id": "yun",
+    "name": "Yun",
+    "owner": "kyoshi",
+    "aliases": []
+  },
+  {
+    "id": "kelsang",
+    "name": "Kelsang",
+    "owner": "kyoshi",
+    "aliases": []
+  },
+  {
+    "id": "ming-hua",
+    "name": "Ming-Hua",
+    "owner": "zaheer",
+    "aliases": []
+  },
+  {
+    "id": "ghazan",
+    "name": "Ghazan",
+    "owner": "zaheer",
+    "aliases": []
+  },
+  {
+    "id": "p'li",
+    "name": "P'Li",
+    "owner": "zaheer",
+    "aliases": []
+  },
+  {
+    "id": "imperial-firebender",
+    "name": "Imperial Firebender",
+    "owner": "ozai",
+    "aliases": []
+  },
+  {
+    "id": "general-zhao",
+    "name": "General Zhao",
+    "owner": "ozai",
+    "aliases": [
+      "Admiral Zhao"
+    ]
+  },
+  {
+    "id": "firelord-sozin",
+    "name": "Firelord Sozin",
+    "owner": "ozai",
+    "aliases": []
+  },
+  {
+    "id": "roku",
+    "name": "Roku",
+    "owner": "avatar-aang",
+    "aliases": [
+      "Avatar Roku"
+    ]
+  },
+  {
+    "id": "katara",
+    "name": "Katara",
+    "owner": "avatar-aang",
+    "aliases": []
+  },
+  {
+    "id": "dark-avatar-unalaq",
+    "name": "Dark Avatar Unalaq",
+    "owner": "nightmare-korra",
+    "aliases": []
+  },
+  {
+    "id": "dark-spirit",
+    "name": "Dark Spirit",
+    "owner": "nightmare-korra",
+    "aliases": []
+  },
+  {
+    "id": "vaatu",
+    "name": "Vaatu",
+    "owner": "nightmare-korra",
+    "aliases": []
+  }
+]

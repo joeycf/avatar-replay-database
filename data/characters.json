@@ -5,78 +5,16 @@
     "imgPortrait": "/img/char/aang.webp",
     "accent": "#F7CC4B",
     "extra": {
+      "aliases": [],
       "nation": "air",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "katara",
-    "name": "Katara",
-    "imgPortrait": "/img/char/katara.webp",
-    "accent": "#62C5EF",
-    "extra": {
-      "nation": "water",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "zuko",
-    "name": "Zuko",
-    "imgPortrait": "/img/char/zuko.webp",
-    "accent": "#FF9284",
-    "extra": {
-      "nation": "fire",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "toph",
-    "name": "Toph",
-    "imgPortrait": "/img/char/toph.webp",
-    "accent": "#85CD75",
-    "extra": {
-      "nation": "earth",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "korra",
-    "name": "Korra",
-    "imgPortrait": "/img/char/korra.webp",
-    "accent": "#64A1EE",
-    "extra": {
-      "nation": "water",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "sokka",
-    "name": "Sokka",
-    "imgPortrait": "/img/char/sokka.webp",
-    "accent": "#ACD1E7",
-    "extra": {
-      "nation": "water",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "azula",
-    "name": "Azula",
-    "imgPortrait": "/img/char/azula.webp",
-    "accent": "#EE79A1",
-    "extra": {
-      "nation": "fire",
-      "released": "2026-07-23"
-    }
-  },
-  {
-    "id": "kyoshi",
-    "name": "Kyoshi",
-    "imgPortrait": "/img/char/kyoshi.webp",
-    "accent": "#45A075",
-    "extra": {
-      "nation": "earth",
-      "released": "2026-07-23"
+      "released": "2026-07-23",
+      "steamToken": "aang",
+      "siteKey": "aang",
+      "supports": [
+        "appa",
+        "gyatso",
+        "momo"
+      ]
     }
   },
   {
@@ -85,8 +23,144 @@
     "imgPortrait": "/img/char/zaheer.webp",
     "accent": "#A6A266",
     "extra": {
+      "aliases": [],
       "nation": "air",
-      "released": "2026-07-23"
+      "released": "2026-07-23",
+      "steamToken": "zaheer",
+      "supports": [
+        "ghazan",
+        "ming-hua",
+        "p'li"
+      ]
+    }
+  },
+  {
+    "id": "katara",
+    "name": "Katara",
+    "imgPortrait": "/img/char/katara.webp",
+    "accent": "#62C5EF",
+    "extra": {
+      "aliases": [],
+      "nation": "water",
+      "released": "2026-07-23",
+      "steamToken": "katara",
+      "siteKey": "katara",
+      "supports": [
+        "kanna",
+        "master-pakku"
+      ]
+    }
+  },
+  {
+    "id": "korra",
+    "name": "Korra",
+    "imgPortrait": "/img/char/korra.webp",
+    "accent": "#64A1EE",
+    "extra": {
+      "aliases": [],
+      "nation": "water",
+      "released": "2026-07-23",
+      "steamToken": "korra",
+      "siteKey": "korra",
+      "supports": [
+        "naga",
+        "raava",
+        "tonraq"
+      ]
+    }
+  },
+  {
+    "id": "sokka",
+    "name": "Sokka",
+    "imgPortrait": "/img/char/sokka.webp",
+    "accent": "#ACD1E7",
+    "extra": {
+      "aliases": [],
+      "nation": "water",
+      "released": "2026-07-23",
+      "steamToken": "sokka",
+      "siteKey": "sokka",
+      "supports": [
+        "master-piandao",
+        "princess-yue",
+        "suki"
+      ]
+    }
+  },
+  {
+    "id": "toph",
+    "name": "Toph",
+    "imgPortrait": "/img/char/toph.webp",
+    "accent": "#85CD75",
+    "extra": {
+      "aliases": [
+        "Toph Beifong"
+      ],
+      "nation": "earth",
+      "released": "2026-07-23",
+      "steamToken": "toph",
+      "siteKey": "toph",
+      "supports": [
+        "badgermole",
+        "the-boulder",
+        "the-hippo"
+      ]
+    }
+  },
+  {
+    "id": "kyoshi",
+    "name": "Kyoshi",
+    "imgPortrait": "/img/char/kyoshi.webp",
+    "accent": "#45A075",
+    "extra": {
+      "aliases": [
+        "Avatar Kyoshi"
+      ],
+      "nation": "earth",
+      "released": "2026-07-23",
+      "steamToken": "kyoshi",
+      "siteKey": "kyoshi",
+      "supports": [
+        "kelsang",
+        "rangi",
+        "yun"
+      ]
+    }
+  },
+  {
+    "id": "zuko",
+    "name": "Zuko",
+    "imgPortrait": "/img/char/zuko.webp",
+    "accent": "#FF9284",
+    "extra": {
+      "aliases": [],
+      "nation": "fire",
+      "released": "2026-07-23",
+      "steamToken": "zuko",
+      "siteKey": "zuko",
+      "supports": [
+        "june",
+        "mai",
+        "ran-and-shaw"
+      ]
+    }
+  },
+  {
+    "id": "azula",
+    "name": "Azula",
+    "imgPortrait": "/img/char/azula.webp",
+    "accent": "#EE79A1",
+    "extra": {
+      "aliases": [],
+      "nation": "fire",
+      "released": "2026-07-23",
+      "steamToken": "azula",
+      "siteKey": "azula",
+      "supports": [
+        "joo-dee",
+        "lo-and-li",
+        "ursa"
+      ]
     }
   },
   {
@@ -95,8 +169,17 @@
     "imgPortrait": "/img/char/ozai.webp",
     "accent": "#DE6907",
     "extra": {
+      "aliases": [
+        "Fire Lord Ozai"
+      ],
       "nation": "fire",
-      "released": "2026-07-23"
+      "released": "2026-07-23",
+      "steamToken": "ozai",
+      "supports": [
+        "firelord-sozin",
+        "general-zhao",
+        "imperial-firebender"
+      ]
     }
   },
   {
@@ -105,8 +188,16 @@
     "imgPortrait": "/img/char/avatar-aang.webp",
     "accent": "#B7F0FB",
     "extra": {
+      "aliases": [
+        "Avatar State Aang"
+      ],
       "nation": "avatar",
-      "released": "2026-07-23"
+      "released": "2026-07-23",
+      "steamToken": "aang_avchar",
+      "supports": [
+        "katara",
+        "roku"
+      ]
     }
   },
   {
@@ -115,8 +206,15 @@
     "imgPortrait": "/img/char/nightmare-korra.webp",
     "accent": "#B28FEF",
     "extra": {
+      "aliases": [],
       "nation": "avatar",
-      "released": "2026-07-23"
+      "released": "2026-07-23",
+      "steamToken": "korra_nightmare",
+      "supports": [
+        "dark-avatar-unalaq",
+        "dark-spirit",
+        "vaatu"
+      ]
     }
   }
 ]
