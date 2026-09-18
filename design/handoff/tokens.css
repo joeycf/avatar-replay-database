@@ -1,0 +1,73 @@
+/* ============================================================
+   replaydatabase.com/avatar — Avatar Legends: The Fighting Game skin (game #7)
+   Anatomy unchanged; tokens + three fonts only.
+   Color policy 2026-09-15: primary/secondary sampled from the game's own identity.
+   Sources: official all-mode logo (uploads/Avatar_Legends_allmode.png) — the paramountgames.com
+   logo and element seals are pure white line art (nothing to sample); key-art fills are
+   cream wash + warm red; avatarfighters.com logo indigo #363C88 (Coming Soon card, superseded).
+   Surface ratio column = contrast on --color-surface (#1D1A16). All text tokens AA ≥ 4.5.
+   Fonts: display Cinzel (@fontsource/cinzel 700,900) · UI Figtree (@fontsource/figtree 400,500,600,700)
+          · mono JetBrains Mono (@fontsource/jetbrains-mono 400,500)
+   Rights: Avatar Legends © Paramount. Fan project — type and color evocation only.
+   ============================================================ */
+:root {
+  /* --- surfaces: ink-and-parchment, warm-cream cast (hue ~80, chroma ≤ .015) --- */
+  --color-bg:            #141210;  /* ink well */
+  --color-surface:       #1D1A16;  /* sumi on parchment */
+  --color-surface-2:     #26221C;  /* raised */
+  --color-surface-3:     #302A22;  /* hover / active */
+  --color-border:        #3A332A;  /* hairline */
+  --color-border-strong: #4D443A;  /* focus / divider */
+
+  /* --- text (all AA on --color-surface) --- */
+  --color-text:          #F2EADD;  /* cream wash · 14.5:1 */
+  --color-text-muted:    #B8B0A3;  /* 8.1:1 */
+  --color-text-faint:    #8D8579;  /* 4.8:1 */
+  --color-primary-contrast: #12100D; /* ink on primary · 9.1:1, on secondary · 9.9:1 */
+
+  /* --- semantic --- */
+  --color-primary:     #4EC0ED;  /* oklch(0.76 0.12 228) · 8.33:1 on surface · Sampled from the AVATAR wordmark fill on the official all-mode logo (Avatar-State / water blue, ~#4FC3F0 at the glyph core). Neighbour for the record: Tōkon blue #03A5FE (ΔH ≈ 20, ΔL ≈ .10) — accepted under the 2026-09-15 policy. */
+  --color-secondary:   #FCA942;  /* oklch(0.8 0.15 68) · 8.99:1 on surface · Sampled from the element-seal gradient on the official all-mode logo (saffron top stop, ~#F3A93E) — Air Nomad saffron. Neighbour for the record: SF6 orange #FF7D00 (ΔH ≈ 20, ΔL ≈ .08). */
+  --color-danger:      #F75D59;  /* oklch(0.68 0.19 25) · 5.5:1 on surface · Fire Nation vermilion, pulled cooler than the secondary so both survive at chip size (ΔH 43 vs secondary, ΔH 157 vs primary). */
+  --color-warning:     #F0D862;  /* oklch(0.88 0.14 98) · 12.14:1 on surface · Earth Kingdom gold-ochre (Ba Sing Se roof tile); moved off saffron — ΔH 30 vs secondary with ΔL .08, plus a chroma step. */
+  --color-success:     #75D079;  /* oklch(0.78 0.15 145) · 9.12:1 on surface · Earth Kingdom jade — ΔH 77 vs secondary, ΔH 83 vs primary. */
+  --color-info:        #B09BEE;  /* oklch(0.74 0.12 295) · 7.24:1 on surface · Spirit-world violet (Raava/Vaatu wash) — ΔH 67 vs primary. */
+
+  /* --- fonts --- */
+  --font-display: "Cinzel", "Marcellus", Georgia, serif;
+  --font-ui:      "Figtree", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  /* --- per-character accents: families by nation ---
+     Method: anchor hue → family band → Δ8–12° where achievable, else ΔL ≥ .12 / chroma split → AA on surface.
+     Roster enumerated 2026-09-16: 12 launch fighters + Year 1 Pass (Bolin, Ty Lee, Lin Beifong, Iroh)
+     + free DLC Tagah (Fall 2026). Year 1 vote winner (Tenzin/Kuvira/Amon/King Bumi/Asami) NOT yet
+     announced — not tokenized; add on reveal. --------------------------------------------------- */
+
+  /* Water Tribe */
+  --char-katara:           #62C5EF;  /* Katara · oklch(0.78 0.11 228) · 8.87:1 · Water Tribe blue, anchored on the wordmark blue; family anchor. */
+  --char-korra:            #64A1EE;  /* Korra · oklch(0.7 0.13 255) · 6.5:1 · Southern Water Tribe navy-blue of Korra's outfit; ΔH 27 from Katara. */
+  --char-sokka:            #ACD1E7;  /* Sokka · oklch(0.84 0.05 235) · 10.75:1 · Non-bender of the Water Tribe — pale steel, chroma-split (.05 vs .11) from Katara. */
+
+  /* Earth Kingdom */
+  --char-toph:             #85CD75;  /* Toph Beifong · oklch(0.78 0.14 140) · 9.07:1 · Beifong green; family anchor. */
+  --char-kyoshi:           #45A075;  /* Avatar Kyoshi · oklch(0.64 0.11 160) · 5.4:1 · Kyoshi Warrior deep green; ΔH 20 + ΔL .14 from Toph. */
+  --char-bolin:            #D3D979;  /* Bolin · oklch(0.86 0.12 112) · 11.53:1 · Earthbender lime-yellow of Bolin's Fire Ferrets kit; ΔH 28 from Toph. */
+  --char-lin-beifong:      #A8BEAC;  /* Lin Beifong · oklch(0.78 0.035 150) · 8.77:1 · Metalbender police grey-green, chroma-split (.035 vs .14) from Toph. */
+
+  /* Fire Nation */
+  --char-zuko:             #FF9284;  /* Zuko · oklch(0.78 0.14 28) · 8:1 · Fire Nation red-coral; family anchor. */
+  --char-azula:            #EE79A1;  /* Azula · oklch(0.72 0.15 0) · 6.51:1 · Blue-fire is spoken for by the primary, so Azula takes the crimson-rose end; ΔH 28 from Zuko. */
+  --char-ozai:             #DE6907;  /* Fire Lord Ozai · oklch(0.65 0.17 50) · 5.06:1 · Ember orange of the Fire Lord's throne-room flame wall; ΔH 22 + ΔL .13 from Zuko. */
+  --char-iroh:             #FCB26F;  /* Iroh · oklch(0.82 0.12 62) · 9.69:1 · Tea-and-amber, the Dragon of the West; ΔH 12 + ΔL .17 from Ozai, ΔH 34 from Zuko. */
+
+  /* Air Nomads */
+  --char-aang:             #F7CC4B;  /* Aang · oklch(0.86 0.15 90) · 11.3:1 · Air Nomad saffron-yellow of Aang's robes; family anchor. */
+  --char-zaheer:           #A6A266;  /* Zaheer · oklch(0.7 0.08 105) · 6.59:1 · Red Lotus ash-olive — ΔH 15 + ΔL .16 from Aang. */
+  --char-tagah:            #F7E6C3;  /* Tagah · oklch(0.93 0.05 85) · 14.08:1 · Ancient airbender parchment-cream; chroma-split (.05 vs .15) + ΔL .07 from Aang. FREE DLC, Fall 2026 (announced 2026-07-23, exact date pending). */
+
+  /* Avatar / non-benders */
+  --char-avatar-aang:      #B7F0FB;  /* Avatar State Aang · oklch(0.92 0.06 210) · 13.92:1 · Avatar-State glow: near-white ice-blue; ΔL .16 above the primary. */
+  --char-nightmare-korra:  #B28FEF;  /* Nightmare Korra · oklch(0.72 0.14 300) · 6.66:1 · Avatar-State Korra roster slot (official reveal name "Nightmare Korra"); Vaatu-violet, ΔH 90 from Avatar State Aang. */
+  --char-ty-lee:           #F59ECF;  /* Ty Lee · oklch(0.8 0.12 345) · 8.81:1 · Chi-blocker non-bender — circus pink; ΔH 45 from Nightmare Korra. */
+}

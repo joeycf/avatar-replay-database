@@ -1,0 +1,122 @@
+[
+  {
+    "id": "aang",
+    "name": "Aang",
+    "imgPortrait": "/img/char/aang.webp",
+    "accent": "#F7CC4B",
+    "extra": {
+      "nation": "air",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "katara",
+    "name": "Katara",
+    "imgPortrait": "/img/char/katara.webp",
+    "accent": "#62C5EF",
+    "extra": {
+      "nation": "water",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "zuko",
+    "name": "Zuko",
+    "imgPortrait": "/img/char/zuko.webp",
+    "accent": "#FF9284",
+    "extra": {
+      "nation": "fire",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "toph",
+    "name": "Toph",
+    "imgPortrait": "/img/char/toph.webp",
+    "accent": "#85CD75",
+    "extra": {
+      "nation": "earth",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "korra",
+    "name": "Korra",
+    "imgPortrait": "/img/char/korra.webp",
+    "accent": "#64A1EE",
+    "extra": {
+      "nation": "water",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "sokka",
+    "name": "Sokka",
+    "imgPortrait": "/img/char/sokka.webp",
+    "accent": "#ACD1E7",
+    "extra": {
+      "nation": "water",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "azula",
+    "name": "Azula",
+    "imgPortrait": "/img/char/azula.webp",
+    "accent": "#EE79A1",
+    "extra": {
+      "nation": "fire",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "kyoshi",
+    "name": "Kyoshi",
+    "imgPortrait": "/img/char/kyoshi.webp",
+    "accent": "#45A075",
+    "extra": {
+      "nation": "earth",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "zaheer",
+    "name": "Zaheer",
+    "imgPortrait": "/img/char/zaheer.webp",
+    "accent": "#A6A266",
+    "extra": {
+      "nation": "air",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "ozai",
+    "name": "Ozai",
+    "imgPortrait": "/img/char/ozai.webp",
+    "accent": "#DE6907",
+    "extra": {
+      "nation": "fire",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "avatar-aang",
+    "name": "Avatar Aang",
+    "imgPortrait": "/img/char/avatar-aang.webp",
+    "accent": "#B7F0FB",
+    "extra": {
+      "nation": "avatar",
+      "released": "2026-07-23"
+    }
+  },
+  {
+    "id": "nightmare-korra",
+    "name": "Nightmare Korra",
+    "imgPortrait": "/img/char/nightmare-korra.webp",
+    "accent": "#B28FEF",
+    "extra": {
+      "nation": "avatar",
+      "released": "2026-07-23"
+    }
+  }
+]

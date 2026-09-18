@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0C0B09;color:#F2EADD;font-family:"Figtree",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4EC0ED;text-decoration:none}a:hover{color:#B7F0FB}
+</style>
+</helmet>
+
+<div style="display:flex;flex-direction:column;gap:56px;padding:48px;min-width:1500px">
+
+<!-- header / decision -->
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:#8D8579">REPLAYDATABASE.COM · GAME #7 SKIN · TOKENS ONLY · 2026-09-16</div>
+    <div style="font-family:Cinzel,serif;font-weight:900;font-size:44px;line-height:1.05;letter-spacing:.02em">Avatar Legends skin</div>
+    <div style="font-size:15px;line-height:1.55;color:#B8B0A3;max-width:720px">Primary <b style="color:#4EC0ED">#4EC0ED</b> sampled from the wordmark fill of the official all-mode logo (Avatar-State / water blue). Secondary <b style="color:#FCA942">#FCA942</b> sampled from the saffron stop of the element-seal gradient on the same logo. Surfaces are sumi-ink over parchment with a warm-cream cast. The four bending colors carry the roster as accent families by nation.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+      <span style="padding:5px 9px;border:1px solid #3A332A;border-radius:4px;color:#B8B0A3">neighbour · primary ↔ Tōkon #03A5FE (ΔH≈20, ΔL≈.10) — for the record</span>
+      <span style="padding:5px 9px;border:1px solid #3A332A;border-radius:4px;color:#B8B0A3">neighbour · secondary ↔ SF6 #FF7D00 (ΔH≈20, ΔL≈.08) — for the record</span>
+      <span style="padding:5px 9px;border:1px solid #3A332A;border-radius:4px;color:#B8B0A3">umbrella teal #17CFC8 · ΔH 40 from primary — clear</span>
+    </div>
+  </div>
+  <!-- chip-size separation proof -->
+  <div style="background:#1D1A16;border:1px solid #3A332A;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8D8579">WITHIN-SKIN SEPARATION AT CHIP SIZE · ALL AA ON #1D1A16</div>
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px">
+      <sc-for list="{{ semantic }}" as="t" hint-placeholder-count="6">
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:999px;background:{{ t.hex }};color:#12100D;font-size:11px;font-weight:700">{{ t.label }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#B8B0A3">{{ t.hex }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#8D8579">{{ t.note }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:18px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#B8B0A3;flex-wrap:wrap">
+      <span>Display · <b style="font-family:Cinzel;color:#F2EADD">Cinzel</b> @fontsource/cinzel 700, 900</span>
+      <span>UI · <b style="color:#F2EADD">Figtree</b> @fontsource/figtree 400–700</span>
+      <span>Mono · <b style="color:#F2EADD">JetBrains Mono</b> @fontsource/jetbrains-mono 400, 500</span>
+    </div>
+  </div>
+</div>
+
+<!-- wordmark + surfaces -->
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:32px">
+  <div style="background:#141210;border:1px solid #3A332A;border-radius:12px;padding:56px 48px;display:flex;flex-direction:column;gap:28px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:-40px;top:-40px;width:340px;height:340px;border-radius:50%;border:1px solid #302A22"></div>
+    <div style="position:absolute;right:20px;top:20px;width:220px;height:220px;border-radius:50%;border:1px solid #26221C"></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">WORDMARK · CINZEL 900 · TYPE + COLOR EVOCATION ONLY</div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <div style="font-family:Cinzel,serif;font-weight:900;font-size:78px;line-height:.95;letter-spacing:.04em;color:#4EC0ED">AVATAR</div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <div style="font-family:Cinzel,serif;font-weight:700;font-size:30px;letter-spacing:.42em;color:#F2EADD">LEGENDS</div>
+        <div style="height:1px;flex:1;background:#4D443A"></div>
+        <div style="font-family:Cinzel,serif;font-weight:700;font-size:30px;letter-spacing:.3em;color:#FCA942">REPLAY</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div style="width:14px;height:14px;border-radius:50%;background:#62C5EF"></div>
+      <div style="width:14px;height:14px;background:#85CD75"></div>
+      <div style="width:14px;height:14px;background:#FF9284;transform:rotate(45deg) scale(.8)"></div>
+      <div style="width:14px;height:14px;border-radius:50% 50% 0 50%;background:#F7CC4B"></div>
+      <div style="font-family:Figtree;font-size:13px;color:#8D8579;margin-left:8px">Water · Earth · Fire · Air — four geometric marks, no seals reproduced</div>
+    </div>
+    <div style="display:flex;gap:24px;margin-top:8px">
+      <div style="font-family:Cinzel,serif;font-weight:700;font-size:24px;color:#F2EADD;letter-spacing:.06em">AVATAR LEGENDS <span style="color:#8D8579">/</span> REPLAY <span style="font-family:'JetBrains Mono';font-size:11px;color:#8D8579;letter-spacing:0">24px nav lockup</span></div>
+    </div>
+  </div>
+  <div style="background:#1D1A16;border:1px solid #3A332A;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8D8579">SURFACES · INK &amp; PARCHMENT (HUE ≈ 80, C ≤ .015)</div>
+    <sc-for list="{{ surfaces }}" as="s" hint-placeholder-count="6">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:56px;height:34px;border-radius:5px;background:{{ s.hex }};border:1px solid #4D443A"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#F2EADD;width:190px">{{ s.name }}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B8B0A3">{{ s.hex }}</div>
+      </div>
+    </sc-for>
+    <div style="height:1px;background:#3A332A;margin:4px 0"></div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:14px">
+      <div style="color:#F2EADD">--color-text #F2EADD · 14.5:1</div>
+      <div style="color:#B8B0A3">--color-text-muted #B8B0A3 · 8.1:1</div>
+      <div style="color:#8D8579">--color-text-faint #8D8579 · 4.8:1</div>
+    </div>
+  </div>
+</div>
+
+<!-- browse grid -->
+<div style="display:flex;flex-direction:column;gap:14px">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">MOCKUP · BROWSE GRID (/avatar)</div>
+  <div style="background:#141210;border:1px solid #3A332A;border-radius:12px;overflow:hidden">
+    <div style="display:flex;align-items:center;gap:28px;padding:16px 28px;border-bottom:1px solid #3A332A;background:#1D1A16">
+      <div style="font-family:Cinzel,serif;font-weight:700;font-size:18px;letter-spacing:.06em;color:#F2EADD">AVATAR LEGENDS <span style="color:#8D8579">/</span> <span style="color:#FCA942">REPLAY</span></div>
+      <div style="display:flex;gap:22px;font-size:14px;font-weight:500;color:#B8B0A3">
+        <span style="color:#4EC0ED;border-bottom:2px solid #4EC0ED;padding-bottom:2px">Browse</span><span>Players</span><span>Stats</span><span>Events</span><span>Changelog</span>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;align-items:center">
+        <div style="padding:8px 14px;border:1px solid #3A332A;border-radius:6px;font-size:13px;color:#8D8579;width:220px;background:#141210">Search fighter, player, event…</div>
+        <div style="padding:8px 14px;border-radius:6px;font-size:13px;font-weight:700;background:#4EC0ED;color:#12100D">Upload replay</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;padding:16px 28px;border-bottom:1px solid #3A332A;flex-wrap:wrap;font-size:12.5px;font-weight:600">
+      <span style="padding:5px 12px;border-radius:999px;background:#4EC0ED;color:#12100D">All fighters</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Water Tribe</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Earth Kingdom</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Fire Nation</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Air Nomads</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Avatar / non-benders</span>
+      <span style="margin-left:auto;padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Patch 2.5 ▾</span>
+      <span style="padding:5px 12px;border-radius:999px;border:1px solid #3A332A;color:#B8B0A3">Ranked ▾</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:22px 28px">
+      <sc-for list="{{ replays }}" as="r" hint-placeholder-count="6">
+        <div style="background:#1D1A16;border:1px solid #3A332A;border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:8px;font-size:11.5px;color:#8D8579;font-family:'JetBrains Mono',monospace">
+            <span>{{ r.event }}</span><span>·</span><span>{{ r.round }}</span>
+            <span style="margin-left:auto;padding:2px 7px;border-radius:4px;font-size:10.5px;font-weight:700;background:{{ r.tagBg }};color:#12100D">{{ r.tag }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center">
+            <div style="display:flex;flex-direction:column;gap:5px;min-width:0">
+              <div style="font-weight:700;font-size:15px;color:#F2EADD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.p1 }}</div>
+              <span style="align-self:flex-start;padding:3px 9px;border-radius:4px;font-size:11.5px;font-weight:700;background:{{ r.c1 }};color:#12100D">{{ r.f1 }}</span>
+            </div>
+            <div style="font-family:Cinzel,serif;font-weight:900;font-size:20px;color:#F2EADD;letter-spacing:.05em">{{ r.score }}</div>
+            <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end;min-width:0">
+              <div style="font-weight:700;font-size:15px;color:#F2EADD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.p2 }}</div>
+              <span style="padding:3px 9px;border-radius:4px;font-size:11.5px;font-weight:700;background:{{ r.c2 }};color:#12100D">{{ r.f2 }}</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;font-size:12px;color:#8D8579;font-family:'JetBrains Mono',monospace">
+            <span>{{ r.stage }}</span><span style="margin-left:auto">{{ r.date }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<!-- card close-up + stats -->
+<div style="display:grid;grid-template-columns:520px minmax(0,1fr);gap:32px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">MOCKUP · 1v1 CARD CLOSE-UP · ONE BADGE PER SIDE</div>
+    <div style="background:#1D1A16;border:1px solid #3A332A;border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#8D8579;font-family:'JetBrains Mono',monospace">
+        <span>CEO 2026</span><span>·</span><span>Grand Final</span>
+        <span style="margin-left:auto;padding:3px 9px;border-radius:4px;font-size:11px;font-weight:700;background:#FCA942;color:#12100D">FEATURED</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-weight:700;font-size:22px;color:#F2EADD">NorthWind</div>
+          <span style="align-self:flex-start;padding:5px 12px;border-radius:5px;font-size:14px;font-weight:700;background:#F7CC4B;color:#12100D">Aang</span>
+          <div style="font-size:12.5px;color:#B8B0A3">Support · Appa · Var. Glider</div>
+        </div>
+        <div style="font-family:Cinzel,serif;font-weight:900;font-size:36px;color:#F2EADD;letter-spacing:.05em">3–2</div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;text-align:right">
+          <div style="font-weight:700;font-size:22px;color:#F2EADD">Ember_Kai</div>
+          <span style="padding:5px 12px;border-radius:5px;font-size:14px;font-weight:700;background:#EE79A1;color:#12100D">Azula</span>
+          <div style="font-size:12.5px;color:#B8B0A3">Support · Mai · Var. Fire Lord</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;height:6px;border-radius:3px;overflow:hidden">
+        <div style="background:#F7CC4B"></div><div style="background:#EE79A1"></div><div style="background:#F7CC4B"></div><div style="background:#EE79A1"></div><div style="background:#F7CC4B"></div>
+      </div>
+      <div style="display:flex;gap:14px;font-size:12.5px;color:#8D8579;font-family:'JetBrains Mono',monospace;flex-wrap:wrap">
+        <span>Fire Lord War Room</span><span>Patch 2.5</span><span style="margin-left:auto">2026-08-16</span>
+      </div>
+      <div style="display:flex;gap:8px">
+        <div style="flex:1;text-align:center;padding:10px;border-radius:6px;background:#4EC0ED;color:#12100D;font-weight:700;font-size:14px">Watch replay</div>
+        <div style="padding:10px 14px;border-radius:6px;border:1px solid #4D443A;color:#B8B0A3;font-weight:600;font-size:14px">Frame data</div>
+      </div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579;margin-top:14px">STATUS IN CONTEXT</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:12.5px;font-weight:700">
+      <span style="padding:5px 10px;border-radius:5px;background:#F75D59;color:#12100D">Desync · danger</span>
+      <span style="padding:5px 10px;border-radius:5px;background:#F0D862;color:#12100D">Unverified · warning</span>
+      <span style="padding:5px 10px;border-radius:5px;background:#75D079;color:#12100D">Verified · success</span>
+      <span style="padding:5px 10px;border-radius:5px;background:#B09BEE;color:#12100D">Patch note · info</span>
+      <span style="padding:5px 10px;border-radius:5px;background:#FCA942;color:#12100D">Featured · secondary</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">MOCKUP · STATS PAGE WITH FULL ACCENT LEGEND (17 TOKENIZED)</div>
+    <div style="background:#141210;border:1px solid #3A332A;border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;align-items:baseline;gap:16px">
+        <div style="font-family:Cinzel,serif;font-weight:700;font-size:26px;letter-spacing:.04em;color:#F2EADD">Pick rate · Ranked · Patch 2.5</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8D8579">24,318 sets · 2026-08-08 → 09-16</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="8">
+          <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 60px;gap:12px;align-items:center;font-size:13.5px">
+            <div style="display:flex;align-items:center;gap:8px;color:#F2EADD;font-weight:600"><span style="width:10px;height:10px;border-radius:2px;background:{{ s.hex }}"></span>{{ s.name }}</div>
+            <div style="height:14px;background:#1D1A16;border-radius:3px;overflow:hidden"><div style="height:100%;width:{{ s.w }};background:{{ s.hex }}"></div></div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B8B0A3;text-align:right">{{ s.pct }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="height:1px;background:#3A332A"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8D8579">ACCENT LEGEND · FAMILIES BY NATION · RATIO ON #1D1A16</div>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px">
+        <sc-for list="{{ families }}" as="f" hint-placeholder-count="5">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:Cinzel,serif;font-weight:700;font-size:13px;letter-spacing:.08em;color:#F2EADD;border-bottom:1px solid #3A332A;padding-bottom:6px">{{ f.name }}</div>
+            <sc-for list="{{ f.characters }}" as="c" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="align-self:flex-start;padding:3px 9px;border-radius:4px;font-size:12px;font-weight:700;background:{{ c.hex }};color:#12100D">{{ c.name }}</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#8D8579">--char-{{ c.id }} · {{ c.hex }} · {{ c.ratio }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <div style="font-size:12.5px;color:#8D8579;line-height:1.5">Year 1 vote winner (Tenzin / Kuvira / Amon / King Bumi / Asami Sato) not yet announced — no token; add on reveal. Tagah is free DLC, Fall 2026, tokenized on announcement.</div>
+    </div>
+  </div>
+</div>
+
+<!-- OG card + favicon -->
+<div style="display:grid;grid-template-columns:600px minmax(0,1fr);gap:32px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">OG CARD · 1200×630 (SHOWN AT 50%)</div>
+    <div style="width:600px;height:315px;background:#141210;border:1px solid #3A332A;border-radius:6px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;box-sizing:border-box">
+      <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;opacity:.14">
+        <div style="background:#62C5EF"></div><div style="background:#85CD75"></div><div style="background:#F7CC4B"></div><div style="background:#FF9284"></div>
+      </div>
+      <div style="position:absolute;right:28px;top:28px;width:150px;height:150px;border-radius:50%;border:2px solid #4D443A"></div>
+      <div style="position:absolute;right:46px;top:46px;width:114px;height:114px;border-radius:50%;border:1px solid #4EC0ED"></div>
+      <div style="position:absolute;right:64px;top:64px;width:78px;height:78px;border-radius:50%;border:1px solid #FCA942"></div>
+      <div style="position:relative;font-family:Cinzel,serif;font-weight:900;font-size:42px;letter-spacing:.04em;color:#4EC0ED;line-height:1">AVATAR</div>
+      <div style="position:relative;font-family:Cinzel,serif;font-weight:700;font-size:16px;letter-spacing:.42em;color:#F2EADD;margin-top:4px">LEGENDS <span style="color:#FCA942;letter-spacing:.3em">· REPLAY</span></div>
+      <div style="position:relative;font-size:12px;color:#B8B0A3;margin-top:10px">Competitive replays · frame data · Patch 2.5 · replaydatabase.com/avatar</div>
+    </div>
+    <div style="font-size:12.5px;color:#8D8579;line-height:1.5">Four quadrant washes (Water / Earth / Air / Fire at 14%) under a three-ring set: border, primary, secondary. Agrees with the Coming Soon card's elemental register; indigo #363C88 retired at flip.</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8D8579">FAVICON MOTIF · GEOMETRIC TILE FAMILY</div>
+    <div style="display:flex;gap:20px;align-items:flex-end">
+      <div style="width:128px;height:128px;border-radius:24px;background:#141210;border:1px solid #3A332A;position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr"><div style="background:#62C5EF"></div><div style="background:#85CD75"></div><div style="background:#F7CC4B"></div><div style="background:#FF9284"></div></div>
+        <div style="position:absolute;inset:26px;border-radius:50%;background:#141210;border:4px solid #F2EADD"></div>
+        <div style="position:absolute;inset:44px;border-radius:50%;background:#4EC0ED"></div>
+      </div>
+      <div style="width:64px;height:64px;border-radius:12px;background:#141210;border:1px solid #3A332A;position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr"><div style="background:#62C5EF"></div><div style="background:#85CD75"></div><div style="background:#F7CC4B"></div><div style="background:#FF9284"></div></div>
+        <div style="position:absolute;inset:13px;border-radius:50%;background:#141210;border:2px solid #F2EADD"></div>
+        <div style="position:absolute;inset:22px;border-radius:50%;background:#4EC0ED"></div>
+      </div>
+      <div style="width:32px;height:32px;border-radius:6px;background:#141210;position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr"><div style="background:#62C5EF"></div><div style="background:#85CD75"></div><div style="background:#F7CC4B"></div><div style="background:#FF9284"></div></div>
+        <div style="position:absolute;inset:7px;border-radius:50%;background:#141210;border:1.5px solid #F2EADD"></div>
+        <div style="position:absolute;inset:11px;border-radius:50%;background:#4EC0ED"></div>
+      </div>
+      <div style="font-size:12.5px;color:#8D8579;line-height:1.5;max-width:300px">Four-quadrant tile, cream ring, primary-blue core (the Avatar at the centre of the four nations). Reads at 32px; sits in the geometric-tile family beside the other six.</div>
+    </div>
+    <div style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#B8B0A3;line-height:1.7">
+      <div>Deliverable files · <a href="tokens.css">tokens.css</a> · <a href="accent-families.json">accent-families.json</a></div>
+      <div style="color:#8D8579">Avatar Legends © Paramount. Fan project; no logos, seals, or character art reproduced.</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const semantic = [
+      {label:'Primary',hex:'#4EC0ED',note:'H228 · 8.3:1'},
+      {label:'Secondary',hex:'#FCA942',note:'H68 · ΔH160'},
+      {label:'Danger',hex:'#F75D59',note:'H25 · ΔH43 sec'},
+      {label:'Warning',hex:'#F0D862',note:'H98 · ΔH30 ΔL.08'},
+      {label:'Success',hex:'#75D079',note:'H145 · ΔH77'},
+      {label:'Info',hex:'#B09BEE',note:'H295 · ΔH67 pri'},
+    ];
+    const surfaces = [
+      {name:'--color-bg',hex:'#141210'},{name:'--color-surface',hex:'#1D1A16'},{name:'--color-surface-2',hex:'#26221C'},
+      {name:'--color-surface-3',hex:'#302A22'},{name:'--color-border',hex:'#3A332A'},{name:'--color-border-strong',hex:'#4D443A'},
+    ];
+    const C = {katara:'#62C5EF',korra:'#64A1EE',sokka:'#ACD1E7',toph:'#85CD75',kyoshi:'#45A075',bolin:'#D3D979','lin-beifong':'#A8BEAC',zuko:'#FF9284',azula:'#EE79A1',ozai:'#DE6907',iroh:'#FCB26F',aang:'#F7CC4B',zaheer:'#A6A266',tagah:'#F7E6C3','avatar-aang':'#B7F0FB','nightmare-korra':'#B28FEF','ty-lee':'#F59ECF'};
+    const replays = [
+      {event:'CEO 2026',round:'Winners Final',tag:'VERIFIED',tagBg:'#75D079',p1:'NorthWind',f1:'Aang',c1:C.aang,p2:'Ember_Kai',f2:'Azula',c2:C.azula,score:'3–1',stage:'Northern Air Temple',date:'2026-08-16'},
+      {event:'CEO 2026',round:'Losers Semi',tag:'VERIFIED',tagBg:'#75D079',p1:'Toph_Main_42',f1:'Toph Beifong',c1:C.toph,p2:'RaavaLight',f2:'Korra',c2:C.korra,score:'2–3',stage:'Republic City',date:'2026-08-16'},
+      {event:'Ranked',round:'Diamond',tag:'UNVERIFIED',tagBg:'#F0D862',p1:'saltwater',f1:'Katara',c1:C.katara,p2:'Boomerang.exe',f2:'Sokka',c2:C.sokka,score:'2–0',stage:'Agna Qel\'a',date:'2026-09-14'},
+      {event:'Weekly #7',round:'Top 8',tag:'VERIFIED',tagBg:'#75D079',p1:'RedLotus_Z',f1:'Zaheer',c1:C.zaheer,p2:'FanDancer',f2:'Avatar Kyoshi',c2:C.kyoshi,score:'3–2',stage:'Ba Sing Se',date:'2026-09-12'},
+      {event:'Ranked',round:'Platinum',tag:'DESYNC',tagBg:'#F75D59',p1:'phoenixking',f1:'Fire Lord Ozai',c1:C.ozai,p2:'blue_spirit',f2:'Zuko',c2:C.zuko,score:'1–2',stage:'Fire Lord War Room',date:'2026-09-15'},
+      {event:'Weekly #7',round:'Grand Final',tag:'VERIFIED',tagBg:'#75D079',p1:'GlowUp',f1:'Avatar State Aang',c1:C['avatar-aang'],p2:'DarkWater',f2:'Nightmare Korra',c2:C['nightmare-korra'],score:'3–0',stage:'Spirit Wilds',date:'2026-09-12'},
+    ];
+    const stats = [
+      ['Aang',C.aang,14.2],['Zuko',C.zuko,12.8],['Korra',C.korra,11.1],['Azula',C.azula,10.4],['Toph Beifong',C.toph,9.7],['Katara',C.katara,9.0],['Sokka',C.sokka,7.6],['Zaheer',C.zaheer,6.9],['Avatar Kyoshi',C.kyoshi,6.3],['Fire Lord Ozai',C.ozai,5.8],['Avatar State Aang',C['avatar-aang'],3.4],['Nightmare Korra',C['nightmare-korra'],2.8],
+    ].map(([name,hex,p])=>({name,hex,pct:p.toFixed(1)+'%',w:(p/14.2*100).toFixed(0)+'%'}));
+    const R = {katara:'8.9',korra:'6.5',sokka:'10.8',toph:'9.1',kyoshi:'5.4',bolin:'11.5','lin-beifong':'8.8',zuko:'8.0',azula:'6.5',ozai:'5.1',iroh:'9.7',aang:'11.3',zaheer:'6.6',tagah:'14.1','avatar-aang':'13.9','nightmare-korra':'6.7','ty-lee':'8.8'};
+    const N = {katara:'Katara',korra:'Korra',sokka:'Sokka',toph:'Toph Beifong',kyoshi:'Avatar Kyoshi',bolin:'Bolin ✦','lin-beifong':'Lin Beifong ✦',zuko:'Zuko',azula:'Azula',ozai:'Fire Lord Ozai',iroh:'Iroh ✦',aang:'Aang',zaheer:'Zaheer',tagah:'Tagah ✦','avatar-aang':'Avatar State Aang','nightmare-korra':'Nightmare Korra','ty-lee':'Ty Lee ✦'};
+    const mk = ids => ids.map(id=>({id,name:N[id],hex:C[id],ratio:R[id]+':1'}));
+    const families = [
+      {name:'WATER TRIBE',characters:mk(['katara','korra','sokka'])},
+      {name:'EARTH KINGDOM',characters:mk(['toph','kyoshi','bolin','lin-beifong'])},
+      {name:'FIRE NATION',characters:mk(['zuko','azula','ozai','iroh'])},
+      {name:'AIR NOMADS',characters:mk(['aang','zaheer','tagah'])},
+      {name:'AVATAR / NON-BENDERS',characters:mk(['avatar-aang','nightmare-korra','ty-lee'])},
+    ];
+    return { semantic, surfaces, replays, stats, families };
+  }
+}
+</script>
+</body>
+</html>

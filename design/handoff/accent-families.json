@@ -1,0 +1,282 @@
+{
+  "semantic": {
+    "primary": {
+      "hex": "#4EC0ED",
+      "oklch": [
+        0.76,
+        0.12,
+        228
+      ],
+      "contrastOnSurface": 8.33
+    },
+    "secondary": {
+      "hex": "#FCA942",
+      "oklch": [
+        0.8,
+        0.15,
+        68
+      ],
+      "contrastOnSurface": 8.99
+    },
+    "danger": {
+      "hex": "#F75D59",
+      "oklch": [
+        0.68,
+        0.19,
+        25
+      ],
+      "contrastOnSurface": 5.5
+    },
+    "warning": {
+      "hex": "#F0D862",
+      "oklch": [
+        0.88,
+        0.14,
+        98
+      ],
+      "contrastOnSurface": 12.14
+    },
+    "success": {
+      "hex": "#75D079",
+      "oklch": [
+        0.78,
+        0.15,
+        145
+      ],
+      "contrastOnSurface": 9.12
+    },
+    "info": {
+      "hex": "#B09BEE",
+      "oklch": [
+        0.74,
+        0.12,
+        295
+      ],
+      "contrastOnSurface": 7.24
+    }
+  },
+  "families": {
+    "water": {
+      "name": "Water Tribe",
+      "characters": [
+        {
+          "id": "katara",
+          "name": "Katara",
+          "hex": "#62C5EF",
+          "oklch": {
+            "l": 0.78,
+            "c": 0.11,
+            "h": 228
+          },
+          "contrastOnSurface": 8.87
+        },
+        {
+          "id": "korra",
+          "name": "Korra",
+          "hex": "#64A1EE",
+          "oklch": {
+            "l": 0.7,
+            "c": 0.13,
+            "h": 255
+          },
+          "contrastOnSurface": 6.5
+        },
+        {
+          "id": "sokka",
+          "name": "Sokka",
+          "hex": "#ACD1E7",
+          "oklch": {
+            "l": 0.84,
+            "c": 0.05,
+            "h": 235
+          },
+          "contrastOnSurface": 10.75
+        }
+      ]
+    },
+    "earth": {
+      "name": "Earth Kingdom",
+      "characters": [
+        {
+          "id": "toph",
+          "name": "Toph Beifong",
+          "hex": "#85CD75",
+          "oklch": {
+            "l": 0.78,
+            "c": 0.14,
+            "h": 140
+          },
+          "contrastOnSurface": 9.07
+        },
+        {
+          "id": "kyoshi",
+          "name": "Avatar Kyoshi",
+          "hex": "#45A075",
+          "oklch": {
+            "l": 0.64,
+            "c": 0.11,
+            "h": 160
+          },
+          "contrastOnSurface": 5.4
+        },
+        {
+          "id": "bolin",
+          "name": "Bolin",
+          "hex": "#D3D979",
+          "oklch": {
+            "l": 0.86,
+            "c": 0.12,
+            "h": 112
+          },
+          "contrastOnSurface": 11.53
+        },
+        {
+          "id": "lin-beifong",
+          "name": "Lin Beifong",
+          "hex": "#A8BEAC",
+          "oklch": {
+            "l": 0.78,
+            "c": 0.035,
+            "h": 150
+          },
+          "contrastOnSurface": 8.77
+        }
+      ]
+    },
+    "fire": {
+      "name": "Fire Nation",
+      "characters": [
+        {
+          "id": "zuko",
+          "name": "Zuko",
+          "hex": "#FF9284",
+          "oklch": {
+            "l": 0.78,
+            "c": 0.14,
+            "h": 28
+          },
+          "contrastOnSurface": 8
+        },
+        {
+          "id": "azula",
+          "name": "Azula",
+          "hex": "#EE79A1",
+          "oklch": {
+            "l": 0.72,
+            "c": 0.15,
+            "h": 0
+          },
+          "contrastOnSurface": 6.51
+        },
+        {
+          "id": "ozai",
+          "name": "Fire Lord Ozai",
+          "hex": "#DE6907",
+          "oklch": {
+            "l": 0.65,
+            "c": 0.17,
+            "h": 50
+          },
+          "contrastOnSurface": 5.06
+        },
+        {
+          "id": "iroh",
+          "name": "Iroh",
+          "hex": "#FCB26F",
+          "oklch": {
+            "l": 0.82,
+            "c": 0.12,
+            "h": 62
+          },
+          "contrastOnSurface": 9.69
+        }
+      ]
+    },
+    "air": {
+      "name": "Air Nomads",
+      "characters": [
+        {
+          "id": "aang",
+          "name": "Aang",
+          "hex": "#F7CC4B",
+          "oklch": {
+            "l": 0.86,
+            "c": 0.15,
+            "h": 90
+          },
+          "contrastOnSurface": 11.3
+        },
+        {
+          "id": "zaheer",
+          "name": "Zaheer",
+          "hex": "#A6A266",
+          "oklch": {
+            "l": 0.7,
+            "c": 0.08,
+            "h": 105
+          },
+          "contrastOnSurface": 6.59
+        },
+        {
+          "id": "tagah",
+          "name": "Tagah",
+          "hex": "#F7E6C3",
+          "oklch": {
+            "l": 0.93,
+            "c": 0.05,
+            "h": 85
+          },
+          "contrastOnSurface": 14.08
+        }
+      ]
+    },
+    "avatar": {
+      "name": "Avatar / non-benders",
+      "characters": [
+        {
+          "id": "avatar-aang",
+          "name": "Avatar State Aang",
+          "hex": "#B7F0FB",
+          "oklch": {
+            "l": 0.92,
+            "c": 0.06,
+            "h": 210
+          },
+          "contrastOnSurface": 13.92
+        },
+        {
+          "id": "nightmare-korra",
+          "name": "Nightmare Korra",
+          "hex": "#B28FEF",
+          "oklch": {
+            "l": 0.72,
+            "c": 0.14,
+            "h": 300
+          },
+          "contrastOnSurface": 6.66
+        },
+        {
+          "id": "ty-lee",
+          "name": "Ty Lee",
+          "hex": "#F59ECF",
+          "oklch": {
+            "l": 0.8,
+            "c": 0.12,
+            "h": 345
+          },
+          "contrastOnSurface": 8.81
+        }
+      ]
+    }
+  },
+  "meta": {
+    "game": "avatar",
+    "title": "Avatar Legends: The Fighting Game",
+    "enumerated": "2026-09-16",
+    "pending": [
+      "year-1-vote-winner"
+    ],
+    "surface": "#1D1A16",
+    "separationRule": "OKLCH ΔH ≥ 25, or ΔH ≥ 10 with |ΔL| ≥ .12, or chroma split ≥ .06 within a family"
+  }
+}

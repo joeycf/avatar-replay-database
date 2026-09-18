@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Avatar Legends: The Fighting Game — the skin.
+
+   Transcribed from design/handoff/tokens.css, which is the design system's
+   source of truth. Only the ENGINE'S semantic tokens live here; the 17
+   --char-* accents are NOT in this file — they go to app.config.ts `accents`,
+   which the engine injects as --accent-<id>, and scripts/characters.ts reads
+   the same handoff block so the two cannot drift.
+
+   THE CONTRACT (STACK §5.13, engine README "Theme override contract"): this
+   MUST be a plain, UNLAYERED :root block — never @theme. An app stylesheet
+   does not pass through the engine's Tailwind root compile, so an @theme
+   block ships raw, the browser drops it as an unknown at-rule, and production
+   silently wears the umbrella defaults. `nuxt dev` masks it exactly.
+
+   @fontsource specifiers are EXTENSIONLESS on purpose: the packages are not
+   uniform about their ./*.css exports, and the extension form is what broke
+   SF6's display face.
+
+   ── TRANSCRIPTION NOTE (checklist 14, which this build wrote) ─────────────
+   The handoff declares 16 --color-* names; the engine shadows 18. Reconciled
+   2026-09-18 by measurement, not by eye:
+
+   · 12 map 1:1 and are VERBATIM.
+   · 1 RENAME: the handoff's --color-surface-2 is the engine's
+     --color-surface-raised. (Its --color-surface-3 has no engine consumer;
+     parked below.)
+   · 5 the engine wants are ABSENT from the handoff and are DERIVED below:
+     surface-sunken, border-subtle, text-secondary, primary-hover, focus. The
+     brief said "16 vs 18, derive the missing" and that arithmetic is wrong in
+     both directions — one handoff name is a rename, and FIVE are missing.
+     primary-hover and focus have no precedent to copy because every earlier
+     handoff supplied them; when they are missing the engine falls back to the
+     UMBRELLA TEAL (#45dcd6 / #4fe0da) in silence, on a skin with no teal in
+     it anywhere.
+   · 3 the handoff declares have NO engine consumer (surface-3, border-strong,
+     info). They sit at the bottom as comments so the design intent survives
+     without shipping dead custom properties. `info` is the notable one: the
+     engine has no info token at all, so the handoff's spirit-violet is design
+     intent with nowhere to land today.
+
+   ── WHAT WAS RE-MEASURED, AND WHAT WAS WRONG ──────────────────────────────
+   All 28 contrast claims and all 23 OKLCH claims in the handoff re-measured
+   correct to 0.05 / 0.01 / 2°. That is the best record of any handoff here.
+   Four documentation errors were found, none of them a ratio, and all four
+   are corrected in the comments below rather than in the values:
+
+   1. SECONDARY PROVENANCE IS WRONG. tokens.css:30 says #FCA942 was "sampled
+      from the element-seal gradient on the official all-mode logo (saffron
+      top stop, ~#F3A93E)". That file has ZERO pixels within ΔE .02 of either
+      value; its saffron mode is #FCBE6C (oklch .842 .122 72.5). The colour is
+      synthesized, and it is a good colour — kept, citation corrected. This is
+      the second consecutive handoff to carry a sampled-hex claim that does
+      not reproduce (Strive's correction 2 was the first).
+   2. NEIGHBOUR DEGREES ARE OVERSTATED. Primary vs Tōkon #03A5FE measures
+      ΔH 16.2 / ΔL .066, not "ΔH≈20, ΔL≈.10"; secondary vs SF6 #FF7D00
+      measures ΔH 16.2, not ≈20; the umbrella teal #17CFC8 sits ΔH 37.4 away,
+      not 40. Under the 2026-09-15 colour policy none of this blocks anything
+      — cross-game collisions are accepted — but the numbers should be the
+      measured ones.
+   3. "Surfaces: chroma ≤ .015" (tokens.css:14) is false for three of them:
+      surface-3 .0166, border .0183, border-strong .0205.
+   4. "All text tokens AA ≥ 4.5" holds on --color-bg and --color-surface, but
+      --color-text-faint on --color-surface-raised measures 4.34:1. The engine
+      uses that pairing in 35 utility sites. Faint text on a raised surface is
+      therefore below AA by a hair; it is the handoff's own value and it ships,
+      but nothing new should reach for that pairing.
+   ========================================================================== */
+
+@import '@fontsource/cinzel/700';
+@import '@fontsource/cinzel/900';
+@import '@fontsource/figtree/400';
+@import '@fontsource/figtree/500';
+@import '@fontsource/figtree/600';
+@import '@fontsource/figtree/700';
+@import '@fontsource/jetbrains-mono/400';
+@import '@fontsource/jetbrains-mono/500';
+
+:root {
+  /* ── surfaces: ink-and-parchment, warm-cream cast ──────────────────────
+     The ramp the derivations below stand on, in 8-bit sRGB per channel:
+       bg #141210 → surface #1D1A16 → surface-2 #26221C → surface-3 #302A22
+     Even steps of +9/+8/+6 on R, +8/+8/+8 on G, +6/+6/+6 on B. */
+  --color-bg: #141210; /* ink well */
+  --color-surface: #1d1a16; /* sumi on parchment */
+  --color-surface-raised: #26221c; /* handoff --color-surface-2, RENAMED */
+
+  /* DERIVED (absent from the handoff). The platform's two precedents agree
+     to three decimals: Tōkon took sunken = bg × 0.720 (the mean of its
+     per-channel ratios) and Strive took × 0.722 (the ratio of channel sums).
+     Both land on the same byte here:
+       R 20 × 0.720 = 14.40 → 14 (0x0E)
+       G 18 × 0.720 = 12.96 → 13 (0x0D)
+       B 16 × 0.720 = 11.52 → 12 (0x0C)
+     #0E0D0C sits 1.96 HSL L below bg, inside the sibling range (-1.37..-2.16). */
+  --color-surface-sunken: #0e0d0c;
+
+  --color-border: #3a332a; /* hairline */
+
+  /* DERIVED (absent from the handoff), and NOT by the sibling factor. Strive's
+     rule (border × 0.701/0.703) gives #29241E here, which passes the
+     arithmetic and fails Strive's own stated relationship check: it lands only
+     0.133 of the way from raised→border where the engine's own subtle sits at
+     0.262, and its hairline contrast against surface would be 1.127 — the
+     faintest on the platform (siblings run 1.136–1.165). Position-preserving
+     value instead: #2C261E → 1.158 vs surface, 1.057 vs raised, HSL L 14.51
+     (the engine's own subtle is 14.51), OKLCH H 74.9, on this ramp. */
+  --color-border-subtle: #2c261e;
+
+  /* ── text (AA on --color-bg and --color-surface) ─────────────────────── */
+  --color-text: #f2eadd; /* cream wash · 14.5:1 on surface */
+
+  /* DERIVED (absent from the handoff). The engine, CotW and Strive all place
+     text-secondary at 78.87% of the relative-luminance span from text to
+     text-muted. Y(text) = 0.8093, Y(muted) = 0.4390; target Y = 0.8093 -
+     0.7887 × (0.8093 - 0.4390) = 0.5173 → #C6BEB1, measured 9.41:1 on surface
+     and 10.15:1 on bg. (Tōkon's alternative rule — a 27.6% sRGB lerp from
+     muted toward text — gives #C8C0B3 at 9.61:1; within a hair, and the
+     luminance rule is the one three surfaces already use.) */
+  --color-text-secondary: #c6beb1;
+
+  --color-text-muted: #b8b0a3; /* 8.1:1 */
+  --color-text-faint: #8d8579; /* 4.8:1 on surface; 4.34:1 on raised — see note 4 */
+
+  /* ── semantic ─────────────────────────────────────────────────────────── */
+  /* Sampled from the AVATAR wordmark fill on the official all-mode logo
+     (Avatar-State / water blue). Re-measured: 8,149 pixels of that file sit
+     within ΔE .02 of this value, so unlike the secondary this provenance
+     reproduces. oklch(0.76 0.12 228) · 8.33:1 on surface. */
+  --color-primary: #4ec0ed;
+
+  /* DERIVED (absent from the handoff). The median sibling hover lift in OKLCH
+     is dL +.0432, dC -.0189, dH +0.7 → #74CCF3: 9.64:1 on surface, 10.39:1 on
+     bg, and #12100D on it 10.56:1. The handoff's review page implies a link
+     hover of #B7F0FB, which is --char-avatar-aang, a CHARACTER accent lifted
+     .159 above the primary — four times the sibling lift and a collision with
+     a roster token. Not used. */
+  --color-primary-hover: #74ccf3;
+
+  --color-primary-contrast: #12100d; /* ink on primary 9.1:1, on secondary 9.9:1 */
+
+  /* Air Nomad saffron. PROVENANCE CORRECTED (note 1): synthesized, not
+     sampled — the cited logo's saffron is #FCBE6C. oklch(0.8 0.15 68),
+     8.99:1 on surface, ΔH 160 from the primary. */
+  --color-secondary: #fca942;
+
+  /* DERIVED (absent from the handoff). Same-hue lift above the hover, the
+     ordering the engine's own default uses (primary → hover → focus):
+     oklch(0.87 0.09 225) → #92DAF0, 11.15:1 on surface and 12.02:1 on bg,
+     comfortably past the 3:1 non-text floor a focus ring has to clear. */
+  --color-focus: #92daf0;
+
+  /* ── status ───────────────────────────────────────────────────────────── */
+  --color-danger: #f75d59; /* Fire Nation vermilion · 5.5:1 · ΔH 43 from secondary */
+  --color-warning: #f0d862; /* Earth Kingdom gold-ochre · 12.14:1 */
+  --color-success: #75d079; /* Earth Kingdom jade · 9.12:1 */
+
+  /* ── fonts ────────────────────────────────────────────────────────────── */
+  /* Cinzel's lowercase is SMALL CAPS (k/K advance 601/700, a/A 0.871), which
+     is a display property, not a defect — but it is why the OG generator's
+     font probe (checklist 5d) must include lowercase in its latin string, and
+     'ō' for latin-ext. Both families ship both subsets at @fontsource 5.3.0. */
+  --font-display: 'Cinzel', 'Marcellus', Georgia, serif;
+  --font-ui: 'Figtree', 'Helvetica Neue', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* ── PARKED: declared by the handoff, no engine consumer ────────────────
+     --color-surface-3:     #302a22;   raised hover/active step
+     --color-border-strong: #4d443a;   focus/divider hairline
+     --color-info:          #b09bee;   spirit-world violet (Raava/Vaatu wash);
+                                       the engine has no info token at all. */
+}
