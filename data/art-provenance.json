@@ -1,0 +1,209 @@
+{
+  "method": "GENERATED. No vendor or wiki asset is fetched, cropped, composited or published by this repo; scripts/art.ts replaces global fetch with a throwing stub and proves the stub is live before it draws anything.",
+  "licence": {
+    "source": "https://reference.paramount.com/terms-of-use",
+    "read": "2026-09-18",
+    "finding": "Reproduction of the rights holder's materials is \"STRICTLY PROHIBITED WITHOUT THE PRIOR WRITTEN CONSENT\". No fan-content grant, no non-commercial carve-out, no attribution clause — so there is no set of conditions under which the vendor art could be published here, and no credit line that would make it permissible.",
+    "fanKit": "None published. Checked on the vendor site, the publisher site and both storefronts (2026-09-18). Every sibling art chain on this platform starts by enumerating a fan-kit page; there is no page to enumerate.",
+    "wikiCopies": "Pixel-identical to the vendor renders (mean absolute difference 3.9-24.7, against 71-73 between two DIFFERENT characters), i.e. the same asset re-hosted. A wiki's own fair-use tag does not transfer, so the copies inherit the prohibition.",
+    "credit": null
+  },
+  "expiry": {
+    "kind": "missing-fan-kit",
+    "id": "art-licence",
+    "date": "2026-12-31",
+    "action": "Re-read https://reference.paramount.com/terms-of-use in full and re-check the vendor and publisher sites for a fan kit or press kit. If the terms still prohibit reuse, bump this date (it is imported from the earliest backstop in scripts/expiries.ts UNRELEASED, so moving that row moves this) and re-run `npm run data:art`. If a kit HAS appeared, read its terms firsthand, record the reading beside this one, and only then consider an enumerate-never-construct chain — the generated tiles stay until a licence says otherwise. Never clear this by deleting it."
+  },
+  "tiles": 17,
+  "releasedTiles": 12,
+  "announcedTiles": 5,
+  "files": [
+    {
+      "id": "aang",
+      "name": "Aang",
+      "nation": "air",
+      "accent": "#F7CC4B",
+      "state": "released",
+      "file": "/img/char/aang.webp",
+      "dimensions": "512×683",
+      "bytes": 12972,
+      "sha256": "7b7aa2e8235bf688b4dd4a4fbb88333890bea4f21d318e4d29ca1628bd2de147"
+    },
+    {
+      "id": "zaheer",
+      "name": "Zaheer",
+      "nation": "air",
+      "accent": "#A6A266",
+      "state": "released",
+      "file": "/img/char/zaheer.webp",
+      "dimensions": "512×683",
+      "bytes": 10612,
+      "sha256": "2bf5d426bdc5f52c9421c5ee6dae7a1a311b43a1f25e7a63cfbde3195599676c"
+    },
+    {
+      "id": "katara",
+      "name": "Katara",
+      "nation": "water",
+      "accent": "#62C5EF",
+      "state": "released",
+      "file": "/img/char/katara.webp",
+      "dimensions": "512×683",
+      "bytes": 12310,
+      "sha256": "7357e0906b2394af522fd6c9505e3dc675ead250166d10065bdee60c21f60a41"
+    },
+    {
+      "id": "korra",
+      "name": "Korra",
+      "nation": "water",
+      "accent": "#64A1EE",
+      "state": "released",
+      "file": "/img/char/korra.webp",
+      "dimensions": "512×683",
+      "bytes": 11882,
+      "sha256": "93df1f9dd9f5e6dba10353901019493bb2346c08cccce4846ced5ab33a2457aa"
+    },
+    {
+      "id": "sokka",
+      "name": "Sokka",
+      "nation": "water",
+      "accent": "#ACD1E7",
+      "state": "released",
+      "file": "/img/char/sokka.webp",
+      "dimensions": "512×683",
+      "bytes": 10844,
+      "sha256": "c01c7fd90cecb641d3256212afee1d2581e9cbdbb15db14eaa03d3637e6fbde9"
+    },
+    {
+      "id": "toph",
+      "name": "Toph",
+      "nation": "earth",
+      "accent": "#85CD75",
+      "state": "released",
+      "file": "/img/char/toph.webp",
+      "dimensions": "512×683",
+      "bytes": 10484,
+      "sha256": "b9f4b22d7ec50aded31eb8ef06b839c88fc75c987e43e89c46c80d36c6cbba80"
+    },
+    {
+      "id": "kyoshi",
+      "name": "Kyoshi",
+      "nation": "earth",
+      "accent": "#45A075",
+      "state": "released",
+      "file": "/img/char/kyoshi.webp",
+      "dimensions": "512×683",
+      "bytes": 9746,
+      "sha256": "0835f9c7a243f76e4537206cb0d1c075d30c10d5634d68263094f308735ed2cc"
+    },
+    {
+      "id": "zuko",
+      "name": "Zuko",
+      "nation": "fire",
+      "accent": "#FF9284",
+      "state": "released",
+      "file": "/img/char/zuko.webp",
+      "dimensions": "512×683",
+      "bytes": 11448,
+      "sha256": "65bbaf3bb309b378e5ff32b61f5bbaf05e34e4663000a5c6133e0a85158fdc70"
+    },
+    {
+      "id": "azula",
+      "name": "Azula",
+      "nation": "fire",
+      "accent": "#EE79A1",
+      "state": "released",
+      "file": "/img/char/azula.webp",
+      "dimensions": "512×683",
+      "bytes": 10290,
+      "sha256": "4f43de713bcdf16d580828f61dd6058fd0b261d20df6dfca18f1e1e8ef2d30c7"
+    },
+    {
+      "id": "ozai",
+      "name": "Ozai",
+      "nation": "fire",
+      "accent": "#DE6907",
+      "state": "released",
+      "file": "/img/char/ozai.webp",
+      "dimensions": "512×683",
+      "bytes": 11044,
+      "sha256": "6760a5119d20dca649dc2ed72bdd7947073b5f6b3ff55377fb462e606cfb5fc3"
+    },
+    {
+      "id": "avatar-aang",
+      "name": "Avatar Aang",
+      "nation": "avatar",
+      "accent": "#B7F0FB",
+      "state": "released",
+      "file": "/img/char/avatar-aang.webp",
+      "dimensions": "512×683",
+      "bytes": 15170,
+      "sha256": "efd030b4a529e6679622522068292d9668e9bc6e2a9cc6072681903cabaf4bc3"
+    },
+    {
+      "id": "nightmare-korra",
+      "name": "Nightmare Korra",
+      "nation": "avatar",
+      "accent": "#B28FEF",
+      "state": "released",
+      "file": "/img/char/nightmare-korra.webp",
+      "dimensions": "512×683",
+      "bytes": 14480,
+      "sha256": "414c6842a095b116ba4ff83f5da9e5f2395bf60f86df34b499b699e3c948c2cd"
+    },
+    {
+      "id": "iroh",
+      "name": "Iroh",
+      "nation": "fire",
+      "accent": "#FCB26F",
+      "state": "announced",
+      "file": "/img/char/iroh.webp",
+      "dimensions": "512×683",
+      "bytes": 11450,
+      "sha256": "7b19d46c26376cda44b2676d63bcf78306e7225ac5c8bdf131009f49d9fb7166"
+    },
+    {
+      "id": "ty-lee",
+      "name": "Ty Lee",
+      "nation": "avatar",
+      "accent": "#F59ECF",
+      "state": "announced",
+      "file": "/img/char/ty-lee.webp",
+      "dimensions": "512×683",
+      "bytes": 12656,
+      "sha256": "fb7b5ca6993cd74c6f043d99a462b50804f23c15f7bfe5309a8f8c65bd53456b"
+    },
+    {
+      "id": "lin-beifong",
+      "name": "Lin Beifong",
+      "nation": "earth",
+      "accent": "#A8BEAC",
+      "state": "announced",
+      "file": "/img/char/lin-beifong.webp",
+      "dimensions": "512×683",
+      "bytes": 10466,
+      "sha256": "2f552d5c917c24ae891e67fd33a58151f063ce22fee921f28e5d8d1a9a4c1d76"
+    },
+    {
+      "id": "bolin",
+      "name": "Bolin",
+      "nation": "earth",
+      "accent": "#D3D979",
+      "state": "announced",
+      "file": "/img/char/bolin.webp",
+      "dimensions": "512×683",
+      "bytes": 10546,
+      "sha256": "a77230158c3398c6ae415332844472bd4de853c166f6d4d6b28648edd5af608b"
+    },
+    {
+      "id": "tagah",
+      "name": "Tagah",
+      "nation": "air",
+      "accent": "#F7E6C3",
+      "state": "announced",
+      "file": "/img/char/tagah.webp",
+      "dimensions": "512×683",
+      "bytes": 11138,
+      "sha256": "7f7aeff98c7c7ddc859a597849959118399f2be0eff0dc00b7d51e5e62a78547"
+    }
+  ]
+}

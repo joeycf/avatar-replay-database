@@ -1,0 +1,248 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    # 09:17 UTC daily (odd minute to dodge cron rush; the SEVENTH stagger slot on
+    # the platform, after 2XKO's 06:17, Tekken's 06:47, SF6's 07:17, Tōkon's
+    # 07:47, CotW's 08:17 and Strive's 08:47, so the seven refreshes never
+    # contend).
+    #
+    # This slot was reserved for us by name: Strive's workflow says "NOTE FOR
+    # WHOEVER ADDS GAME SEVEN … the next free slot is 09:17 and the window
+    # becomes 06:00-09:30". Taking it does exactly that.
+    #
+    # NOTE FOR WHOEVER ADDS GAME EIGHT: the pattern is +30 minutes alternating
+    # :17/:47, so the next free slot is 09:47 and the window becomes 06:00-10:00.
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # matches engines.node (the platform's Node policy — STACK.md §1)
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # ── THE ORDER IS scripts/catchup.ts's ORDER, AND IT IS LOAD-BEARING ────
+      #
+      # fetch → index pull → parse → emit, the same sequence `npm run data:catchup`
+      # runs locally and for the same reason (checklist 9c): parse MERGES the
+      # index dump, so a pull that has not happened yet is a pull whose rows are
+      # missing from this morning's records.
+      #
+      # It is written out as separate steps rather than as one `data:catchup`
+      # call because the index pull has to be `continue-on-error` and a step
+      # inside another process cannot be. That is the whole difference between
+      # the two entry points, and it is why both exist.
+      #
+      # WHAT IS NOT HERE, AND WHY. The roster, the character art and the OG card
+      # are not part of the daily run: scripts/characters.ts, scripts/art.ts and
+      # scripts/og.ts only run when the roster or the brand changes.
+      # scripts/roster-check.ts and scripts/patch-check.ts are manual by design
+      # and say so in their own headers ("NETWORK, MANUAL, NEVER IN THE CRON") —
+      # they read the vendor, and a vendor outage is not ours to go red on. Their
+      # home is the workspace-level ../check-rosters.sh and ../check-patches.sh,
+      # which read the `roster-check:` / `patch-check:` trailers those scripts
+      # print. The offline halves of both checks ARE here, after the commit.
+      #
+      # QUOTA. The key is SHARED with six other games' daily crons and a recon
+      # pass on this game exhausted the whole day's allowance once already
+      # (checklist 10j). Nothing in this pipeline calls search.list — the walk is
+      # uploads-playlist pages at 1 unit each plus one videos.list hydration
+      # batch per 50 videos — and scripts/fetch.ts carries a per-channel date
+      # floor keyed to the game's launch (checklist 1b) so a multi-game channel
+      # with thousands of uploads is not re-harvested every morning for the
+      # handful that carry the marker.
+      - name: Fetch channel uploads
+        run: npm run data:fetch
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+
+      # THE INDEX PULL, AND IT IS ALLOWED TO FAIL.
+      #
+      # This is the second half of "the cron never depends on Replay Theater
+      # succeeding", and it is deliberately a step of its own rather than a link
+      # in an && chain — a chain would take the whole refresh down with it, which
+      # is exactly the dependency the split exists to avoid.
+      #
+      # continue-on-error marks the run yellow and moves on. scripts/parse.ts
+      # then finds no dump, carries the committed records against the pin in
+      # data/source-pins.json, and the rest of the day proceeds normally
+      # (checklist 12d). A bad morning upstream costs that morning's new entries;
+      # nothing already committed is at risk, because this intake is add-only.
+      #
+      # LAST OF THE FETCHES, so a failure here cannot cost the channel dumps
+      # already in hand.
+      #
+      # YT_API_KEY is repeated on purpose: `env:` is per step, and requireApiKey()
+      # runs at module load, so without it this exits 1 before it has read
+      # anything.
+      - name: Fetch the tournament index (Replay Theater)
+        continue-on-error: true
+        run: npm run data:theater
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+
+      - name: Parse
+        run: npm run data:parse
+
+      - name: Emit
+        run: npm run data:emit
+
+      - name: Commit if changed
+        run: |
+          git config user.name "avatar-data-refresh[bot]"
+          git config user.email "data-refresh@users.noreply.github.com"
+          # THE FILE LIST IS BY NAME, NEVER `git add data/` (checklist 9b). A
+          # blanket add would stage whatever else happens to be in data/ — a
+          # hand-edited data/overrides.json mid-review, a scratch file — and
+          # commit it as part of an unattended refresh. data/overrides.json is
+          # the one file in that directory a human owns outright (it is where a
+          # verdict lands, scripts/parse.ts step 3), so it is deliberately absent
+          # from this list. Every file below is pipeline-owned:
+          #
+          #   videos.json          the parse substrate
+          #   replays.json         the emitted public contract (also copied to
+          #                        public/data at build time)
+          #   stats.json players.json
+          #                        the emitted registries
+          #   characters.json supports.json
+          #                        the provided registries. The daily run does not
+          #                        rebuild them — scripts/characters.ts is manual —
+          #                        but they are staged so a roster change committed
+          #                        by hand cannot be left half-pushed by a refresh.
+          #                        THE SUPPORT REGISTRY IS A REGISTRY (checklist 13):
+          #                        it is not a second roster, and it is not derived
+          #                        from characters.json either.
+          #   patchGroups.json     derived from scripts/patches.ts by emit; a daily
+          #                        run can legitimately change it the day a patch
+          #                        is added
+          #   summary.json         the apex selector's card payload, and the file
+          #                        that carries the deployed ENGINE TAG for the
+          #                        smoke check below (checklist 10i)
+          #   review-queue.json    parse-regenerated derived state, content-only.
+          #                        Regenerated IN FULL every run, which is why
+          #                        scripts/match-dupes.ts reads it and never writes
+          #                        to it (checklist 2b)
+          #   source-pins.json     the index intake's carry pin. Most runs rebuild
+          #                        and rewrite it, so staging it is required — an
+          #                        unstaged file that DOES change is a change
+          #                        discarded in silence, and this pin is both the
+          #                        source and the target of the carry
+          #   theater-cursor.json  where the index pull remembers how far it read.
+          #                        raw/ is gitignored and CI starts from a fresh
+          #                        checkout, so uncommitted the cursor resets to 0
+          #                        every morning and every run becomes a full sweep
+          #   report.md            the human-readable run report
+          git add \
+            data/videos.json data/replays.json data/stats.json data/players.json \
+            data/characters.json data/supports.json data/patchGroups.json \
+            data/summary.json data/review-queue.json data/source-pins.json \
+            data/theater-cursor.json data/report.md
+          # report.md's "_Generated <timestamp>_" line changes every run; a diff
+          # that is ONLY that line is not a data change — drop it so a no-change
+          # day produces no commit (and no deploy). report.md still ships whenever
+          # anything real changes alongside it, including the day an
+          # "## ⚠ ACTION REQUIRED" block first appears, which is real content.
+          REAL=$(git diff --cached -- data/report.md | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | { grep -vc '^[+-]_Generated ' || true; })
+          if [ "$REAL" -eq 0 ]; then
+            git restore --staged --worktree data/report.md
+          fi
+          # AND THE SAME FOR THE CURSOR. The catalogue takes new entries on days
+          # when nothing of OURS changed, so the highest-seen id rises on runs
+          # that produced no record. Left staged that would retire the
+          # no-change-no-commit rule outright and put a deploy on the calendar
+          # every day forever. Dropped when it is the only thing left, the cursor
+          # simply does not advance on a quiet day and the next run re-reads those
+          # pages; nothing is lost, because the intake is add-only.
+          #
+          # WRITTEN AS AN EMPTINESS TEST ON THE REMAINING STAGED NAMES rather
+          # than `git diff --quiet -- <paths>`: with the cursor filtered out that
+          # path list can be EMPTY, and an empty pathspec means "everything",
+          # which would silently invert the check.
+          OTHERS=$(git diff --cached --name-only | grep -v '^data/theater-cursor.json$' || true)
+          if [ -z "$OTHERS" ]; then
+            git restore --staged --worktree data/theater-cursor.json
+          fi
+          if git diff --cached --quiet; then
+            echo "No data changes — skipping commit."
+            exit 0
+          fi
+          N=$(node -p "require('./data/replays.json').length")
+          git commit -m "data: refresh $(date -u +%F) — ${N} replays"
+          git push
+
+      # Deploy is Vercel's git integration off the push above — there is no
+      # deploy step here to run "after", so this polls until production serves
+      # the digest we just committed. A build still in flight is a WARNING; a
+      # served count outside the collapse guard's own band is a FAILURE, and a
+      # summary.json whose `game` is not ours is a failure immediately (checklist
+      # 10h — the copied-env incident). The guard in parse.ts protects the
+      # repository; this protects what visitors get.
+      #
+      # SMOKE_HOST POINTS AT THE GAME'S OWN HOST UNTIL THE SHELL FLIP. The apex
+      # edge-rewrite of /avatar/* to this project does not exist yet, so the
+      # default (https://replaydatabase.com) reads the shell's 404 on every poll
+      # and the check times out as "never readable" — a red step for a deployment
+      # that is perfectly healthy. Delete this `env:` block on the day the
+      # rewrite ships, and not before.
+      #
+      # Deliberately BEFORE the two checks below: those are designed to go red,
+      # and a red step stops the ones after it.
+      - name: Post-deploy smoke check
+        env:
+          SMOKE_HOST: https://avatar-replay-database.vercel.app
+        run: npm run verify:deployed
+
+      - name: Flag due expiries
+        # Deliberately failing (scripts/expiries.ts). The data has already been
+        # committed and pushed by the step above, so a red run never costs a
+        # refresh — it only makes the pending work impossible to miss.
+        #
+        # THIS IS ALSO THE ROSTER CHECK THE CRON CAN HONESTLY RUN. The vendor-
+        # facing scripts/roster-check.ts is manual; this arm is clock-and-corpus
+        # and nothing upstream can blind it. It carries three live gates on day
+        # one: the six announced-but-unreleased fighters, each with a window
+        # rather than a date the vendor never gave (checklist 11d); the SHIPPED
+        # arm, which scans the committed corpus for a gated fighter's name
+        # appearing in real footage; and the support-table sweep, which is
+        # knowingly two rows short (katara and avatar-aang own two supports each
+        # of the three the vendor states) and must not go quiet about it.
+        #
+        # Clear it by doing the work, NOT by deleting this step.
+        run: npm run data:expiries
+
+      - name: Validate the patch table
+        # `if: always()` because the step above is DESIGNED to go red, and a red
+        # step stops the ones after it. These two gates are independent and both
+        # have to be able to report on the same run.
+        #
+        # OFFLINE, AND CLOCK-DEPENDENT, WHICH IS WHY IT BELONGS IN A CRON rather
+        # than only in `npm run typecheck`. scripts/patches.ts `validate()` reads
+        # TODAY: a row dated in the future, an era left closed, a
+        # CONFIRMED_QUIET_THROUGH that has drifted ahead of the clock — all of
+        # them can go from valid to invalid on a day nobody touched the repo, and
+        # the parse would then file records against a table that is wrong. The
+        # staleness alarm rides here too (STALE_PATCH_DAYS, set clear of this
+        # table's own widest gap), and it is what says out loud that the vendor
+        # has gone quiet long enough to go and look.
+        #
+        # The CONTENT check against the vendor's own feed is scripts/patch-check.ts,
+        # which is manual for the reason in its header. Clear this by fixing the
+        # table, NOT by deleting this step.
+        if: always()
+        run: npm run data:patches

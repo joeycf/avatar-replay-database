@@ -1,0 +1,48 @@
+{
+  "measured": {
+    "atEntryId": 497262,
+    "compared": 0,
+    "unmatched": 95,
+    "segmented": 0,
+    "players": {
+      "both": 0,
+      "one": 0,
+      "neither": 0,
+      "flipped": 0,
+      "placeholder": 0,
+      "handleAffix": {
+        "ours": 0,
+        "theirs": 0,
+        "unrelated": 0
+      }
+    },
+    "characters": {
+      "sides": 0,
+      "agree": 0,
+      "disagree": 0,
+      "cannotWitness": 0,
+      "blindSpot": 0,
+      "unreadable": 0,
+      "overCap": 0
+    },
+    "supports": {
+      "sides": 0,
+      "agree": 0,
+      "disagree": 0,
+      "weSilent": 0,
+      "unreadable": 0,
+      "ownerMismatch": 0
+    },
+    "independence": {
+      "rows": 258,
+      "chapterTranscribed": 69,
+      "titleTranscribed": 62,
+      "partial": 39,
+      "independent": 88,
+      "unjoined": 0,
+      "sameDay": 227
+    }
+  },
+  "blindSpots": [],
+  "disagreements": []
+}

@@ -1395,7 +1395,12 @@ export const CHANNELS: ChannelConfig[] = [
       since: '2026-09-07',
       reason:
         'three records in 68 minutes on 2026-09-07 and nothing since; its Avatar output is stream VODs',
-      records: -1,
+      // SET 2026-09-18 from this pipeline's own parse of raw/drewShoto.json, per
+      // the shipping order above: `npm run data:catchup` refused the -1
+      // placeholder, the dump parsed to 3 records, and 3 is what is pinned. It
+      // matches the recon's offline figure, which is a check rather than the
+      // source.
+      records: 3,
     },
     slotOrder: 'handle-outside',
     gateMode: 'title',

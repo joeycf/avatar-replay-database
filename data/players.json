@@ -1,1 +1,1557 @@
-[]
+[
+  {
+    "id": "05mario",
+    "handle": "05Mario",
+    "extra": {
+      "aliases": [
+        "05mario"
+      ]
+    }
+  },
+  {
+    "id": "1600axthon",
+    "handle": "1600Axthon"
+  },
+  {
+    "id": "1999-honda-civic",
+    "handle": "1999 Honda Civic"
+  },
+  {
+    "id": "2limited",
+    "handle": "2Limited"
+  },
+  {
+    "id": "76darhk",
+    "handle": "76Darhk"
+  },
+  {
+    "id": "aaronx3",
+    "handle": "Aaronx3"
+  },
+  {
+    "id": "aces-high",
+    "handle": "Aces_High"
+  },
+  {
+    "id": "aeduo",
+    "handle": "Aeduo"
+  },
+  {
+    "id": "aegis",
+    "handle": "Aegis"
+  },
+  {
+    "id": "afrorevoler",
+    "handle": "AfroRevoler"
+  },
+  {
+    "id": "akendor",
+    "handle": "Akendor"
+  },
+  {
+    "id": "akuadynasty",
+    "handle": "Akuadynasty"
+  },
+  {
+    "id": "al-pigone",
+    "handle": "AL Pigone"
+  },
+  {
+    "id": "al-pigone-bodegacat",
+    "handle": "Al Pigone/BodegaCat"
+  },
+  {
+    "id": "an11-mo",
+    "handle": "An11-_-MO"
+  },
+  {
+    "id": "arbiter",
+    "handle": "Arbiter"
+  },
+  {
+    "id": "archer-rules",
+    "handle": "Archer Rules"
+  },
+  {
+    "id": "archit3ct",
+    "handle": "Archit3ct"
+  },
+  {
+    "id": "architech",
+    "handle": "Architech"
+  },
+  {
+    "id": "argun0",
+    "handle": "Argun0"
+  },
+  {
+    "id": "arimanne",
+    "handle": "AriManne"
+  },
+  {
+    "id": "arin-karin",
+    "handle": "ARIN KARIN"
+  },
+  {
+    "id": "arinkarin",
+    "handle": "ArinKarin",
+    "extra": {
+      "aliases": [
+        "Arinkarin"
+      ]
+    }
+  },
+  {
+    "id": "ash-rao",
+    "handle": "Ash Rao"
+  },
+  {
+    "id": "atma",
+    "handle": "Atma"
+  },
+  {
+    "id": "avaunt",
+    "handle": "Avaunt"
+  },
+  {
+    "id": "aviaan",
+    "handle": "Aviaan"
+  },
+  {
+    "id": "avianzebra",
+    "handle": "AvianZebra"
+  },
+  {
+    "id": "awanderingtanuki",
+    "handle": "AWanderingTanuki"
+  },
+  {
+    "id": "ayyolado",
+    "handle": "AyYoLado"
+  },
+  {
+    "id": "bar-barxii",
+    "handle": "bar_barXII"
+  },
+  {
+    "id": "barbarxii",
+    "handle": "BarBarXII"
+  },
+  {
+    "id": "batmanity",
+    "handle": "Batmanity"
+  },
+  {
+    "id": "batmanity343",
+    "handle": "Batmanity343"
+  },
+  {
+    "id": "beartoe",
+    "handle": "BearToe"
+  },
+  {
+    "id": "bigbagmill",
+    "handle": "BigBagMill"
+  },
+  {
+    "id": "bigblack",
+    "handle": "BigBlack"
+  },
+  {
+    "id": "bigbuttjackson",
+    "handle": "BigButtJackson"
+  },
+  {
+    "id": "biosludge-dispenser",
+    "handle": "Biosludge Dispenser"
+  },
+  {
+    "id": "biscuit",
+    "handle": "Biscuit"
+  },
+  {
+    "id": "bloo",
+    "handle": "Bloo"
+  },
+  {
+    "id": "boaventura345",
+    "handle": "Boaventura345"
+  },
+  {
+    "id": "bob1299",
+    "handle": "Bob1299"
+  },
+  {
+    "id": "boltstruck",
+    "handle": "Boltstruck"
+  },
+  {
+    "id": "boobusmcscoobus",
+    "handle": "BoobusMcScoobus"
+  },
+  {
+    "id": "boogie",
+    "handle": "Boogie"
+  },
+  {
+    "id": "bootyeatinbandit",
+    "handle": "Bootyeatinbandit"
+  },
+  {
+    "id": "brian-f",
+    "handle": "Brian F"
+  },
+  {
+    "id": "bukongwukong",
+    "handle": "BukongWukong"
+  },
+  {
+    "id": "busta",
+    "handle": "Busta"
+  },
+  {
+    "id": "buyachushun",
+    "handle": "BUYACHUSHUN"
+  },
+  {
+    "id": "buyacushun",
+    "handle": "Buyacushun"
+  },
+  {
+    "id": "cesulion",
+    "handle": "Cesulion"
+  },
+  {
+    "id": "chichionlyfans",
+    "handle": "ChiChiOnlyFans"
+  },
+  {
+    "id": "chimpo383",
+    "handle": "Chimpo383"
+  },
+  {
+    "id": "christm",
+    "handle": "Chris™"
+  },
+  {
+    "id": "chunugoli",
+    "handle": "Chunugoli"
+  },
+  {
+    "id": "chuu",
+    "handle": "CHUU"
+  },
+  {
+    "id": "cincoswim",
+    "handle": "CincoSwim"
+  },
+  {
+    "id": "cipher",
+    "handle": "Cipher"
+  },
+  {
+    "id": "citrusdestroyer",
+    "handle": "CitrusDestroyer"
+  },
+  {
+    "id": "cjallen",
+    "handle": "cjallen"
+  },
+  {
+    "id": "click",
+    "handle": "Click"
+  },
+  {
+    "id": "closingregent",
+    "handle": "ClosingRegent"
+  },
+  {
+    "id": "coke",
+    "handle": "Coke"
+  },
+  {
+    "id": "coolcalmsam",
+    "handle": "coolcalmsam"
+  },
+  {
+    "id": "cow",
+    "handle": "Cow"
+  },
+  {
+    "id": "cwang-red",
+    "handle": "CWang RED"
+  },
+  {
+    "id": "dadongus",
+    "handle": "DADONGUS"
+  },
+  {
+    "id": "dai",
+    "handle": "Dai"
+  },
+  {
+    "id": "darkwater72",
+    "handle": "Darkwater72"
+  },
+  {
+    "id": "data-xigbar-in-real-life",
+    "handle": "Data Xigbar In Real Life"
+  },
+  {
+    "id": "dbzformers",
+    "handle": "DBZFORMERS"
+  },
+  {
+    "id": "ddive",
+    "handle": "Ddive"
+  },
+  {
+    "id": "deadium",
+    "handle": "Deadium"
+  },
+  {
+    "id": "deerskin",
+    "handle": "Deerskin"
+  },
+  {
+    "id": "definest",
+    "handle": "Definest"
+  },
+  {
+    "id": "demonjay",
+    "handle": "Demonjay"
+  },
+  {
+    "id": "detective-wolf",
+    "handle": "Detective Wolf"
+  },
+  {
+    "id": "diaphone",
+    "handle": "Diaphone"
+  },
+  {
+    "id": "dinguspunch",
+    "handle": "DingusPunch"
+  },
+  {
+    "id": "diverdans",
+    "handle": "DiverDans"
+  },
+  {
+    "id": "dkd-abysmal",
+    "handle": "DKD_Abysmal"
+  },
+  {
+    "id": "dlz",
+    "handle": "DLZ"
+  },
+  {
+    "id": "dmon",
+    "handle": "dmon"
+  },
+  {
+    "id": "domitto",
+    "handle": "Domitto"
+  },
+  {
+    "id": "donnandwarf",
+    "handle": "DonnanDwarf"
+  },
+  {
+    "id": "drewski-27",
+    "handle": "Drewski-27"
+  },
+  {
+    "id": "duburu",
+    "handle": "Duburu"
+  },
+  {
+    "id": "duck",
+    "handle": "Duck"
+  },
+  {
+    "id": "eccafu",
+    "handle": "EcCaFU"
+  },
+  {
+    "id": "eggbo",
+    "handle": "eggbo"
+  },
+  {
+    "id": "eggyolkyummy",
+    "handle": "EggYolkYummy"
+  },
+  {
+    "id": "elfry",
+    "handle": "Elfry"
+  },
+  {
+    "id": "emanated",
+    "handle": "Emanated"
+  },
+  {
+    "id": "emi-luemi",
+    "handle": "Emi_Luemi"
+  },
+  {
+    "id": "emoscoobydoo",
+    "handle": "EmoScoobyDoo"
+  },
+  {
+    "id": "endrsp",
+    "handle": "EndrSP"
+  },
+  {
+    "id": "etlibra",
+    "handle": "ETlibra"
+  },
+  {
+    "id": "evilburito",
+    "handle": "EvilBurito"
+  },
+  {
+    "id": "evilburrito",
+    "handle": "EvilBurrito"
+  },
+  {
+    "id": "exltd",
+    "handle": "Exltd"
+  },
+  {
+    "id": "f4b-4n",
+    "handle": "F4B!4N"
+  },
+  {
+    "id": "faltimux",
+    "handle": "Faltimux"
+  },
+  {
+    "id": "farfall",
+    "handle": "Farfall"
+  },
+  {
+    "id": "faulty",
+    "handle": "Faulty"
+  },
+  {
+    "id": "feral-hoe-hours",
+    "handle": "Feral Hoe Hours"
+  },
+  {
+    "id": "fish",
+    "handle": "Fish"
+  },
+  {
+    "id": "flank",
+    "handle": "Flank"
+  },
+  {
+    "id": "flankroast",
+    "handle": "Flankroast"
+  },
+  {
+    "id": "fluddsan",
+    "handle": "FluddSan"
+  },
+  {
+    "id": "foghig",
+    "handle": "Foghig"
+  },
+  {
+    "id": "folkena",
+    "handle": "Folkena"
+  },
+  {
+    "id": "fool",
+    "handle": "Fool"
+  },
+  {
+    "id": "foom",
+    "handle": "Foom"
+  },
+  {
+    "id": "fredminghini",
+    "handle": "fredminghini"
+  },
+  {
+    "id": "fuerte",
+    "handle": "Fuerte"
+  },
+  {
+    "id": "giga-caras",
+    "handle": "Giga Caras"
+  },
+  {
+    "id": "ginntootonic",
+    "handle": "Ginntootonic",
+    "extra": {
+      "aliases": [
+        "GinnTooTonic"
+      ]
+    }
+  },
+  {
+    "id": "ginochaviano",
+    "handle": "ginochaviano"
+  },
+  {
+    "id": "girls-knight",
+    "handle": "girls knight"
+  },
+  {
+    "id": "gonemad",
+    "handle": "Gonemad",
+    "extra": {
+      "aliases": [
+        "GoneMad"
+      ]
+    }
+  },
+  {
+    "id": "gravyjones",
+    "handle": "gravyjones"
+  },
+  {
+    "id": "graycapedhero",
+    "handle": "GrayCapedHero",
+    "extra": {
+      "aliases": [
+        "Graycapedhero"
+      ]
+    }
+  },
+  {
+    "id": "guttercat",
+    "handle": "GutterCat"
+  },
+  {
+    "id": "guy",
+    "handle": "GUY"
+  },
+  {
+    "id": "gwynstylish",
+    "handle": "GwynStylish"
+  },
+  {
+    "id": "hallowhavyn",
+    "handle": "hallowhavyn"
+  },
+  {
+    "id": "hashtag0ne",
+    "handle": "Hashtag0ne"
+  },
+  {
+    "id": "hatsukei",
+    "handle": "Hatsukei"
+  },
+  {
+    "id": "haven",
+    "handle": "haven"
+  },
+  {
+    "id": "havok",
+    "handle": "Havok"
+  },
+  {
+    "id": "hexanoid",
+    "handle": "HexaNoid"
+  },
+  {
+    "id": "hikari",
+    "handle": "Hikari"
+  },
+  {
+    "id": "hldougllas",
+    "handle": "hldougllas"
+  },
+  {
+    "id": "hoc-faulty",
+    "handle": "HOC Faulty"
+  },
+  {
+    "id": "holdbacktobark",
+    "handle": "HoldBackToBark"
+  },
+  {
+    "id": "honeybee",
+    "handle": "HoneyBee"
+  },
+  {
+    "id": "hynes",
+    "handle": "Hynes"
+  },
+  {
+    "id": "hyperhico",
+    "handle": "hyperHICO"
+  },
+  {
+    "id": "icebound",
+    "handle": "Icebound"
+  },
+  {
+    "id": "icontrol",
+    "handle": "iControl",
+    "extra": {
+      "aliases": [
+        "icontrol"
+      ]
+    }
+  },
+  {
+    "id": "idiom",
+    "handle": "Idiom"
+  },
+  {
+    "id": "idunknown",
+    "handle": "IDUnknown"
+  },
+  {
+    "id": "infinite",
+    "handle": "Infinite"
+  },
+  {
+    "id": "j-valentine",
+    "handle": "J.Valentine"
+  },
+  {
+    "id": "jack-the-bucket",
+    "handle": "Jack The Bucket"
+  },
+  {
+    "id": "jackthebucket",
+    "handle": "Jackthebucket",
+    "extra": {
+      "aliases": [
+        "JackTheBucket",
+        "jackthebucket"
+      ]
+    }
+  },
+  {
+    "id": "jaey",
+    "handle": "Jaey"
+  },
+  {
+    "id": "jessekumiko",
+    "handle": "Jessekumiko"
+  },
+  {
+    "id": "jester",
+    "handle": "Jester"
+  },
+  {
+    "id": "jiga",
+    "handle": "Jiga"
+  },
+  {
+    "id": "jiggynyc",
+    "handle": "JiggyNYC"
+  },
+  {
+    "id": "joe-mama",
+    "handle": "JOE MAMA"
+  },
+  {
+    "id": "jrome",
+    "handle": "Jrome"
+  },
+  {
+    "id": "jundo",
+    "handle": "Jundo"
+  },
+  {
+    "id": "justnasty",
+    "handle": "JustNasty"
+  },
+  {
+    "id": "k7",
+    "handle": "K7"
+  },
+  {
+    "id": "k7-showoff",
+    "handle": "K7 Showoff"
+  },
+  {
+    "id": "kaiji",
+    "handle": "Kaiji"
+  },
+  {
+    "id": "kang",
+    "handle": "KANG"
+  },
+  {
+    "id": "karma",
+    "handle": "Karma"
+  },
+  {
+    "id": "karmav112",
+    "handle": "Karmav112"
+  },
+  {
+    "id": "kbzon",
+    "handle": "Kbzon"
+  },
+  {
+    "id": "kenecrypt",
+    "handle": "Kenecrypt"
+  },
+  {
+    "id": "kilo",
+    "handle": "Kilo"
+  },
+  {
+    "id": "kingkc",
+    "handle": "KingKC"
+  },
+  {
+    "id": "kingofninjas",
+    "handle": "KingOfNinjas"
+  },
+  {
+    "id": "kite",
+    "handle": "Kite"
+  },
+  {
+    "id": "kogasan09",
+    "handle": "kogasan09"
+  },
+  {
+    "id": "kolibri",
+    "handle": "Kolibri"
+  },
+  {
+    "id": "koustics",
+    "handle": "Koustics"
+  },
+  {
+    "id": "kovac",
+    "handle": "Kovac"
+  },
+  {
+    "id": "kreation",
+    "handle": "Kreation"
+  },
+  {
+    "id": "kudaytaa",
+    "handle": "Kudaytaa"
+  },
+  {
+    "id": "kusa",
+    "handle": "Kusa"
+  },
+  {
+    "id": "l-d",
+    "handle": "L.D"
+  },
+  {
+    "id": "labyrinthz",
+    "handle": "LabyrinthZ"
+  },
+  {
+    "id": "lakeryy",
+    "handle": "Lakeryy"
+  },
+  {
+    "id": "laowping",
+    "handle": "LaowPing"
+  },
+  {
+    "id": "lav",
+    "handle": "Lav"
+  },
+  {
+    "id": "ld",
+    "handle": "LD"
+  },
+  {
+    "id": "ldwells",
+    "handle": "LDWells"
+  },
+  {
+    "id": "lemaynevent",
+    "handle": "LeMaynEvent"
+  },
+  {
+    "id": "leonidas-daimon",
+    "handle": "Leonidas Daimon"
+  },
+  {
+    "id": "lethalpop",
+    "handle": "LethalPop"
+  },
+  {
+    "id": "loading",
+    "handle": "Loading"
+  },
+  {
+    "id": "lordzaraki",
+    "handle": "LordZaraki"
+  },
+  {
+    "id": "lorenzo",
+    "handle": "Lorenzo"
+  },
+  {
+    "id": "lou-minadi",
+    "handle": "Lou Minadi"
+  },
+  {
+    "id": "lou-minaudi",
+    "handle": "Lou Minaudi"
+  },
+  {
+    "id": "magma",
+    "handle": "Magma"
+  },
+  {
+    "id": "makpls",
+    "handle": "Makpls"
+  },
+  {
+    "id": "mark-fafnir",
+    "handle": "Mark Fafnir"
+  },
+  {
+    "id": "marko-b",
+    "handle": "Marko B"
+  },
+  {
+    "id": "marsspitsbars",
+    "handle": "MarsSpitsBars",
+    "extra": {
+      "aliases": [
+        "Marsspitsbars"
+      ]
+    }
+  },
+  {
+    "id": "mattchu",
+    "handle": "Mattchu"
+  },
+  {
+    "id": "maul",
+    "handle": "Maul"
+  },
+  {
+    "id": "maxninja",
+    "handle": "Maxninja"
+  },
+  {
+    "id": "maxx-sev",
+    "handle": "Maxx.Sev",
+    "extra": {
+      "aliases": [
+        "Maxx.sev",
+        "Maxx.SEV"
+      ]
+    }
+  },
+  {
+    "id": "megaplox",
+    "handle": "MegaPlox"
+  },
+  {
+    "id": "megaspeaker",
+    "handle": "Megaspeaker"
+  },
+  {
+    "id": "menace",
+    "handle": "Menace"
+  },
+  {
+    "id": "mightyyahikottv",
+    "handle": "Mightyyahikottv"
+  },
+  {
+    "id": "mikeand1ke",
+    "handle": "Mikeand1ke"
+  },
+  {
+    "id": "mikey",
+    "handle": "Mikey"
+  },
+  {
+    "id": "mile-man",
+    "handle": "Mile_Man"
+  },
+  {
+    "id": "miller2b",
+    "handle": "Miller2B"
+  },
+  {
+    "id": "mirrah",
+    "handle": "Mirrah"
+  },
+  {
+    "id": "missedfgc",
+    "handle": "MissedFGC"
+  },
+  {
+    "id": "modren",
+    "handle": "Modren"
+  },
+  {
+    "id": "moldynugget",
+    "handle": "moldynugget"
+  },
+  {
+    "id": "morflow",
+    "handle": "Morflow"
+  },
+  {
+    "id": "mpgame",
+    "handle": "MPGame"
+  },
+  {
+    "id": "mr-gentleman",
+    "handle": "Mr Gentleman"
+  },
+  {
+    "id": "mrfuk",
+    "handle": "MrFuk"
+  },
+  {
+    "id": "mrwigyea",
+    "handle": "MrWigyea"
+  },
+  {
+    "id": "mt-zulu-bbc",
+    "handle": "MT. ZULU BBC"
+  },
+  {
+    "id": "murtuoso",
+    "handle": "Murtuoso"
+  },
+  {
+    "id": "my-daddy",
+    "handle": "My Daddy"
+  },
+  {
+    "id": "mysteryracer21",
+    "handle": "MysteryRacer21"
+  },
+  {
+    "id": "namedroops",
+    "handle": "Namedroops"
+  },
+  {
+    "id": "namredoops",
+    "handle": "namredoops"
+  },
+  {
+    "id": "narath",
+    "handle": "Narath"
+  },
+  {
+    "id": "natsu",
+    "handle": "Natsu"
+  },
+  {
+    "id": "ncv",
+    "handle": "ncv",
+    "extra": {
+      "aliases": [
+        "NCV"
+      ]
+    }
+  },
+  {
+    "id": "negarepear",
+    "handle": "Negarepear"
+  },
+  {
+    "id": "neonish",
+    "handle": "Neonish"
+  },
+  {
+    "id": "nerdnerdxii",
+    "handle": "NerdNerdXII"
+  },
+  {
+    "id": "neverfearheok",
+    "handle": "neverfearheok"
+  },
+  {
+    "id": "nicky",
+    "handle": "Nicky",
+    "extra": {
+      "aliases": [
+        "nicky"
+      ]
+    }
+  },
+  {
+    "id": "normal-ms",
+    "handle": "NORMAL-MS"
+  },
+  {
+    "id": "notalice",
+    "handle": "NotAlice"
+  },
+  {
+    "id": "nychris-g",
+    "handle": "NYCHRIS G"
+  },
+  {
+    "id": "obassasin1",
+    "handle": "OBAssasin1"
+  },
+  {
+    "id": "octozed",
+    "handle": "OctoZed"
+  },
+  {
+    "id": "onedrive-isnt-signed-in",
+    "handle": "OneDrive Isnt Signed In"
+  },
+  {
+    "id": "onghieu",
+    "handle": "OngHieu"
+  },
+  {
+    "id": "onizeme",
+    "handle": "Onizeme"
+  },
+  {
+    "id": "onset",
+    "handle": "onset!"
+  },
+  {
+    "id": "paige",
+    "handle": "Paige"
+  },
+  {
+    "id": "pat",
+    "handle": "Pat"
+  },
+  {
+    "id": "pg13",
+    "handle": "PG13"
+  },
+  {
+    "id": "phoenixwrong",
+    "handle": "PhoenixWrong"
+  },
+  {
+    "id": "phoxx",
+    "handle": "Phoxx"
+  },
+  {
+    "id": "phuchi",
+    "handle": "Phuchi"
+  },
+  {
+    "id": "pinksquidz",
+    "handle": "PinkSquidz"
+  },
+  {
+    "id": "pitsos",
+    "handle": "Pitsos"
+  },
+  {
+    "id": "plisno",
+    "handle": "Plisno"
+  },
+  {
+    "id": "poklazer",
+    "handle": "PokLazer"
+  },
+  {
+    "id": "porklazer",
+    "handle": "porklazer"
+  },
+  {
+    "id": "precho",
+    "handle": "Precho"
+  },
+  {
+    "id": "princess-slim",
+    "handle": "Princess Slim"
+  },
+  {
+    "id": "princessslim",
+    "handle": "PrincessSlim"
+  },
+  {
+    "id": "prodoublesushi",
+    "handle": "ProDoubleSushi",
+    "extra": {
+      "aliases": [
+        "Prodoublesushi"
+      ]
+    }
+  },
+  {
+    "id": "psyf",
+    "handle": "PsyF"
+  },
+  {
+    "id": "puddin",
+    "handle": "Puddin'"
+  },
+  {
+    "id": "purple",
+    "handle": "Purple"
+  },
+  {
+    "id": "raymond-buller",
+    "handle": "Raymond Buller"
+  },
+  {
+    "id": "realtimmythicc",
+    "handle": "realtimmythicc"
+  },
+  {
+    "id": "receita",
+    "handle": "Receita"
+  },
+  {
+    "id": "red",
+    "handle": "RED"
+  },
+  {
+    "id": "redblade",
+    "handle": "Redblade"
+  },
+  {
+    "id": "rekrp",
+    "handle": "RekRP"
+  },
+  {
+    "id": "reverendbaka",
+    "handle": "ReverendBaka"
+  },
+  {
+    "id": "revivetheman",
+    "handle": "ReviveTheMan"
+  },
+  {
+    "id": "riddly",
+    "handle": "Riddly"
+  },
+  {
+    "id": "ridleyprime",
+    "handle": "RidleyPrime"
+  },
+  {
+    "id": "roborush",
+    "handle": "RoboRush"
+  },
+  {
+    "id": "rodrigoarispe20",
+    "handle": "rodrigoarispe20"
+  },
+  {
+    "id": "rood",
+    "handle": "Rood"
+  },
+  {
+    "id": "rumanuma",
+    "handle": "RumaNuma"
+  },
+  {
+    "id": "ruunyah",
+    "handle": "Ruunyah"
+  },
+  {
+    "id": "rystek",
+    "handle": "Rystek"
+  },
+  {
+    "id": "ryuki",
+    "handle": "Ryuki"
+  },
+  {
+    "id": "rzeta",
+    "handle": "rzeta"
+  },
+  {
+    "id": "s-cero",
+    "handle": "S_Cero"
+  },
+  {
+    "id": "sachio",
+    "handle": "Sachio"
+  },
+  {
+    "id": "sageartz",
+    "handle": "SageArtz"
+  },
+  {
+    "id": "sanay",
+    "handle": "Sanay"
+  },
+  {
+    "id": "saxophone",
+    "handle": "Saxophone"
+  },
+  {
+    "id": "saxxie",
+    "handle": "Saxxie"
+  },
+  {
+    "id": "schoolbus",
+    "handle": "SchoolBus"
+  },
+  {
+    "id": "scythe",
+    "handle": "Scythe"
+  },
+  {
+    "id": "scytheldn",
+    "handle": "ScytheLDN"
+  },
+  {
+    "id": "seven",
+    "handle": "Seven"
+  },
+  {
+    "id": "shielddevil",
+    "handle": "ShieldDevil"
+  },
+  {
+    "id": "shostakovich",
+    "handle": "Shostakovich"
+  },
+  {
+    "id": "shunitsu",
+    "handle": "Shunitsu"
+  },
+  {
+    "id": "siege",
+    "handle": "Siege"
+  },
+  {
+    "id": "skeet",
+    "handle": "Skeet"
+  },
+  {
+    "id": "slay",
+    "handle": "Slay"
+  },
+  {
+    "id": "sleepy-nipa",
+    "handle": "Sleepy Nipa"
+  },
+  {
+    "id": "sleepysnax",
+    "handle": "[sleepysnax]"
+  },
+  {
+    "id": "smitty",
+    "handle": "Smitty"
+  },
+  {
+    "id": "sn3akuni",
+    "handle": "SN3AKUNI"
+  },
+  {
+    "id": "snake-eyez",
+    "handle": "Snake Eyez"
+  },
+  {
+    "id": "snkz",
+    "handle": "Snkz"
+  },
+  {
+    "id": "sno",
+    "handle": "Sno"
+  },
+  {
+    "id": "solid-pajahands",
+    "handle": "Solid PajaHands"
+  },
+  {
+    "id": "son-dula",
+    "handle": "Son-Dula"
+  },
+  {
+    "id": "sonicfox",
+    "handle": "SonicFox"
+  },
+  {
+    "id": "soz-tofuboi",
+    "handle": "SOZ tofuboi"
+  },
+  {
+    "id": "sp1derpunk757",
+    "handle": "Sp1derpunk757"
+  },
+  {
+    "id": "space",
+    "handle": "Space"
+  },
+  {
+    "id": "splashnyc",
+    "handle": "SplashNYC"
+  },
+  {
+    "id": "spooder",
+    "handle": "Spooder"
+  },
+  {
+    "id": "stanmanpan",
+    "handle": "stanmanpan"
+  },
+  {
+    "id": "starks",
+    "handle": "Starks"
+  },
+  {
+    "id": "stedman-slick",
+    "handle": "Stedman Slick"
+  },
+  {
+    "id": "still",
+    "handle": "STiLL",
+    "extra": {
+      "aliases": [
+        "STILL",
+        "StiLL"
+      ]
+    }
+  },
+  {
+    "id": "storm179",
+    "handle": "STORM179"
+  },
+  {
+    "id": "super-x-silver",
+    "handle": "Super-X-SIlver"
+  },
+  {
+    "id": "suprise-me",
+    "handle": "Suprise Me"
+  },
+  {
+    "id": "swagmastahhh",
+    "handle": "SwagMastahhh"
+  },
+  {
+    "id": "sydend",
+    "handle": "Sydend"
+  },
+  {
+    "id": "synnove",
+    "handle": "Synnove"
+  },
+  {
+    "id": "t0ni",
+    "handle": "T0ni"
+  },
+  {
+    "id": "tasker",
+    "handle": "Tasker"
+  },
+  {
+    "id": "teo1029",
+    "handle": "teo1029"
+  },
+  {
+    "id": "testmyluck",
+    "handle": "TestMyLuck",
+    "extra": {
+      "aliases": [
+        "Testmyluck"
+      ]
+    }
+  },
+  {
+    "id": "tetsuga-ar",
+    "handle": "Tetsuga-Ar"
+  },
+  {
+    "id": "the-painted-lady",
+    "handle": "The Painted Lady"
+  },
+  {
+    "id": "thearm",
+    "handle": "TheArm"
+  },
+  {
+    "id": "thefallenone718",
+    "handle": "TheFallenOne718"
+  },
+  {
+    "id": "thesaviorzombie",
+    "handle": "TheSaviorZombie"
+  },
+  {
+    "id": "theziadguy",
+    "handle": "TheZiadGuy"
+  },
+  {
+    "id": "tobirjay",
+    "handle": "TobiRjay"
+  },
+  {
+    "id": "toonie03",
+    "handle": "Toonie03"
+  },
+  {
+    "id": "towito",
+    "handle": "Towito"
+  },
+  {
+    "id": "treeman",
+    "handle": "Treeman"
+  },
+  {
+    "id": "tutururu",
+    "handle": "Tutururu"
+  },
+  {
+    "id": "twinkletoes",
+    "handle": "TwinkleToes"
+  },
+  {
+    "id": "twotoestoto",
+    "handle": "twotoestoto"
+  },
+  {
+    "id": "unijorse",
+    "handle": "unijorse"
+  },
+  {
+    "id": "unsafeonhit",
+    "handle": "UnsafeonHit",
+    "extra": {
+      "aliases": [
+        "UnsafeOnHit",
+        "Unsafeonhit"
+      ]
+    }
+  },
+  {
+    "id": "v",
+    "handle": "V"
+  },
+  {
+    "id": "valcion",
+    "handle": "Valcion"
+  },
+  {
+    "id": "valiant",
+    "handle": "Valiant"
+  },
+  {
+    "id": "versintos",
+    "handle": "Versintos"
+  },
+  {
+    "id": "vickiviper",
+    "handle": "Vickiviper"
+  },
+  {
+    "id": "vik-jagi",
+    "handle": "Vik/Jagi"
+  },
+  {
+    "id": "vini",
+    "handle": "vini"
+  },
+  {
+    "id": "vivi",
+    "handle": "Vivi"
+  },
+  {
+    "id": "walkemdownmarko",
+    "handle": "WalkemdownMarko"
+  },
+  {
+    "id": "weebmaru",
+    "handle": "Weebmaru"
+  },
+  {
+    "id": "whim",
+    "handle": "Whim"
+  },
+  {
+    "id": "wubbiq",
+    "handle": "wubbiq"
+  },
+  {
+    "id": "wynter",
+    "handle": "Wynter"
+  },
+  {
+    "id": "xcali",
+    "handle": "XCali"
+  },
+  {
+    "id": "xcaliburbladez",
+    "handle": "xcaliburbladez",
+    "extra": {
+      "aliases": [
+        "XCaliburBladez",
+        "XcaliburBladez",
+        "XCaliburbladez"
+      ]
+    }
+  },
+  {
+    "id": "xinigami",
+    "handle": "Xinigami"
+  },
+  {
+    "id": "xxpurple-pikminxx",
+    "handle": "xXPurple PikminxX"
+  },
+  {
+    "id": "xyned",
+    "handle": "Xyned"
+  },
+  {
+    "id": "y-huss",
+    "handle": "y-huss"
+  },
+  {
+    "id": "yaboidre",
+    "handle": "YaBoiDre"
+  },
+  {
+    "id": "yaboydre",
+    "handle": "YaBoyDre"
+  },
+  {
+    "id": "yata",
+    "handle": "Yata"
+  },
+  {
+    "id": "yatagarasuwu",
+    "handle": "Yatagarasuwu"
+  },
+  {
+    "id": "zachiderp",
+    "handle": "Zachiderp"
+  },
+  {
+    "id": "zaidi",
+    "handle": "Zaidi"
+  },
+  {
+    "id": "zane",
+    "handle": "Zane",
+    "extra": {
+      "aliases": [
+        "ZANE"
+      ]
+    }
+  },
+  {
+    "id": "zanefgc",
+    "handle": "ZaneFGC"
+  },
+  {
+    "id": "zapoke",
+    "handle": "Zapoke"
+  },
+  {
+    "id": "zee",
+    "handle": "Zee"
+  },
+  {
+    "id": "ziad",
+    "handle": "Ziad"
+  }
+]

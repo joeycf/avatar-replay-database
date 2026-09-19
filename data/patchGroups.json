@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "S1",
+    "label": "Since launch",
+    "note": "The vendor has declared no balance season. One era, opening on the launch build.",
+    "children": [
+      {
+        "id": "2026-07-23",
+        "note": "Launch build — Windows, PS5 and Switch"
+      },
+      {
+        "id": "2026-07-29",
+        "note": "Samurai Appa support skin, keyboard remapping, fixes"
+      },
+      {
+        "id": "2026-08-06",
+        "note": "Replay Takeover, Steam/PS5 crossplay, 7 fighters changed"
+      },
+      {
+        "id": "2026-09-02",
+        "label": "Patch 2.5",
+        "note": "Ranked Mode 1.0, input buffer, damage-scaling fix, 9 fighters changed"
+      }
+    ]
+  }
+]
