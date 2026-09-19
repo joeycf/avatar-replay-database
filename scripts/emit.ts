@@ -282,8 +282,17 @@ function assertSupportsAreNotCharacters(
  * `videoId` and `startSeconds` are GUARDED TOGETHER (checklist 12b): guarding on
  * `startSeconds` alone strips `videoId` from every offset-zero record, and five
  * multi-row VODs here open at t=0 — a segment at zero is still a segment.
- * `startSeconds: 0` itself is not emitted because absent already means zero to
- * the engine, so emitting it would add a key per record that says nothing.
+ *
+ * AND `startSeconds: 0` IS EMITTED, which reverses this file's first answer.
+ * The original guard was `v.startSeconds ? …`, on the reasoning that absent
+ * already means zero to the player so the key would say nothing. It says
+ * something: the five `@0` records then carried a COMPOSITE id and no offset
+ * field, so the published record claimed to be a segment in its id and a whole
+ * video in its fields. scripts/e2e.ts caught it as `132 composite ids vs 127
+ * segments`. The id and the fields are one statement about what the record IS,
+ * and a reader asking "is this a segment" must not get two answers — which is
+ * checklist 12b's own failure one level up. A truthiness test on a numeric
+ * field that can legitimately be 0 is the bug, not the key.
  */
 const toReplay = (v: MatchVideo): EmittedReplay => {
   const supports: RecordSupports = [v.sides[0].support ?? null, v.sides[1].support ?? null];
@@ -300,7 +309,10 @@ const toReplay = (v: MatchVideo): EmittedReplay => {
     ...(v.viewCount ? { views: v.viewCount } : {}),
     ...(v.durationSec ? { durationSec: v.durationSec } : {}),
     ...(v.videoId
-      ? { videoId: v.videoId, ...(v.startSeconds ? { startSeconds: v.startSeconds } : {}) }
+      ? {
+          videoId: v.videoId,
+          ...(v.startSeconds !== undefined ? { startSeconds: v.startSeconds } : {}),
+        }
       : {}),
     // Pass-through, not a decision. Whether a label is meaningful is a question
     // only the builder that read it can answer, and parse-finish.ts's theater
