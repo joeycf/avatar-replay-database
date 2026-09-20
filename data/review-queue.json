@@ -875,6 +875,35 @@
     }
   },
   {
+    "id": "CaM5lK5md9s",
+    "kind": "duplicate-candidate",
+    "channel": "still",
+    "title": "STiLL(KATARA) V.S PrincessSlim (NORRA) MEGA SET | AVATAR LEGENDS 08.24.26",
+    "publishedAt": "2026-09-19T19:00:17Z",
+    "durationSec": 2175,
+    "handles": [
+      "STiLL",
+      "PrincessSlim"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "princessslim",
+          "still"
+        ],
+        "characters": [
+          "katara",
+          "nightmare-korra"
+        ],
+        "playedOn": "2026-08-24"
+      },
+      "ids": [
+        "CaM5lK5md9s",
+        "Upq7aPvkjmQ"
+      ]
+    }
+  },
+  {
     "id": "MZF9UMt83Ts",
     "kind": "duplicate-candidate",
     "channel": "versusFestival",

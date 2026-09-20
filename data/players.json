@@ -222,6 +222,10 @@
     "handle": "Cesulion"
   },
   {
+    "id": "cgtf92",
+    "handle": "cgtf92"
+  },
+  {
     "id": "chichionlyfans",
     "handle": "ChiChiOnlyFans"
   },
@@ -1436,7 +1440,12 @@
   },
   {
     "id": "versintos",
-    "handle": "Versintos"
+    "handle": "Versintos",
+    "extra": {
+      "aliases": [
+        "VERSINTOS"
+      ]
+    }
   },
   {
     "id": "vickiviper",
@@ -1548,7 +1557,12 @@
   },
   {
     "id": "zee",
-    "handle": "Zee"
+    "handle": "Zee",
+    "extra": {
+      "aliases": [
+        "ZEE"
+      ]
+    }
   },
   {
     "id": "ziad",
