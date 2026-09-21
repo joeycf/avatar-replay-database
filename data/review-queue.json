@@ -345,12 +345,170 @@
     "durationSec": 6844
   },
   {
+    "id": "ZLvvc1Hk7H8",
+    "kind": "character-completion",
+    "channel": "schoolBus",
+    "title": "[Avatar Legends] High Level FT10 SchoolBus (Korra) vs Monty's Mystery Mix (Norra)",
+    "publishedAt": "2026-09-20T20:50:03Z",
+    "durationSec": 2178,
+    "handles": [
+      "SchoolBus",
+      "Monty's Mystery Mix"
+    ]
+  },
+  {
     "id": "GzsbXqNy7tw",
     "kind": "character-completion",
     "channel": "redblade",
     "title": "AVATAR LEGENDS SET - Redblade vs Bustafat",
     "publishedAt": "2026-08-23T19:03:43Z",
     "durationSec": 2130
+  },
+  {
+    "id": "muNhsNznAi4@1167",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs Ryuki (Aang/Momo) ▰ ParagOnline #8",
+    "publishedAt": "2026-09-20T15:45:39Z",
+    "durationSec": 4542,
+    "handles": [
+      "Zane",
+      "Ryuki"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "ryuki",
+          "zane"
+        ],
+        "characters": [
+          "aang",
+          "zaheer"
+        ],
+        "playedOn": "2026-09-20"
+      },
+      "ids": [
+        "muNhsNznAi4@1167",
+        "muNhsNznAi4@3747"
+      ]
+    }
+  },
+  {
+    "id": "muNhsNznAi4@2768",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ GoneMad (Kyoshi/Kelsang) vs Zane (Zaheer/Ming-Hua) ▰ ParagOnline #8",
+    "publishedAt": "2026-09-20T15:45:39Z",
+    "durationSec": 4542,
+    "handles": [
+      "GoneMad",
+      "Zane"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "gonemad",
+          "zane"
+        ],
+        "characters": [
+          "kyoshi",
+          "zaheer"
+        ],
+        "playedOn": "2026-09-20"
+      },
+      "ids": [
+        "muNhsNznAi4@2768",
+        "muNhsNznAi4@4142"
+      ]
+    }
+  },
+  {
+    "id": "vGELDXkSZNw@1695",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Slusho (Sokka/Princess Yue) vs NightStriker (Zuko/Ran and Shaw) ▰ 219 Throwdown #86",
+    "publishedAt": "2026-09-19T22:54:31Z",
+    "durationSec": 5728,
+    "handles": [
+      "Slusho",
+      "NightStriker"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "nightstriker",
+          "slusho"
+        ],
+        "characters": [
+          "sokka",
+          "zuko"
+        ],
+        "playedOn": "2026-09-19"
+      },
+      "ids": [
+        "vGELDXkSZNw@1695",
+        "vGELDXkSZNw@4349",
+        "vGELDXkSZNw@4510"
+      ]
+    }
+  },
+  {
+    "id": "vGELDXkSZNw@3992",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Valiant (Azula/Ursa) vs NightStriker (Zuko/Ran and Shaw) ▰ 219 Throwdown #86",
+    "publishedAt": "2026-09-19T22:54:31Z",
+    "durationSec": 5728,
+    "handles": [
+      "Valiant",
+      "NightStriker"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "nightstriker",
+          "valiant"
+        ],
+        "characters": [
+          "azula",
+          "zuko"
+        ],
+        "playedOn": "2026-09-19"
+      },
+      "ids": [
+        "vGELDXkSZNw@3992",
+        "vGELDXkSZNw@5077"
+      ]
+    }
+  },
+  {
+    "id": "UHU2lskQKy4@10565",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs xcaliburbladez (Zaheer/P'Li) ▰ Mix Masters Legends #3",
+    "publishedAt": "2026-09-18T16:34:19Z",
+    "durationSec": 11153,
+    "handles": [
+      "Zane",
+      "xcaliburbladez"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "xcaliburbladez",
+          "zane"
+        ],
+        "characters": [
+          "zaheer",
+          "zaheer"
+        ],
+        "playedOn": "2026-09-18"
+      },
+      "ids": [
+        "UHU2lskQKy4@10565",
+        "UHU2lskQKy4@8689"
+      ]
+    }
   },
   {
     "id": "d0iA-6mJ1a8",

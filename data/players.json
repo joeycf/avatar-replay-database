@@ -218,6 +218,10 @@
     "handle": "Buyacushun"
   },
   {
+    "id": "cat",
+    "handle": "cat"
+  },
+  {
     "id": "cesulion",
     "handle": "Cesulion"
   },
@@ -410,6 +414,10 @@
     "handle": "ETlibra"
   },
   {
+    "id": "evasion",
+    "handle": "Evasion"
+  },
+  {
     "id": "evilburito",
     "handle": "EvilBurito"
   },
@@ -440,6 +448,10 @@
   {
     "id": "feral-hoe-hours",
     "handle": "Feral Hoe Hours"
+  },
+  {
+    "id": "finisher",
+    "handle": "Finisher"
   },
   {
     "id": "fish",
@@ -476,6 +488,10 @@
   {
     "id": "fredminghini",
     "handle": "fredminghini"
+  },
+  {
+    "id": "ft-schoolbus",
+    "handle": "FT? SchoolBus"
   },
   {
     "id": "fuerte",
@@ -589,6 +605,10 @@
     "handle": "hyperHICO"
   },
   {
+    "id": "hytek",
+    "handle": "Hytek"
+  },
+  {
     "id": "icebound",
     "handle": "Icebound"
   },
@@ -614,12 +634,21 @@
     "handle": "Infinite"
   },
   {
+    "id": "irk",
+    "handle": "Irk"
+  },
+  {
     "id": "j-valentine",
     "handle": "J.Valentine"
   },
   {
     "id": "jack-the-bucket",
-    "handle": "Jack The Bucket"
+    "handle": "Jack The Bucket",
+    "extra": {
+      "aliases": [
+        "jack the bucket"
+      ]
+    }
   },
   {
     "id": "jackthebucket",
@@ -634,6 +663,14 @@
   {
     "id": "jaey",
     "handle": "Jaey"
+  },
+  {
+    "id": "jellyskele",
+    "handle": "JellySkele"
+  },
+  {
+    "id": "jemi-keiyns",
+    "handle": "Jemi Keiyns"
   },
   {
     "id": "jessekumiko",
@@ -859,6 +896,10 @@
     "handle": "Megaspeaker"
   },
   {
+    "id": "mell",
+    "handle": "MeLL"
+  },
+  {
     "id": "menace",
     "handle": "Menace"
   },
@@ -960,6 +1001,10 @@
     }
   },
   {
+    "id": "negareaper",
+    "handle": "Negareaper"
+  },
+  {
     "id": "negarepear",
     "handle": "Negarepear"
   },
@@ -983,6 +1028,10 @@
         "nicky"
       ]
     }
+  },
+  {
+    "id": "nightstriker",
+    "handle": "NightStriker"
   },
   {
     "id": "normal-ms",
@@ -1023,6 +1072,14 @@
   {
     "id": "paige",
     "handle": "Paige"
+  },
+  {
+    "id": "pamba",
+    "handle": "Pamba"
+  },
+  {
+    "id": "pasty",
+    "handle": "Pasty"
   },
   {
     "id": "pat",
@@ -1098,6 +1155,10 @@
     "handle": "Purple"
   },
   {
+    "id": "rainmaker",
+    "handle": "Rainmaker"
+  },
+  {
     "id": "raymond-buller",
     "handle": "Raymond Buller"
   },
@@ -1142,6 +1203,10 @@
     "handle": "RoboRush"
   },
   {
+    "id": "rocknrollback",
+    "handle": "RockNRollback"
+  },
+  {
     "id": "rodrigoarispe20",
     "handle": "rodrigoarispe20"
   },
@@ -1152,6 +1217,10 @@
   {
     "id": "rumanuma",
     "handle": "RumaNuma"
+  },
+  {
+    "id": "russissarah",
+    "handle": "russissarah"
   },
   {
     "id": "ruunyah",
@@ -1198,6 +1267,10 @@
     "handle": "SchoolBus"
   },
   {
+    "id": "scribblescrub",
+    "handle": "ScribbleScrub"
+  },
+  {
     "id": "scythe",
     "handle": "Scythe"
   },
@@ -1240,6 +1313,10 @@
   {
     "id": "sleepysnax",
     "handle": "[sleepysnax]"
+  },
+  {
+    "id": "slusho",
+    "handle": "Slusho"
   },
   {
     "id": "smitty",
@@ -1340,6 +1417,10 @@
     "handle": "Synnove"
   },
   {
+    "id": "t-wong",
+    "handle": "T-Wong"
+  },
+  {
     "id": "t0ni",
     "handle": "T0ni"
   },
@@ -1385,6 +1466,10 @@
     "handle": "TheZiadGuy"
   },
   {
+    "id": "thrillhouse",
+    "handle": "Thrillhouse"
+  },
+  {
     "id": "tobirjay",
     "handle": "TobiRjay"
   },
@@ -1407,6 +1492,10 @@
   {
     "id": "twinkletoes",
     "handle": "TwinkleToes"
+  },
+  {
+    "id": "twist",
+    "handle": "Twist"
   },
   {
     "id": "twotoestoto",
@@ -1448,6 +1537,10 @@
     }
   },
   {
+    "id": "vic",
+    "handle": "Vic"
+  },
+  {
     "id": "vickiviper",
     "handle": "Vickiviper"
   },
@@ -1465,7 +1558,12 @@
   },
   {
     "id": "walkemdownmarko",
-    "handle": "WalkemdownMarko"
+    "handle": "WalkemdownMarko",
+    "extra": {
+      "aliases": [
+        "walkemdownMarko"
+      ]
+    }
   },
   {
     "id": "weebmaru",
