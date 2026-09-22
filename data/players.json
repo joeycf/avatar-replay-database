@@ -130,6 +130,10 @@
     "handle": "AyYoLado"
   },
   {
+    "id": "baba",
+    "handle": "Baba"
+  },
+  {
     "id": "bar-barxii",
     "handle": "bar_barXII"
   },
@@ -180,6 +184,10 @@
   {
     "id": "bob1299",
     "handle": "Bob1299"
+  },
+  {
+    "id": "bobafairyella",
+    "handle": "BobaFairyElla"
   },
   {
     "id": "boltstruck",
@@ -336,6 +344,10 @@
   {
     "id": "diaphone",
     "handle": "Diaphone"
+  },
+  {
+    "id": "dimana",
+    "handle": "Dimana"
   },
   {
     "id": "dinguspunch",
@@ -1151,6 +1163,10 @@
     "handle": "Puddin'"
   },
   {
+    "id": "pure-fgc",
+    "handle": "Pure_FGC"
+  },
+  {
     "id": "purple",
     "handle": "Purple"
   },
@@ -1179,8 +1195,16 @@
     "handle": "Redblade"
   },
   {
+    "id": "redsodapop",
+    "handle": "RedSodaPop"
+  },
+  {
     "id": "rekrp",
     "handle": "RekRP"
+  },
+  {
+    "id": "renecup",
+    "handle": "Renecup"
   },
   {
     "id": "reverendbaka",
@@ -1329,6 +1353,10 @@
   {
     "id": "snake-eyez",
     "handle": "Snake Eyez"
+  },
+  {
+    "id": "sneezy727",
+    "handle": "SneezY727"
   },
   {
     "id": "snkz",
@@ -1572,6 +1600,14 @@
   {
     "id": "whim",
     "handle": "Whim"
+  },
+  {
+    "id": "whitetree",
+    "handle": "Whitetree"
+  },
+  {
+    "id": "wht-oji-junior",
+    "handle": "Wht oji junior"
   },
   {
     "id": "wubbiq",

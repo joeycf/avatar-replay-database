@@ -1,5 +1,115 @@
 [
   {
+    "id": "Wb7OZDrKfqc",
+    "channel": "aegisEsports",
+    "intake": "aegisEsports",
+    "title": "Avatar Legends The Fighting Game Zaheer vs Kyoshi (Flank vs Hytek) Avatar Legends Replay",
+    "date": "2026-09-22",
+    "publishedAt": "2026-09-22T02:45:27Z",
+    "durationSec": 297,
+    "viewCount": 52,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "sides": [
+      {
+        "player": "flank",
+        "handle": "Flank",
+        "characters": [
+          "zaheer"
+        ],
+        "support": null,
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "zaheer"
+          ],
+          "slotOrder": "pair-chars-outside",
+          "complete": true
+        }
+      },
+      {
+        "player": "hytek",
+        "handle": "Hytek",
+        "characters": [
+          "kyoshi"
+        ],
+        "support": null,
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "kyoshi"
+          ],
+          "slotOrder": "pair-chars-outside",
+          "complete": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "1PwRZae1HGY",
+    "channel": "teo1029",
+    "intake": "teo1029",
+    "title": "Avatar Legends | teo1029 (Ozai/Sozin) vs RedSodaPop (Zaheer/Ghazan)",
+    "date": "2026-09-21",
+    "publishedAt": "2026-09-21T23:09:12Z",
+    "durationSec": 2359,
+    "viewCount": 1132,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "sides": [
+      {
+        "player": "teo1029",
+        "handle": "teo1029",
+        "characters": [
+          "ozai"
+        ],
+        "support": "firelord-sozin",
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "ozai"
+          ],
+          "slotOrder": "handle-outside",
+          "supportTier": "title",
+          "complete": true
+        }
+      },
+      {
+        "player": "redsodapop",
+        "handle": "RedSodaPop",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "zaheer"
+          ],
+          "slotOrder": "handle-outside",
+          "supportTier": "title",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "firelord-sozin",
+      "ghazan"
+    ]
+  },
+  {
     "id": "3StT9UfA79o",
     "channel": "normalMs",
     "intake": "normalMs",
@@ -7,7 +117,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T02:25:11Z",
     "durationSec": 375,
-    "viewCount": 1,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -64,13 +174,123 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T13:00:24Z",
     "durationSec": 756,
-    "viewCount": 2,
+    "viewCount": 34,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
       {
         "player": "ziad",
         "handle": "Ziad",
+        "characters": [
+          "korra"
+        ],
+        "support": null,
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "korra"
+          ],
+          "slotOrder": "handle-outside",
+          "complete": true
+        }
+      },
+      {
+        "player": "still",
+        "handle": "STiLL",
+        "characters": [
+          "katara"
+        ],
+        "support": null,
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "katara"
+          ],
+          "slotOrder": "handle-outside",
+          "complete": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "dZgpRsGqU08",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Scythe (Katara/Kanna) vs AWanderingTanuki (Toph/Badgermole) ▰ FT7",
+    "date": "2026-09-21",
+    "publishedAt": "2026-09-21T02:49:22Z",
+    "durationSec": 1162,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "channelName": "ScytheLDN",
+    "sides": [
+      {
+        "player": "scythe",
+        "handle": "Scythe",
+        "characters": [
+          "katara"
+        ],
+        "support": "kanna",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "katara"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "awanderingtanuki",
+        "handle": "AWanderingTanuki",
+        "characters": [
+          "toph"
+        ],
+        "support": "badgermole",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "kanna",
+      "badgermole"
+    ]
+  },
+  {
+    "id": "J38W72yBtgw",
+    "channel": "still",
+    "intake": "still",
+    "title": "Pure_FGC (KORRA) V.S. STiLL (KATARA) MEGA SET | AVATAR LEGENDS : 08.25.26",
+    "date": "2026-09-21",
+    "publishedAt": "2026-09-21T16:30:03Z",
+    "durationSec": 1834,
+    "viewCount": 38,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "sides": [
+      {
+        "player": "pure-fgc",
+        "handle": "Pure_FGC",
         "characters": [
           "korra"
         ],
@@ -116,7 +336,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T10:09:00Z",
     "durationSec": 894,
-    "viewCount": 51,
+    "viewCount": 423,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -174,7 +394,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T21:34:51Z",
     "durationSec": 3145,
-    "viewCount": 253,
+    "viewCount": 653,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -216,6 +436,546 @@
           "complete": true
         }
       }
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@0",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Whitetree (Zaheer/Ming-Hua) vs BobaFairyElla (Korra/Naga) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 0,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "whitetree",
+        "handle": "Whitetree",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "bobafairyella",
+        "handle": "BobaFairyElla",
+        "characters": [
+          "korra"
+        ],
+        "support": "naga",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ming-hua",
+      "naga"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@1050",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Narath (Avatar Aang/Roku) vs SneezY727 (Azula/Joo Dee) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 1050,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "narath",
+        "handle": "Narath",
+        "characters": [
+          "avatar-aang"
+        ],
+        "support": "roku",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "avatar-aang"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "sneezy727",
+        "handle": "SneezY727",
+        "characters": [
+          "azula"
+        ],
+        "support": "joo-dee",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "azula"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "roku",
+      "joo-dee"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@1284",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Wht oji junior (Zuko/June) vs Baba (Zuko/Mai) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 1284,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "wht-oji-junior",
+        "handle": "Wht oji junior",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "baba",
+        "handle": "Baba",
+        "characters": [
+          "zuko"
+        ],
+        "support": "mai",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "june",
+      "mai"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@1768",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Dimana (Toph/The Boulder) vs Wht oji junior (Zuko/June) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 1768,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "dimana",
+        "handle": "Dimana",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "wht-oji-junior",
+        "handle": "Wht oji junior",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "the-boulder",
+      "june"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@2181",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Narath (Avatar Aang/Roku) vs Whitetree (Zaheer/Ming-Hua) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 2181,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "narath",
+        "handle": "Narath",
+        "characters": [
+          "avatar-aang"
+        ],
+        "support": "roku",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "avatar-aang"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "whitetree",
+        "handle": "Whitetree",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "roku",
+      "ming-hua"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@2607",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Whitetree (Zaheer/Ming-Hua) vs Wht oji junior (Zuko/June) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 2607,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "whitetree",
+        "handle": "Whitetree",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "wht-oji-junior",
+        "handle": "Wht oji junior",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ming-hua",
+      "june"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@267",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Whitetree (Zaheer/Ming-Hua) vs Baba (Kyoshi/Rangi) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 267,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "whitetree",
+        "handle": "Whitetree",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "baba",
+        "handle": "Baba",
+        "characters": [
+          "kyoshi"
+        ],
+        "support": "rangi",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "kyoshi"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ming-hua",
+      "rangi"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@3155",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Narath (Avatar Aang/Roku) vs Wht oji junior (Zuko/June) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 3155,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "narath",
+        "handle": "Narath",
+        "characters": [
+          "avatar-aang"
+        ],
+        "support": "roku",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "avatar-aang"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "wht-oji-junior",
+        "handle": "Wht oji junior",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "roku",
+      "june"
+    ]
+  },
+  {
+    "id": "JN1kgy_DMZg@751",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Renecup (Korra/Naga) vs Wht oji junior (Zuko/June) ▰ Crossover ICT #154",
+    "date": "2026-09-20",
+    "publishedAt": "2026-09-20T23:43:28Z",
+    "durationSec": 3407,
+    "era": "S1",
+    "patch": "2026-09-02",
+    "videoId": "JN1kgy_DMZg",
+    "startSeconds": 751,
+    "event": "Crossover ICT #154",
+    "sides": [
+      {
+        "player": "renecup",
+        "handle": "Renecup",
+        "characters": [
+          "korra"
+        ],
+        "support": "naga",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "wht-oji-junior",
+        "handle": "Wht oji junior",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "naga",
+      "june"
     ]
   },
   {
@@ -878,7 +1638,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T15:34:11Z",
     "durationSec": 2030,
-    "viewCount": 2719,
+    "viewCount": 3653,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -936,7 +1696,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T03:00:32Z",
     "durationSec": 555,
-    "viewCount": 616,
+    "viewCount": 1407,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -988,7 +1748,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T23:45:15Z",
     "durationSec": 580,
-    "viewCount": 134,
+    "viewCount": 172,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -1040,7 +1800,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T16:00:08Z",
     "durationSec": 3597,
-    "viewCount": 42,
+    "viewCount": 56,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -1195,7 +1955,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:16:12Z",
     "durationSec": 454,
-    "viewCount": 2,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -1247,7 +2007,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T21:07:34Z",
     "durationSec": 575,
-    "viewCount": 2,
+    "viewCount": 4,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -1304,7 +2064,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:09:42Z",
     "durationSec": 227,
-    "viewCount": 2,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -1459,7 +2219,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T15:31:48Z",
     "durationSec": 1082,
-    "viewCount": 20,
+    "viewCount": 45,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -2236,7 +2996,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:45:21Z",
     "durationSec": 1058,
-    "viewCount": 3309,
+    "viewCount": 4300,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3591,7 +4351,7 @@
     "date": "2026-09-16",
     "publishedAt": "2026-09-16T21:55:26Z",
     "durationSec": 1344,
-    "viewCount": 60,
+    "viewCount": 62,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3649,7 +4409,7 @@
     "date": "2026-09-16",
     "publishedAt": "2026-09-16T12:30:26Z",
     "durationSec": 1736,
-    "viewCount": 2190,
+    "viewCount": 2201,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3707,7 +4467,7 @@
     "date": "2026-09-15",
     "publishedAt": "2026-09-15T20:53:50Z",
     "durationSec": 1829,
-    "viewCount": 219,
+    "viewCount": 221,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3765,7 +4525,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:05Z",
     "durationSec": 727,
-    "viewCount": 402,
+    "viewCount": 411,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3817,7 +4577,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:29:45Z",
     "durationSec": 572,
-    "viewCount": 625,
+    "viewCount": 656,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -3869,7 +4629,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:31:00Z",
     "durationSec": 755,
-    "viewCount": 325,
+    "viewCount": 330,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4521,7 +5281,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:42Z",
     "durationSec": 859,
-    "viewCount": 1184,
+    "viewCount": 1192,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4573,7 +5333,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:33Z",
     "durationSec": 533,
-    "viewCount": 307,
+    "viewCount": 313,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4625,7 +5385,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:14Z",
     "durationSec": 389,
-    "viewCount": 119,
+    "viewCount": 124,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4677,7 +5437,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:23Z",
     "durationSec": 505,
-    "viewCount": 415,
+    "viewCount": 428,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4729,7 +5489,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:29:55Z",
     "durationSec": 552,
-    "viewCount": 279,
+    "viewCount": 285,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4781,7 +5541,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T00:13:01Z",
     "durationSec": 2025,
-    "viewCount": 998,
+    "viewCount": 1002,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4839,7 +5599,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:51Z",
     "durationSec": 552,
-    "viewCount": 210,
+    "viewCount": 215,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4891,7 +5651,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:31:10Z",
     "durationSec": 803,
-    "viewCount": 992,
+    "viewCount": 1017,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -4943,7 +5703,7 @@
     "date": "2026-09-13",
     "publishedAt": "2026-09-13T21:24:19Z",
     "durationSec": 988,
-    "viewCount": 30,
+    "viewCount": 31,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -5893,7 +6653,7 @@
     "date": "2026-09-13",
     "publishedAt": "2026-09-13T06:08:21Z",
     "durationSec": 451,
-    "viewCount": 9,
+    "viewCount": 11,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -5997,7 +6757,7 @@
     "date": "2026-09-13",
     "publishedAt": "2026-09-13T16:02:08Z",
     "durationSec": 3394,
-    "viewCount": 1253,
+    "viewCount": 1269,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6295,7 +7055,7 @@
     "date": "2026-09-13",
     "publishedAt": "2026-09-13T06:08:48Z",
     "durationSec": 1054,
-    "viewCount": 178,
+    "viewCount": 187,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6347,7 +7107,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:37:33Z",
     "durationSec": 576,
-    "viewCount": 199,
+    "viewCount": 200,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6399,7 +7159,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T03:33:06Z",
     "durationSec": 790,
-    "viewCount": 461,
+    "viewCount": 491,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6457,7 +7217,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:07:20Z",
     "durationSec": 400,
-    "viewCount": 31,
+    "viewCount": 32,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6563,7 +7323,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:31:11Z",
     "durationSec": 411,
-    "viewCount": 133,
+    "viewCount": 138,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6667,7 +7427,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T06:01:36Z",
     "durationSec": 2019,
-    "viewCount": 4097,
+    "viewCount": 4124,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6829,7 +7589,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:04:31Z",
     "durationSec": 795,
-    "viewCount": 47,
+    "viewCount": 49,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6881,7 +7641,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:05:27Z",
     "durationSec": 418,
-    "viewCount": 258,
+    "viewCount": 263,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6933,7 +7693,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:39:53Z",
     "durationSec": 634,
-    "viewCount": 325,
+    "viewCount": 331,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6985,7 +7745,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:06:33Z",
     "durationSec": 518,
-    "viewCount": 107,
+    "viewCount": 108,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7037,7 +7797,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:02:32Z",
     "durationSec": 690,
-    "viewCount": 106,
+    "viewCount": 110,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7089,7 +7849,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T11:00:22Z",
     "durationSec": 2312,
-    "viewCount": 347,
+    "viewCount": 370,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7147,7 +7907,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:08:00Z",
     "durationSec": 516,
-    "viewCount": 257,
+    "viewCount": 272,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7199,7 +7959,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:38:58Z",
     "durationSec": 639,
-    "viewCount": 161,
+    "viewCount": 167,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7251,7 +8011,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:04:58Z",
     "durationSec": 684,
-    "viewCount": 87,
+    "viewCount": 88,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7303,7 +8063,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T21:23:03Z",
     "durationSec": 1097,
-    "viewCount": 3598,
+    "viewCount": 3633,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7361,7 +8121,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T01:26:25Z",
     "durationSec": 379,
-    "viewCount": 503,
+    "viewCount": 533,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7413,7 +8173,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T15:00:10Z",
     "durationSec": 491,
-    "viewCount": 1927,
+    "viewCount": 1932,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7908,7 +8668,7 @@
     "date": "2026-09-10",
     "publishedAt": "2026-09-10T20:48:57Z",
     "durationSec": 579,
-    "viewCount": 26,
+    "viewCount": 27,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7960,7 +8720,7 @@
     "date": "2026-09-10",
     "publishedAt": "2026-09-10T17:56:33Z",
     "durationSec": 390,
-    "viewCount": 1535,
+    "viewCount": 1541,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -8226,7 +8986,7 @@
     "date": "2026-09-10",
     "publishedAt": "2026-09-10T20:49:06Z",
     "durationSec": 649,
-    "viewCount": 70,
+    "viewCount": 71,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -8336,7 +9096,7 @@
     "date": "2026-09-09",
     "publishedAt": "2026-09-09T18:06:25Z",
     "durationSec": 1819,
-    "viewCount": 24,
+    "viewCount": 25,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -8396,7 +9156,7 @@
     "date": "2026-09-09",
     "publishedAt": "2026-09-09T02:00:16Z",
     "durationSec": 3156,
-    "viewCount": 2898,
+    "viewCount": 2912,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9264,7 +10024,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T15:10:50Z",
     "durationSec": 731,
-    "viewCount": 6523,
+    "viewCount": 6539,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9316,7 +10076,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T04:52:21Z",
     "durationSec": 1532,
-    "viewCount": 1604,
+    "viewCount": 1607,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9374,7 +10134,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T13:12:05Z",
     "durationSec": 3112,
-    "viewCount": 7397,
+    "viewCount": 7434,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9490,7 +10250,7 @@
     "date": "2026-09-05",
     "publishedAt": "2026-09-05T11:00:29Z",
     "durationSec": 1021,
-    "viewCount": 294,
+    "viewCount": 302,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9548,7 +10308,7 @@
     "date": "2026-09-05",
     "publishedAt": "2026-09-05T19:28:21Z",
     "durationSec": 377,
-    "viewCount": 966,
+    "viewCount": 977,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -11817,7 +12577,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T14:32:25Z",
     "durationSec": 3806,
-    "viewCount": 4565,
+    "viewCount": 4605,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -11875,7 +12635,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T21:56:19Z",
     "durationSec": 726,
-    "viewCount": 467,
+    "viewCount": 474,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -12309,7 +13069,7 @@
     "date": "2026-09-03",
     "publishedAt": "2026-09-03T09:24:31Z",
     "durationSec": 594,
-    "viewCount": 168,
+    "viewCount": 169,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -12643,7 +13403,7 @@
     "date": "2026-09-01",
     "publishedAt": "2026-09-01T14:16:12Z",
     "durationSec": 2329,
-    "viewCount": 40,
+    "viewCount": 41,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13583,7 +14343,7 @@
     "date": "2026-08-30",
     "publishedAt": "2026-08-30T14:36:45Z",
     "durationSec": 3230,
-    "viewCount": 14824,
+    "viewCount": 14876,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13693,7 +14453,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T03:21:14Z",
     "durationSec": 2048,
-    "viewCount": 7233,
+    "viewCount": 7236,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13751,7 +14511,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T16:20:21Z",
     "durationSec": 2996,
-    "viewCount": 1106,
+    "viewCount": 1110,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13809,7 +14569,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T03:00:19Z",
     "durationSec": 618,
-    "viewCount": 4183,
+    "viewCount": 4186,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13861,7 +14621,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T16:43:56Z",
     "durationSec": 789,
-    "viewCount": 8951,
+    "viewCount": 9070,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -13977,7 +14737,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T14:06:01Z",
     "durationSec": 545,
-    "viewCount": 1694,
+    "viewCount": 1708,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -14081,7 +14841,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:12:39Z",
     "durationSec": 2380,
-    "viewCount": 8766,
+    "viewCount": 8794,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -14133,7 +14893,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:00:14Z",
     "durationSec": 355,
-    "viewCount": 4345,
+    "viewCount": 4363,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -14185,7 +14945,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T03:02:09Z",
     "durationSec": 2181,
-    "viewCount": 7155,
+    "viewCount": 7167,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15623,7 +16383,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T19:54:18Z",
     "durationSec": 2469,
-    "viewCount": 14533,
+    "viewCount": 14711,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15675,7 +16435,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T14:00:17Z",
     "durationSec": 2007,
-    "viewCount": 625,
+    "viewCount": 639,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15733,7 +16493,7 @@
     "date": "2026-08-26",
     "publishedAt": "2026-08-26T08:14:33Z",
     "durationSec": 1871,
-    "viewCount": 1124,
+    "viewCount": 1142,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15849,7 +16609,7 @@
     "date": "2026-08-26",
     "publishedAt": "2026-08-26T00:00:13Z",
     "durationSec": 561,
-    "viewCount": 4730,
+    "viewCount": 4737,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15901,7 +16661,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T15:00:03Z",
     "durationSec": 361,
-    "viewCount": 2778,
+    "viewCount": 2781,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -15953,7 +16713,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T02:00:19Z",
     "durationSec": 384,
-    "viewCount": 495,
+    "viewCount": 501,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -16005,7 +16765,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-09-19T15:00:03Z",
     "durationSec": 696,
-    "viewCount": 78,
+    "viewCount": 83,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -16167,7 +16927,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-09-19T13:00:15Z",
     "durationSec": 631,
-    "viewCount": 55,
+    "viewCount": 56,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -16819,7 +17579,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-09-17T23:00:15Z",
     "durationSec": 545,
-    "viewCount": 63,
+    "viewCount": 64,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17039,7 +17799,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T00:00:02Z",
     "durationSec": 455,
-    "viewCount": 59,
+    "viewCount": 65,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17093,7 +17853,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T01:00:33Z",
     "durationSec": 527,
-    "viewCount": 37,
+    "viewCount": 38,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17145,7 +17905,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T19:00:17Z",
     "durationSec": 2175,
-    "viewCount": 79,
+    "viewCount": 90,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17197,7 +17957,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T18:00:33Z",
     "durationSec": 640,
-    "viewCount": 35,
+    "viewCount": 36,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17353,7 +18113,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-17T19:00:04Z",
     "durationSec": 1306,
-    "viewCount": 75,
+    "viewCount": 78,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17405,7 +18165,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-08-24T15:00:26Z",
     "durationSec": 676,
-    "viewCount": 1156,
+    "viewCount": 1161,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17457,7 +18217,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T14:00:03Z",
     "durationSec": 500,
-    "viewCount": 43,
+    "viewCount": 44,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17509,7 +18269,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-08-24T17:00:35Z",
     "durationSec": 2309,
-    "viewCount": 385,
+    "viewCount": 387,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17567,7 +18327,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-17T21:00:19Z",
     "durationSec": 761,
-    "viewCount": 57,
+    "viewCount": 65,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17619,7 +18379,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T23:00:33Z",
     "durationSec": 465,
-    "viewCount": 34,
+    "viewCount": 36,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17723,7 +18483,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T17:00:23Z",
     "durationSec": 1454,
-    "viewCount": 57,
+    "viewCount": 62,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17833,7 +18593,7 @@
     "date": "2026-08-23",
     "publishedAt": "2026-08-23T04:10:25Z",
     "durationSec": 2343,
-    "viewCount": 2661,
+    "viewCount": 2662,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -17951,7 +18711,7 @@
     "date": "2026-08-23",
     "publishedAt": "2026-08-23T16:29:53Z",
     "durationSec": 2598,
-    "viewCount": 4330,
+    "viewCount": 4351,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18003,7 +18763,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-13T20:00:38Z",
     "durationSec": 616,
-    "viewCount": 110,
+    "viewCount": 116,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18055,7 +18815,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-12T22:00:11Z",
     "durationSec": 4206,
-    "viewCount": 161,
+    "viewCount": 171,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18107,7 +18867,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-13T12:00:05Z",
     "durationSec": 410,
-    "viewCount": 26,
+    "viewCount": 28,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18159,7 +18919,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T10:15:37Z",
     "durationSec": 1747,
-    "viewCount": 592,
+    "viewCount": 599,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18477,7 +19237,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T15:00:09Z",
     "durationSec": 288,
-    "viewCount": 628,
+    "viewCount": 629,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18581,7 +19341,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-12T19:00:28Z",
     "durationSec": 4470,
-    "viewCount": 189,
+    "viewCount": 190,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18685,7 +19445,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T00:52:39Z",
     "durationSec": 2641,
-    "viewCount": 10673,
+    "viewCount": 10769,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18789,7 +19549,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T12:40:44Z",
     "durationSec": 2291,
-    "viewCount": 691,
+    "viewCount": 697,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18899,7 +19659,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T02:00:03Z",
     "durationSec": 602,
-    "viewCount": 5711,
+    "viewCount": 5766,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -18951,7 +19711,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T20:01:26Z",
     "durationSec": 1548,
-    "viewCount": 66,
+    "viewCount": 68,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19115,7 +19875,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:31:41Z",
     "durationSec": 1079,
-    "viewCount": 2917,
+    "viewCount": 2921,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19231,7 +19991,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:36:13Z",
     "durationSec": 2180,
-    "viewCount": 4254,
+    "viewCount": 4271,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19451,7 +20211,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T08:14:52Z",
     "durationSec": 324,
-    "viewCount": 1394,
+    "viewCount": 1400,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19555,7 +20315,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T00:35:46Z",
     "durationSec": 313,
-    "viewCount": 230,
+    "viewCount": 231,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19661,7 +20421,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T15:00:09Z",
     "durationSec": 405,
-    "viewCount": 5026,
+    "viewCount": 5035,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19765,7 +20525,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T08:15:27Z",
     "durationSec": 315,
-    "viewCount": 1493,
+    "viewCount": 1504,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19817,7 +20577,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T21:00:05Z",
     "durationSec": 495,
-    "viewCount": 3361,
+    "viewCount": 3377,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19869,7 +20629,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T04:00:02Z",
     "durationSec": 266,
-    "viewCount": 1509,
+    "viewCount": 1513,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19921,7 +20681,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T00:19:57Z",
     "durationSec": 247,
-    "viewCount": 692,
+    "viewCount": 693,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -19973,7 +20733,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T11:00:34Z",
     "durationSec": 307,
-    "viewCount": 1421,
+    "viewCount": 1423,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20025,7 +20785,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-09-01T17:00:04Z",
     "durationSec": 561,
-    "viewCount": 68,
+    "viewCount": 71,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20187,7 +20947,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-09-01T22:00:32Z",
     "durationSec": 687,
-    "viewCount": 281,
+    "viewCount": 283,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20239,7 +20999,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-29T19:00:07Z",
     "durationSec": 790,
-    "viewCount": 492,
+    "viewCount": 493,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20343,7 +21103,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-31T19:00:10Z",
     "durationSec": 2469,
-    "viewCount": 6307,
+    "viewCount": 6311,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20395,7 +21155,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-09-02T15:00:16Z",
     "durationSec": 385,
-    "viewCount": 308,
+    "viewCount": 314,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20447,7 +21207,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-20T11:00:05Z",
     "durationSec": 2172,
-    "viewCount": 32,
+    "viewCount": 33,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20608,7 +21368,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-20T15:00:10Z",
     "durationSec": 546,
-    "viewCount": 2025,
+    "viewCount": 2050,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20660,7 +21420,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-20T23:00:01Z",
     "durationSec": 520,
-    "viewCount": 8145,
+    "viewCount": 8159,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20816,7 +21576,7 @@
     "date": "2026-08-19",
     "publishedAt": "2026-08-19T21:39:02Z",
     "durationSec": 3082,
-    "viewCount": 1790,
+    "viewCount": 1832,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20874,7 +21634,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T11:30:35Z",
     "durationSec": 2452,
-    "viewCount": 820,
+    "viewCount": 822,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20926,7 +21686,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-27T13:00:38Z",
     "durationSec": 738,
-    "viewCount": 140,
+    "viewCount": 142,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -20978,7 +21738,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-26T12:30:13Z",
     "durationSec": 1830,
-    "viewCount": 1200,
+    "viewCount": 1201,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21030,7 +21790,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T05:35:49Z",
     "durationSec": 1591,
-    "viewCount": 143,
+    "viewCount": 146,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21140,7 +21900,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-30T22:00:05Z",
     "durationSec": 745,
-    "viewCount": 109,
+    "viewCount": 110,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21452,7 +22212,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T05:28:52Z",
     "durationSec": 1831,
-    "viewCount": 27,
+    "viewCount": 28,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21510,7 +22270,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T16:50:21Z",
     "durationSec": 1924,
-    "viewCount": 2517,
+    "viewCount": 2520,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21568,7 +22328,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T17:40:24Z",
     "durationSec": 4650,
-    "viewCount": 125,
+    "viewCount": 126,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21678,7 +22438,7 @@
     "date": "2026-08-17",
     "publishedAt": "2026-08-17T05:00:05Z",
     "durationSec": 2257,
-    "viewCount": 160,
+    "viewCount": 163,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -21840,7 +22600,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T09:31:57Z",
     "durationSec": 1083,
-    "viewCount": 320,
+    "viewCount": 324,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22048,7 +22808,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T14:49:23Z",
     "durationSec": 220,
-    "viewCount": 52,
+    "viewCount": 54,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22100,7 +22860,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T22:43:26Z",
     "durationSec": 2485,
-    "viewCount": 4506,
+    "viewCount": 4509,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22262,7 +23022,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T03:00:26Z",
     "durationSec": 430,
-    "viewCount": 1581,
+    "viewCount": 1586,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22418,7 +23178,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T04:48:53Z",
     "durationSec": 2051,
-    "viewCount": 3207,
+    "viewCount": 3208,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22528,7 +23288,7 @@
     "date": "2026-08-15",
     "publishedAt": "2026-08-15T22:00:32Z",
     "durationSec": 740,
-    "viewCount": 2649,
+    "viewCount": 2657,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22684,7 +23444,7 @@
     "date": "2026-08-15",
     "publishedAt": "2026-08-15T15:00:14Z",
     "durationSec": 351,
-    "viewCount": 1887,
+    "viewCount": 1889,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -22794,7 +23554,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T12:00:38Z",
     "durationSec": 592,
-    "viewCount": 6563,
+    "viewCount": 6573,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23118,7 +23878,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T19:00:04Z",
     "durationSec": 483,
-    "viewCount": 1452,
+    "viewCount": 1458,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23222,7 +23982,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T19:00:15Z",
     "durationSec": 435,
-    "viewCount": 552,
+    "viewCount": 557,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23430,7 +24190,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T22:00:36Z",
     "durationSec": 384,
-    "viewCount": 1879,
+    "viewCount": 1880,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23848,7 +24608,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T19:40:20Z",
     "durationSec": 1630,
-    "viewCount": 337,
+    "viewCount": 341,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23906,7 +24666,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T14:22:34Z",
     "durationSec": 1300,
-    "viewCount": 83,
+    "viewCount": 84,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -23964,7 +24724,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T15:32:25Z",
     "durationSec": 754,
-    "viewCount": 3259,
+    "viewCount": 3270,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24022,7 +24782,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T07:51:26Z",
     "durationSec": 2027,
-    "viewCount": 8500,
+    "viewCount": 8529,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24242,7 +25002,7 @@
     "date": "2026-08-11",
     "publishedAt": "2026-08-11T21:07:08Z",
     "durationSec": 1476,
-    "viewCount": 2828,
+    "viewCount": 2835,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24294,7 +25054,7 @@
     "date": "2026-08-11",
     "publishedAt": "2026-08-11T13:10:51Z",
     "durationSec": 638,
-    "viewCount": 228,
+    "viewCount": 229,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24346,7 +25106,7 @@
     "date": "2026-08-11",
     "publishedAt": "2026-08-11T00:37:29Z",
     "durationSec": 2001,
-    "viewCount": 4436,
+    "viewCount": 4440,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24574,7 +25334,7 @@
     "date": "2026-08-09",
     "publishedAt": "2026-08-09T23:37:42Z",
     "durationSec": 2533,
-    "viewCount": 3036,
+    "viewCount": 3039,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24678,7 +25438,7 @@
     "date": "2026-08-09",
     "publishedAt": "2026-08-09T05:00:09Z",
     "durationSec": 515,
-    "viewCount": 4545,
+    "viewCount": 4574,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -24846,7 +25606,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T23:00:11Z",
     "durationSec": 790,
-    "viewCount": 1600,
+    "viewCount": 1607,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25002,7 +25762,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T05:00:18Z",
     "durationSec": 633,
-    "viewCount": 1485,
+    "viewCount": 1487,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25054,7 +25814,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T17:00:14Z",
     "durationSec": 387,
-    "viewCount": 865,
+    "viewCount": 871,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25106,7 +25866,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T20:12:21Z",
     "durationSec": 2357,
-    "viewCount": 10037,
+    "viewCount": 10060,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25216,7 +25976,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T05:00:23Z",
     "durationSec": 388,
-    "viewCount": 210,
+    "viewCount": 211,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25268,7 +26028,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T17:00:28Z",
     "durationSec": 431,
-    "viewCount": 489,
+    "viewCount": 492,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25320,7 +26080,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T23:00:27Z",
     "durationSec": 470,
-    "viewCount": 5424,
+    "viewCount": 5439,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25372,7 +26132,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T18:06:48Z",
     "durationSec": 4067,
-    "viewCount": 8183,
+    "viewCount": 8223,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25430,7 +26190,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T07:40:48Z",
     "durationSec": 2539,
-    "viewCount": 4214,
+    "viewCount": 4217,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25488,7 +26248,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T11:00:16Z",
     "durationSec": 468,
-    "viewCount": 676,
+    "viewCount": 685,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25656,7 +26416,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T17:00:23Z",
     "durationSec": 347,
-    "viewCount": 278,
+    "viewCount": 279,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25760,7 +26520,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T11:00:20Z",
     "durationSec": 900,
-    "viewCount": 2354,
+    "viewCount": 2403,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25864,7 +26624,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T15:15:35Z",
     "durationSec": 2712,
-    "viewCount": 4037,
+    "viewCount": 4050,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -25916,7 +26676,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T21:56:36Z",
     "durationSec": 378,
-    "viewCount": 194,
+    "viewCount": 195,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -25968,7 +26728,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T16:48:18Z",
     "durationSec": 1875,
-    "viewCount": 253,
+    "viewCount": 254,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26020,7 +26780,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T04:12:55Z",
     "durationSec": 2637,
-    "viewCount": 8967,
+    "viewCount": 9013,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26078,7 +26838,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T01:35:40Z",
     "durationSec": 2260,
-    "viewCount": 4635,
+    "viewCount": 4646,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26188,7 +26948,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T07:23:48Z",
     "durationSec": 2316,
-    "viewCount": 7882,
+    "viewCount": 7904,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26246,7 +27006,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T16:28:47Z",
     "durationSec": 2134,
-    "viewCount": 3928,
+    "viewCount": 3945,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26350,7 +27110,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T18:47:56Z",
     "durationSec": 769,
-    "viewCount": 7440,
+    "viewCount": 7480,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26402,7 +27162,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T23:57:23Z",
     "durationSec": 2592,
-    "viewCount": 1409,
+    "viewCount": 1411,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26628,7 +27388,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T17:48:48Z",
     "durationSec": 3750,
-    "viewCount": 3343,
+    "viewCount": 3346,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26686,7 +27446,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T18:32:10Z",
     "durationSec": 1675,
-    "viewCount": 10567,
+    "viewCount": 10622,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26796,7 +27556,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T02:53:14Z",
     "durationSec": 4421,
-    "viewCount": 284,
+    "viewCount": 303,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -26848,7 +27608,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T12:00:37Z",
     "durationSec": 1264,
-    "viewCount": 1083,
+    "viewCount": 1085,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27010,7 +27770,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T03:14:34Z",
     "durationSec": 2234,
-    "viewCount": 516,
+    "viewCount": 517,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27068,7 +27828,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T01:00:17Z",
     "durationSec": 647,
-    "viewCount": 298,
+    "viewCount": 300,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27172,7 +27932,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T19:00:32Z",
     "durationSec": 413,
-    "viewCount": 360,
+    "viewCount": 365,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27224,7 +27984,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T02:36:25Z",
     "durationSec": 1395,
-    "viewCount": 2519,
+    "viewCount": 2524,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27328,7 +28088,7 @@
     "date": "2026-07-31",
     "publishedAt": "2026-07-31T16:27:58Z",
     "durationSec": 914,
-    "viewCount": 3606,
+    "viewCount": 3622,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27386,7 +28146,7 @@
     "date": "2026-07-31",
     "publishedAt": "2026-07-31T05:07:49Z",
     "durationSec": 1823,
-    "viewCount": 6973,
+    "viewCount": 6983,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27548,7 +28308,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T19:00:20Z",
     "durationSec": 426,
-    "viewCount": 866,
+    "viewCount": 867,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27808,7 +28568,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T18:11:58Z",
     "durationSec": 454,
-    "viewCount": 249,
+    "viewCount": 251,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -27964,7 +28724,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T18:24:41Z",
     "durationSec": 377,
-    "viewCount": 175,
+    "viewCount": 176,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -28513,7 +29273,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T06:24:45Z",
     "durationSec": 1693,
-    "viewCount": 26296,
+    "viewCount": 26322,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -28571,7 +29331,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T19:12:27Z",
     "durationSec": 701,
-    "viewCount": 7593,
+    "viewCount": 7610,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -28629,7 +29389,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T14:30:15Z",
     "durationSec": 504,
-    "viewCount": 232,
+    "viewCount": 235,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -28739,7 +29499,7 @@
     "date": "2026-07-28",
     "publishedAt": "2026-07-28T16:50:29Z",
     "durationSec": 789,
-    "viewCount": 3427,
+    "viewCount": 3428,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -28849,7 +29609,7 @@
     "date": "2026-07-28",
     "publishedAt": "2026-07-28T00:48:55Z",
     "durationSec": 349,
-    "viewCount": 37,
+    "viewCount": 40,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -29163,7 +29923,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:46:10Z",
     "durationSec": 425,
-    "viewCount": 65,
+    "viewCount": 68,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -29215,7 +29975,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T18:24:59Z",
     "durationSec": 4388,
-    "viewCount": 4701,
+    "viewCount": 4709,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -29748,7 +30508,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:55:49Z",
     "durationSec": 567,
-    "viewCount": 668,
+    "viewCount": 671,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -29955,7 +30715,7 @@
     "date": "2026-07-26",
     "publishedAt": "2026-07-26T15:26:24Z",
     "durationSec": 1046,
-    "viewCount": 12521,
+    "viewCount": 12539,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -31511,7 +32271,7 @@
     "date": "2026-07-25",
     "publishedAt": "2026-07-25T15:28:12Z",
     "durationSec": 978,
-    "viewCount": 7136,
+    "viewCount": 7161,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -31569,7 +32329,7 @@
     "date": "2026-07-25",
     "publishedAt": "2026-07-25T14:45:05Z",
     "durationSec": 455,
-    "viewCount": 1958,
+    "viewCount": 1959,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -31621,7 +32381,7 @@
     "date": "2026-07-24",
     "publishedAt": "2026-07-24T15:49:31Z",
     "durationSec": 3355,
-    "viewCount": 8522,
+    "viewCount": 8546,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
