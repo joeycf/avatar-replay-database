@@ -1,26 +1,26 @@
 {
   "totals": {
-    "replays": 583,
+    "replays": 585,
     "characters": 12,
     "players": 398,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 235
+      "2026-09-02": 237
     },
     "supports": 34,
-    "sidesWithSupport": 591
+    "sidesWithSupport": 593
   },
   "characterUsage": {
+    "korra": 143,
+    "aang": 84,
     "zaheer": 124,
     "kyoshi": 133,
-    "ozai": 80,
+    "ozai": 81,
+    "toph": 152,
     "sokka": 76,
-    "korra": 142,
     "katara": 148,
-    "toph": 151,
-    "aang": 83,
     "avatar-aang": 18,
     "azula": 122,
     "zuko": 60,
@@ -68,14 +68,14 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
+      "korra": 75,
+      "aang": 36,
       "zaheer": 60,
       "kyoshi": 55,
-      "ozai": 28,
+      "ozai": 29,
+      "toph": 61,
       "sokka": 37,
-      "korra": 74,
       "katara": 43,
-      "toph": 60,
-      "aang": 35,
       "avatar-aang": 8,
       "azula": 27,
       "zuko": 29,
@@ -83,11 +83,23 @@
     }
   },
   "playerCharacters": {
+    "ash-rao": {
+      "korra": 2
+    },
+    "avianzebra": {
+      "aang": 11
+    },
     "flank": {
       "zaheer": 2
     },
     "hytek": {
       "kyoshi": 3
+    },
+    "arinkarin": {
+      "ozai": 27
+    },
+    "jiggynyc": {
+      "toph": 2
     },
     "teo1029": {
       "ozai": 9
@@ -248,9 +260,6 @@
     },
     "jellyskele": {
       "nightmare-korra": 2
-    },
-    "arinkarin": {
-      "ozai": 26
     },
     "red": {
       "korra": 4,
@@ -517,9 +526,6 @@
     },
     "folkena": {
       "kyoshi": 2
-    },
-    "avianzebra": {
-      "aang": 10
     },
     "feral-hoe-hours": {
       "kyoshi": 1
@@ -823,9 +829,6 @@
     "nerdnerdxii": {
       "azula": 1
     },
-    "jiggynyc": {
-      "toph": 1
-    },
     "notalice": {
       "katara": 2
     },
@@ -1067,9 +1070,6 @@
     "super-x-silver": {
       "avatar-aang": 1
     },
-    "ash-rao": {
-      "korra": 1
-    },
     "jrome": {
       "sokka": 1
     },
@@ -1305,14 +1305,14 @@
     }
   },
   "supportUsage": {
+    "naga": 57,
+    "gyatso": 33,
     "firelord-sozin": 20,
     "ghazan": 26,
     "rangi": 30,
     "kanna": 33,
     "badgermole": 25,
-    "gyatso": 32,
     "ming-hua": 24,
-    "naga": 56,
     "roku": 12,
     "joo-dee": 4,
     "june": 16,
