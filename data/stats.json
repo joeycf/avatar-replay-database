@@ -1,29 +1,29 @@
 {
   "totals": {
-    "replays": 585,
+    "replays": 589,
     "characters": 12,
-    "players": 398,
+    "players": 402,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 237
+      "2026-09-02": 241
     },
     "supports": 34,
-    "sidesWithSupport": 593
+    "sidesWithSupport": 599
   },
   "characterUsage": {
-    "korra": 143,
-    "aang": 84,
-    "zaheer": 124,
+    "zaheer": 125,
+    "sokka": 77,
+    "zuko": 63,
+    "aang": 86,
+    "korra": 144,
     "kyoshi": 133,
     "ozai": 81,
     "toph": 152,
-    "sokka": 76,
     "katara": 148,
     "avatar-aang": 18,
     "azula": 122,
-    "zuko": 60,
     "nightmare-korra": 39
   },
   "byPatchUsage": {
@@ -68,26 +68,48 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "korra": 75,
-      "aang": 36,
-      "zaheer": 60,
+      "zaheer": 61,
+      "sokka": 38,
+      "zuko": 32,
+      "aang": 38,
+      "korra": 76,
       "kyoshi": 55,
       "ozai": 29,
       "toph": 61,
-      "sokka": 37,
       "katara": 43,
       "avatar-aang": 8,
       "azula": 27,
-      "zuko": 29,
       "nightmare-korra": 16
     }
   },
   "playerCharacters": {
+    "warthog-ec": {
+      "zaheer": 1
+    },
+    "normal-ms": {
+      "sokka": 5,
+      "aang": 9
+    },
+    "rood": {
+      "zuko": 7,
+      "aang": 7,
+      "zaheer": 4,
+      "katara": 2
+    },
+    "killa-jam-98": {
+      "aang": 1
+    },
+    "catthew": {
+      "korra": 1
+    },
     "ash-rao": {
       "korra": 2
     },
     "avianzebra": {
       "aang": 11
+    },
+    "sirkayy": {
+      "aang": 1
     },
     "flank": {
       "zaheer": 2
@@ -109,10 +131,6 @@
     },
     "vic": {
       "kyoshi": 1
-    },
-    "normal-ms": {
-      "sokka": 4,
-      "aang": 9
     },
     "ziad": {
       "korra": 12
@@ -490,12 +508,6 @@
     },
     "princess-slim": {
       "nightmare-korra": 2
-    },
-    "rood": {
-      "zuko": 4,
-      "aang": 7,
-      "zaheer": 4,
-      "katara": 2
     },
     "hatsukei": {
       "aang": 1
@@ -1305,17 +1317,18 @@
     }
   },
   "supportUsage": {
-    "naga": 57,
+    "ming-hua": 25,
+    "appa": 22,
+    "june": 18,
+    "naga": 58,
     "gyatso": 33,
     "firelord-sozin": 20,
     "ghazan": 26,
     "rangi": 30,
     "kanna": 33,
     "badgermole": 25,
-    "ming-hua": 24,
     "roku": 12,
     "joo-dee": 4,
-    "june": 16,
     "mai": 11,
     "the-boulder": 28,
     "momo": 12,
@@ -1331,7 +1344,6 @@
     "suki": 9,
     "general-zhao": 8,
     "dark-avatar-unalaq": 8,
-    "appa": 20,
     "master-pakku": 19,
     "dark-spirit": 9,
     "imperial-firebender": 7,

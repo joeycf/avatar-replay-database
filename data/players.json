@@ -230,6 +230,10 @@
     "handle": "cat"
   },
   {
+    "id": "catthew",
+    "handle": "Catthew"
+  },
+  {
     "id": "cesulion",
     "handle": "Cesulion"
   },
@@ -747,6 +751,10 @@
   {
     "id": "kenecrypt",
     "handle": "Kenecrypt"
+  },
+  {
+    "id": "killa-jam-98",
+    "handle": "Killa_Jam_98"
   },
   {
     "id": "kilo",
@@ -1323,6 +1331,10 @@
     "handle": "Siege"
   },
   {
+    "id": "sirkayy",
+    "handle": "sirkayy"
+  },
+  {
     "id": "skeet",
     "handle": "Skeet"
   },
@@ -1592,6 +1604,10 @@
         "walkemdownMarko"
       ]
     }
+  },
+  {
+    "id": "warthog-ec",
+    "handle": "WarThog-ec"
   },
   {
     "id": "weebmaru",
