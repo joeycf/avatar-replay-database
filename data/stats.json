@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 589,
+    "replays": 616,
     "characters": 12,
-    "players": 402,
+    "players": 410,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 241
+      "2026-09-02": 268
     },
     "supports": 34,
-    "sidesWithSupport": 599
+    "sidesWithSupport": 650
   },
   "characterUsage": {
-    "zaheer": 125,
-    "sokka": 77,
-    "zuko": 63,
-    "aang": 86,
-    "korra": 144,
-    "kyoshi": 133,
-    "ozai": 81,
-    "toph": 152,
-    "katara": 148,
-    "avatar-aang": 18,
-    "azula": 122,
-    "nightmare-korra": 39
+    "zaheer": 135,
+    "sokka": 85,
+    "zuko": 65,
+    "aang": 88,
+    "korra": 146,
+    "toph": 160,
+    "nightmare-korra": 47,
+    "kyoshi": 135,
+    "avatar-aang": 21,
+    "azula": 126,
+    "ozai": 84,
+    "katara": 150
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -68,18 +68,18 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "zaheer": 61,
-      "sokka": 38,
-      "zuko": 32,
-      "aang": 38,
-      "korra": 76,
-      "kyoshi": 55,
-      "ozai": 29,
-      "toph": 61,
-      "katara": 43,
-      "avatar-aang": 8,
-      "azula": 27,
-      "nightmare-korra": 16
+      "zaheer": 71,
+      "sokka": 46,
+      "zuko": 34,
+      "aang": 40,
+      "korra": 78,
+      "toph": 69,
+      "nightmare-korra": 24,
+      "kyoshi": 57,
+      "avatar-aang": 11,
+      "azula": 31,
+      "ozai": 32,
+      "katara": 45
     }
   },
   "playerCharacters": {
@@ -101,6 +101,48 @@
     },
     "catthew": {
       "korra": 1
+    },
+    "avatar-fighter": {
+      "zaheer": 9
+    },
+    "schwi": {
+      "toph": 8
+    },
+    "aaroncube": {
+      "nightmare-korra": 8
+    },
+    "1999-honda-civic": {
+      "sokka": 10
+    },
+    "brian-f": {
+      "zaheer": 3,
+      "sokka": 1
+    },
+    "cat": {
+      "kyoshi": 3
+    },
+    "king-co0pa": {
+      "korra": 2
+    },
+    "darkwrath": {
+      "avatar-aang": 3
+    },
+    "smitty": {
+      "azula": 6,
+      "avatar-aang": 1
+    },
+    "solve": {
+      "ozai": 3
+    },
+    "nalice": {
+      "katara": 2
+    },
+    "kaiji": {
+      "zuko": 2,
+      "kyoshi": 2
+    },
+    "wig": {
+      "aang": 2
     },
     "ash-rao": {
       "korra": 2
@@ -212,9 +254,6 @@
     },
     "cow": {
       "toph": 22
-    },
-    "cat": {
-      "kyoshi": 1
     },
     "kusa": {
       "azula": 2
@@ -635,10 +674,6 @@
     "megaspeaker": {
       "ozai": 1
     },
-    "brian-f": {
-      "zaheer": 2,
-      "sokka": 1
-    },
     "jiga": {
       "ozai": 1
     },
@@ -674,9 +709,6 @@
     },
     "coke": {
       "korra": 1
-    },
-    "1999-honda-civic": {
-      "sokka": 2
     },
     "xinigami": {
       "kyoshi": 5
@@ -896,9 +928,6 @@
     "batmanity": {
       "zuko": 1,
       "zaheer": 1
-    },
-    "kaiji": {
-      "kyoshi": 2
     },
     "f4b-4n": {
       "zaheer": 1
@@ -1233,10 +1262,6 @@
     "missedfgc": {
       "azula": 1
     },
-    "smitty": {
-      "azula": 2,
-      "avatar-aang": 1
-    },
     "neverfearheok": {
       "zaheer": 1
     },
@@ -1321,33 +1346,33 @@
     "appa": 22,
     "june": 18,
     "naga": 58,
+    "ghazan": 35,
+    "the-hippo": 21,
+    "dark-spirit": 17,
+    "princess-yue": 26,
+    "p'li": 26,
+    "rangi": 31,
+    "tonraq": 9,
+    "lo-and-li": 28,
+    "general-zhao": 11,
+    "master-pakku": 21,
+    "ran-and-shaw": 12,
+    "momo": 14,
+    "yun": 19,
     "gyatso": 33,
     "firelord-sozin": 20,
-    "ghazan": 26,
-    "rangi": 30,
     "kanna": 33,
     "badgermole": 25,
     "roku": 12,
     "joo-dee": 4,
     "mai": 11,
     "the-boulder": 28,
-    "momo": 12,
-    "yun": 18,
     "kelsang": 16,
-    "the-hippo": 13,
-    "p'li": 25,
-    "tonraq": 7,
     "ursa": 35,
-    "princess-yue": 18,
-    "ran-and-shaw": 10,
     "vaatu": 9,
     "suki": 9,
-    "general-zhao": 8,
     "dark-avatar-unalaq": 8,
-    "master-pakku": 19,
-    "dark-spirit": 9,
     "imperial-firebender": 7,
-    "lo-and-li": 24,
     "raava": 6,
     "katara": 1
   }

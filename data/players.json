@@ -25,6 +25,10 @@
     "handle": "76Darhk"
   },
   {
+    "id": "aaroncube",
+    "handle": "AaronCube"
+  },
+  {
     "id": "aaronx3",
     "handle": "Aaronx3"
   },
@@ -108,6 +112,10 @@
   {
     "id": "atma",
     "handle": "Atma"
+  },
+  {
+    "id": "avatar-fighter",
+    "handle": "Avatar Fighter"
   },
   {
     "id": "avaunt",
@@ -227,7 +235,12 @@
   },
   {
     "id": "cat",
-    "handle": "cat"
+    "handle": "Cat",
+    "extra": {
+      "aliases": [
+        "cat"
+      ]
+    }
   },
   {
     "id": "catthew",
@@ -312,6 +325,10 @@
   {
     "id": "darkwater72",
     "handle": "Darkwater72"
+  },
+  {
+    "id": "darkwrath",
+    "handle": "Darkwrath"
   },
   {
     "id": "data-xigbar-in-real-life",
@@ -761,6 +778,10 @@
     "handle": "Kilo"
   },
   {
+    "id": "king-co0pa",
+    "handle": "King Co0pa"
+  },
+  {
     "id": "kingkc",
     "handle": "KingKC"
   },
@@ -994,6 +1015,10 @@
   {
     "id": "mysteryracer21",
     "handle": "MysteryRacer21"
+  },
+  {
+    "id": "nalice",
+    "handle": "NAlice"
   },
   {
     "id": "namedroops",
@@ -1299,6 +1324,10 @@
     "handle": "SchoolBus"
   },
   {
+    "id": "schwi",
+    "handle": "Schwi"
+  },
+  {
     "id": "scribblescrub",
     "handle": "ScribbleScrub"
   },
@@ -1381,6 +1410,10 @@
   {
     "id": "solid-pajahands",
     "handle": "Solid PajaHands"
+  },
+  {
+    "id": "solve",
+    "handle": "Solve"
   },
   {
     "id": "son-dula",
@@ -1624,6 +1657,10 @@
   {
     "id": "wht-oji-junior",
     "handle": "Wht oji junior"
+  },
+  {
+    "id": "wig",
+    "handle": "Wig"
   },
   {
     "id": "wubbiq",

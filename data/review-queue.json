@@ -373,6 +373,93 @@
     "durationSec": 2130
   },
   {
+    "id": "PQ8_9_zzfBk@10955",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs Avatar Fighter (Zaheer/Ghazan) ▰ BANNED BENDER BEATDOWN - Playtester Tournament",
+    "publishedAt": "2026-09-23T03:35:45Z",
+    "durationSec": 14064,
+    "handles": [
+      "1999 Honda Civic",
+      "Avatar Fighter"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "1999-honda-civic",
+          "avatar-fighter"
+        ],
+        "characters": [
+          "sokka",
+          "zaheer"
+        ],
+        "playedOn": "2026-09-23"
+      },
+      "ids": [
+        "PQ8_9_zzfBk@10955",
+        "PQ8_9_zzfBk@5900"
+      ]
+    }
+  },
+  {
+    "id": "PQ8_9_zzfBk@2544",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Darkwrath (Avatar Aang/Guru Pathik) vs AaronCube (Nightmare Korra/Dark Spirit) ▰ BANNED BENDER BEATDOWN - Playtester Tournament",
+    "publishedAt": "2026-09-23T03:35:45Z",
+    "durationSec": 14064,
+    "handles": [
+      "Darkwrath",
+      "AaronCube"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "aaroncube",
+          "darkwrath"
+        ],
+        "characters": [
+          "avatar-aang",
+          "nightmare-korra"
+        ],
+        "playedOn": "2026-09-23"
+      },
+      "ids": [
+        "PQ8_9_zzfBk@2544",
+        "PQ8_9_zzfBk@7468"
+      ]
+    }
+  },
+  {
+    "id": "PQ8_9_zzfBk@3285",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Schwi (Toph/The Hippo) vs Smitty (Azula/Lo and Li) ▰ BANNED BENDER BEATDOWN - Playtester Tournament",
+    "publishedAt": "2026-09-23T03:35:45Z",
+    "durationSec": 14064,
+    "handles": [
+      "Schwi",
+      "Smitty"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "schwi",
+          "smitty"
+        ],
+        "characters": [
+          "azula",
+          "toph"
+        ],
+        "playedOn": "2026-09-23"
+      },
+      "ids": [
+        "PQ8_9_zzfBk@3285",
+        "PQ8_9_zzfBk@8180"
+      ]
+    }
+  },
+  {
     "id": "muNhsNznAi4@1167",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
