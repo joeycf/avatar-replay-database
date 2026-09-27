@@ -1,22 +1,22 @@
 {
   "totals": {
-    "replays": 620,
+    "replays": 623,
     "characters": 12,
-    "players": 411,
+    "players": 413,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 272
+      "2026-09-02": 275
     },
     "supports": 34,
     "sidesWithSupport": 654
   },
   "characterUsage": {
-    "ozai": 86,
-    "azula": 128,
+    "azula": 129,
+    "zaheer": 138,
+    "ozai": 88,
     "korra": 147,
-    "zaheer": 136,
     "aang": 89,
     "sokka": 85,
     "zuko": 65,
@@ -24,7 +24,7 @@
     "nightmare-korra": 47,
     "kyoshi": 135,
     "avatar-aang": 21,
-    "katara": 151
+    "katara": 152
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -68,10 +68,10 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "ozai": 34,
-      "azula": 33,
+      "azula": 34,
+      "zaheer": 74,
+      "ozai": 36,
       "korra": 79,
-      "zaheer": 72,
       "aang": 41,
       "sokka": 46,
       "zuko": 34,
@@ -79,10 +79,16 @@
       "nightmare-korra": 24,
       "kyoshi": 57,
       "avatar-aang": 11,
-      "katara": 46
+      "katara": 47
     }
   },
   "playerCharacters": {
+    "wynter": {
+      "azula": 4
+    },
+    "orochi-clark": {
+      "zaheer": 1
+    },
     "teo1029": {
       "ozai": 10
     },
@@ -179,7 +185,7 @@
       "kyoshi": 3
     },
     "arinkarin": {
-      "ozai": 27
+      "ozai": 28
     },
     "jiggynyc": {
       "toph": 2
@@ -191,7 +197,8 @@
       "kyoshi": 1
     },
     "still": {
-      "katara": 78
+      "katara": 79,
+      "ozai": 1
     },
     "scythe": {
       "katara": 6
@@ -448,6 +455,9 @@
     "holdbacktobark": {
       "katara": 2
     },
+    "chosen-busta": {
+      "zaheer": 1
+    },
     "elfry": {
       "nightmare-korra": 1
     },
@@ -480,9 +490,6 @@
     },
     "duburu": {
       "aang": 1
-    },
-    "wynter": {
-      "azula": 3
     },
     "reverendbaka": {
       "nightmare-korra": 2
