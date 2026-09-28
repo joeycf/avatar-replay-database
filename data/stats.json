@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 623,
+    "replays": 630,
     "characters": 12,
-    "players": 413,
+    "players": 417,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 275
+      "2026-09-02": 282
     },
     "supports": 34,
-    "sidesWithSupport": 654
+    "sidesWithSupport": 660
   },
   "characterUsage": {
-    "azula": 129,
+    "aang": 91,
+    "zuko": 66,
+    "ozai": 89,
+    "katara": 153,
+    "azula": 133,
+    "korra": 148,
     "zaheer": 138,
-    "ozai": 88,
-    "korra": 147,
-    "aang": 89,
-    "sokka": 85,
-    "zuko": 65,
-    "toph": 160,
-    "nightmare-korra": 47,
-    "kyoshi": 135,
-    "avatar-aang": 21,
-    "katara": 152
+    "toph": 161,
+    "avatar-aang": 22,
+    "nightmare-korra": 48,
+    "kyoshi": 136,
+    "sokka": 85
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -68,36 +68,76 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "azula": 34,
+      "aang": 43,
+      "zuko": 35,
+      "ozai": 37,
+      "katara": 48,
+      "azula": 38,
+      "korra": 80,
       "zaheer": 74,
-      "ozai": 36,
-      "korra": 79,
-      "aang": 41,
-      "sokka": 46,
-      "zuko": 34,
-      "toph": 69,
-      "nightmare-korra": 24,
-      "kyoshi": 57,
-      "avatar-aang": 11,
-      "katara": 47
+      "toph": 70,
+      "avatar-aang": 12,
+      "nightmare-korra": 25,
+      "kyoshi": 58,
+      "sokka": 46
     }
   },
   "playerCharacters": {
+    "an11-mo": {
+      "aang": 15
+    },
+    "mile-man": {
+      "zuko": 2
+    },
+    "arinkarin": {
+      "ozai": 29
+    },
+    "still": {
+      "katara": 80,
+      "ozai": 1
+    },
+    "biscuit": {
+      "azula": 11
+    },
+    "red": {
+      "korra": 5,
+      "azula": 8
+    },
+    "boobusmcscoobus": {
+      "azula": 3
+    },
+    "yo-xan": {
+      "aang": 1
+    },
     "wynter": {
       "azula": 4
     },
     "orochi-clark": {
       "zaheer": 1
     },
+    "cow": {
+      "toph": 23
+    },
+    "narath": {
+      "avatar-aang": 9
+    },
+    "lannyva": {
+      "azula": 1
+    },
+    "the-irs": {
+      "nightmare-korra": 1
+    },
+    "kusa": {
+      "azula": 3
+    },
+    "briggetchu": {
+      "kyoshi": 1
+    },
     "teo1029": {
       "ozai": 10
     },
     "porklazer": {
       "azula": 3
-    },
-    "red": {
-      "azula": 8,
-      "korra": 4
     },
     "ziad": {
       "korra": 13
@@ -184,9 +224,6 @@
     "hytek": {
       "kyoshi": 3
     },
-    "arinkarin": {
-      "ozai": 28
-    },
     "jiggynyc": {
       "toph": 2
     },
@@ -196,10 +233,6 @@
     "vic": {
       "kyoshi": 1
     },
-    "still": {
-      "katara": 79,
-      "ozai": 1
-    },
     "scythe": {
       "katara": 6
     },
@@ -208,9 +241,6 @@
     },
     "pure-fgc": {
       "korra": 1
-    },
-    "an11-mo": {
-      "aang": 14
     },
     "pamba": {
       "zaheer": 1
@@ -226,9 +256,6 @@
     },
     "bobafairyella": {
       "korra": 1
-    },
-    "narath": {
-      "avatar-aang": 8
     },
     "sneezy727": {
       "azula": 1
@@ -271,12 +298,6 @@
     },
     "twist": {
       "toph": 1
-    },
-    "cow": {
-      "toph": 22
-    },
-    "kusa": {
-      "azula": 2
     },
     "zee": {
       "ozai": 2
@@ -720,9 +741,6 @@
     "lou-minaudi": {
       "katara": 3
     },
-    "mile-man": {
-      "zuko": 1
-    },
     "coke": {
       "korra": 1
     },
@@ -747,9 +765,6 @@
     "aaronx3": {
       "katara": 1
     },
-    "boobusmcscoobus": {
-      "azula": 2
-    },
     "citrusdestroyer": {
       "zaheer": 1
     },
@@ -764,9 +779,6 @@
     },
     "mpgame": {
       "katara": 1
-    },
-    "biscuit": {
-      "azula": 10
     },
     "gwynstylish": {
       "korra": 3
@@ -1352,10 +1364,14 @@
     }
   },
   "supportUsage": {
+    "gyatso": 34,
+    "ran-and-shaw": 13,
+    "lo-and-li": 30,
+    "momo": 16,
+    "the-boulder": 29,
+    "roku": 13,
     "firelord-sozin": 21,
-    "lo-and-li": 29,
     "ghazan": 36,
-    "momo": 15,
     "ming-hua": 25,
     "appa": 22,
     "june": 18,
@@ -1368,15 +1384,11 @@
     "tonraq": 9,
     "general-zhao": 11,
     "master-pakku": 21,
-    "ran-and-shaw": 12,
     "yun": 19,
-    "gyatso": 33,
     "kanna": 33,
     "badgermole": 25,
-    "roku": 12,
     "joo-dee": 4,
     "mai": 11,
-    "the-boulder": 28,
     "kelsang": 16,
     "ursa": 35,
     "vaatu": 9,
