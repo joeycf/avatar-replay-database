@@ -290,9 +290,12 @@ check(
 // ── the accents ─────────────────────────────────────────────────────────────
 //
 // Accents are the ONE place a game's palette reaches components by character id.
-// The engine's plugin injects them through useHead, so they are in the
-// PRERENDERED HTML rather than only after hydration — which is what makes them
-// checkable here at all.
+// Since engine v0.16.0 they are compiled into the entry stylesheet
+// (modules/accents-css.ts) instead of an inline <style> in every page, so they
+// are read from the built CSS the home page links: render-blocking, so present
+// at first paint, which is what the inline block was for. The minifier
+// lowercases a hex and may shorten one (#ffcc00 → #fc0), so both sides are
+// normalised; anything else it rewrites prints both values and fails here.
 //
 // THE CONFIG DECLARES MORE THAN THE ROSTER, ON PURPOSE, and that asymmetry is
 // the interesting half. app.config.ts carries an accent for the five announced-
@@ -310,17 +313,16 @@ const characters = JSON.parse(src('data/characters.json')) as {
 }[];
 check('roster is non-empty', characters.length > 0, `${characters.length} fighters`);
 const home = read('index.html');
+const hex = (v: string) => {
+  const s = v.trim().toLowerCase();
+  return /^#[0-9a-f]{3}$/.test(s) ? `#${[...s.slice(1)].map((c) => c + c).join('')}` : s;
+};
 const injected = new Map(
-  [...home.matchAll(/--accent-([a-z0-9-]+):(#[0-9a-fA-F]{6})/g)].map((m) => [
-    m[1],
-    m[2].toLowerCase(),
-  ]),
+  [...css.matchAll(/--accent-([a-z0-9-]+):([^;}]+)/g)].map((m) => [m[1], hex(m[2])]),
 );
-const missingAccents = characters.filter(
-  (c) => injected.get(c.id) !== c.accent.toLowerCase().trim(),
-);
+const missingAccents = characters.filter((c) => injected.get(c.id) !== hex(c.accent));
 check(
-  `all ${characters.length} roster accents are injected as --accent-<id> in the prerendered HTML`,
+  `all ${characters.length} roster accents reach the built CSS as --accent-<id>`,
   missingAccents.length === 0,
   missingAccents
     .slice(0, 3)
@@ -815,9 +817,14 @@ if (EMPTY) {
       `/characters/${sample.id} prerenders with a data-derived <title>`,
       /<title>[^<]*\w[^<]*<\/title>/.test(html),
     );
+    // Its accent by reference: the page styles itself with var(--accent-<id>),
+    // and the accents block above proves the built CSS defines that variable
+    // with the right colour. (Until engine v0.16.0 this looked for the hex in
+    // the page, which only ever matched the inline accents block every page
+    // carried; the character's own markup has never spelled the hex out.)
     check(
       `/characters/${sample.id} carries its accent`,
-      html.toLowerCase().includes(sample.accent.toLowerCase()),
+      html.includes(`var(--accent-${sample.id}`),
     );
   } else {
     check(`/characters/${sample.id} prerendered`, false, 'missing from the build');
