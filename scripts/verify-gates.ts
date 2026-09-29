@@ -44,7 +44,7 @@
  * and the matcher builders; scripts/parse-finish.ts exports
  * `buildTheaterRecords`. That export surface exists so the orientation and index
  * logic can be exercised WITHOUT running the pipeline, and this file is its
- * consumer: eight controls drive a small probe module against those functions
+ * consumer: twelve controls drive a small probe module against those functions
  * with hand-built inputs. They are offline, they need no corpus, they need no
  * API key, and they are the controls for the four rules that are this game's
  * reason for existing — the pair-level slot order (5q), the CPU/arcade refusal
@@ -197,6 +197,9 @@ const verdict = (r: Run, names: RegExp): Verdict => {
 const PROBE_CASES = [
   'pair-level',
   'cpu-arcade',
+  'handles-first',
+  'sole-group',
+  'single-bang',
   'identity',
   'placeholder-symbol',
   'index-format-tag',
@@ -266,6 +269,49 @@ if (which === 'pair-level' || which === 'cpu-arcade') {
   } else {
     const out = parseTitle('Avatar Legends: The Fighting Game - Katara vs. Zaheer', ctx);
     need('CPU/ARCADE REFUSAL (checklist 5r)', out.miss === 'matchup-only', reading(out));
+  }
+}
+
+// ── the three grammar gaps closed on 2026-09-29 (an instrument change) ──────
+if (which === 'handles-first' || which === 'sole-group' || which === 'single-bang') {
+  const ctxFor = (id: string) => {
+    const ch = CHANNEL_BY_ID.get(id)!;
+    const rw = handleRewrites(ch);
+    return {
+      matcher: channelMatcher(ch, characters, supports),
+      declared: ch.slotOrder,
+      ...(rw ? { handleRewrites: rw } : {}),
+      channel: ch,
+    };
+  };
+  const reading = (o: ReturnType<typeof parseTitle>): string =>
+    o.ok ? o.ok.map((s) => s.handle + '=' + s.characters.join('+')).join(' vs ') : 'miss:' + o.miss;
+  if (which === 'handles-first') {
+    const out = parseTitle(
+      '(Ziad vs Arinkarin) - Avatar Legends The Fighting Game Korra vs Ozai Replay!',
+      ctxFor('aegisEsports'),
+    );
+    need('HANDLES-FIRST PAIR TITLE (aegisEsports)', reading(out) === 'Ziad=korra vs Arinkarin=ozai', reading(out));
+  } else if (which === 'sole-group') {
+    const out = parseTitle(
+      'The BEST Kyoshi got me stressed...(RED Korra vs GoneMad Kyoshi) | Avatar Legends the Fighting Game',
+      ctxFor('redVsFantasy'),
+    );
+    need('WHOLE-TITLE BRACKET (redVsFantasy)', reading(out) === 'RED=korra vs GoneMad=kyoshi', reading(out));
+    // The same shape with handles and no fighters is what a pair-level title
+    // leaves when the strips took its outside vs. It must stay a no-vs miss,
+    // never become a queue item.
+    const bare = parseTitle(
+      'Avatar Legends The Fighting Game (Plisno vs T0ni) Avatar Legends Replay!',
+      ctxFor('aegisEsports'),
+    );
+    need('WHOLE-TITLE BRACKET STAYS A MISS WITHOUT FIGHTERS', bare.miss === 'no-vs', reading(bare));
+  } else {
+    const out = parseTitle(
+      'FIRST Toph with a frontal lobe! RED (Korra) vs Cow (Toph) FT5 | Avatar Legends The Fighting Game',
+      ctxFor('redVsFantasy'),
+    );
+    need('SINGLE-BANG CLICKBAIT PREFIX (redVsFantasy)', reading(out) === 'RED=korra vs Cow=toph', reading(out));
   }
 }
 
@@ -747,6 +793,39 @@ const CONTROLS: Control[] = [
         "    if (matchupOnly) return { miss: 'matchup-only' };",
         "    if (false as boolean) return { miss: 'matchup-only' };",
       ),
+  },
+  // The three grammar gaps closed on 2026-09-29, recorded as an instrument
+  // change to the flip gate's count A: +3 records corpus-wide, all in the
+  // 09-21 week, which moved from 21 to 24. Each control disarms its fix and
+  // requires the probe to name the title that falls back to a miss.
+  {
+    name: 'parse: the aegisEsports mid-title marker strip is disarmed — "(H vs H) - marker C vs C" reads no-vs',
+    cmd: PROBE('handles-first'),
+    files: ['scripts/channels.ts'],
+    names: /HANDLES-FIRST PAIR TITLE \(aegisEsports\)/,
+    inject: () => sub('scripts/channels.ts', '(?<=^\\(', '(?<=^\\(NEVER'),
+  },
+  {
+    name: 'parse: the whole-title bracket unwrap is removed — "(H C vs H C)" reads no-vs',
+    cmd: PROBE('sole-group'),
+    files: ['scripts/parse.ts'],
+    names: /WHOLE-TITLE BRACKET \(redVsFantasy\)/,
+    inject: () =>
+      sub('scripts/parse.ts', '    const sole = soleGroupMatchup(t, ctx);\n    if (sole) return sole;\n', ''),
+  },
+  {
+    name: 'parse: the unwrap keeps a half-read bracket — handles with no fighters leave the no-vs class',
+    cmd: PROBE('sole-group'),
+    files: ['scripts/parse.ts'],
+    names: /WHOLE-TITLE BRACKET STAYS A MISS WITHOUT FIGHTERS/,
+    inject: () => sub('scripts/parse.ts', '  return out.ok ? out : null;\n}', '  return out;\n}'),
+  },
+  {
+    name: 'parse: redVsFantasy’s single-! clickbait cut is reverted — the hype sentence becomes RED’s handle',
+    cmd: PROBE('single-bang'),
+    files: ['scripts/channels.ts'],
+    names: /SINGLE-BANG CLICKBAIT PREFIX \(redVsFantasy\)/,
+    inject: () => sub('scripts/channels.ts', '|\\?!|!)\\s*(?=', '|\\?!)\\s*(?='),
   },
   {
     // NORMALISATION MUST EXERCISE IDENTITY, NOT THE PARSE RATE — the trap the

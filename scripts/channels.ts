@@ -254,12 +254,28 @@ export const CHANNELS: ChannelConfig[] = [
         /^\s*(?:GRAND FINAL|LOSER FINALS|WINNERS FINAL)\s*-\s*/i,
         /^\s*Grand Finals\s+/i,
         /^\s*(?:OVER \d+\+? PLAYERS!|THE MOST STACKED [A-Z ]+YET|INSANE [A-Z ]+MATCHES!|Absolute Chaos in the Grand Finals!)\s*/,
+        // THE HANDLES-FIRST SHAPE, first published 2026-09-21 (cDYmOGtYE-U):
+        // "(Ziad vs Arinkarin) - Avatar Legends The Fighting Game Korra vs Ozai
+        // Replay!". It is the same pair-level grammar with the bracket moved to
+        // the FRONT, and the marker now sits between the two pairs. Left there,
+        // the global marker-tail strip takes the fighters with it, because the
+        // bracketed `vs` keeps that edit legal, and the title reads `no-vs`.
+        // This removes the marker ONLY where it directly follows a leading
+        // handles bracket, so parsePair sees "(Ziad vs Arinkarin) Korra vs
+        // Ozai" and aligns the pairs as it does on the 57 original titles. A
+        // prefix pattern need not be anchored at ^; this one is anchored to
+        // the leading group through the lookbehind.
+        /(?<=^\([^()]*\bvs\b[^()]*\))\s*[-–—]\s*Avatar\s*Legends\s*(?:The\s*Fighting\s*Game)?/i,
       ],
       suffix: [
         /\s*Avatar\s*Legends\s*(?:The\s*Fighting\s*Game\s*)?(?:Tournament\s*)?Replay!*\s*$/i,
         /\s*Avatar\s*Replay!*\s*$/i,
         /\s*Tournament Highlights!*\s*$/i,
         /\s*Match!*\s*$/i,
+        // The handles-first shape ends in a bare "Replay!" once the marker
+        // has moved to the middle. It runs after the two marker-bearing
+        // spellings above, so on the original titles it finds nothing left.
+        /\s*Replay!*\s*$/i,
       ],
     },
     // Checklist 5t. Six "Full Tournament VOD" uploads run 4840, 5408, 6445,
@@ -1102,10 +1118,17 @@ export const CHANNELS: ChannelConfig[] = [
     // both-resolve side, and BOTH readings are wrong — handle-outside yields the
     // 5-word handle "Kyoshi Player nobody knows... Click" (MAX_HANDLE_WORDS does
     // not save it) and chars-outside mints the player "Kyoshi" outright.
+    //
+    // A SINGLE '!' ENDS THE CLICKBAIT TOO (added 2026-09-29): "FIRST Toph with
+    // a frontal lobe! RED (Korra) vs Cow (Toph) FT5" kept the whole hype
+    // sentence as RED's handle slot, it named Toph, and the side read
+    // `no-handle`. The earliest terminator wins, so a title whose prose ends in
+    // '!!!' is cut exactly where it was before. The lookahead still requires
+    // a bracket to follow, which keeps the cut off bracket-less titles.
     slotOrder: 'handle-outside',
     gateMode: 'title',
     strip: {
-      prefix: [/^[^()]*?(?:\.\.\.\.|\.\.\.|!!!|\?!)\s*(?=[^()]*\()/],
+      prefix: [/^[^()]*?(?:\.\.\.\.|\.\.\.|!!!|\?!|!)\s*(?=[^()]*\()/],
       suffix: [
         /\s*---\s*[A-Za-z0-9 ]+\s*(?:19|20)\d\d\s*$/,
         /\s*(?:Grand |Winners |Losers )?Finals!*\s*$/i,

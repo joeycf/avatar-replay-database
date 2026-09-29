@@ -1,13 +1,13 @@
 {
   "totals": {
-    "replays": 646,
+    "replays": 649,
     "characters": 12,
     "players": 425,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 298
+      "2026-09-02": 301
     },
     "supports": 34,
     "sidesWithSupport": 692
@@ -17,13 +17,13 @@
     "katara": 154,
     "zuko": 67,
     "avatar-aang": 23,
-    "toph": 163,
-    "ozai": 94,
+    "toph": 164,
+    "ozai": 95,
     "azula": 140,
-    "korra": 155,
+    "korra": 158,
+    "kyoshi": 140,
     "zaheer": 139,
     "nightmare-korra": 49,
-    "kyoshi": 139,
     "sokka": 85
   },
   "byPatchUsage": {
@@ -72,13 +72,13 @@
       "katara": 49,
       "zuko": 36,
       "avatar-aang": 13,
-      "toph": 72,
-      "ozai": 42,
+      "toph": 73,
+      "ozai": 43,
       "azula": 45,
-      "korra": 87,
+      "korra": 90,
+      "kyoshi": 62,
       "zaheer": 75,
       "nightmare-korra": 26,
-      "kyoshi": 61,
       "sokka": 46
     }
   },
@@ -99,7 +99,7 @@
       "toph": 14
     },
     "arinkarin": {
-      "ozai": 29
+      "ozai": 30
     },
     "still": {
       "katara": 80,
@@ -109,7 +109,7 @@
       "azula": 11
     },
     "red": {
-      "korra": 5,
+      "korra": 7,
       "azula": 8
     },
     "boobusmcscoobus": {
@@ -118,6 +118,9 @@
     "yo-xan": {
       "aang": 1
     },
+    "gonemad": {
+      "kyoshi": 19
+    },
     "wynter": {
       "azula": 4
     },
@@ -125,7 +128,7 @@
       "zaheer": 1
     },
     "cow": {
-      "toph": 23
+      "toph": 24
     },
     "lannyva": {
       "azula": 1
@@ -179,7 +182,7 @@
       "azula": 3
     },
     "ziad": {
-      "korra": 13
+      "korra": 14
     },
     "zanefgc": {
       "zaheer": 3
@@ -331,9 +334,6 @@
     },
     "v": {
       "korra": 7
-    },
-    "gonemad": {
-      "kyoshi": 18
     },
     "twist": {
       "toph": 1

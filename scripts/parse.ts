@@ -1305,6 +1305,8 @@ export function parseTitle(rawTitle: string, ctx: TitleContext): ParseOutcome {
     if (pair) return pair;
   }
   if (tops.length === 0) {
+    const sole = soleGroupMatchup(t, ctx);
+    if (sole) return sole;
     // A pair-level title whose outside `vs` the strips removed, or schoolBus's
     // mirror shape ("HIGH LEVEL KORRA MIRROR (SchoolBus vs Dinotail)"), where the
     // fighter is named once for both sides. Neither is recoverable without
@@ -1323,6 +1325,35 @@ export function parseTitle(rawTitle: string, ctx: TitleContext): ParseOutcome {
   const parts = splitAt(t, tops[0]!, matchLengthAt(t, tops[0]!));
   if (parts.some((p) => !p)) return { miss: 'no-vs' };
   return finishSides(parts, ctx);
+}
+
+/**
+ * THE WHOLE MATCHUP IN ONE BRACKET, added 2026-09-29. redVsFantasy wrote "The
+ * BEST Kyoshi got me stressed...(RED Korra vs GoneMad Kyoshi) | Avatar Legends
+ * the Fighting Game" (EPdOonB923c): once the clickbait prefix and the marker
+ * tail are gone, the title IS one bracket, both handle-and-fighter pairs sit
+ * inside it, and its only `vs` is not top-level, so the title read `no-vs`.
+ *
+ * Unwrapped only when the group spans the entire title and holds exactly one
+ * `vs`, and kept only when BOTH sides resolve. Anything less falls through to
+ * the old path unchanged. That matters because the same shape is what a
+ * pair-level title leaves when the strips took its outside `vs` ("(Plisno vs
+ * T0ni)"): handles with no fighters, which must stay a `no-vs` miss rather
+ * than turn into a review-queue item.
+ */
+function soleGroupMatchup(t: string, ctx: TitleContext): ParseOutcome | null {
+  GROUP.lastIndex = 0;
+  const groups = [...t.matchAll(GROUP)];
+  if (groups.length !== 1) return null;
+  const g = groups[0]!;
+  if (g.index !== 0 || g[0].length !== t.length) return null;
+  const inner = g[0].slice(1, -1).trim();
+  const vs = topLevelVs(inner);
+  if (vs.length !== 1) return null;
+  const parts = splitAt(inner, vs[0]!, matchLengthAt(inner, vs[0]!));
+  if (parts.some((p) => !p)) return null;
+  const out = finishSides(parts, ctx);
+  return out.ok ? out : null;
 }
 
 /** Exactly one top-level ' - ' with a bracket group on each side. */
