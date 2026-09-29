@@ -373,6 +373,35 @@
     "durationSec": 2130
   },
   {
+    "id": "RWnlDRa-GmU@2822",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ [lx]Raf (Ozai/Firelord Sozin) vs dawnRDE (Azula/Ursa) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #6",
+    "publishedAt": "2026-09-27T21:54:31Z",
+    "durationSec": 8991,
+    "handles": [
+      "[lx]Raf",
+      "dawnRDE"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "dawnrde",
+          "lx-raf"
+        ],
+        "characters": [
+          "azula",
+          "ozai"
+        ],
+        "playedOn": "2026-09-27"
+      },
+      "ids": [
+        "RWnlDRa-GmU@2822",
+        "RWnlDRa-GmU@8347"
+      ]
+    }
+  },
+  {
     "id": "PQ8_9_zzfBk@10955",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

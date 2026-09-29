@@ -343,6 +343,10 @@
     "handle": "Data Xigbar In Real Life"
   },
   {
+    "id": "dawnrde",
+    "handle": "dawnRDE"
+  },
+  {
     "id": "dbzformers",
     "handle": "DBZFORMERS"
   },
@@ -429,6 +433,10 @@
   {
     "id": "eggyolkyummy",
     "handle": "EggYolkYummy"
+  },
+  {
+    "id": "einklotz",
+    "handle": "EinKlotz"
   },
   {
     "id": "elfry",
@@ -671,6 +679,10 @@
     "handle": "IDUnknown"
   },
   {
+    "id": "inahk",
+    "handle": "Inahk"
+  },
+  {
     "id": "infinite",
     "handle": "Infinite"
   },
@@ -760,6 +772,10 @@
   {
     "id": "kang",
     "handle": "KANG"
+  },
+  {
+    "id": "kanou",
+    "handle": "Kanou"
   },
   {
     "id": "karma",
@@ -892,6 +908,10 @@
   {
     "id": "lou-minaudi",
     "handle": "Lou Minaudi"
+  },
+  {
+    "id": "lx-raf",
+    "handle": "[lx]Raf"
   },
   {
     "id": "magma",
@@ -1111,6 +1131,10 @@
     "handle": "OctoZed"
   },
   {
+    "id": "ohdatsapplemate",
+    "handle": "OhDatsAppleMate"
+  },
+  {
     "id": "on-earth-arin-karin",
     "handle": "ON EARTH ARIN KARIN"
   },
@@ -1149,6 +1173,14 @@
   {
     "id": "pat",
     "handle": "Pat"
+  },
+  {
+    "id": "pepe",
+    "handle": "Pepe"
+  },
+  {
+    "id": "persi",
+    "handle": "Persi"
   },
   {
     "id": "pg13",
