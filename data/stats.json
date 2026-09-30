@@ -1,29 +1,29 @@
 {
   "totals": {
-    "replays": 649,
+    "replays": 651,
     "characters": 12,
     "players": 425,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 301
+      "2026-09-02": 303
     },
     "supports": 34,
-    "sidesWithSupport": 692
+    "sidesWithSupport": 693
   },
   "characterUsage": {
-    "aang": 94,
+    "aang": 95,
+    "azula": 141,
     "katara": 154,
     "zuko": 67,
     "avatar-aang": 23,
     "toph": 164,
-    "ozai": 95,
-    "azula": 140,
+    "ozai": 96,
     "korra": 158,
     "kyoshi": 140,
     "zaheer": 139,
-    "nightmare-korra": 49,
+    "nightmare-korra": 50,
     "sokka": 85
   },
   "byPatchUsage": {
@@ -68,23 +68,26 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "aang": 46,
+      "aang": 47,
+      "azula": 46,
       "katara": 49,
       "zuko": 36,
       "avatar-aang": 13,
       "toph": 73,
-      "ozai": 43,
-      "azula": 45,
+      "ozai": 44,
       "korra": 90,
       "kyoshi": 62,
       "zaheer": 75,
-      "nightmare-korra": 26,
+      "nightmare-korra": 27,
       "sokka": 46
     }
   },
   "playerCharacters": {
     "an11-mo": {
-      "aang": 16
+      "aang": 17
+    },
+    "persi": {
+      "azula": 4
     },
     "kanou": {
       "katara": 1
@@ -103,7 +106,7 @@
     },
     "still": {
       "katara": 80,
-      "ozai": 1
+      "ozai": 2
     },
     "biscuit": {
       "azula": 11
@@ -150,9 +153,6 @@
     },
     "ohdatsapplemate": {
       "aang": 2
-    },
-    "persi": {
-      "azula": 3
     },
     "lx-raf": {
       "ozai": 5
@@ -415,7 +415,7 @@
       "ozai": 11
     },
     "testmyluck": {
-      "nightmare-korra": 14,
+      "nightmare-korra": 15,
       "zaheer": 1
     },
     "negareaper": {
@@ -1388,7 +1388,7 @@
     }
   },
   "supportUsage": {
-    "gyatso": 35,
+    "gyatso": 36,
     "kanna": 34,
     "ran-and-shaw": 14,
     "roku": 14,
