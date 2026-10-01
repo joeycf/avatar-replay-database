@@ -1233,7 +1233,18 @@
   },
   {
     "id": "precho",
-    "handle": "Precho"
+    "handle": "Precho",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Ultimate Fighting Arena 2026",
+          "place": 1,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2026/AL"
+        }
+      ]
+    }
   },
   {
     "id": "princess-slim",
@@ -1370,7 +1381,18 @@
   },
   {
     "id": "sachio",
-    "handle": "Sachio"
+    "handle": "Sachio",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Ultimate Fighting Arena 2026",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2026/AL"
+        }
+      ]
+    }
   },
   {
     "id": "sageartz",
@@ -1759,11 +1781,20 @@
   {
     "id": "xcaliburbladez",
     "handle": "xcaliburbladez",
+    "featured": true,
     "extra": {
       "aliases": [
         "XCaliburBladez",
         "XcaliburBladez",
         "XCaliburbladez"
+      ],
+      "titles": [
+        {
+          "event": "CEO 2026",
+          "place": 1,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/Community_Effort_Orlando/2026/AL"
+        }
       ]
     }
   },

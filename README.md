@@ -223,28 +223,56 @@ provenance.json` carries the citation and an expiry that re-checks for a fan kit
 
 ## Scripts
 
-| command             | what it does                                                         |
-| ------------------- | -------------------------------------------------------------------- |
-| `data:fetch`        | uploads-playlist walk, 32 channels, per-channel date floor (1b)      |
-| `data:theater`      | the index catalogue pull + the YouTube liveness join                 |
-| `data:parse`        | title parse + the index merge, every guard, `data/report.md`         |
-| `data:emit`         | the public contract, with every assertion a throw                    |
-| `data:catchup`      | fetch → theater → parse → emit, in that order, as one command        |
-| `data:characters`   | the fighter roster + the support registry + all their validators     |
-| `data:patches`      | the patch table's shape; also runs inside `npm run typecheck`        |
-| `data:patch-check`  | the vendor's three surfaces vs the table. Manual — never in the cron |
-| `data:roster-check` | Steam achievements + the vendor widget vs the roster. Manual         |
-| `data:expiries`     | the clock-and-corpus gate: unreleased fighters, supports, patches    |
-| `data:dupes`        | the match-identity deep dive. Report only, and it proves it          |
-| `data:art`          | the generated tiles. Manual                                          |
-| `data:og`           | the OG card. Manual                                                  |
-| `verify:gates`      | the positive-control suite                                           |
-| `verify:deployed`   | content-digest smoke check against production                        |
-| `test:e2e`          | assertions against the built output                                  |
+| command             | what it does                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| `data:fetch`        | uploads-playlist walk, 32 channels, per-channel date floor (1b)                                  |
+| `data:theater`      | the index catalogue pull + the YouTube liveness join                                             |
+| `data:parse`        | title parse + the index merge, every guard, `data/report.md`                                     |
+| `data:emit`         | the public contract, with every assertion a throw                                                |
+| `data:catchup`      | fetch → theater → parse → emit, in that order, as one command                                    |
+| `data:characters`   | the fighter roster + the support registry + all their validators                                 |
+| `data:patches`      | the patch table's shape; also runs inside `npm run typecheck`                                    |
+| `data:patch-check`  | the vendor's three surfaces vs the table. Manual — never in the cron                             |
+| `data:roster-check` | Steam achievements + the vendor widget vs the roster. Manual                                     |
+| `data:tournaments`  | Liquipedia's Tier 1–2 winners/runners-up → `data/tournaments.json`. Manual; `--match`, `--check` |
+| `data:expiries`     | the clock-and-corpus gate: unreleased fighters, supports, patches                                |
+| `data:dupes`        | the match-identity deep dive. Report only, and it proves it                                      |
+| `data:art`          | the generated tiles. Manual                                                                      |
+| `data:og`           | the OG card. Manual                                                                              |
+| `verify:gates`      | the positive-control suite                                                                       |
+| `verify:deployed`   | content-digest smoke check against production                                                    |
+| `test:e2e`          | assertions against the built output                                                              |
 
 `npm run typecheck` — **never raw `tsc`**. The repo is two disjoint TypeScript
 tracks and the root config delegates to Nuxt's, so `npx tsc --noEmit -p .`
 reports clean while a pipeline script references deleted functions.
+
+## Featured players come from tournament results
+
+A player is **featured** when they won or placed second at a Liquipedia Tier 1 or
+Tier 2 Avatar Legends event, or when they rank in the top 2% of the unflagged
+players by appearances (engine v0.17.0; the old rule, "25+ replays", is a bar
+almost nobody clears on a corpus this size, and nobody here was ever flagged by
+hand). The placements are `data/tournaments.json`, pulled by
+`npm run data:tournaments` — **manual, network, never in the cron** — through
+Liquipedia's MediaWiki API (its HTML pages are bot-walled and off limits by its
+terms; the API wants gzip, a contact User-Agent and one `parse` call per 30 s,
+which is why two tiers take 35 s). The daily parse re-matches the file against
+the registry it just built and stamps `featured: true` + `extra.titles` on every
+hit, so a champion with no replay yet costs nothing today and is featured the
+morning their first video is ingested.
+
+The matcher never guesses between people. A name that is also a roster entry in
+EITHER namespace — a fighter (`Kyoshi`) or a support (`Suki`, `Sozin`) — has
+under three alphanumerics, or resolves to two registry ids is reported in
+`data/report.md` and `npm run data:tournaments -- --match`, and a human closes
+it in `data/tournament-aliases.json` (an id, or `null` to ignore).
+`tsx scripts/tournaments.ts --check` validates both files inside
+`npm run typecheck`.
+
+Liquipedia's content is **CC BY-SA 3.0**: the credit is in the file's `source`
+block and the engine renders it beside every title on the player page.
+Pacing across all eight games is `../sync-tournaments.sh`.
 
 ## The gates
 

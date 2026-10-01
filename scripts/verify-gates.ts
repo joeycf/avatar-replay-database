@@ -558,6 +558,14 @@ interface Control {
   cmd: string[];
   /** The rule the run must NAME. */
   names: RegExp;
+  /** Extra environment for the command (a control that points a script at an
+   *  unreachable endpoint, say). */
+  env?: NodeJS.ProcessEnv;
+  /** A control whose pass condition is a MEASUREMENT rather than a named
+   *  non-zero exit brings its own verdict. It runs BEFORE the files are
+   *  restored, so it can read what the command left on disk. `names` is
+   *  still declared, for the listing, but is not consulted. */
+  assert?: (r: Run) => Verdict;
   /** Anything that must be true before the command can be judged. Returns null
    *  when it is. The control's ANCHOR is still audited when this is not. */
   precondition?: () => string | null;
@@ -588,6 +596,73 @@ const EMIT_OUTPUTS = [
 const PROBE = (c: (typeof PROBE_CASES)[number]): string[] => ['tsx', probePath(), c];
 
 const CONTROLS: Control[] = [
+  // ── tournament placements (scripts/tournaments.ts --check) ───────────────
+  // Both offline. The file is Liquipedia's Tier 1–2 table as fetched; the
+  // validator is what keeps a hand-edit (or a half-written fetch) from
+  // reaching parse-finish.ts, which features whoever the file names.
+  {
+    name: 'tournaments: the same event page listed twice (a double-counted title)',
+    cmd: ['tsx', 'scripts/tournaments.ts', '--check'],
+    files: ['data/tournaments.json'],
+    names: /duplicate event page/,
+    inject: () => {
+      if (!existsSync(join(ROOT, 'data/tournaments.json'))) return 'no data/tournaments.json yet';
+      const f = readJson<{ events: unknown[] }>('data/tournaments.json');
+      if (!f.events.length) return 'tournaments.json carries no events';
+      f.events.push(f.events[0]);
+      write('data/tournaments.json', `${JSON.stringify(f, null, 2)}\n`);
+      return true;
+    },
+  },
+  {
+    name: 'tournaments: an alias row pointing at a player who is not in the registry',
+    cmd: ['tsx', 'scripts/tournaments.ts', '--check'],
+    files: ['data/tournament-aliases.json'],
+    names: /unknown player id "no-such-player"/,
+    inject: () => {
+      if (!existsSync(join(ROOT, 'data/tournament-aliases.json')))
+        return 'no data/tournament-aliases.json yet';
+      const f = readJson<{ aliases: Record<string, string | null> }>(
+        'data/tournament-aliases.json',
+      );
+      const k = Object.keys(f.aliases)[0];
+      if (!k) return 'the aliases file has no rows to corrupt';
+      f.aliases[k] = 'no-such-player';
+      write('data/tournament-aliases.json', `${JSON.stringify(f, null, 2)}\n`);
+      return true;
+    },
+  },
+  {
+    // THE KEEP-THE-FILE GUARANTEE. An unreachable Liquipedia must be
+    // UNVERIFIED (exit 0, yellow in ../sync-tournaments.sh) and must leave the
+    // committed table byte-identical — a fetch failure that wrote an empty file
+    // would un-feature every champion on the next parse. A measurement, not an
+    // exit code, so it brings its own assert. Needs no real network: the
+    // endpoint is pointed at a closed local port, so the `fetch` fails at the
+    // socket and the control runs offline.
+    name: 'tournaments: Liquipedia unreachable → UNVERIFIED and data/tournaments.json untouched',
+    cmd: ['tsx', 'scripts/tournaments.ts'],
+    files: ['data/tournaments.json'],
+    env: { TOURNAMENTS_URL: 'http://127.0.0.1:9/api.php' },
+    names: /tournaments: UNVERIFIED/,
+    inject: () =>
+      existsSync(join(ROOT, 'data/tournaments.json')) ? true : 'no data/tournaments.json yet',
+    assert: (r) => {
+      if (r.error) return fail(`the command never ran: ${r.error.message}`);
+      if (r.status !== 0)
+        return fail(
+          `exited ${r.status}; an unreachable upstream is UNVERIFIED, never a failure. Got: ${head(r)}`,
+        );
+      if (!/tournaments: UNVERIFIED/.test(r.out))
+        return fail(`no UNVERIFIED trailer. Got: ${head(r)}`);
+      const before = snapshots.get('data/tournaments.json');
+      const after = readFileSync(join(ROOT, 'data/tournaments.json'));
+      if (!before || !before.equals(after))
+        return fail('data/tournaments.json changed on a failed fetch');
+      return pass('UNVERIFIED, file byte-identical');
+    },
+  },
+
   // ── the patch table (scripts/patches.ts) ─────────────────────────────────
   {
     name: 'patches: two rows share a start date (the CMS error that mis-filed 950 records on CotW)',
@@ -811,7 +886,11 @@ const CONTROLS: Control[] = [
     files: ['scripts/parse.ts'],
     names: /WHOLE-TITLE BRACKET \(redVsFantasy\)/,
     inject: () =>
-      sub('scripts/parse.ts', '    const sole = soleGroupMatchup(t, ctx);\n    if (sole) return sole;\n', ''),
+      sub(
+        'scripts/parse.ts',
+        '    const sole = soleGroupMatchup(t, ctx);\n    if (sole) return sole;\n',
+        '',
+      ),
   },
   {
     name: 'parse: the unwrap keeps a half-read bracket — handles with no fighters leave the no-vs class',
@@ -1353,9 +1432,12 @@ for (const c of selected) {
     );
     continue;
   }
-  const r = run(c.cmd);
+  const r = run(c.cmd, c.env);
+  // A measuring control reads the disk the command left behind, so its verdict
+  // is taken BEFORE the restore; the default verdict reads only the Run.
+  const v = c.assert ? c.assert(r) : verdict(r, c.names);
   restore(c.files);
-  record(c.name, verdict(r, c.names));
+  record(c.name, v);
 }
 
 // ── the clean run, which is the other half of step 10 ───────────────────────

@@ -47,8 +47,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | towito _(watch)_ | towito | 132 | 2 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 0 |
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 9 | 3 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 1 |
-| drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 248 | — | — | — | — |
+| drewShoto _(frozen)_ | drewShoto | 654 | 12 | 3 | 3 | 1 (120s) | 0 (—) | 0 | 2 |
+| replayTheater _(index, carried)_ | replayTheater | — | — | — | 248 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 5 of 33 intake(s)_
 _with records commit more than 20, so on the other 28 its second arm cannot fire at all_
@@ -64,11 +64,7 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 0 built this run, 248 carried (add-only), **248** total; pin 248. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
-
-Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
-
-Segment ids: **0** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+No pull produced a dump this run, so the committed catalogue was carried against its pin: **248** record(s). That is the designed fallback, not a failure of this run; `npm run data:theater` refreshes it.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -137,6 +133,7 @@ no player to complete.
 | towito | 130 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redblade | 50 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | saxxiefone | 6 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| drewShoto | 642 | 0 | 0 | 1 | 0 | 6 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 
 ## Slot order, per intake — both sides tallied
 
@@ -179,6 +176,7 @@ covering a channel — which is why this is printed rather than merely collected
 | towito | handle-outside | 4 | 0 | 0 | 0 | 0 (0.0%) | 0 | 4 |
 | redblade | handle-outside | 2 | 0 | 0 | 0 | 0 (0.0%) | 0 | 2 |
 | saxxiefone | handle-first-bare | 0 | 0 | 4 | 0 | 0 (0.0%) | 0 | 4 |
+| drewShoto | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
 
 _A `chars-outside` share on a channel declared `handle-first-bare` is that channel reading its_
 _own inconsistency rather than the parser guessing — schoolBus flips orientation inside one_
@@ -323,16 +321,27 @@ or ceiling would admit.
 | saxxiefone · records | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 |
 | saxxiefone · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | saxxiefone · other misses | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| drewShoto · records | 0 | 0 | 0 | 1 | 2 | 0 | 0 | 0 |
+| drewShoto · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| drewShoto · other misses | 0 | 0 | 1 | 4 | 2 | 0 | 0 | 2 |
 
 ## Handles
 
-- word count per side: 1 → 764 · 2 → 38 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 769 · 2 → 39 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 23 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
 ## Registry invariant — no player is a fighter OR a support
 
 Every handle in players.json was resolved through the roster matcher at parse time, across BOTH namespaces. 0 resolve to a character and are on the confirmed list (scripts/roster.ts): —.
+
+## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
+
+2 events with placements read; 3 of 430 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+
+**Titled:** `precho` 1W/0R · `sachio` 0W/1R · `xcaliburbladez` 1W/0R
+
+**Waiting for footage** (1): Doza
 
 ## Rejects — titles that name a character but did not parse, per intake
 
@@ -404,6 +413,11 @@ construction — it names two fighters by definition and would drown the table.
 
 - `mKKKAksBoTQ` no-vs: Saxxie (Zuko) Tournament Highlights! Fire Nation Fridays via @ShiraiRyuTV | Avatar Legends
 
+**drewShoto** — 2
+
+- `Naaoj5fQXXM` no-vs: KATARA BATTLES AZULA - Avatar Legends: The Fighting Game
+- `WwdYVXewtaY` no-vs: NIGHTMARE KORRA DESTROY AZULA - Avatar Legends: The Fighting Game
+
 ## Residue — text no roster span covered
 
 A new nickname, a DLC fighter, an unverified support or an uploader typo surfaces here as a
@@ -418,12 +432,14 @@ support nobody has verified is a support nobody should be able to parse into a r
 - 1× `Aegis Esports Run`
 - 1× `ArinKarin`
 - 1× `Back on MR Demon`
+- 1× `BATTLES`
 - 1× `Biscuit BigBlack Mix Masters`
 - 1× `Biscuit Kilo Quarter Mix Masters`
 - 1× `Biscuit STiLL Mix Masters`
 - 1× `BnB Advanced`
 - 1× `Bread Butter`
 - 1× `Can I win FOUR Tournaments in row`
+- 1× `DESTROY`
 - 1× `FACING MIGHTY SWEG JUST BEFORE CLOCKIN IN MEGA`
 - 1× `Finalist`
 - 1× `FIRST TIME HAKODA GAMES STiLL V S ScaryBusey BASUAL`
@@ -437,6 +453,7 @@ support nobody has verified is a support nobody should be able to parse into a r
 - 1× `How State SAVED This`
 - 1× `I Start playing character GAMES V S First time SFL Soap`
 - 1× `I Turned Street Fighter into Bending MASTER`
+- 1× `Ion know`
 - 1× `IS HEALING FGC`
 - 1× `K Showoff BigBlack Mix Masters`
 - 1× `Kolibri Biscuit Quarter Mix Masters`
@@ -449,11 +466,8 @@ support nobody has verified is a support nobody should be able to parse into a r
 - 1× `MIRRORS STiLL x FaultyThing x MuffinNYC`
 - 1× `Mix Masters Run`
 - 1× `Mix Masters Run Sept`
-- 1× `MORE MIRRORS part STiLL x FaultyThing x MuffinNYC`
-- 1× `Moscow Slam Afneey flcl`
-- 1× `Moscow Slam BTN madi`
-- … 48 more
+- … 53 more
 
-> drewShoto: frozen since 2026-09-07, 3 record(s) carried.
+> drewShoto: frozen since 2026-09-07; 3 record(s) parsed from a frozen dump (the seeding path) and asserted against the pin.
 
-_Generated 2026-10-01T16:30:12.629Z_
+_Generated 2026-10-01T18:23:15.531Z_

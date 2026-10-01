@@ -1,0 +1,72 @@
+{
+  "source": {
+    "name": "Liquipedia Fighting Games Wiki",
+    "url": "https://liquipedia.net/fighters/Avatar_Legends/Tournaments",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "game": "al",
+    "tiers": [
+      1,
+      2
+    ]
+  },
+  "generatedAt": "2026-10-01",
+  "events": [
+    {
+      "name": "Evolution Championship Series: France 2026",
+      "page": "Evolution_Championship_Series/2026/France/AL",
+      "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/France/AL",
+      "date": "2026-10-26",
+      "tier": 1,
+      "entrants": 255,
+      "prize": "$32,226.48",
+      "location": "Nice",
+      "winner": null,
+      "runnerUp": null
+    },
+    {
+      "name": "Ultimate Fighting Arena 2026",
+      "page": "Ultimate_Fighting_Arena/2026/AL",
+      "url": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2026/AL",
+      "date": "2026-09-26",
+      "tier": 2,
+      "entrants": 107,
+      "prize": "$2,320.71",
+      "location": "Paris",
+      "winner": {
+        "name": "Precho",
+        "page": "Precho",
+        "flag": "United Kingdom",
+        "character": "Korra"
+      },
+      "runnerUp": {
+        "name": "Sachio",
+        "page": "Sachio",
+        "flag": "Germany",
+        "character": "Sokka"
+      }
+    },
+    {
+      "name": "CEO 2026",
+      "page": "Community_Effort_Orlando/2026/AL",
+      "url": "https://liquipedia.net/fighters/Community_Effort_Orlando/2026/AL",
+      "date": "2026-08-26",
+      "tier": 2,
+      "entrants": 706,
+      "prize": "$7,060",
+      "location": "Orlando, FL",
+      "winner": {
+        "name": "xcaliburbladez",
+        "page": "XCaliburBladez",
+        "flag": "United States",
+        "character": "Zaheer"
+      },
+      "runnerUp": {
+        "name": "Doza",
+        "page": "Doza",
+        "flag": "United States",
+        "character": "Korra"
+      }
+    }
+  ]
+}
