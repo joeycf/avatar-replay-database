@@ -222,6 +222,10 @@
     "handle": "Briggetchu"
   },
   {
+    "id": "buffkyoshi",
+    "handle": "BuffKyoshi"
+  },
+  {
     "id": "bukongwukong",
     "handle": "BukongWukong"
   },
@@ -512,7 +516,12 @@
   },
   {
     "id": "flankroast",
-    "handle": "Flankroast"
+    "handle": "Flankroast",
+    "extra": {
+      "aliases": [
+        "FlankRoast"
+      ]
+    }
   },
   {
     "id": "fluddsan",
@@ -824,6 +833,10 @@
   {
     "id": "kolibri",
     "handle": "Kolibri"
+  },
+  {
+    "id": "komodoswagdragon",
+    "handle": "KomodoSwagDragon"
   },
   {
     "id": "koustics",
@@ -1264,6 +1277,10 @@
     "handle": "Raymond Buller"
   },
   {
+    "id": "rcnoir",
+    "handle": "RCnoir"
+  },
+  {
     "id": "realtimmythicc",
     "handle": "realtimmythicc"
   },
@@ -1500,6 +1517,10 @@
     "handle": "stanmanpan"
   },
   {
+    "id": "starfire",
+    "handle": "Starfire"
+  },
+  {
     "id": "starks",
     "handle": "Starks"
   },
@@ -1690,7 +1711,8 @@
     "handle": "WalkemdownMarko",
     "extra": {
       "aliases": [
-        "walkemdownMarko"
+        "walkemdownMarko",
+        "WalkEmDownMarko"
       ]
     }
   },
@@ -1725,6 +1747,10 @@
   {
     "id": "wynter",
     "handle": "Wynter"
+  },
+  {
+    "id": "xatchara",
+    "handle": "xatchara"
   },
   {
     "id": "xcali",

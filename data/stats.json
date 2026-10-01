@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 651,
+    "replays": 658,
     "characters": 12,
-    "players": 425,
+    "players": 430,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 303
+      "2026-09-02": 310
     },
     "supports": 34,
-    "sidesWithSupport": 693
+    "sidesWithSupport": 697
   },
   "characterUsage": {
-    "aang": 95,
-    "azula": 141,
-    "katara": 154,
-    "zuko": 67,
-    "avatar-aang": 23,
+    "zuko": 68,
+    "sokka": 88,
+    "kyoshi": 142,
+    "ozai": 98,
+    "aang": 96,
+    "korra": 159,
+    "azula": 142,
+    "avatar-aang": 24,
+    "katara": 155,
     "toph": 164,
-    "ozai": 96,
-    "korra": 158,
-    "kyoshi": 140,
-    "zaheer": 139,
-    "nightmare-korra": 50,
-    "sokka": 85
+    "zaheer": 140,
+    "nightmare-korra": 50
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -68,26 +68,58 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "aang": 47,
-      "azula": 46,
-      "katara": 49,
-      "zuko": 36,
-      "avatar-aang": 13,
+      "zuko": 37,
+      "sokka": 49,
+      "kyoshi": 64,
+      "ozai": 46,
+      "aang": 48,
+      "korra": 91,
+      "azula": 47,
+      "avatar-aang": 14,
+      "katara": 50,
       "toph": 73,
-      "ozai": 44,
-      "korra": 90,
-      "kyoshi": 62,
-      "zaheer": 75,
-      "nightmare-korra": 27,
-      "sokka": 46
+      "zaheer": 76,
+      "nightmare-korra": 27
     }
   },
   "playerCharacters": {
+    "rcnoir": {
+      "zuko": 1
+    },
+    "normal-ms": {
+      "sokka": 8,
+      "aang": 9
+    },
+    "buffkyoshi": {
+      "kyoshi": 1
+    },
+    "graycapedhero": {
+      "ozai": 9
+    },
+    "starfire": {
+      "kyoshi": 1
+    },
+    "xatchara": {
+      "ozai": 1
+    },
+    "walkemdownmarko": {
+      "aang": 4
+    },
+    "mysteryracer21": {
+      "korra": 7
+    },
     "an11-mo": {
       "aang": 17
     },
     "persi": {
       "azula": 4
+    },
+    "red": {
+      "azula": 9,
+      "korra": 7
+    },
+    "komodoswagdragon": {
+      "avatar-aang": 1
     },
     "kanou": {
       "katara": 1
@@ -101,19 +133,18 @@
     "al-pigone": {
       "toph": 14
     },
+    "flankroast": {
+      "zaheer": 9
+    },
+    "still": {
+      "katara": 81,
+      "ozai": 2
+    },
     "arinkarin": {
       "ozai": 30
     },
-    "still": {
-      "katara": 80,
-      "ozai": 2
-    },
     "biscuit": {
       "azula": 11
-    },
-    "red": {
-      "korra": 7,
-      "azula": 8
     },
     "boobusmcscoobus": {
       "azula": 3
@@ -192,10 +223,6 @@
     },
     "warthog-ec": {
       "zaheer": 1
-    },
-    "normal-ms": {
-      "sokka": 5,
-      "aang": 9
     },
     "rood": {
       "zuko": 7,
@@ -289,9 +316,6 @@
     },
     "ft-schoolbus": {
       "korra": 1
-    },
-    "walkemdownmarko": {
-      "aang": 3
     },
     "whitetree": {
       "zaheer": 4
@@ -403,9 +427,6 @@
     },
     "jemi-keiyns": {
       "kyoshi": 1
-    },
-    "flankroast": {
-      "zaheer": 8
     },
     "cwang-red": {
       "korra": 1,
@@ -685,9 +706,6 @@
     },
     "karma": {
       "katara": 1
-    },
-    "graycapedhero": {
-      "ozai": 8
     },
     "unsafeonhit": {
       "toph": 9
@@ -1172,9 +1190,6 @@
     "argun0": {
       "azula": 1
     },
-    "mysteryracer21": {
-      "korra": 6
-    },
     "vini": {
       "korra": 1
     },
@@ -1388,6 +1403,10 @@
     }
   },
   "supportUsage": {
+    "june": 19,
+    "kelsang": 18,
+    "firelord-sozin": 27,
+    "rangi": 32,
     "gyatso": 36,
     "kanna": 34,
     "ran-and-shaw": 14,
@@ -1400,16 +1419,12 @@
     "naga": 65,
     "ghazan": 37,
     "ursa": 39,
-    "firelord-sozin": 26,
-    "kelsang": 17,
     "badgermole": 26,
     "yun": 21,
     "ming-hua": 25,
     "appa": 22,
-    "june": 18,
     "princess-yue": 26,
     "p'li": 26,
-    "rangi": 31,
     "tonraq": 9,
     "general-zhao": 11,
     "master-pakku": 21,
