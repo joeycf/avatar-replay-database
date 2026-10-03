@@ -36,7 +36,12 @@
  *  · The missed-channel sweep surfaced 62 further candidate channels holding 473
  *    marked titles between them that were never deep-dived, several of them
  *    large (QueueMan 52 marked, AWanderingTanuki 44, Kavalan 38, MicroDuck 38,
- *    Avataryaya 33). This table is a floor, not a census.
+ *    Avataryaya 33), and the first pass had left 91 more (561 marked) under
+ *    its deep-dive line. ALL 153 WERE TRIAGED ON 2026-10-03 AND NONE MEETS THE
+ *    BAR — "STAGE-0 LEFTOVERS, TRIAGED" below. Every channel Stage 0 surfaced
+ *    has now been judged, and this table is still a floor: it omits sub-bar
+ *    channels that post real sets, sets whose titles name no fighter, and every
+ *    channel nobody has found.
  *
  * ─────────────────────────────────────────────────────────────────────────────
  * ARRAY ORDER IS DEDUPE PRECEDENCE. Reordering changes which copy of a
@@ -167,6 +172,39 @@
  *    beta-labelled clips still being uploaded on 2026-08-10, so its own
  *    provenance labels are unreliable too. 71 marked uploads is the third
  *    largest marked count in the whole sweep; the yield is zero.
+ *
+ * STAGE-0 LEFTOVERS, TRIAGED (2026-10-03, Instrument change 2): 153 CHANNELS, 0
+ * ADMITTED. The sweep's 62 never-deep-dived candidates and the first pass's 91,
+ * under the brief's bar, adopted in writing before any API call: ten records
+ * through THIS pipeline since launch (two players and two fighters in the
+ * title, the shipped gate and parser, at least 120s), the newest on or after
+ * 2026-09-03 (an older newest would have entered live with a freezeWatch). Run
+ * after the day's crons: every RSS feed, channels.list, and the uploads
+ * playlist walked to 2026-07-23 wherever the feed did not reach it — 8,479
+ * uploads since launch read, 843 of them marked, 210 units, search.list 0. Four
+ * blind reviewers re-read the titles; the most fighter-named sets any of them
+ * found on one channel is 6.
+ *  · THE SWEEP'S 62 HOLD NOTHING THIS DEFINITION COUNTS: 410 marked uploads
+ *    since launch, 0 records. QueueMan, Kavalan, AWanderingTanuki and MicroDuck
+ *    carry 220 of them, every one a no-vs title — uploader-POV ranked clips,
+ *    let's-plays, stream VODs, hashtag shorts. The only titles naming two
+ *    players and two fighters are UnsafeonHit's 6 and DeeVi04's 5, none of them
+ *    marked (DeeVi04 also posts SF6 shorts, so its gate is not optional).
+ *  · THE FIRST PASS'S 91 POST FIGHTER-NAMED SETS IN ONES AND TWOS: 18 channels,
+ *    22 uploads, at most 3 (JiggyNYC). Below the bar, so out.
+ *  · TOULOUSE VS FIGHTERS (UCOVSe2SxQYiUbLBLMLVKMnw) POSTS REAL SINGLE SETS WITH
+ *    NO FIGHTER IN THE TITLE: 15 since launch, "Toulouse Fighting Monday - MGDB
+ *    vs Shun - Grande Finale", the game named only in the description (a
+ *    start.gg slug, and a trailing #AvatarLegends the marker strips). No fighter
+ *    is no record: it fails the definition, not the volume, and reading it
+ *    would take a bracket-API tier this game does not have.
+ *  · THE INDEX ALREADY HOLDS THEIR UPLOADS: 17 of its 27 whole-video rows are
+ *    uploads by 9 of the 153 (Boobusmcscoobus 4, JiggyNYC 3, TestMyLuck_ 3,
+ *    Marko B 2, Aviaan, Hynes, Ken3mperial, More Brian_F, Youff). A future
+ *    admission checks every one first: the index pin is set before dedupe
+ *    (parse-finish.ts), so a channel copy that displaces a whole-video row
+ *    passes the day it lands and throws on the next morning the index adds
+ *    nothing new.
  *
  * ALIASES BELOW ARE CHANNEL-SCOPED ONLY. The four short roster spellings —
  * 'Toph', 'Kyoshi', 'Ozai', 'Avatar Aang', against the handoff's 'Toph Beifong',
