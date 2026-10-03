@@ -1,29 +1,29 @@
 {
   "totals": {
-    "replays": 673,
+    "replays": 675,
     "characters": 12,
-    "players": 436,
+    "players": 437,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 325
+      "2026-09-02": 327
     },
     "supports": 34,
-    "sidesWithSupport": 725
+    "sidesWithSupport": 726
   },
   "characterUsage": {
+    "azula": 147,
+    "avatar-aang": 25,
     "toph": 168,
-    "azula": 146,
     "sokka": 89,
     "aang": 98,
     "ozai": 101,
-    "katara": 160,
+    "katara": 161,
     "zuko": 77,
     "kyoshi": 143,
     "korra": 160,
-    "avatar-aang": 24,
-    "zaheer": 140,
+    "zaheer": 141,
     "nightmare-korra": 50
   },
   "byPatchUsage": {
@@ -68,21 +68,27 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
+      "azula": 52,
+      "avatar-aang": 15,
       "toph": 77,
-      "azula": 51,
       "sokka": 50,
       "aang": 50,
       "ozai": 49,
-      "katara": 55,
+      "katara": 56,
       "zuko": 46,
       "kyoshi": 65,
       "korra": 92,
-      "avatar-aang": 14,
-      "zaheer": 76,
+      "zaheer": 77,
       "nightmare-korra": 27
     }
   },
   "playerCharacters": {
+    "boobusmcscoobus": {
+      "azula": 4
+    },
+    "goose": {
+      "avatar-aang": 1
+    },
     "jiggynyc": {
       "toph": 4
     },
@@ -158,7 +164,7 @@
       "zaheer": 9
     },
     "still": {
-      "katara": 81,
+      "katara": 82,
       "ozai": 2
     },
     "arinkarin": {
@@ -166,9 +172,6 @@
     },
     "biscuit": {
       "azula": 12
-    },
-    "boobusmcscoobus": {
-      "azula": 3
     },
     "yo-xan": {
       "aang": 1
@@ -678,6 +681,10 @@
     "honeybee": {
       "toph": 1
     },
+    "k7": {
+      "zaheer": 1,
+      "azula": 1
+    },
     "idiom": {
       "aang": 1
     },
@@ -1083,9 +1090,6 @@
     "fredminghini": {
       "kyoshi": 1
     },
-    "k7": {
-      "azula": 1
-    },
     "ldwells": {
       "aang": 1
     },
@@ -1421,8 +1425,8 @@
     }
   },
   "supportUsage": {
+    "lo-and-li": 36,
     "the-hippo": 24,
-    "lo-and-li": 35,
     "gyatso": 37,
     "badgermole": 28,
     "firelord-sozin": 29,
