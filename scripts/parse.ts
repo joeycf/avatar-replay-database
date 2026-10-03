@@ -102,6 +102,7 @@ import type {
   ChannelConfig,
   ChannelKey,
   CharProvenance,
+  DepartedEvidence,
   MatchSide,
   MatchVideo,
   RawVideoRecord,
@@ -1568,14 +1569,59 @@ function isThisGame(ch: ChannelConfig, v: RawVideoRecord, matcher: AliasMatcher)
 // differ (`still`, up to 23 days) the record's date is the day it was PLAYED,
 // which is older than the upload by construction — comparing it against a dump's
 // newest upload would make a correctly dated record look like a stale one.
-function assertRawIsFresh(id: ChannelKey, dump: RawVideoRecord[], committed: MatchVideo[]): void {
+//
+// A DELETED UPLOAD IS LEGAL, and data alone can only show that while something
+// newer is still in the dump. When the deleted upload WAS the channel's newest
+// and nothing has been posted since, a fresh dump fails this test exactly as a
+// stale one does. Observed 2026-10-02 on Strive, where the cron died here with
+// every dump fresh. data:fetch now asks YouTube about the committed records
+// newer than each dump and writes the ones that are gone to
+// raw/<id>.departed.json (types/index.ts DepartedEvidence). Those ids are
+// skipped below, but only while that file is bound to this exact dump. On any
+// dump this guard already accepted, nothing changes: no record is newer than
+// the dump, so no departure can be listed.
+async function readDeparted(
+  id: ChannelKey,
+  newestInDump: string,
+): Promise<DepartedEvidence | null> {
+  const p = join(RAW, `${id}.departed.json`);
+  if (!existsSync(p)) return null;
+  try {
+    const ev = JSON.parse(await readFile(p, 'utf8')) as DepartedEvidence;
+    if (ev.channel !== id || ev.newestInDump !== newestInDump || !Array.isArray(ev.ids))
+      return null;
+    return ev;
+  } catch {
+    // Unreadable is treated as absent, which leaves the guard strict.
+    console.warn(
+      `  ⚠ raw/${id}.departed.json will not parse; ignored, so the stale-raw guard stays strict`,
+    );
+    return null;
+  }
+}
+
+async function assertRawIsFresh(
+  id: ChannelKey,
+  dump: RawVideoRecord[],
+  committed: MatchVideo[],
+): Promise<void> {
   let newestInDump = '';
   for (const r of dump) if (r.publishedAt > newestInDump) newestInDump = r.publishedAt;
   if (!newestInDump) return;
 
+  const departed = await readDeparted(id, newestInDump);
+  const gone = new Set(departed?.ids);
+  if (departed && gone.size) {
+    console.log(
+      `  ↘ raw/${id}.json: ${gone.size} committed upload(s) newer than the dump left YouTube ` +
+        `(confirmed by data:fetch at ${departed.checkedAt}). Pruned, not read as staleness: ` +
+        [...gone].join(', '),
+    );
+  }
+
   let newestCommitted: MatchVideo | undefined;
   for (const v of committed) {
-    if (v.intake !== id) continue;
+    if (v.intake !== id || gone.has(v.id)) continue;
     if (!newestCommitted || v.publishedAt > newestCommitted.publishedAt) newestCommitted = v;
   }
   if (!newestCommitted) return;
@@ -1594,6 +1640,10 @@ function assertRawIsFresh(id: ChannelKey, dump: RawVideoRecord[], committed: Mat
       ``,
       `  Refresh first:  npm run data:fetch   (or npm run data:catchup, which cannot be`,
       `  run in the wrong order by accident)`,
+      ``,
+      `  If that upload was deleted, made private or unlisted, the fetch confirms it with`,
+      `  YouTube and records it in raw/${id}.departed.json, and the parse then prunes it`,
+      `  instead of stopping here.`,
     ].join('\n'),
   );
 }
@@ -1719,7 +1769,7 @@ async function main(): Promise<void> {
     }
     const dump = JSON.parse(await readFile(file, 'utf8')) as RawVideoRecord[];
     if (dump.length === 0) throw new Error(`raw/${ch.id}.json is empty — refusing to parse.`);
-    assertRawIsFresh(ch.id, dump, committed);
+    await assertRawIsFresh(ch.id, dump, committed);
 
     const tally = emptyTally(floorSec, ceilSec);
     const hist = emptyHistogram();

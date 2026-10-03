@@ -17,7 +17,9 @@
  * parse's business, so they live one stage later and are named here only so the
  * boundary is visible from the side that spends the quota:
  *
- *   · the DATA-ONLY stale-raw guard      scripts/parse.ts  assertRawIsFresh()
+ *   · the DATA-ONLY stale-raw guard      scripts/parse.ts  assertRawIsFresh(),
+ *     which reads the departures confirmDepartures() below writes beside each
+ *     dump (the one fact about the archive only the network can supply)
  *   · the COLLAPSE guard                 scripts/parse-finish.ts, step 5
  *   · the FREEZE carry and its pin       scripts/parse-finish.ts, step 2
  *
@@ -68,14 +70,21 @@
  * estimated from a formula in a comment.
  */
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { ACTIVE_CHANNELS, CHANNELS, hasAvatarMarker, hasMarkerForChannel } from './channels';
 import { buildAliasMatcher, loadCharacters, loadSupports } from './roster';
 import type { AliasMatcher } from './roster';
-import type { ChannelConfig, RawVideoRecord } from '../types/index';
+import type {
+  ChannelConfig,
+  ChannelKey,
+  DepartedEvidence,
+  MatchVideo,
+  RawVideoRecord,
+} from '../types/index';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'raw');
@@ -358,6 +367,65 @@ async function fetchChannel(ch: ChannelConfig): Promise<ChannelFetch> {
   return { records, unhydrated: ids.length - records.length, pages, stoppedAtFloor };
 }
 
+// ── departures: the one case the stale-raw guard cannot judge from data ─────
+//
+// parse.ts refuses a dump when the committed corpus holds a record for that
+// intake newer than anything in it. That proves the dump stale, EXCEPT when the
+// record has left YouTube: delete a channel's newest upload, post nothing after
+// it, and a dump fetched a minute ago fails the same test a month-old one does.
+// Observed 2026-10-02 on Strive (ggstBattleCollection's 5VB5RbRr9Ck), where the
+// cron died in Parse with every dump in hand fresh. On this corpus, where most
+// intakes post a handful of uploads a week, a deleted newest upload stays the
+// newest for days, so the window is wider here, not narrower.
+//
+// The data cannot separate the two cases, so this asks YouTube, and only about
+// committed records newer than the dump, selected by exactly the guard's rule
+// (same intake, publishedAt). On an ordinary morning there are none, so it
+// makes no call and costs nothing. One videos.list call covers 50 ids, and it
+// goes through apiGet, so a refusal aborts the run like any other call.
+interface StatusResponse {
+  items: { id: string; status: { privacyStatus: string } }[];
+}
+
+async function confirmDepartures(
+  id: ChannelKey,
+  dump: RawVideoRecord[],
+  committed: MatchVideo[],
+): Promise<DepartedEvidence> {
+  const newestInDump = dump.reduce((a, v) => (v.publishedAt > a ? v.publishedAt : a), '');
+  const ahead = newestInDump
+    ? committed.filter((v) => v.intake === id && v.publishedAt > newestInDump).map((v) => v.id)
+    : [];
+  const ids: string[] = [];
+  for (let i = 0; i < ahead.length; i += 50) {
+    const batch = ahead.slice(i, i + 50);
+    const res: StatusResponse = await apiGet('videos', {
+      part: 'status',
+      id: batch.join(','),
+      maxResults: '50',
+    });
+    const live = new Set(
+      res.items.filter((v) => v.status.privacyStatus === 'public').map((v) => v.id),
+    );
+    ids.push(...batch.filter((x) => !live.has(x)));
+  }
+  return { channel: id, newestInDump, checkedAt: new Date().toISOString(), ids };
+}
+
+/** The committed corpus, for the departure check only. Absent or unreadable is
+ *  treated as empty here: no check runs, so no departure is recorded, and the
+ *  guard stays strict. parse.ts refuses an unreadable videos.json itself. */
+async function readCommitted(): Promise<MatchVideo[]> {
+  const p = join(ROOT, 'data', 'videos.json');
+  if (!existsSync(p)) return [];
+  try {
+    const v = JSON.parse(await readFile(p, 'utf8')) as MatchVideo[];
+    return Array.isArray(v) ? v : [];
+  } catch {
+    return [];
+  }
+}
+
 // ── THE RECON / REJECT PRINTER (checklist 5e) ───────────────────────────────
 //
 // Console only, and deliberately NOT a gate. Its job is to make a grammar drift
@@ -485,11 +553,19 @@ async function main(): Promise<void> {
       (includeFrozen ? ' (--include-frozen: seeding a freeze pin)' : '') +
       '…\n',
   );
+  const committed = await readCommitted();
   const rows: { total: number; marked: number }[] = [];
   for (const ch of targets) {
     const before = QUOTA.units;
     const out = await fetchChannel(ch);
+    // Asked BEFORE anything is written, so a failure leaves the previous dump
+    // and its departure file together. The old file is removed before the new
+    // dump lands, so the two can never be from different fetches; parse.ts
+    // checks the binding as well.
+    const departed = await confirmDepartures(ch.id, out.records, committed);
+    await rm(join(RAW_DIR, `${ch.id}.departed.json`), { force: true });
     await writeFile(join(RAW_DIR, `${ch.id}.json`), JSON.stringify(out.records));
+    await writeFile(join(RAW_DIR, `${ch.id}.departed.json`), JSON.stringify(departed));
     // Title only here, on every channel: the description widening two intakes
     // declare (types/index.ts GateMode) is parse's business, and this line is
     // recon. EXPECT IT TO READ BELOW THE RECON TABLE'S per-channel figures on
@@ -507,6 +583,11 @@ async function main(): Promise<void> {
         (out.unhydrated ? `  ⚠ ${out.unhydrated} id(s) did not hydrate` : '') +
         (ch.frozen ? '  [FROZEN — seeding]' : ''),
     );
+    if (departed.ids.length)
+      console.log(
+        `    ↘ ${departed.ids.length} committed upload(s) newer than this dump are gone from ` +
+          `YouTube (deleted, private or unlisted): ${departed.ids.join(', ')}. parse prunes them.`,
+      );
     recon(ch, out.records, matcher);
   }
 
