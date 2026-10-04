@@ -319,6 +319,10 @@
     "handle": "ClosingRegent"
   },
   {
+    "id": "clubsoda",
+    "handle": "ClubSoda"
+  },
+  {
     "id": "coke",
     "handle": "Coke"
   },
@@ -1078,6 +1082,10 @@
     "handle": "My Daddy"
   },
   {
+    "id": "myguywins",
+    "handle": "myguywins"
+  },
+  {
     "id": "mysteryracer21",
     "handle": "MysteryRacer21"
   },
@@ -1190,6 +1198,10 @@
   {
     "id": "orochi-clark",
     "handle": "Orochi Clark"
+  },
+  {
+    "id": "p-town-hero",
+    "handle": "P Town Hero"
   },
   {
     "id": "paige",
@@ -1332,8 +1344,16 @@
     "handle": "RedSodaPop"
   },
   {
+    "id": "reiganrensha",
+    "handle": "ReiganRensha"
+  },
+  {
     "id": "rekrp",
     "handle": "RekRP"
+  },
+  {
+    "id": "rekt",
+    "handle": "Rekt"
   },
   {
     "id": "renecup",
@@ -1459,6 +1479,14 @@
     "handle": "Seven"
   },
   {
+    "id": "shaudl",
+    "handle": "ShaudL"
+  },
+  {
+    "id": "shaundude",
+    "handle": "Shaundude"
+  },
+  {
     "id": "shielddevil",
     "handle": "ShieldDevil"
   },
@@ -1549,6 +1577,10 @@
   {
     "id": "space",
     "handle": "Space"
+  },
+  {
+    "id": "spacefungi",
+    "handle": "SpaceFungi"
   },
   {
     "id": "splashnyc",
@@ -1789,6 +1821,10 @@
   {
     "id": "wig",
     "handle": "Wig"
+  },
+  {
+    "id": "willow",
+    "handle": "Willow"
   },
   {
     "id": "wubbiq",

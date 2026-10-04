@@ -373,6 +373,64 @@
     "durationSec": 2130
   },
   {
+    "id": "0iCbJ30ooi8@4141",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Biscuit (Azula/Joo Dee) vs Saxxie (Zuko/June) ▰ The Otter's Grotto #1",
+    "publishedAt": "2026-10-03T05:53:51Z",
+    "durationSec": 4517,
+    "handles": [
+      "Biscuit",
+      "Saxxie"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "biscuit",
+          "saxxie"
+        ],
+        "characters": [
+          "azula",
+          "zuko"
+        ],
+        "playedOn": "2026-10-03"
+      },
+      "ids": [
+        "0iCbJ30ooi8@4141",
+        "0iCbJ30ooi8@42"
+      ]
+    }
+  },
+  {
+    "id": "h5xgCwi27ys@8202",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Flankroast (Zaheer/Ming-Hua) vs Cow (Toph/The Hippo) ▰ Mix Masters Legends #4",
+    "publishedAt": "2026-10-01T16:53:09Z",
+    "durationSec": 10895,
+    "handles": [
+      "Flankroast",
+      "Cow"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "cow",
+          "flankroast"
+        ],
+        "characters": [
+          "toph",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-01"
+      },
+      "ids": [
+        "h5xgCwi27ys@8202",
+        "h5xgCwi27ys@9467"
+      ]
+    }
+  },
+  {
     "id": "RWnlDRa-GmU@2822",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
@@ -398,6 +456,64 @@
       "ids": [
         "RWnlDRa-GmU@2822",
         "RWnlDRa-GmU@8347"
+      ]
+    }
+  },
+  {
+    "id": "sDOXSfRCcTw@2573",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Toonie03 (Sokka/Princess Yue) vs Boogie (Korra/Naga) ▰ ParagOnline #9",
+    "publishedAt": "2026-09-27T15:47:54Z",
+    "durationSec": 5043,
+    "handles": [
+      "Toonie03",
+      "Boogie"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "boogie",
+          "toonie03"
+        ],
+        "characters": [
+          "korra",
+          "sokka"
+        ],
+        "playedOn": "2026-09-27"
+      },
+      "ids": [
+        "sDOXSfRCcTw@2573",
+        "sDOXSfRCcTw@4095"
+      ]
+    }
+  },
+  {
+    "id": "sDOXSfRCcTw@3641",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Boogie (Korra/Naga) vs ArinKarin (Ozai/Imperial Firebender) ▰ ParagOnline #9",
+    "publishedAt": "2026-09-27T15:47:54Z",
+    "durationSec": 5043,
+    "handles": [
+      "Boogie",
+      "ArinKarin"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "arinkarin",
+          "boogie"
+        ],
+        "characters": [
+          "korra",
+          "ozai"
+        ],
+        "playedOn": "2026-09-27"
+      },
+      "ids": [
+        "sDOXSfRCcTw@3641",
+        "sDOXSfRCcTw@876"
       ]
     }
   },
