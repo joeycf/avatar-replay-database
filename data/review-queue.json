@@ -1,5 +1,13 @@
 [
   {
+    "id": "Q4Qsv1OEHbc",
+    "kind": "character-completion",
+    "channel": "still",
+    "title": "KATARA VS THE WORLD! AVATAR LEGENDS KOTH | 10 SET STREAK CHAMPION RUN PART 2 | 09.14.26",
+    "publishedAt": "2026-10-05T18:00:11Z",
+    "durationSec": 2239
+  },
+  {
     "id": "bDD6KIFStto",
     "kind": "character-completion",
     "channel": "still",
@@ -365,12 +373,49 @@
     ]
   },
   {
+    "id": "nOjFvWveCQY",
+    "kind": "character-completion",
+    "channel": "redVsFantasy",
+    "title": "Norra might be a strong character.... RED vs Princess Slim FT10 | Avatar Legends the Fighting Game",
+    "publishedAt": "2026-10-03T21:00:00Z",
+    "durationSec": 2096
+  },
+  {
     "id": "GzsbXqNy7tw",
     "kind": "character-completion",
     "channel": "redblade",
     "title": "AVATAR LEGENDS SET - Redblade vs Bustafat",
     "publishedAt": "2026-08-23T19:03:43Z",
     "durationSec": 2130
+  },
+  {
+    "id": "B31UqKGmJ60",
+    "kind": "duplicate-candidate",
+    "channel": "normalMs",
+    "title": "Avatar Legends: Granno (AZULA/URSA) vs NORMAL-MS (SOKKA/PIANDAO)",
+    "publishedAt": "2026-10-04T23:48:58Z",
+    "durationSec": 573,
+    "handles": [
+      "Granno",
+      "NORMAL-MS"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "granno",
+          "normal-ms"
+        ],
+        "characters": [
+          "azula",
+          "sokka"
+        ],
+        "playedOn": "2026-10-04"
+      },
+      "ids": [
+        "B31UqKGmJ60",
+        "yW0XNISgjz0"
+      ]
+    }
   },
   {
     "id": "0iCbJ30ooi8@4141",
