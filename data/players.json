@@ -250,6 +250,10 @@
     "handle": "Buyacushun"
   },
   {
+    "id": "cassian",
+    "handle": "Cassian"
+  },
+  {
     "id": "cat",
     "handle": "Cat",
     "extra": {
@@ -387,6 +391,10 @@
     "handle": "Demonjay"
   },
   {
+    "id": "desselie",
+    "handle": "Desselie"
+  },
+  {
     "id": "detective-wolf",
     "handle": "Detective Wolf"
   },
@@ -439,6 +447,10 @@
     "handle": "Duck"
   },
   {
+    "id": "dungeondice",
+    "handle": "DungeonDice"
+  },
+  {
     "id": "eccafu",
     "handle": "EcCaFU"
   },
@@ -473,6 +485,10 @@
   {
     "id": "endrsp",
     "handle": "EndrSP"
+  },
+  {
+    "id": "eogrgr",
+    "handle": "Eogrgr"
   },
   {
     "id": "etlibra",
@@ -1244,6 +1260,10 @@
     "handle": "PhoenixWrong"
   },
   {
+    "id": "phoenixwrongssb",
+    "handle": "PhoenixWrongSSB"
+  },
+  {
     "id": "phoxx",
     "handle": "Phoxx"
   },
@@ -1398,6 +1418,10 @@
   {
     "id": "rood",
     "handle": "Rood"
+  },
+  {
+    "id": "ruib",
+    "handle": "RuiB"
   },
   {
     "id": "rumanuma",

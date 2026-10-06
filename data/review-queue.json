@@ -418,6 +418,35 @@
     }
   },
   {
+    "id": "scd8kKfS6pY@6282",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Pepe (Toph/Badgermole) vs RuiB (Zaheer/Ghazan) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #7",
+    "publishedAt": "2026-10-04T21:57:01Z",
+    "durationSec": 9061,
+    "handles": [
+      "Pepe",
+      "RuiB"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "pepe",
+          "ruib"
+        ],
+        "characters": [
+          "toph",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-04"
+      },
+      "ids": [
+        "scd8kKfS6pY@6282",
+        "scd8kKfS6pY@7847"
+      ]
+    }
+  },
+  {
     "id": "0iCbJ30ooi8@4141",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
