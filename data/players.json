@@ -568,6 +568,10 @@
     "handle": "Fool"
   },
   {
+    "id": "fooly-ghouly",
+    "handle": "Fooly Ghouly"
+  },
+  {
     "id": "foom",
     "handle": "Foom"
   },
@@ -641,6 +645,10 @@
   {
     "id": "guy",
     "handle": "GUY"
+  },
+  {
+    "id": "gwen-stacy",
+    "handle": "Gwen Stacy"
   },
   {
     "id": "gwynstylish",
@@ -1086,6 +1094,10 @@
     "handle": "Mr Gentleman"
   },
   {
+    "id": "mr-madgear",
+    "handle": "Mr-Madgear"
+  },
+  {
     "id": "mrfuk",
     "handle": "MrFuk"
   },
@@ -1228,6 +1240,10 @@
     "handle": "P Town Hero"
   },
   {
+    "id": "pacstrife",
+    "handle": "PacStrife"
+  },
+  {
     "id": "paige",
     "handle": "Paige"
   },
@@ -1330,6 +1346,10 @@
   {
     "id": "puddin",
     "handle": "Puddin'"
+  },
+  {
+    "id": "punguinz",
+    "handle": "Punguinz"
   },
   {
     "id": "pure-fgc",
@@ -1596,7 +1616,12 @@
   },
   {
     "id": "son-dula",
-    "handle": "Son-Dula"
+    "handle": "Son_Dula",
+    "extra": {
+      "aliases": [
+        "Son-Dula"
+      ]
+    }
   },
   {
     "id": "sonicfox",
@@ -1625,6 +1650,10 @@
   {
     "id": "spooder",
     "handle": "Spooder"
+  },
+  {
+    "id": "spookypuky",
+    "handle": "Spookypuky"
   },
   {
     "id": "stanmanpan",
@@ -1704,6 +1733,10 @@
   {
     "id": "tetsuga-ar",
     "handle": "Tetsuga-Ar"
+  },
+  {
+    "id": "thatruffprophet",
+    "handle": "ThatRuffProphet"
   },
   {
     "id": "the-irs",

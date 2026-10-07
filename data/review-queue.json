@@ -389,6 +389,64 @@
     "durationSec": 2130
   },
   {
+    "id": "14fYeaB7njc@2216",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Son_Dula (Kyoshi/Yun) vs Punguinz (Katara/Master Pakku) ▰ First Attack 2026 Top 8",
+    "publishedAt": "2026-10-05T21:36:01Z",
+    "durationSec": 5383,
+    "handles": [
+      "Son_Dula",
+      "Punguinz"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "punguinz",
+          "son-dula"
+        ],
+        "characters": [
+          "katara",
+          "kyoshi"
+        ],
+        "playedOn": "2026-10-05"
+      },
+      "ids": [
+        "14fYeaB7njc@2216",
+        "14fYeaB7njc@3717"
+      ]
+    }
+  },
+  {
+    "id": "14fYeaB7njc@3163",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Spookypuky (Zuko/Mai) vs Punguinz (Katara/Kanna) ▰ First Attack 2026 Top 8",
+    "publishedAt": "2026-10-05T21:36:01Z",
+    "durationSec": 5383,
+    "handles": [
+      "Spookypuky",
+      "Punguinz"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "punguinz",
+          "spookypuky"
+        ],
+        "characters": [
+          "katara",
+          "zuko"
+        ],
+        "playedOn": "2026-10-05"
+      },
+      "ids": [
+        "14fYeaB7njc@3163",
+        "14fYeaB7njc@340"
+      ]
+    }
+  },
+  {
     "id": "B31UqKGmJ60",
     "kind": "duplicate-candidate",
     "channel": "normalMs",
@@ -414,6 +472,64 @@
       "ids": [
         "B31UqKGmJ60",
         "yW0XNISgjz0"
+      ]
+    }
+  },
+  {
+    "id": "nhqtzZ3uqzA@1145",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Busta (Zaheer/P'Li) vs ArinKarin (Ozai/Imperial Firebender) ▰ ParagOnline #10",
+    "publishedAt": "2026-10-04T15:45:12Z",
+    "durationSec": 3837,
+    "handles": [
+      "Busta",
+      "ArinKarin"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "arinkarin",
+          "busta"
+        ],
+        "characters": [
+          "ozai",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-04"
+      },
+      "ids": [
+        "nhqtzZ3uqzA@1145",
+        "nhqtzZ3uqzA@2958"
+      ]
+    }
+  },
+  {
+    "id": "nhqtzZ3uqzA@2476",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs Busta (Zaheer/P'Li) ▰ ParagOnline #10",
+    "publishedAt": "2026-10-04T15:45:12Z",
+    "durationSec": 3837,
+    "handles": [
+      "Zane",
+      "Busta"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "busta",
+          "zane"
+        ],
+        "characters": [
+          "zaheer",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-04"
+      },
+      "ids": [
+        "nhqtzZ3uqzA@2476",
+        "nhqtzZ3uqzA@3431"
       ]
     }
   },
