@@ -389,6 +389,35 @@
     "durationSec": 2130
   },
   {
+    "id": "EQzSKbABCNE",
+    "kind": "duplicate-candidate",
+    "channel": "toledoLocals",
+    "title": "Emanated (Katara) vs Sanay (Toph) - Avatar Legends Losers Final - The Toledo Local #104",
+    "publishedAt": "2026-10-07T23:23:31Z",
+    "durationSec": 420,
+    "handles": [
+      "Emanated",
+      "Sanay"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "emanated",
+          "sanay"
+        ],
+        "characters": [
+          "katara",
+          "toph"
+        ],
+        "playedOn": "2026-10-07"
+      },
+      "ids": [
+        "EQzSKbABCNE",
+        "VUGqkJ1JYJI"
+      ]
+    }
+  },
+  {
     "id": "14fYeaB7njc@2216",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

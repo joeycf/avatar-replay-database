@@ -1,9 +1,9 @@
 {
   "game": "avatar",
   "name": "Avatar Legends: The Fighting Game",
-  "replays": 750,
-  "players": 462,
+  "replays": 758,
+  "players": 464,
   "characters": 12,
-  "updated": "2026-10-06",
+  "updated": "2026-10-08",
   "engine": "v0.17.0"
 }

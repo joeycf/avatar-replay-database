@@ -447,6 +447,10 @@
     "handle": "Duck"
   },
   {
+    "id": "duckus6",
+    "handle": "Duckus6"
+  },
+  {
     "id": "dungeondice",
     "handle": "DungeonDice"
   },
@@ -825,6 +829,10 @@
   {
     "id": "kaiji",
     "handle": "Kaiji"
+  },
+  {
+    "id": "kallsign-bugs",
+    "handle": "Kallsign_Bugs"
   },
   {
     "id": "kang",
