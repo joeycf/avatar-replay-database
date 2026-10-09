@@ -1,7 +1,7 @@
 # Avatar Legends pipeline report
 
-- **758** published record(s) · **464** player(s) · **12** fighter(s) · **34** support(s)
-- **447** record(s) state at least one support (59.0%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
+- **759** published record(s) · **464** player(s) · **12** fighter(s) · **34** support(s)
+- **448** record(s) state at least one support (59.0%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
 - **61** mirror match(es) (8.0%)
 - **92** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
@@ -17,8 +17,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 384 | 76 | 67 | 67 | 0 (120s) | 9 (3600s) | 0 | 0 |
-| still | still | 156 | 80 | 59 | 59 | 0 (120s) | 0 (—) | 0 | 16 |
-| ndyTv | ndyTv | 3071 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
+| still | still | 157 | 81 | 59 | 59 | 0 (120s) | 0 (—) | 0 | 16 |
+| ndyTv | ndyTv | 3091 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 967 | 39 | 39 | 39 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 203 | 21 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 85 | 26 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -28,11 +28,11 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | normalMs | normalMs | 488 | 30 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
 | rood | rood | 30 | 20 | 19 | 19 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 36 | 20 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 0 |
-| natsuXenoblade _(watch)_ | natsuXenoblade | 176 | 15 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 1 |
+| natsuXenoblade _(watch)_ | natsuXenoblade | 177 | 16 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 1 |
 | takeANappa | takeANappa | 282 | 19 | 10 | 10 | 2 (120s) | 0 (—) | 0 | 3 |
 | versusFestival | versusFestival | 418 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 815 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 825 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 14 | 10 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -107,8 +107,8 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 308 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 76 | 0 | 0 | 0 | 0 | 12 | 0 | 8 | 1 | 0 | 0 | 0 | 0 |
-| ndyTv | 3014 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| still | 76 | 0 | 0 | 0 | 0 | 13 | 0 | 8 | 1 | 0 | 0 | 0 | 0 |
+| ndyTv | 3034 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 928 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | cow | 59 | 1 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -122,7 +122,7 @@ no player to complete.
 | takeANappa | 263 | 0 | 0 | 2 | 0 | 5 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 410 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 808 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 818 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -160,7 +160,7 @@ covering a channel — which is why this is printed rather than merely collected
 | normalMs | handle-outside | 44 | 0 | 0 | 0 | 0 (0.0%) | 0 | 44 |
 | rood | handle-outside | 22 | 0 | 16 | 0 | 0 (0.0%) | 1 | 38 |
 | an11Mo | handle-outside | 40 | 0 | 0 | 0 | 0 (0.0%) | 0 | 40 |
-| natsuXenoblade | handle-outside | 4 | 0 | 0 | 0 | 0 (0.0%) | 0 | 4 |
+| natsuXenoblade | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
 | takeANappa | chars-outside | 8 | 12 | 0 | 0 | 0 (0.0%) | 0 | 20 |
 | versusFestival | handle-outside | 16 | 0 | 0 | 0 | 0 (0.0%) | 0 | 16 |
 | avianZebra | handle-outside | 20 | 0 | 0 | 0 | 0 (0.0%) | 0 | 20 |
@@ -201,7 +201,7 @@ while the record is kept.
 | normalMs | 28 | 28 | 0 | 0 | 0 |
 | rood | 20 | 20 | 0 | 1 | 0 |
 | an11Mo | 39 | 39 | 0 | 0 | 0 |
-| natsuXenoblade | 4 | 4 | 0 | 0 | 0 |
+| natsuXenoblade | 5 | 5 | 0 | 0 | 0 |
 | takeANappa | 20 | 20 | 0 | 0 | 0 |
 | avianZebra | 20 | 20 | 0 | 0 | 0 |
 | teo1029 | 18 | 18 | 0 | 0 | 0 |
@@ -219,7 +219,7 @@ Where a channel titles a set with the day it was PLAYED, that day is the record 
 is misdated AND its backlog is credited to the weeks it was uploaded in — which is how a
 corpus looks like it is accelerating while ambient volume is flat.
 
-- **still**: 70 marked upload(s) dated from the title, 4 token(s) refused as outside the 26-day bound, 6 carrying no token at all; largest lag used 26 day(s)
+- **still**: 71 marked upload(s) dated from the title, 4 token(s) refused as outside the 26-day bound, 6 carrying no token at all; largest lag used 26 day(s)
 
 ## Duration histogram, per intake
 
@@ -235,7 +235,7 @@ or ceiling would admit.
 | aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 11 | 5 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still · other misses | 0 | 0 | 0 | 0 | 1 | 6 | 12 | 2 |
+| still · other misses | 0 | 0 | 0 | 0 | 1 | 6 | 13 | 2 |
 | ndyTv · records | 0 | 0 | 0 | 3 | 20 | 1 | 0 | 0 |
 | ndyTv · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | ndyTv · other misses | 0 | 0 | 0 | 2 | 31 | 0 | 0 | 0 |
@@ -266,7 +266,7 @@ or ceiling would admit.
 | an11Mo · records | 0 | 0 | 0 | 0 | 1 | 5 | 9 | 5 |
 | an11Mo · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | an11Mo · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| natsuXenoblade · records | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+| natsuXenoblade · records | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 1 |
 | natsuXenoblade · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade · other misses | 0 | 0 | 0 | 0 | 1 | 1 | 3 | 8 |
 | takeANappa · records | 0 | 0 | 0 | 0 | 3 | 4 | 1 | 2 |
@@ -326,7 +326,7 @@ or ceiling would admit.
 
 ## Handles
 
-- word count per side: 1 → 797 · 2 → 41 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 799 · 2 → 41 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 24 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
@@ -465,8 +465,8 @@ support nobody has verified is a support nobody should be able to parse into a r
 - 1× `mario y huss Mix Masters`
 - 1× `MIRROR SchoolBus Dinotail`
 - 1× `MIRRORS STiLL x FaultyThing x MuffinNYC`
-- … 65 more
+- … 66 more
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-10-08T16:29:45.428Z_
+_Generated 2026-10-09T16:13:35.007Z_

@@ -1,22 +1,22 @@
 {
   "totals": {
-    "replays": 758,
+    "replays": 759,
     "characters": 12,
     "players": 464,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 410
+      "2026-09-02": 411
     },
     "supports": 34,
-    "sidesWithSupport": 873
+    "sidesWithSupport": 874
   },
   "characterUsage": {
     "aang": 104,
-    "katara": 177,
+    "zuko": 95,
+    "katara": 178,
     "toph": 192,
-    "zuko": 94,
     "nightmare-korra": 53,
     "korra": 175,
     "ozai": 115,
@@ -69,9 +69,9 @@
     },
     "2026-09-02": {
       "aang": 56,
-      "katara": 72,
+      "zuko": 64,
+      "katara": 73,
       "toph": 101,
-      "zuko": 63,
       "nightmare-korra": 30,
       "korra": 107,
       "ozai": 63,
@@ -88,6 +88,12 @@
     },
     "duckus6": {
       "aang": 1
+    },
+    "natsu": {
+      "zuko": 4
+    },
+    "punguinz": {
+      "katara": 5
     },
     "emanated": {
       "katara": 3,
@@ -130,12 +136,6 @@
     },
     "mr-madgear": {
       "kyoshi": 2
-    },
-    "punguinz": {
-      "katara": 4
-    },
-    "natsu": {
-      "zuko": 3
     },
     "granno": {
       "azula": 2
@@ -1510,11 +1510,11 @@
   "supportUsage": {
     "gyatso": 42,
     "momo": 19,
+    "mai": 17,
     "dark-spirit": 20,
     "june": 36,
     "lo-and-li": 49,
     "yun": 25,
-    "mai": 16,
     "rangi": 40,
     "master-pakku": 33,
     "kanna": 40,
