@@ -1,27 +1,27 @@
 {
   "totals": {
-    "replays": 759,
+    "replays": 760,
     "characters": 12,
     "players": 464,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 411
+      "2026-09-02": 412
     },
     "supports": 34,
     "sidesWithSupport": 874
   },
   "characterUsage": {
+    "azula": 167,
+    "korra": 176,
     "aang": 104,
     "zuko": 95,
     "katara": 178,
     "toph": 192,
     "nightmare-korra": 53,
-    "korra": 175,
     "ozai": 115,
     "sokka": 98,
-    "azula": 166,
     "kyoshi": 155,
     "zaheer": 163,
     "avatar-aang": 34
@@ -68,21 +68,28 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
+      "azula": 72,
+      "korra": 108,
       "aang": 56,
       "zuko": 64,
       "katara": 73,
       "toph": 101,
       "nightmare-korra": 30,
-      "korra": 107,
       "ozai": 63,
       "sokka": 59,
-      "azula": 71,
       "kyoshi": 77,
       "zaheer": 99,
       "avatar-aang": 24
     }
   },
   "playerCharacters": {
+    "prodoublesushi": {
+      "azula": 12
+    },
+    "red": {
+      "korra": 8,
+      "azula": 9
+    },
     "an11-mo": {
       "aang": 20
     },
@@ -307,10 +314,6 @@
       "ozai": 1
     },
     "mysteryracer21": {
-      "korra": 7
-    },
-    "red": {
-      "azula": 9,
       "korra": 7
     },
     "kanou": {
@@ -860,9 +863,6 @@
     },
     "marko-b": {
       "aang": 1
-    },
-    "prodoublesushi": {
-      "azula": 11
     },
     "shostakovich": {
       "katara": 1

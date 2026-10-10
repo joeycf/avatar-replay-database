@@ -1,7 +1,7 @@
 # Avatar Legends pipeline report
 
-- **759** published record(s) · **464** player(s) · **12** fighter(s) · **34** support(s)
-- **448** record(s) state at least one support (59.0%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
+- **760** published record(s) · **464** player(s) · **12** fighter(s) · **34** support(s)
+- **448** record(s) state at least one support (58.9%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
 - **61** mirror match(es) (8.0%)
 - **92** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
@@ -18,7 +18,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 384 | 76 | 67 | 67 | 0 (120s) | 9 (3600s) | 0 | 0 |
 | still | still | 157 | 81 | 59 | 59 | 0 (120s) | 0 (—) | 0 | 16 |
-| ndyTv | ndyTv | 3091 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
+| ndyTv | ndyTv | 3110 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 967 | 39 | 39 | 39 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 203 | 21 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 85 | 26 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -29,16 +29,16 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | rood | rood | 30 | 20 | 19 | 19 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 36 | 20 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 0 |
 | natsuXenoblade _(watch)_ | natsuXenoblade | 177 | 16 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 1 |
-| takeANappa | takeANappa | 282 | 19 | 10 | 10 | 2 (120s) | 0 (—) | 0 | 3 |
+| takeANappa | takeANappa | 283 | 19 | 10 | 10 | 2 (120s) | 0 (—) | 0 | 3 |
 | versusFestival | versusFestival | 418 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 825 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 826 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 14 | 10 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 307 | 11 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 4 |
 | superSalemFighters | superSalemFighters | 182 | 5 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 0 |
-| redVsFantasy | redVsFantasy | 527 | 28 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 11 |
+| redVsFantasy | redVsFantasy | 528 | 29 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 11 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | phoenixWrong | phoenixWrong | 26 | 5 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 2 |
@@ -48,7 +48,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 10 | 4 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 2 |
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 330 | — | — | — | — |
+| replayTheater _(index, carried)_ | replayTheater | — | — | — | 330 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 6 of 33 intake(s)_
 _with records commit more than 20, so on the other 27 its second arm cannot fire at all_
@@ -64,11 +64,7 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 0 built this run, 330 carried (add-only), **330** total; pin 330. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
-
-Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
-
-Segment ids: **0** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+The pull ran and found nothing newer than the cursor, so the committed catalogue was carried unchanged: **330** record(s), pin 330. A quiet morning is the ordinary case here, not a failed one.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -108,7 +104,7 @@ no player to complete.
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 308 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | still | 76 | 0 | 0 | 0 | 0 | 13 | 0 | 8 | 1 | 0 | 0 | 0 | 0 |
-| ndyTv | 3034 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| ndyTv | 3053 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 928 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | cow | 59 | 1 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -119,10 +115,10 @@ no player to complete.
 | rood | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade | 161 | 10 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| takeANappa | 263 | 0 | 0 | 2 | 0 | 5 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+| takeANappa | 264 | 0 | 0 | 2 | 0 | 5 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 410 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 818 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 819 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -170,7 +166,7 @@ covering a channel — which is why this is printed rather than merely collected
 | xcaliburBladez | handle-outside | 12 | 0 | 0 | 0 | 0 (0.0%) | 0 | 12 |
 | schoolBus | handle-first-bare | 6 | 4 | 0 | 0 | 0 (0.0%) | 0 | 10 |
 | superSalemFighters | handle-outside | 10 | 0 | 0 | 0 | 0 (0.0%) | 0 | 10 |
-| redVsFantasy | handle-outside | 12 | 0 | 2 | 0 | 0 (0.0%) | 0 | 14 |
+| redVsFantasy | handle-outside | 14 | 0 | 2 | 0 | 0 (0.0%) | 0 | 16 |
 | mikeyChiFgc | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
 | kang | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
 | phoenixWrong | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
@@ -296,7 +292,7 @@ or ceiling would admit.
 | superSalemFighters · records | 0 | 0 | 0 | 0 | 4 | 1 | 0 | 0 |
 | superSalemFighters · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | superSalemFighters · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy · records | 0 | 0 | 0 | 0 | 3 | 1 | 3 | 0 |
+| redVsFantasy · records | 0 | 0 | 0 | 0 | 3 | 1 | 4 | 0 |
 | redVsFantasy · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy · other misses | 0 | 0 | 0 | 0 | 2 | 7 | 7 | 5 |
 | mikeyChiFgc · records | 0 | 0 | 0 | 0 | 0 | 1 | 2 | 0 |
@@ -326,7 +322,7 @@ or ceiling would admit.
 
 ## Handles
 
-- word count per side: 1 → 799 · 2 → 41 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 801 · 2 → 41 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 24 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
@@ -469,4 +465,4 @@ support nobody has verified is a support nobody should be able to parse into a r
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-10-09T16:13:35.007Z_
+_Generated 2026-10-10T15:24:15.196Z_
