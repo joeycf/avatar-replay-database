@@ -1,7 +1,7 @@
 # Avatar Legends pipeline report
 
-- **760** published record(s) · **464** player(s) · **12** fighter(s) · **34** support(s)
-- **448** record(s) state at least one support (58.9%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
+- **762** published record(s) · **466** player(s) · **12** fighter(s) · **34** support(s)
+- **450** record(s) state at least one support (59.1%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
 - **61** mirror match(es) (8.0%)
 - **92** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
@@ -17,8 +17,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 384 | 76 | 67 | 67 | 0 (120s) | 9 (3600s) | 0 | 0 |
-| still | still | 157 | 81 | 59 | 59 | 0 (120s) | 0 (—) | 0 | 16 |
-| ndyTv | ndyTv | 3110 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
+| still | still | 158 | 81 | 59 | 59 | 0 (120s) | 0 (—) | 0 | 16 |
+| ndyTv | ndyTv | 3131 | 57 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 967 | 39 | 39 | 39 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 203 | 21 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 85 | 26 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -26,10 +26,10 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | skeet | skeet | 138 | 22 | 18 | 18 | 0 (120s) | 0 (—) | 0 | 0 |
 | unrivaledTournaments | unrivaledTournaments | 153 | 15 | 15 | 15 | 0 (120s) | 0 (—) | 0 | 0 |
 | normalMs | normalMs | 488 | 30 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
-| rood | rood | 30 | 20 | 19 | 19 | 0 (120s) | 0 (—) | 0 | 1 |
+| rood | rood | 34 | 22 | 21 | 21 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 36 | 20 | 20 | 20 | 0 (120s) | 0 (—) | 0 | 0 |
 | natsuXenoblade _(watch)_ | natsuXenoblade | 177 | 16 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 1 |
-| takeANappa | takeANappa | 283 | 19 | 10 | 10 | 2 (120s) | 0 (—) | 0 | 3 |
+| takeANappa | takeANappa | 287 | 19 | 10 | 10 | 2 (120s) | 0 (—) | 0 | 3 |
 | versusFestival | versusFestival | 418 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
 | kmlTournaments | kmlTournaments | 826 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -37,7 +37,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 307 | 11 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 4 |
-| superSalemFighters | superSalemFighters | 182 | 5 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 0 |
+| superSalemFighters | superSalemFighters | 185 | 5 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 0 |
 | redVsFantasy | redVsFantasy | 528 | 29 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 11 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -50,8 +50,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
 | replayTheater _(index, carried)_ | replayTheater | — | — | — | 330 | — | — | — | — |
 
-_The collapse guard needs a per-intake loss of >10% AND >20 records. 6 of 33 intake(s)_
-_with records commit more than 20, so on the other 27 its second arm cannot fire at all_
+_The collapse guard needs a per-intake loss of >10% AND >20 records. 7 of 33 intake(s)_
+_with records commit more than 20, so on the other 26 its second arm cannot fire at all_
 _(checklist 7b). For those the live protection is the freeze pin, the freezeWatch rows and_
 _this table — so every loss the guard cannot refuse is printed below._
 
@@ -103,8 +103,8 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 308 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 76 | 0 | 0 | 0 | 0 | 13 | 0 | 8 | 1 | 0 | 0 | 0 | 0 |
-| ndyTv | 3053 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| still | 77 | 0 | 0 | 0 | 0 | 13 | 0 | 8 | 1 | 0 | 0 | 0 | 0 |
+| ndyTv | 3074 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 928 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | cow | 59 | 1 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -112,10 +112,10 @@ no player to complete.
 | skeet | 116 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | unrivaledTournaments | 138 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | normalMs | 458 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| rood | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+| rood | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade | 161 | 10 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| takeANappa | 264 | 0 | 0 | 2 | 0 | 5 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+| takeANappa | 268 | 0 | 0 | 2 | 0 | 5 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 410 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kmlTournaments | 819 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -123,7 +123,7 @@ no player to complete.
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | schoolBus | 296 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| superSalemFighters | 177 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| superSalemFighters | 180 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy | 499 | 0 | 0 | 0 | 0 | 20 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -154,7 +154,7 @@ covering a channel — which is why this is printed rather than merely collected
 | skeet | handle-outside | 36 | 0 | 0 | 0 | 0 (0.0%) | 0 | 36 |
 | unrivaledTournaments | handle-outside | 30 | 0 | 0 | 0 | 0 (0.0%) | 0 | 30 |
 | normalMs | handle-outside | 44 | 0 | 0 | 0 | 0 (0.0%) | 0 | 44 |
-| rood | handle-outside | 22 | 0 | 16 | 0 | 0 (0.0%) | 1 | 38 |
+| rood | handle-outside | 22 | 0 | 20 | 0 | 0 (0.0%) | 1 | 42 |
 | an11Mo | handle-outside | 40 | 0 | 0 | 0 | 0 (0.0%) | 0 | 40 |
 | natsuXenoblade | handle-outside | 6 | 0 | 0 | 0 | 0 (0.0%) | 0 | 6 |
 | takeANappa | chars-outside | 8 | 12 | 0 | 0 | 0 (0.0%) | 0 | 20 |
@@ -195,7 +195,7 @@ while the record is kept.
 | cow | 39 | 39 | 0 | 0 | 0 |
 | skeet | 2 | 2 | 0 | 0 | 0 |
 | normalMs | 28 | 28 | 0 | 0 | 0 |
-| rood | 20 | 20 | 0 | 1 | 0 |
+| rood | 22 | 22 | 0 | 1 | 0 |
 | an11Mo | 39 | 39 | 0 | 0 | 0 |
 | natsuXenoblade | 5 | 5 | 0 | 0 | 0 |
 | takeANappa | 20 | 20 | 0 | 0 | 0 |
@@ -256,7 +256,7 @@ or ceiling would admit.
 | normalMs · records | 0 | 0 | 0 | 0 | 13 | 6 | 3 | 0 |
 | normalMs · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | normalMs · other misses | 0 | 0 | 2 | 0 | 3 | 3 | 0 | 0 |
-| rood · records | 0 | 0 | 0 | 1 | 11 | 4 | 3 | 0 |
+| rood · records | 0 | 0 | 0 | 1 | 13 | 4 | 3 | 0 |
 | rood · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rood · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo · records | 0 | 0 | 0 | 0 | 1 | 5 | 9 | 5 |
@@ -322,7 +322,7 @@ or ceiling would admit.
 
 ## Handles
 
-- word count per side: 1 → 801 · 2 → 41 · 3 → 5 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 803 · 2 → 41 · 3 → 7 · 4 → 2 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 24 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
@@ -332,7 +332,7 @@ Every handle in players.json was resolved through the roster matcher at parse ti
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
 
-2 events with placements read; 3 of 464 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+2 events with placements read; 3 of 466 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
 
 **Titled:** `precho` 1W/0R · `sachio` 0W/1R · `xcaliburbladez` 1W/0R
 
@@ -465,4 +465,4 @@ support nobody has verified is a support nobody should be able to parse into a r
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-10-10T15:24:15.196Z_
+_Generated 2026-10-11T15:41:15.480Z_

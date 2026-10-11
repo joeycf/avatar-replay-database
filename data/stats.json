@@ -1,21 +1,21 @@
 {
   "totals": {
-    "replays": 760,
+    "replays": 762,
     "characters": 12,
-    "players": 464,
+    "players": 466,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 412
+      "2026-09-02": 414
     },
     "supports": 34,
-    "sidesWithSupport": 874
+    "sidesWithSupport": 876
   },
   "characterUsage": {
-    "azula": 167,
+    "aang": 106,
+    "azula": 169,
     "korra": 176,
-    "aang": 104,
     "zuko": 95,
     "katara": 178,
     "toph": 192,
@@ -68,9 +68,9 @@
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "azula": 72,
+      "aang": 58,
+      "azula": 74,
       "korra": 108,
-      "aang": 56,
       "zuko": 64,
       "katara": 73,
       "toph": 101,
@@ -83,6 +83,18 @@
     }
   },
   "playerCharacters": {
+    "rood": {
+      "aang": 9,
+      "zuko": 7,
+      "zaheer": 4,
+      "katara": 2
+    },
+    "shugarwuggs-li-loo": {
+      "azula": 1
+    },
+    "moe-inkling-firelord": {
+      "azula": 1
+    },
     "prodoublesushi": {
       "azula": 12
     },
@@ -399,12 +411,6 @@
     },
     "warthog-ec": {
       "zaheer": 1
-    },
-    "rood": {
-      "zuko": 7,
-      "aang": 7,
-      "zaheer": 4,
-      "katara": 2
     },
     "killa-jam-98": {
       "aang": 1
@@ -1508,7 +1514,7 @@
     }
   },
   "supportUsage": {
-    "gyatso": 42,
+    "gyatso": 44,
     "momo": 19,
     "mai": 17,
     "dark-spirit": 20,
