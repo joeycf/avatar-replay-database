@@ -1,24 +1,24 @@
 {
   "totals": {
-    "replays": 762,
+    "replays": 763,
     "characters": 12,
-    "players": 466,
+    "players": 467,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 243,
-      "2026-09-02": 414
+      "2026-09-02": 415
     },
     "supports": 34,
-    "sidesWithSupport": 876
+    "sidesWithSupport": 878
   },
   "characterUsage": {
     "aang": 106,
     "azula": 169,
-    "korra": 176,
+    "korra": 177,
+    "toph": 193,
     "zuko": 95,
     "katara": 178,
-    "toph": 192,
     "nightmare-korra": 53,
     "ozai": 115,
     "sokka": 98,
@@ -70,10 +70,10 @@
     "2026-09-02": {
       "aang": 58,
       "azula": 74,
-      "korra": 108,
+      "korra": 109,
+      "toph": 102,
       "zuko": 64,
       "katara": 73,
-      "toph": 101,
       "nightmare-korra": 30,
       "ozai": 63,
       "sokka": 59,
@@ -91,6 +91,12 @@
     },
     "shugarwuggs-li-loo": {
       "azula": 1
+    },
+    "space": {
+      "korra": 2
+    },
+    "pepe-uehara": {
+      "toph": 1
     },
     "moe-inkling-firelord": {
       "azula": 1
@@ -636,9 +642,6 @@
     },
     "cesulion": {
       "sokka": 1
-    },
-    "space": {
-      "korra": 1
     },
     "dai": {
       "katara": 2
@@ -1515,6 +1518,8 @@
   },
   "supportUsage": {
     "gyatso": 44,
+    "naga": 81,
+    "the-boulder": 39,
     "momo": 19,
     "mai": 17,
     "dark-spirit": 20,
@@ -1530,8 +1535,6 @@
     "ghazan": 49,
     "joo-dee": 8,
     "roku": 22,
-    "naga": 80,
-    "the-boulder": 38,
     "badgermole": 33,
     "katara": 2,
     "ran-and-shaw": 15,
