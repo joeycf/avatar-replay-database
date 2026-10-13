@@ -389,6 +389,35 @@
     "durationSec": 2130
   },
   {
+    "id": "7UqqRt16KcA@2455",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Raymond Buller (Korra/Naga) vs Pepe Uehara (Toph/The Boulder) ▰ EVO France 2026 Top 8",
+    "publishedAt": "2026-10-10T14:57:56Z",
+    "durationSec": 4697,
+    "handles": [
+      "Raymond Buller",
+      "Pepe Uehara"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "pepe-uehara",
+          "raymond-buller"
+        ],
+        "characters": [
+          "korra",
+          "toph"
+        ],
+        "playedOn": "2026-10-10"
+      },
+      "ids": [
+        "7UqqRt16KcA@2455",
+        "7UqqRt16KcA@3909"
+      ]
+    }
+  },
+  {
     "id": "EQzSKbABCNE",
     "kind": "duplicate-candidate",
     "channel": "toledoLocals",
