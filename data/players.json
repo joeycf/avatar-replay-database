@@ -41,6 +41,10 @@
     "handle": "Aces_High"
   },
   {
+    "id": "ad6m",
+    "handle": "ad6m"
+  },
+  {
     "id": "aeduo",
     "handle": "Aeduo"
   },
@@ -150,6 +154,10 @@
     "handle": "Baba"
   },
   {
+    "id": "baconlord",
+    "handle": "Baconlord"
+  },
+  {
     "id": "bar-barxii",
     "handle": "bar_barXII"
   },
@@ -227,7 +235,12 @@
   },
   {
     "id": "briggetchu",
-    "handle": "Briggetchu"
+    "handle": "BriggetChu",
+    "extra": {
+      "aliases": [
+        "Briggetchu"
+      ]
+    }
   },
   {
     "id": "buffkyoshi",
@@ -240,6 +253,10 @@
   {
     "id": "busta",
     "handle": "Busta"
+  },
+  {
+    "id": "bustman",
+    "handle": "BustMan"
   },
   {
     "id": "buyachushun",
@@ -273,6 +290,10 @@
   {
     "id": "cgtf92",
     "handle": "cgtf92"
+  },
+  {
+    "id": "chara",
+    "handle": "Chara"
   },
   {
     "id": "chichionlyfans",
@@ -337,6 +358,10 @@
   {
     "id": "cow",
     "handle": "Cow"
+  },
+  {
+    "id": "cowthecat",
+    "handle": "cowthecat"
   },
   {
     "id": "cwang-red",
@@ -411,8 +436,20 @@
     "handle": "Dimana"
   },
   {
+    "id": "dimensyoharmonia",
+    "handle": "DimenSyoHarmonia"
+  },
+  {
     "id": "dinguspunch",
     "handle": "DingusPunch"
+  },
+  {
+    "id": "discount-hero",
+    "handle": "Discount_Hero"
+  },
+  {
+    "id": "distort",
+    "handle": "Distort"
   },
   {
     "id": "diverdans",
@@ -531,6 +568,10 @@
     "handle": "Faltimux"
   },
   {
+    "id": "faose",
+    "handle": "faose"
+  },
+  {
     "id": "farfall",
     "handle": "Farfall"
   },
@@ -598,6 +639,10 @@
   {
     "id": "fuerte",
     "handle": "Fuerte"
+  },
+  {
+    "id": "geff",
+    "handle": "geff_"
   },
   {
     "id": "giga-caras",
@@ -675,8 +720,16 @@
     "handle": "Hashtag0ne"
   },
   {
+    "id": "hatemani",
+    "handle": "Hatemani"
+  },
+  {
     "id": "hatsukei",
     "handle": "Hatsukei"
+  },
+  {
+    "id": "havard",
+    "handle": "Havard"
   },
   {
     "id": "haven",
@@ -728,10 +781,10 @@
   },
   {
     "id": "icontrol",
-    "handle": "iControl",
+    "handle": "icontrol",
     "extra": {
       "aliases": [
-        "icontrol"
+        "iControl"
       ]
     }
   },
@@ -758,6 +811,10 @@
   {
     "id": "irk",
     "handle": "Irk"
+  },
+  {
+    "id": "j-money",
+    "handle": "J-Money"
   },
   {
     "id": "j-valentine",
@@ -883,6 +940,10 @@
     "handle": "King Co0pa"
   },
   {
+    "id": "king-n00t",
+    "handle": "king_n00t"
+  },
+  {
     "id": "kingkc",
     "handle": "KingKC"
   },
@@ -917,6 +978,10 @@
   {
     "id": "kreation",
     "handle": "Kreation"
+  },
+  {
+    "id": "kroutis",
+    "handle": "kroutis"
   },
   {
     "id": "kudaytaa",
@@ -1094,6 +1159,10 @@
     "handle": "MissedFGC"
   },
   {
+    "id": "missedinput-exe",
+    "handle": "missedinput.exe"
+  },
+  {
     "id": "modren",
     "handle": "Modren"
   },
@@ -1120,6 +1189,10 @@
   {
     "id": "mr-madgear",
     "handle": "Mr-Madgear"
+  },
+  {
+    "id": "mr-mostafles",
+    "handle": "Mr Mostafles"
   },
   {
     "id": "mrfuk",
@@ -1218,6 +1291,10 @@
   {
     "id": "notalice",
     "handle": "NotAlice"
+  },
+  {
+    "id": "nxtrack",
+    "handle": "NxtracK"
   },
   {
     "id": "nychris-g",
@@ -1322,6 +1399,10 @@
   {
     "id": "pitsos",
     "handle": "Pitsos"
+  },
+  {
+    "id": "play-guy",
+    "handle": "Play_guy"
   },
   {
     "id": "plisno",
@@ -1454,6 +1535,10 @@
   {
     "id": "roborush",
     "handle": "RoboRush"
+  },
+  {
+    "id": "rock-n-rollback",
+    "handle": "Rock 'n Rollback"
   },
   {
     "id": "rocknrollback",
@@ -1664,6 +1749,10 @@
     "handle": "SonicFox"
   },
   {
+    "id": "sori",
+    "handle": "Sori"
+  },
+  {
     "id": "soz-tofuboi",
     "handle": "SOZ tofuboi"
   },
@@ -1730,6 +1819,10 @@
     "handle": "Suprise Me"
   },
   {
+    "id": "surgingstormgg",
+    "handle": "SurgingStormGG"
+  },
+  {
     "id": "swagmastahhh",
     "handle": "SwagMastahhh"
   },
@@ -1789,6 +1882,10 @@
   {
     "id": "thefallenone718",
     "handle": "TheFallenOne718"
+  },
+  {
+    "id": "theorangejacket",
+    "handle": "TheOrangeJacket"
   },
   {
     "id": "thesaviorzombie",
@@ -2002,6 +2099,14 @@
   {
     "id": "yo-xan",
     "handle": "Yo Xan"
+  },
+  {
+    "id": "yodeadman",
+    "handle": "YoDeadman"
+  },
+  {
+    "id": "yordie",
+    "handle": "yordie"
   },
   {
     "id": "zachiderp",
