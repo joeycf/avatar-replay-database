@@ -649,6 +649,10 @@
     "handle": "Giga Caras"
   },
   {
+    "id": "gills",
+    "handle": "Gills"
+  },
+  {
     "id": "ginntootonic",
     "handle": "Ginntootonic",
     "extra": {
@@ -1195,6 +1199,10 @@
     "handle": "Mr Mostafles"
   },
   {
+    "id": "mr-prince",
+    "handle": "Mr. Prince"
+  },
+  {
     "id": "mrfuk",
     "handle": "MrFuk"
   },
@@ -1642,6 +1650,10 @@
   {
     "id": "seven",
     "handle": "Seven"
+  },
+  {
+    "id": "shadowking",
+    "handle": "Shadowking"
   },
   {
     "id": "shaudl",
@@ -2132,6 +2144,10 @@
   {
     "id": "zapoke",
     "handle": "Zapoke"
+  },
+  {
+    "id": "zauardo",
+    "handle": "Zauardo"
   },
   {
     "id": "zee",

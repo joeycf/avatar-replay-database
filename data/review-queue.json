@@ -1550,6 +1550,35 @@
     }
   },
   {
+    "id": "mnbN4X4v3iE@1964",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Narath (Avatar Aang/Roku) vs Zauardo (Toph/The Boulder) ▰ Crossover ICT #151",
+    "publishedAt": "2026-08-23T22:29:48Z",
+    "durationSec": 3108,
+    "handles": [
+      "Narath",
+      "Zauardo"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "narath",
+          "zauardo"
+        ],
+        "characters": [
+          "avatar-aang",
+          "toph"
+        ],
+        "playedOn": "2026-08-23"
+      },
+      "ids": [
+        "mnbN4X4v3iE@1964",
+        "mnbN4X4v3iE@2816"
+      ]
+    }
+  },
+  {
     "id": "MZF9UMt83Ts",
     "kind": "duplicate-candidate",
     "channel": "versusFestival",

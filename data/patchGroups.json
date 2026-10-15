@@ -20,6 +20,11 @@
         "id": "2026-09-02",
         "label": "Patch 2.5",
         "note": "Ranked Mode 1.0, input buffer, damage-scaling fix, 9 fighters changed"
+      },
+      {
+        "id": "2026-10-07",
+        "label": "Patch 3.0",
+        "note": "Open Lobbies with spectating, Ozai reimagined, Kyoshi/Ozai Flow-regen rule"
       }
     ]
   }

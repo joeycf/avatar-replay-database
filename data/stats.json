@@ -1,30 +1,31 @@
 {
   "totals": {
-    "replays": 830,
+    "replays": 837,
     "characters": 12,
-    "players": 496,
+    "players": 500,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
-      "2026-08-06": 243,
-      "2026-09-02": 482
+      "2026-08-06": 250,
+      "2026-09-02": 402,
+      "2026-10-07": 80
     },
-    "supports": 34,
-    "sidesWithSupport": 994
+    "supports": 36,
+    "sidesWithSupport": 1014
   },
   "characterUsage": {
     "katara": 187,
-    "zuko": 108,
-    "toph": 226,
+    "zuko": 109,
+    "toph": 230,
     "ozai": 126,
     "azula": 184,
     "kyoshi": 175,
-    "zaheer": 180,
-    "aang": 110,
+    "zaheer": 182,
+    "aang": 112,
     "nightmare-korra": 57,
-    "korra": 184,
+    "korra": 187,
     "sokka": 99,
-    "avatar-aang": 34
+    "avatar-aang": 36
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -54,32 +55,45 @@
       "avatar-aang": 1
     },
     "2026-08-06": {
-      "zaheer": 52,
+      "zaheer": 54,
       "ozai": 40,
-      "aang": 35,
+      "aang": 37,
       "sokka": 34,
-      "toph": 52,
-      "zuko": 20,
+      "toph": 56,
+      "zuko": 21,
       "kyoshi": 54,
       "katara": 89,
       "azula": 42,
-      "korra": 45,
-      "avatar-aang": 9,
+      "korra": 48,
+      "avatar-aang": 11,
       "nightmare-korra": 20
     },
     "2026-09-02": {
-      "katara": 82,
-      "zuko": 77,
-      "toph": 135,
-      "ozai": 74,
-      "azula": 89,
-      "kyoshi": 97,
-      "zaheer": 116,
-      "aang": 62,
-      "nightmare-korra": 34,
-      "korra": 116,
-      "sokka": 60,
-      "avatar-aang": 24
+      "aang": 53,
+      "zuko": 60,
+      "ozai": 63,
+      "sokka": 59,
+      "azula": 71,
+      "kyoshi": 77,
+      "katara": 69,
+      "nightmare-korra": 29,
+      "zaheer": 99,
+      "avatar-aang": 24,
+      "korra": 106,
+      "toph": 96
+    },
+    "2026-10-07": {
+      "katara": 13,
+      "zuko": 17,
+      "toph": 39,
+      "ozai": 11,
+      "azula": 18,
+      "kyoshi": 20,
+      "zaheer": 17,
+      "aang": 9,
+      "nightmare-korra": 5,
+      "korra": 10,
+      "sokka": 1
     }
   },
   "playerCharacters": {
@@ -379,7 +393,7 @@
       "aang": 1
     },
     "narath": {
-      "avatar-aang": 11
+      "avatar-aang": 13
     },
     "informa-tica-abood": {
       "korra": 1
@@ -640,7 +654,7 @@
       "azula": 1
     },
     "wht-oji-junior": {
-      "zuko": 5
+      "zuko": 6
     },
     "baba": {
       "zuko": 1,
@@ -1176,6 +1190,18 @@
     "sleepy-nipa": {
       "zaheer": 1
     },
+    "gills": {
+      "aang": 2
+    },
+    "zauardo": {
+      "toph": 4
+    },
+    "shadowking": {
+      "korra": 3
+    },
+    "mr-prince": {
+      "zaheer": 2
+    },
     "christm": {
       "zuko": 1
     },
@@ -1607,15 +1633,16 @@
   "supportUsage": {
     "firelord-sozin": 34,
     "the-hippo": 43,
-    "ghazan": 57,
+    "ghazan": 59,
     "general-zhao": 13,
     "ursa": 49,
-    "the-boulder": 49,
+    "the-boulder": 53,
     "p'li": 39,
     "imperial-firebender": 24,
+    "hakoda": 2,
     "ming-hua": 30,
-    "june": 38,
-    "gyatso": 46,
+    "june": 39,
+    "gyatso": 48,
     "dark-avatar-unalaq": 9,
     "vaatu": 13,
     "yun": 29,
@@ -1624,7 +1651,7 @@
     "kelsang": 26,
     "mai": 21,
     "master-pakku": 36,
-    "naga": 88,
+    "naga": 91,
     "lo-and-li": 55,
     "momo": 21,
     "suki": 10,
@@ -1632,8 +1659,9 @@
     "kanna": 43,
     "dark-spirit": 20,
     "joo-dee": 8,
-    "roku": 22,
+    "roku": 24,
     "katara": 2,
+    "guru-pathik": 4,
     "appa": 23,
     "master-piandao": 1,
     "princess-yue": 29,
