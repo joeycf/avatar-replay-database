@@ -46,6 +46,7 @@
       "steamToken": "katara",
       "siteKey": "katara",
       "supports": [
+        "hakoda",
         "kanna",
         "master-pakku"
       ]
@@ -195,6 +196,7 @@
       "released": "2026-07-23",
       "steamToken": "aang_avchar",
       "supports": [
+        "guru-pathik",
         "katara",
         "roku"
       ]

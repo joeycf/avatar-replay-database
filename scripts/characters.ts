@@ -5,8 +5,9 @@
  * Character: it has no page, no portrait, no accent, no usage share and never
  * enters Side.characters. What it has that a Character does not is an OWNER, and
  * the pairing is a strict partition — measured across all 516 sides of the live
- * catalogue on 2026-09-18, every one of the 34 attested supports appears under
- * exactly one fighter. That invariant is only expressible while the two tables
+ * catalogue on 2026-09-18, every one of the 34 attested supports appeared under
+ * exactly one fighter, and it still held across all 1,094 sides on 2026-10-15
+ * with the last two added. That invariant is only expressible while the two tables
  * are separate, and it is only ASSERTABLE while one script writes both.
  *
  * ── SOURCES, ALL THREE BINDING ────────────────────────────────────────────
@@ -18,11 +19,11 @@
  *    `npx tsx scripts/roster.ts --scrape` re-runs that enumeration and
  *    `npm run data:roster-check` turns it into a verdict.
  *
- * 2. SUPPORTS below: thirty-four rows, every one carrying an index row id and a
- *    video as its evidence. THIRTY-SIX EXIST — the vendor's store copy reads
- *    "Choose from three support characters to accompany your fighter" and there
- *    are twelve fighters — and the two that are NOT here are not here on
- *    purpose. See the table's header.
+ * 2. SUPPORTS below: thirty-six rows, every one carrying an index row id and a
+ *    video as its evidence — the vendor's store copy reads "Choose from three
+ *    support characters to accompany your fighter" and there are twelve
+ *    fighters. The last two were held out until the index printed them; see the
+ *    table's header.
  *
  * 3. design/handoff/tokens.css: the accents, read from its `--char-<id>` block.
  *    THE DESIGN TOKENS ARE THE SOURCE OF TRUTH. app/app.config.ts transcribes
@@ -336,27 +337,22 @@ const ROSTER: RosterEntry[] = [
 /**
  * The SUPPORT registry — the second namespace.
  *
- * THIRTY-FOUR ROWS AGAINST THIRTY-SIX EXPECTED, AND THE TWO GAPS ARE REAL
- * MEASUREMENTS RATHER THAN MISSING WORK. The vendor states the shape — "Choose
- * from three support characters to accompany your fighter", twelve fighters — so
- * 36 exist. A full sweep of the index on 2026-09-18 (6 pages, 258 rows, 516
- * sides, every side's support column populated) yields exactly 34 distinct
- * names, and the shortfall is one row each under `katara` and `avatar-aang`.
+ * THIRTY-SIX ROWS, THREE PER FIGHTER, AND THE LAST TWO TOOK A MONTH. The vendor
+ * states the shape — "Choose from three support characters to accompany your
+ * fighter", twelve fighters — so 36 exist. A full sweep of the index on
+ * 2026-09-18 (6 pages, 258 rows, 516 sides, every side's support column
+ * populated) yielded 34, one short under `katara` and one under `avatar-aang`.
+ * The two candidates were known — `Hakoda` from four uploader attestations,
+ * `Guru Pathik` from the community wiki alone — and were BANNED rather than
+ * added, because a support nobody has verified is a support nobody should be
+ * able to parse into a record. Their spans went to the residue gate as counted
+ * lines, and scripts/expiries.ts kept an 'unreleased-support' row on a 30-day
+ * sweep cadence.
  *
- * THE TWO CANDIDATES ARE KNOWN AND ARE NOT HERE:
- *   · `Hakoda` (Katara's third) — STiLL writes it in two titles (SfssLFrqiS8,
- *     y4AGEJOEPfY), spells it "Hikoda" in a description, and HoneyBeeCMNDR
- *     writes "Hakoda Support" in a description on a Katara video (x8r1DZfZE_E).
- *     Four attestations across two channels, and ZERO index rows in 258.
- *   · `Guru Pathik` (Avatar Aang's third) — the community wiki's table only.
- *     Zero attestations anywhere in the corpus.
- * Both are in BANNED_ALIASES. A support nobody has verified is a support nobody
- * should be able to parse into a record: the alias would fire on the four
- * `Hakoda` spans and mint a support id that no index row has ever confirmed,
- * and the same table would then be quoted as the evidence. Left out, those four
- * spans reach the residue gate as a counted line — which is the detector — and
- * scripts/expiries.ts carries an 'unreleased-support' row that stays due until
- * the table reaches three per fighter.
+ * The 2026-10-15 sweep (11 pages, 547 rows, 1,094 sides) found both in the
+ * index's own support column: Hakoda once under Katara (row 502327), Guru Pathik
+ * five times under Avatar Aang (earliest row 498676). They are rows below now,
+ * with that evidence, and the bans are lifted.
  *
  * SPELLINGS ARE THE INDEX'S, NOT THE BRIEF'S, and the difference is not
  * academic: the brief writes `Boulder`, `Pakku`, `Ming Hua`, `Ran & Shaw`,
@@ -387,8 +383,9 @@ interface SupportEntry {
   /** Index row id and the video it points at — the evidence for the row AND for
    *  its owner. Measured 2026-09-18. */
   evidence: string;
-  /** How many of the 516 sides named it. Not load-bearing; it is how a row that
-   *  stops appearing becomes visible. */
+  /** How many index sides named it on the sweep that added the row (516 sides
+   *  on 2026-09-18; 1,094 on 2026-10-15 for hakoda and guru-pathik). Not
+   *  load-bearing; it is how a row that stops appearing becomes visible. */
   sides: number;
 }
 
@@ -418,7 +415,7 @@ const SUPPORTS: SupportEntry[] = [
     evidence: 'rt:496822 0ieOuTRrs3w',
     sides: 5,
   },
-  // ── Katara (TWO of three; see the header) ────────────────────────────────
+  // ── Katara ───────────────────────────────────────────────────────────────
   {
     id: 'master-pakku',
     name: 'Master Pakku',
@@ -434,6 +431,20 @@ const SUPPORTS: SupportEntry[] = [
     aliases: [],
     evidence: 'rt:497250 RJUowOrwAEA',
     sides: 33,
+  },
+  {
+    id: 'hakoda',
+    name: 'Hakoda',
+    owner: 'katara',
+    // THE THIRD, EVIDENCED BY THE INDEX AT LAST. Attested in two STiLL titles
+    // (SfssLFrqiS8, y4AGEJOEPfY), a HoneyBeeCMNDR description and KANG's
+    // "Katara/Hakoda" since recon, and banned until a catalogue row confirmed it:
+    // the 2026-10-15 sweep (547 rows, 1,094 sides) has it once, on row 502327
+    // (MPGame's Katara, Mix Masters #5). STiLL's "Hikoda" stays residue — a
+    // spelling only one uploader wrote once is not an alias until it buys a record.
+    aliases: [],
+    evidence: 'rt:502327 lcQT632vI9U@3637',
+    sides: 1,
   },
   // ── Zuko ─────────────────────────────────────────────────────────────────
   {
@@ -665,7 +676,7 @@ const SUPPORTS: SupportEntry[] = [
     evidence: 'rt:496296 CYR9YnnIZ-c',
     sides: 6,
   },
-  // ── Avatar Aang (TWO of three; see the header) ───────────────────────────
+  // ── Avatar Aang ──────────────────────────────────────────────────────────
   {
     id: 'roku',
     name: 'Roku',
@@ -688,6 +699,18 @@ const SUPPORTS: SupportEntry[] = [
     aliases: [],
     evidence: 'rt:482155 GmU3e6jvpcI@582',
     sides: 1,
+  },
+  {
+    id: 'guru-pathik',
+    name: 'Guru Pathik',
+    owner: 'avatar-aang',
+    // THE THIRD, AND THE WIKI'S GUESS WAS RIGHT — but the row exists because of
+    // the index, not the wiki. Zero index rows on 2026-09-18; the 2026-10-15
+    // sweep has five, all under Avatar Aang, the earliest on row 498676 (the
+    // Banned Bender Beatdown playtester tournament, 2026-09-22).
+    aliases: [],
+    evidence: 'rt:498676 PQ8_9_zzfBk@2544',
+    sides: 5,
   },
   // ── Nightmare Korra ──────────────────────────────────────────────────────
   {
@@ -760,14 +783,6 @@ const BANNED_ALIASES: { key: string; why: string }[] = [
   {
     key: 'aaang',
     why: 'UNRESOLVED between `aang` and `avatar-aang` and it must not be guessed. It occurs zero times on every admitted channel, so nothing in the corpus decides it; `A.Aang` is scoped to phoenixWrong (channels.ts:1218) and compiled so it cannot also match this.',
-  },
-  {
-    key: 'hakoda',
-    why: "the leading candidate for Katara's missing third support, attested in two STiLL titles and one HoneyBeeCMNDR description and in ZERO of 258 index rows. Minting it here would make this file the evidence for its own guess. Leave it banned, let the residue gate count it, and clear the `unreleased-support` expiry by evidencing it in the index.",
-  },
-  {
-    key: 'gurupathik',
-    why: "the community wiki's candidate for Avatar Aang's missing third support, with zero attestations anywhere in the corpus and zero index rows. Same rule as `hakoda`.",
   },
   {
     key: 'commanderbumi',
@@ -892,9 +907,10 @@ async function main(): Promise<void> {
   // The two that do NOT block are the ones a stop would only make worse:
   //   'dormant-channel'    fires on an uploader going quiet, which says nothing
   //                        about whether the roster is right.
-  //   'unreleased-support' is a STANDING gap — 34 of 36 evidenced — and blocking
-  //                        on it would make the registries unbuildable until a
-  //                        third party prints a name we do not control.
+  //   'unreleased-support' was a STANDING gap (34 of 36 evidenced until
+  //                        2026-10-15), and blocking on one would make the
+  //                        registries unbuildable until a third party prints a
+  //                        name we do not control.
   //   the REVIEW trigger   is a look-again date, not a roster fact.
   const due = await dueExpiries();
   const blocking = due.filter(blocksRosterBuild);

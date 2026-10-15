@@ -30,6 +30,12 @@
     "aliases": []
   },
   {
+    "id": "hakoda",
+    "name": "Hakoda",
+    "owner": "katara",
+    "aliases": []
+  },
+  {
     "id": "mai",
     "name": "Mai",
     "owner": "zuko",
@@ -186,6 +192,12 @@
   {
     "id": "katara",
     "name": "Katara",
+    "owner": "avatar-aang",
+    "aliases": []
+  },
+  {
+    "id": "guru-pathik",
+    "name": "Guru Pathik",
     "owner": "avatar-aang",
     "aliases": []
   },

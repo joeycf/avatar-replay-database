@@ -86,10 +86,16 @@ const REPLAYS = join(ROOT, 'data/replays.json');
 export const SUPPORTS_PER_FIGHTER = 3;
 
 /**
- * The last day a full index sweep confirmed the support table is still short.
+ * The last day a full index sweep read the support column.
  *
- * THIS IS THE DIFFERENCE BETWEEN A CADENCE AND A PERMANENTLY RED WORKFLOW. The
- * shortfall is real, it is known, and NOBODY HERE CAN CLEAR IT: it clears when a
+ * THE 2026-10-15 SWEEP CLOSED THE GAP: 547 rows, and both missing supports in
+ * them (Hakoda, row 502327; Guru Pathik, five rows from 498676), so the table is
+ * 36 of 36 and the arm below has nothing left to report. The date and the arm
+ * stay, because a support that stops being evidenced, or a fourth one, is the
+ * same question again.
+ *
+ * THIS IS THE DIFFERENCE BETWEEN A CADENCE AND A PERMANENTLY RED WORKFLOW. A
+ * shortfall can be real, known, and something NOBODY HERE CAN CLEAR: it clears when a
  * third party prints a name in a column we read. A gate that goes due every day
  * until that happens is an alarm that fires through a known-quiet quarter, and
  * an alarm nobody reads is worse than no alarm — which is a lesson this
@@ -101,7 +107,7 @@ export const SUPPORTS_PER_FIGHTER = 3;
  * (tokon-replay-database/scripts/patches.ts). Bump it only after an actual
  * sweep — its whole value is that it is a claim about work done.
  */
-export const SUPPORTS_SWEPT_THROUGH = '2026-09-18';
+export const SUPPORTS_SWEPT_THROUGH = '2026-10-15';
 
 /**
  * How long a support sweep stays fresh.
@@ -168,14 +174,21 @@ export interface UnreleasedFighter {
   note: string;
 }
 
-// The REVIEW date on the four Pass rows and on Tagah is 2026-10-13, the day
-// after EVO France closes (10–12 October 2026). That is a THIRD-PARTY
-// expectation and it is used for the only thing third-party expectation is good
-// for: deciding when to look. rooflemonger's PAX West recap (ANQaLj6tpOs,
-// 2026-09-05) reports "No DLC talk yet sadly, probably saving that for Evo
-// France". It is not written into `window`, it is not a release date, and no
+// The REVIEW date on the four Pass rows, the vote slot and Tagah. A look-again
+// date, never a release date: nothing here is written into `window`, and no
 // roster row will ever be created from it.
-const REVIEW_AFTER_EVO_FRANCE = '2026-10-13';
+//
+// FIRST SET to 2026-10-13, the day after EVO France closed (10–12 October), on a
+// third-party expectation — rooflemonger's PAX West recap (ANQaLj6tpOs,
+// 2026-09-05): "No DLC talk yet sadly, probably saving that for Evo France".
+// LOOKED AGAIN 2026-10-15, and nothing had moved: Valve's achievement schema for
+// 2424420 still has twelve `ach_match_won_*` fighter rows; the store sentence is
+// unchanged; the corpus scan of 830 records sights no gated name; the vendor's
+// Steam feed since 09-18 is the Autumn Sale and PATCH 3.0 (Open Lobbies, Ozai
+// reimagined), neither naming a fighter or a date; and no EVO France date
+// announcement could be found. RE-DATED to 2026-10-27: two weeks out, and after
+// the Switch 2 version's 10-23 launch, the next point a vendor is likely to talk.
+const REVIEW_AFTER = '2026-10-27';
 const YEAR_1_PASS_SENTENCE =
   'Adds five iconic characters over the course of the season: Iroh, Ty Lee, ' +
   'Lin Beifong, Bolin and the winner of the Year 1 Character Vote.';
@@ -194,7 +207,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     window: 'over the course of the season',
     source: YEAR_1_PASS_SOURCE,
     backstop: YEAR_1_CLOSES,
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     accent: '#FCB26F',
     note: `Year 1 Pass. Vendor sentence: "${YEAR_1_PASS_SENTENCE}" — names, no dates. Third-party reporting of the reveal order puts him fourth of five, which is reporting and not a schedule.`,
   },
@@ -208,7 +221,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     window: 'over the course of the season',
     source: YEAR_1_PASS_SOURCE,
     backstop: YEAR_1_CLOSES,
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     accent: '#F59ECF',
     note: `Year 1 Pass. Vendor sentence: "${YEAR_1_PASS_SENTENCE}" — names, no dates. Second of five by third-party reveal order.`,
   },
@@ -222,7 +235,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     window: 'over the course of the season',
     source: YEAR_1_PASS_SOURCE,
     backstop: YEAR_1_CLOSES,
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     accent: '#A8BEAC',
     note: `Year 1 Pass. Vendor sentence: "${YEAR_1_PASS_SENTENCE}" — names, no dates. Third of five by third-party reveal order.`,
   },
@@ -233,7 +246,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     window: 'over the course of the season',
     source: YEAR_1_PASS_SOURCE,
     backstop: YEAR_1_CLOSES,
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     accent: '#D3D979',
     note: `Year 1 Pass. Vendor sentence: "${YEAR_1_PASS_SENTENCE}" — names, no dates. First of five by third-party reveal order.`,
   },
@@ -249,7 +262,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     window: 'the winner of the Year 1 Character Vote',
     source: YEAR_1_PASS_SOURCE,
     backstop: YEAR_1_CLOSES,
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     note: 'Year 1 Pass slot five, unnamed. Candidates reported from the vendor\'s EVO 2026 panel: Tenzin, Kuvira, Amon, King Bumi, Asami Sato. The vote is a Digital Deluxe pre-order privilege ("Players who pre-order the Digital Deluxe Edition can vote to choose the final character in the Year 1 Pass!", Xbox 9N4WK9FB0SHV). No winner has been announced on any vendor surface. On reveal: split this row into a named one, get an accent from a Claude Design session, and leave this one deleted.',
   },
   {
@@ -261,7 +274,7 @@ export const UNRELEASED: UnreleasedFighter[] = [
     // "later this year", published 2026-07-23, cannot still be true on
     // 2027-01-01. Arithmetic on the vendor's own sentence.
     backstop: '2026-12-31',
-    reviewAfter: REVIEW_AFTER_EVO_FRANCE,
+    reviewAfter: REVIEW_AFTER,
     accent: '#F7E6C3',
     note: 'Free DLC, announced 2026-07-23 on the vendor\'s X account and its YouTube (RCqSVv1GnlY). DO NOT RE-READ design/handoff/tokens.css:67 AS A SOURCE — it says "Fall 2026", the vendor never did, and that phrase exists only on a fan wiki. Not part of the Year 1 Pass.',
   },
@@ -447,12 +460,10 @@ export async function dueExpiries(asOf: string = today()): Promise<DueExpiry[]> 
           `bug and not a guess — it is a name the index has never printed. Re-sweep ` +
           `https://replaytheater.app/api/matches?game=avatar (paged, >=1.5s apart, quota-free) ` +
           `and read the char2 column on this fighter's rows. IF A NEW NAME APPEARS: add it to ` +
-          `SUPPORTS in scripts/characters.ts with its row id as evidence and remove it from ` +
-          `BANNED_ALIASES. The two known candidates are banned there on purpose — \`Hakoda\` for ` +
-          `katara (four title/description attestations across two channels, zero index rows) and ` +
-          `\`Guru Pathik\` for avatar-aang (community wiki only, zero attestations). Until one is ` +
-          `evidenced its spans reach the residue gate as a counted line, which is the detector; ` +
-          `do not add either from memory. IF THE SWEEP FINDS NOTHING NEW: bump ` +
+          `SUPPORTS in scripts/characters.ts with its row id as evidence, and remove it from ` +
+          `BANNED_ALIASES if a candidate was banned there. Until a name is evidenced its spans ` +
+          `reach the residue gate as a counted line, which is the detector; do not add one from ` +
+          `memory or a wiki. IF THE SWEEP FINDS NOTHING NEW: bump ` +
           `SUPPORTS_SWEPT_THROUGH in scripts/expiries.ts to today and commit it — that records ` +
           `the work and quiets this for ${SUPPORT_SWEEP_STALE_DAYS} days.`,
       });

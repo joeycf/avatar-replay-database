@@ -1224,9 +1224,10 @@ export const CHANNELS: ChannelConfig[] = [
     // matcher that treats supports as fighter aliases makes every side a pair
     // (nightmare-korra + Vaatu, katara + Hakoda) and corrupts characterUsage.
     //
-    // 'Hakoda' is NOT in the index's vocabulary and is presumably Katara's third
-    // support. It stays out of the registry until it is verified — see
-    // types/index.ts SupportRecord.
+    // 'Hakoda' was not in the index's vocabulary at recon and stayed out of the
+    // registry until verified (types/index.ts SupportRecord). The index printed
+    // it on 2026-10-15 (row 502327), so it is Katara's third support now and
+    // these sides resolve it.
     slotOrder: 'handle-outside',
     gateMode: 'title',
     strip: {
