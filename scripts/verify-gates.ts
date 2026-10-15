@@ -726,7 +726,7 @@ const CONTROLS: Control[] = [
   },
   {
     // THIS GAME'S OWN RULE (checklist 4d, which this build wrote). The vendor
-    // numbered ONE of four builds, so the token is the DATE on every row and the
+    // numbered TWO of five builds, so the token is the DATE on every row and the
     // version rides as a display label. A row that takes the vendor's version as
     // its token mints a URL no window matches — and looks more correct than the
     // rule it breaks, which is why it is asserted rather than described.
@@ -776,17 +776,17 @@ const CONTROLS: Control[] = [
   },
   {
     // THE MEASURED-CADENCE RULE, MADE EXECUTABLE. This table already contains a
-    // 27-day gap (2026-08-06 → 2026-09-02), so a staleness threshold at or below
+    // 35-day gap (2026-09-02 → 2026-10-07), so a staleness threshold at or below
     // it is red by construction — and an alarm that is red for a vendor doing
     // nothing wrong is an alarm everybody learns to skim past.
     name: 'patches: the staleness alarm is set below the table’s own widest gap',
     cmd: ['tsx', 'scripts/patches.ts', '--check'],
     files: ['scripts/patches.ts'],
-    names: /STALE_PATCH_DAYS is 20 but this table already contains a 27-day gap/,
+    names: /STALE_PATCH_DAYS is 20 but this table already contains a 35-day gap/,
     inject: () =>
       sub(
         'scripts/patches.ts',
-        'export const STALE_PATCH_DAYS = 30;',
+        'export const STALE_PATCH_DAYS = 40;',
         'export const STALE_PATCH_DAYS = 20;',
       ),
   },

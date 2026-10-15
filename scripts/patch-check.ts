@@ -113,11 +113,14 @@ const COMMUNITY = 'steam_community_announcements';
  *  every "missing patch" line after that would be noise. 20 community posts on
  *  2026-09-16 and again on 2026-09-18; the archive only grows. */
 export const FLOOR_POSTS = 18;
-/** Steam's event type for both of this vendor's patch posts, measured on the
- *  store events API 2026-09-18. It is the second reading of rule (b); no other
- *  event type is assumed to mean anything, because none was measured on this
- *  app. */
-export const PATCH_EVENT_TYPE = 13;
+/** Steam's event types for this vendor's patch posts, measured on the store
+ *  events API. It is the second reading of rule (b); no other event type is
+ *  assumed to mean anything until it is measured on this app.
+ *    13  "Regular update" — Game Update July 29 and September 2 (2026-09-18).
+ *    14  "Major update" — PATCH 3.0 IS HERE, 2026-10-07 (measured 2026-10-15).
+ *        Before it was listed, the checker went UNREADABLE on a real patch and
+ *        its own advice was to excuse the post as not-a-patch. */
+export const PATCH_EVENT_TYPES: ReadonlySet<number> = new Set([13, 14]);
 
 /** What the vendor calls a patch in a title. Deliberately looser than the date
  *  reader, so a title this script cannot parse reaches the hard failure instead
@@ -138,6 +141,25 @@ const PATCH_TITLE = /\b(?:game\s*update|patch|hotfix|update)\b/i;
  * a mute button.
  */
 export const NOT_A_PATCH: Record<string, string> = {};
+
+/**
+ * Patch posts that state their date nowhere rule (c) can read, keyed by the
+ * news gid, with the day a person settled on and the evidence.
+ *
+ * Rule (c) never takes a post's own timestamp, because Patch 2.5 was posted a
+ * day after it shipped. But a patch post with no header date and no title date
+ * is still a patch, and a fatal check nobody can clear is a check people delete.
+ * Same shape as NOT_A_PATCH: a human decision with a reason, not a mute button.
+ */
+export const POST_DATE_OK: Record<string, { day: string; why: string }> = {
+  '1846018067926374': {
+    day: '2026-10-07',
+    why:
+      '"PATCH 3.0 IS HERE" has no [h1]Patch header and no date in body or title. It was posted ' +
+      '2026-10-07T14:41Z saying the patch is already out, and Final Weapon reported it ' +
+      '"Now Live" the same day (decided 2026-10-15).',
+  },
+};
 
 /**
  * Steam builds that shipped with no announcement anywhere, keyed by buildid
@@ -171,6 +193,11 @@ const MONTHS = [
 const MONTH = `(${MONTHS.map((m) => `${m}|${m.slice(0, 3)}\\.?`).join('|')})`;
 /** `[h1]Patch 2.5` — rule (d). */
 const HEADER_VERSION = /\[h1\]\s*Patch\s+(\d+(?:\.\d+)?)/i;
+/** `PATCH 3.0 IS HERE` — the vendor's own prefix at the START of a title, for
+ *  a post whose body has no versioned header (Patch 3.0's). Anchored for the
+ *  same reason as HEADER_VERSION: a number elsewhere in a title is not a
+ *  version. The header wins when both exist. */
+const TITLE_VERSION = /^\s*Patch\s+(\d+(?:\.\d+)?)\b/i;
 /** The versioned-post layout, with or without a readable number after it. */
 const HEADER_SHAPE = /\[h1\]\s*Patch\b/i;
 /** `[h1]Patch 2.5 [i]September 2, 2026[/i]` — the release date, anchored inside
@@ -327,7 +354,7 @@ export function classify(items: NewsItem[], byKey: Map<string, StoreEvent>): Cla
     if (!ev) out.unjoined.push(title);
 
     const eventType = ev ? ev.event_type : null;
-    const byType = eventType === PATCH_EVENT_TYPE;
+    const byType = eventType !== null && PATCH_EVENT_TYPES.has(eventType);
     const byTitle = PATCH_TITLE.test(title);
     const excuse = NOT_A_PATCH[raw.gid];
 
@@ -345,7 +372,7 @@ export function classify(items: NewsItem[], byKey: Map<string, StoreEvent>): Cla
         title,
         posted,
         why: byType
-          ? `event_type ${PATCH_EVENT_TYPE} (the vendor's own patch type) but the title does not read as a patch — ` +
+          ? `event_type ${eventType} (one of the vendor's own patch types) but the title does not read as a patch — ` +
             'a renamed patch title looks exactly like this. Teach PATCH_TITLE, or excuse the gid in NOT_A_PATCH'
           : `title reads as a patch but Steam files it as event_type ${eventType} — ` +
             'a newsletter that mentions an update would mint a phantom row. Excuse the gid in NOT_A_PATCH with a reason',
@@ -402,7 +429,7 @@ export function classify(items: NewsItem[], byKey: Map<string, StoreEvent>): Cla
       });
       continue;
     }
-    const start = bodyDate ?? titleDate;
+    const start = bodyDate ?? titleDate ?? POST_DATE_OK[raw.gid]?.day ?? null;
     if (!start) {
       out.unreadable.push({
         gid: raw.gid,
@@ -427,7 +454,7 @@ export function classify(items: NewsItem[], byKey: Map<string, StoreEvent>): Cla
       continue;
     }
     byDate.set(start, title);
-    const version = vm?.[1];
+    const version = vm?.[1] ?? TITLE_VERSION.exec(title)?.[1];
     if (version) {
       const clashVersion = byVersion.get(version);
       if (clashVersion) {

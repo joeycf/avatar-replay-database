@@ -131,7 +131,7 @@ export interface PatchBoundary {
    *  carries an "Updated" edit stamp a week later. */
   start: string;
   /** The vendor's own version string, verbatim and complete, for display only.
-   *  Present on the one row that has one. Never parsed, never sorted on, and
+   *  Present only on the rows that have one. Never parsed, never sorted on, and
    *  validated against the vendor's `Patch <n>` grammar so a hand edit cannot
    *  quietly put a build number or a feature version here. */
   label?: string;
@@ -199,26 +199,27 @@ export const LAUNCH = '2026-07-23';
 /**
  * Days without a new patch before scripts/expiries.ts calls this table stale.
  *
- * 30, from the measured cadence and nothing else. The gaps this table actually
- * contains are 6, 8 and 27 days (launch → 07-29 → 08-06 → 09-02); patch to
- * patch alone they are 8 and 27. The platform rule — stated in ffcotw
- * scripts/expiries.ts and ggst scripts/seasons.ts, never in the checklist — is
- * to sit above every real gap so the alarm does not cry, and below the signal
- * of a MISS, which at the current cadence is about 54 days.
+ * 40, from the measured cadence and nothing else. The gaps this table actually
+ * contains are 6, 8, 27 and 35 days (launch → 07-29 → 08-06 → 09-02 → 10-07);
+ * patch to patch alone they are 8, 27 and 35. The platform rule — stated in
+ * ffcotw scripts/expiries.ts and ggst scripts/seasons.ts, never in the
+ * checklist — is to sit above every real gap so the alarm does not cry, and
+ * below the signal of a MISS, which at the current cadence is about 70 days.
  *
- * Tōkon's 10 would already be red today (16 days since Patch 2.5) with nothing
- * wrong, and an alarm that is red for no reason is an alarm that gets muted.
+ * Tōkon's 10 would have been red 16 days after Patch 2.5 with nothing wrong,
+ * and an alarm that is red for no reason is an alarm that gets muted.
  *
- * THIS IS n = 3 AND MUST BE RE-MEASURED AT THE NEXT PATCH. The cadence is
- * lengthening (6 → 8 → 27) and three gaps cannot separate a slow vendor from a
- * missed patch. validate() refuses a value at or below the largest gap the
+ * RE-MEASURED AT PATCH 3.0 (2026-10-15), as the n = 3 value of 30 asked: its
+ * 35-day gap put the old value below a real gap, which validate() refuses.
+ * Still n = 4 and still lengthening (6 → 8 → 27 → 35), so re-measure at the
+ * next patch again. validate() refuses a value at or below the largest gap the
  * table itself contains, so shortening it later is checked rather than trusted.
  *
  * This alarm is NOT the real check — `npm run data:patch-check` is. It is the
  * one that cannot go blind, because it reads only this table's own newest date
  * and the clock.
  */
-export const STALE_PATCH_DAYS = 30;
+export const STALE_PATCH_DAYS = 40;
 
 /**
  * The last day a person read the vendor's feed and found no patch missing from
@@ -292,11 +293,11 @@ export const SEASONS: SeasonBoundary[] = [
 /**
  * Every build the vendor shipped to a gameplay platform, oldest first.
  *
- * NEVER INVENT A VERSION TO FILL A GAP. Three of these four rows have no vendor
+ * NEVER INVENT A VERSION TO FILL A GAP. Three of these five rows have no vendor
  * version and are absent from every published version sequence; a reader
- * noticing that only one row carries a `label` is the intended outcome. There is
- * deliberately no validator asserting that versions increment — it would fail on
- * the first honest row here.
+ * noticing that only two rows carry a `label` (2.5 and 3.0) is the intended
+ * outcome. There is deliberately no validator asserting that versions
+ * increment — it would fail on the first honest row here.
  */
 export const PATCHES: PatchBoundary[] = [
   {
@@ -346,9 +347,27 @@ export const PATCHES: PatchBoundary[] = [
     note: 'Ranked Mode 1.0, input buffer, damage-scaling fix, 9 fighters changed',
     // Steam post title, verbatim: "Game Update - September 2, 2026" (gid
     // 1842846814444872).
-    // THE ONLY VERSIONED BUILD. `start` is the body date (2026-09-02); the
+    // A VERSIONED BUILD. `start` is the body date (2026-09-02); the
     // Steam post is dated 2026-09-03T23:37Z and the vendor's site says
     // "Updated September 9, 2026". See the header.
+  },
+  {
+    version: '2026-10-07',
+    start: '2026-10-07',
+    label: 'Patch 3.0',
+    announcedOn: 'steam',
+    url: 'https://store.steampowered.com/news/app/2424420/view/683015461706662083',
+    note: 'Open Lobbies with spectating, Ozai reimagined, Kyoshi/Ozai Flow-regen rule',
+    // Steam post title, verbatim: "PATCH 3.0 IS HERE" (gid 1846018067926374,
+    // posted 2026-10-07T14:41Z, Steam event_type 14 "Major update"). THE ONE
+    // ROW WHOSE DAY IS THE POST'S OWN: the body has no `[h1]Patch` header and
+    // neither it nor the title states a date, so rule (c)'s body-then-title
+    // authority has nothing to read. The title says the patch is already out
+    // ("IS HERE"), and Final Weapon's write-up the same day says "Now Live", so
+    // the post day is the release day here; patch-check's POST_DATE_OK records
+    // that decision. Added 2026-10-15, eight days late: the checker read the
+    // post as UNREADABLE (it knew only event_type 13), and the table's 30-day
+    // alarm would not have fired until 10-19.
   },
 ];
 
@@ -632,7 +651,7 @@ export function validate(now: string = today()): string[] {
   //     the measured-cadence rule made executable: a threshold below a gap this
   //     vendor has already taken is red by construction, and an alarm that is
   //     red for a vendor doing nothing wrong is an alarm everybody learns to
-  //     skim past. 27 days is the largest gap here today.
+  //     skim past. 35 days is the largest gap here today (09-02 → 10-07).
   const gaps = PATCHES.slice(1).map((p, i) => days(PATCHES[i]!.start, p.start));
   const widest = gaps.length ? Math.max(...gaps) : 0;
   if (STALE_PATCH_DAYS <= widest) {
