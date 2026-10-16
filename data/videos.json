@@ -58,6 +58,7 @@
     "date": "2026-10-15",
     "publishedAt": "2026-10-15T10:51:19Z",
     "durationSec": 654,
+    "viewCount": 2,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -161,6 +162,7 @@
     "date": "2026-10-15",
     "publishedAt": "2026-10-15T10:50:39Z",
     "durationSec": 353,
+    "viewCount": 1,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -314,7 +316,7 @@
     "date": "2026-10-15",
     "publishedAt": "2026-10-15T10:51:09Z",
     "durationSec": 501,
-    "viewCount": 1,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -470,7 +472,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T04:10:13Z",
     "durationSec": 2237,
-    "viewCount": 1636,
+    "viewCount": 2147,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -527,7 +529,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T00:54:13Z",
     "durationSec": 403,
-    "viewCount": 16,
+    "viewCount": 20,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -1343,7 +1345,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T00:48:41Z",
     "durationSec": 595,
-    "viewCount": 17,
+    "viewCount": 18,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -1395,7 +1397,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T02:30:24Z",
     "durationSec": 1878,
-    "viewCount": 638,
+    "viewCount": 1169,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -1453,7 +1455,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T00:49:43Z",
     "durationSec": 609,
-    "viewCount": 19,
+    "viewCount": 24,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -1505,7 +1507,7 @@
     "date": "2026-10-14",
     "publishedAt": "2026-10-14T01:34:58Z",
     "durationSec": 798,
-    "viewCount": 17,
+    "viewCount": 20,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -1615,7 +1617,7 @@
     "date": "2026-10-13",
     "publishedAt": "2026-10-13T13:30:01Z",
     "durationSec": 2853,
-    "viewCount": 486,
+    "viewCount": 727,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -2513,7 +2515,7 @@
     "date": "2026-10-12",
     "publishedAt": "2026-10-12T19:34:15Z",
     "durationSec": 476,
-    "viewCount": 165,
+    "viewCount": 655,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -2565,7 +2567,7 @@
     "date": "2026-10-12",
     "publishedAt": "2026-10-12T22:00:25Z",
     "durationSec": 5006,
-    "viewCount": 10,
+    "viewCount": 14,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -3823,7 +3825,7 @@
     "date": "2026-10-10",
     "publishedAt": "2026-10-10T19:28:34Z",
     "durationSec": 639,
-    "viewCount": 2,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -4538,7 +4540,7 @@
     "date": "2026-10-10",
     "publishedAt": "2026-10-10T19:22:28Z",
     "durationSec": 369,
-    "viewCount": 7,
+    "viewCount": 11,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -4595,7 +4597,7 @@
     "date": "2026-10-09",
     "publishedAt": "2026-10-09T21:00:24Z",
     "durationSec": 2350,
-    "viewCount": 705,
+    "viewCount": 718,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -4647,7 +4649,7 @@
     "date": "2026-10-08",
     "publishedAt": "2026-10-08T15:30:07Z",
     "durationSec": 6530,
-    "viewCount": 658,
+    "viewCount": 669,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -4705,7 +4707,7 @@
     "date": "2026-10-08",
     "publishedAt": "2026-10-08T22:00:34Z",
     "durationSec": 3298,
-    "viewCount": 153,
+    "viewCount": 154,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -4918,7 +4920,7 @@
     "date": "2026-10-07",
     "publishedAt": "2026-10-07T22:21:45Z",
     "durationSec": 1759,
-    "viewCount": 1465,
+    "viewCount": 1470,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -5132,7 +5134,7 @@
     "date": "2026-10-06",
     "publishedAt": "2026-10-06T12:14:16Z",
     "durationSec": 1144,
-    "viewCount": 841,
+    "viewCount": 844,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -5190,7 +5192,7 @@
     "date": "2026-10-06",
     "publishedAt": "2026-10-06T04:52:52Z",
     "durationSec": 235,
-    "viewCount": 225,
+    "viewCount": 230,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -5782,7 +5784,7 @@
     "date": "2026-10-04",
     "publishedAt": "2026-10-04T23:48:58Z",
     "durationSec": 573,
-    "viewCount": 61,
+    "viewCount": 66,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -6379,7 +6381,7 @@
     "date": "2026-10-04",
     "publishedAt": "2026-10-04T23:36:03Z",
     "durationSec": 885,
-    "viewCount": 143,
+    "viewCount": 146,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7277,7 +7279,7 @@
     "date": "2026-10-04",
     "publishedAt": "2026-10-04T16:04:52Z",
     "durationSec": 1500,
-    "viewCount": 2995,
+    "viewCount": 3025,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -7802,7 +7804,7 @@
     "date": "2026-10-02",
     "publishedAt": "2026-10-02T05:41:46Z",
     "durationSec": 471,
-    "viewCount": 533,
+    "viewCount": 534,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -8147,7 +8149,7 @@
     "date": "2026-10-01",
     "publishedAt": "2026-10-01T15:00:37Z",
     "durationSec": 4153,
-    "viewCount": 99,
+    "viewCount": 100,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9634,7 +9636,7 @@
     "date": "2026-09-30",
     "publishedAt": "2026-09-30T18:13:23Z",
     "durationSec": 1972,
-    "viewCount": 73,
+    "viewCount": 74,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9795,7 +9797,7 @@
     "date": "2026-09-29",
     "publishedAt": "2026-09-29T11:00:36Z",
     "durationSec": 4692,
-    "viewCount": 770,
+    "viewCount": 773,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9853,7 +9855,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-09-28T13:00:21Z",
     "durationSec": 13024,
-    "viewCount": 2555,
+    "viewCount": 2565,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -9969,7 +9971,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-10-01T13:00:39Z",
     "durationSec": 3683,
-    "viewCount": 115,
+    "viewCount": 119,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -10021,7 +10023,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-09-28T01:30:34Z",
     "durationSec": 696,
-    "viewCount": 1190,
+    "viewCount": 1201,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -10073,7 +10075,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-09-28T13:45:16Z",
     "durationSec": 602,
-    "viewCount": 4090,
+    "viewCount": 4091,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -10183,7 +10185,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T17:00:05Z",
     "durationSec": 638,
-    "viewCount": 1562,
+    "viewCount": 1564,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -10287,7 +10289,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T14:58:57Z",
     "durationSec": 3365,
-    "viewCount": 8243,
+    "viewCount": 8258,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -10345,7 +10347,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T15:00:05Z",
     "durationSec": 506,
-    "viewCount": 471,
+    "viewCount": 481,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -11837,7 +11839,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T19:00:36Z",
     "durationSec": 586,
-    "viewCount": 383,
+    "viewCount": 388,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -11889,7 +11891,7 @@
     "date": "2026-09-26",
     "publishedAt": "2026-09-26T03:21:51Z",
     "durationSec": 2339,
-    "viewCount": 1870,
+    "viewCount": 1872,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -12487,7 +12489,7 @@
     "date": "2026-09-25",
     "publishedAt": "2026-09-25T23:08:27Z",
     "durationSec": 1275,
-    "viewCount": 27802,
+    "viewCount": 27832,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14505,7 +14507,7 @@
     "date": "2026-09-22",
     "publishedAt": "2026-09-22T02:45:27Z",
     "durationSec": 297,
-    "viewCount": 821,
+    "viewCount": 822,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14557,7 +14559,7 @@
     "date": "2026-09-22",
     "publishedAt": "2026-09-22T17:23:01Z",
     "durationSec": 961,
-    "viewCount": 340,
+    "viewCount": 341,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14609,7 +14611,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T23:09:12Z",
     "durationSec": 2359,
-    "viewCount": 4537,
+    "viewCount": 4539,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14776,7 +14778,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T15:27:36Z",
     "durationSec": 606,
-    "viewCount": 840,
+    "viewCount": 842,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14886,7 +14888,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T16:30:03Z",
     "durationSec": 1834,
-    "viewCount": 75,
+    "viewCount": 76,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -14996,7 +14998,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T20:00:35Z",
     "durationSec": 1317,
-    "viewCount": 4705,
+    "viewCount": 4714,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -15048,7 +15050,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T21:34:51Z",
     "durationSec": 3145,
-    "viewCount": 1293,
+    "viewCount": 1296,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -16292,7 +16294,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T15:34:11Z",
     "durationSec": 2030,
-    "viewCount": 5841,
+    "viewCount": 5851,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -16350,7 +16352,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T03:00:32Z",
     "durationSec": 555,
-    "viewCount": 1976,
+    "viewCount": 1977,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -16454,7 +16456,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T16:00:08Z",
     "durationSec": 3597,
-    "viewCount": 87,
+    "viewCount": 88,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -16558,7 +16560,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:22:12Z",
     "durationSec": 575,
-    "viewCount": 2,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -17652,7 +17654,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:45:21Z",
     "durationSec": 1058,
-    "viewCount": 6655,
+    "viewCount": 6661,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -17704,7 +17706,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:20:39Z",
     "durationSec": 405,
-    "viewCount": 2,
+    "viewCount": 3,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -19181,7 +19183,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:05Z",
     "durationSec": 727,
-    "viewCount": 444,
+    "viewCount": 446,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -19233,7 +19235,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:29:45Z",
     "durationSec": 572,
-    "viewCount": 774,
+    "viewCount": 775,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -19937,7 +19939,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:30:42Z",
     "durationSec": 859,
-    "viewCount": 1228,
+    "viewCount": 1230,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -20145,7 +20147,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:29:55Z",
     "durationSec": 552,
-    "viewCount": 331,
+    "viewCount": 332,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -20307,7 +20309,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:31:10Z",
     "durationSec": 803,
-    "viewCount": 1115,
+    "viewCount": 1116,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -21465,7 +21467,7 @@
     "date": "2026-09-13",
     "publishedAt": "2026-09-13T16:02:08Z",
     "durationSec": 3394,
-    "viewCount": 1527,
+    "viewCount": 1534,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -21920,7 +21922,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T03:33:06Z",
     "durationSec": 790,
-    "viewCount": 926,
+    "viewCount": 935,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22084,7 +22086,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:31:11Z",
     "durationSec": 411,
-    "viewCount": 163,
+    "viewCount": 165,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22188,7 +22190,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T06:01:36Z",
     "durationSec": 2019,
-    "viewCount": 4379,
+    "viewCount": 4381,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22402,7 +22404,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:05:27Z",
     "durationSec": 418,
-    "viewCount": 360,
+    "viewCount": 363,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22454,7 +22456,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:39:53Z",
     "durationSec": 634,
-    "viewCount": 352,
+    "viewCount": 354,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22668,7 +22670,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:08:00Z",
     "durationSec": 516,
-    "viewCount": 551,
+    "viewCount": 558,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22720,7 +22722,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:38:58Z",
     "durationSec": 639,
-    "viewCount": 197,
+    "viewCount": 198,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22824,7 +22826,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T21:23:03Z",
     "durationSec": 1097,
-    "viewCount": 3820,
+    "viewCount": 3821,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22882,7 +22884,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-29T22:00:17Z",
     "durationSec": 2311,
-    "viewCount": 72,
+    "viewCount": 73,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22934,7 +22936,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T01:26:25Z",
     "durationSec": 379,
-    "viewCount": 855,
+    "viewCount": 868,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -22986,7 +22988,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T15:00:10Z",
     "durationSec": 491,
-    "viewCount": 2106,
+    "viewCount": 2115,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -23586,7 +23588,7 @@
     "date": "2026-09-10",
     "publishedAt": "2026-09-10T17:56:33Z",
     "durationSec": 390,
-    "viewCount": 1612,
+    "viewCount": 1613,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -23644,7 +23646,7 @@
     "date": "2026-09-10",
     "publishedAt": "2026-10-03T12:00:33Z",
     "durationSec": 2249,
-    "viewCount": 150,
+    "viewCount": 152,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -24074,7 +24076,7 @@
     "date": "2026-09-09",
     "publishedAt": "2026-09-09T02:00:16Z",
     "durationSec": 3156,
-    "viewCount": 3115,
+    "viewCount": 3119,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -24942,7 +24944,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T15:10:50Z",
     "durationSec": 731,
-    "viewCount": 6637,
+    "viewCount": 6640,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -24994,7 +24996,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T04:52:21Z",
     "durationSec": 1532,
-    "viewCount": 1634,
+    "viewCount": 1639,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -25052,7 +25054,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T13:12:05Z",
     "durationSec": 3112,
-    "viewCount": 8168,
+    "viewCount": 8193,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -25226,7 +25228,7 @@
     "date": "2026-09-05",
     "publishedAt": "2026-09-05T19:28:21Z",
     "durationSec": 377,
-    "viewCount": 1573,
+    "viewCount": 1609,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -27016,7 +27018,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T14:52:03Z",
     "durationSec": 587,
-    "viewCount": 37,
+    "viewCount": 38,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -27334,7 +27336,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T14:53:14Z",
     "durationSec": 869,
-    "viewCount": 58,
+    "viewCount": 59,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -27495,7 +27497,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T14:32:25Z",
     "durationSec": 3806,
-    "viewCount": 5072,
+    "viewCount": 5080,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -28321,7 +28323,7 @@
     "date": "2026-09-01",
     "publishedAt": "2026-09-01T14:16:12Z",
     "durationSec": 2329,
-    "viewCount": 57,
+    "viewCount": 58,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29261,7 +29263,7 @@
     "date": "2026-08-30",
     "publishedAt": "2026-08-30T14:36:45Z",
     "durationSec": 3230,
-    "viewCount": 15281,
+    "viewCount": 15290,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29371,7 +29373,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T03:21:14Z",
     "durationSec": 2048,
-    "viewCount": 7301,
+    "viewCount": 7305,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29429,7 +29431,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T16:20:21Z",
     "durationSec": 2996,
-    "viewCount": 1135,
+    "viewCount": 1136,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29487,7 +29489,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T03:00:19Z",
     "durationSec": 618,
-    "viewCount": 4290,
+    "viewCount": 4294,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29539,7 +29541,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T16:43:56Z",
     "durationSec": 789,
-    "viewCount": 11103,
+    "viewCount": 11110,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29655,7 +29657,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T14:06:01Z",
     "durationSec": 545,
-    "viewCount": 2039,
+    "viewCount": 2048,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29707,7 +29709,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T23:00:27Z",
     "durationSec": 525,
-    "viewCount": 2101,
+    "viewCount": 2102,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29759,7 +29761,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:12:39Z",
     "durationSec": 2380,
-    "viewCount": 9281,
+    "viewCount": 9300,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29811,7 +29813,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:00:14Z",
     "durationSec": 355,
-    "viewCount": 4843,
+    "viewCount": 4851,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -29863,7 +29865,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T03:02:09Z",
     "durationSec": 2181,
-    "viewCount": 7320,
+    "viewCount": 7322,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -31301,7 +31303,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T19:54:18Z",
     "durationSec": 2469,
-    "viewCount": 16979,
+    "viewCount": 17046,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -31353,7 +31355,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T14:00:17Z",
     "durationSec": 2007,
-    "viewCount": 847,
+    "viewCount": 850,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -31411,7 +31413,7 @@
     "date": "2026-08-26",
     "publishedAt": "2026-08-26T08:14:33Z",
     "durationSec": 1871,
-    "viewCount": 1490,
+    "viewCount": 1494,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -31527,7 +31529,7 @@
     "date": "2026-08-26",
     "publishedAt": "2026-08-26T00:00:13Z",
     "durationSec": 561,
-    "viewCount": 4992,
+    "viewCount": 4995,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -31631,7 +31633,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T02:00:19Z",
     "durationSec": 384,
-    "viewCount": 569,
+    "viewCount": 567,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -32549,7 +32551,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T19:30:06Z",
     "durationSec": 1945,
-    "viewCount": 183,
+    "viewCount": 185,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -32607,7 +32609,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T03:25:30Z",
     "durationSec": 1890,
-    "viewCount": 92,
+    "viewCount": 97,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -32823,7 +32825,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T19:00:17Z",
     "durationSec": 2175,
-    "viewCount": 153,
+    "viewCount": 154,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -33083,7 +33085,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-08-24T15:00:26Z",
     "durationSec": 676,
-    "viewCount": 1307,
+    "viewCount": 1312,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -33135,7 +33137,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T14:00:03Z",
     "durationSec": 500,
-    "viewCount": 51,
+    "viewCount": 52,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -33187,7 +33189,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-08-24T17:00:35Z",
     "durationSec": 2309,
-    "viewCount": 454,
+    "viewCount": 458,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -33349,7 +33351,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T20:00:15Z",
     "durationSec": 541,
-    "viewCount": 25,
+    "viewCount": 26,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34049,7 +34051,7 @@
     "date": "2026-08-23",
     "publishedAt": "2026-08-23T16:29:53Z",
     "durationSec": 2598,
-    "viewCount": 4578,
+    "viewCount": 4582,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34101,7 +34103,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-13T20:00:38Z",
     "durationSec": 616,
-    "viewCount": 168,
+    "viewCount": 171,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34153,7 +34155,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-12T22:00:11Z",
     "durationSec": 4206,
-    "viewCount": 267,
+    "viewCount": 268,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34257,7 +34259,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T10:15:37Z",
     "durationSec": 1747,
-    "viewCount": 752,
+    "viewCount": 758,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34679,7 +34681,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-09-12T19:00:28Z",
     "durationSec": 4470,
-    "viewCount": 310,
+    "viewCount": 316,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34783,7 +34785,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T00:52:39Z",
     "durationSec": 2641,
-    "viewCount": 12080,
+    "viewCount": 12095,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34887,7 +34889,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T12:40:44Z",
     "durationSec": 2291,
-    "viewCount": 769,
+    "viewCount": 783,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -34997,7 +34999,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T02:00:03Z",
     "durationSec": 602,
-    "viewCount": 6058,
+    "viewCount": 6063,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35048,7 +35050,7 @@
     "title": "Mikey (Nightmare Korra/Dark Spirit) vs YaBoiDre (Azula/Lo and Li) - Avatar Legends First to 10",
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T20:01:26Z",
-    "durationSec": 1548,
+    "durationSec": 1549,
     "viewCount": 71,
     "era": "S1",
     "patch": "2026-08-06",
@@ -35213,7 +35215,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:31:41Z",
     "durationSec": 1079,
-    "viewCount": 3003,
+    "viewCount": 3004,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35329,7 +35331,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:36:13Z",
     "durationSec": 2180,
-    "viewCount": 4722,
+    "viewCount": 4727,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35491,7 +35493,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:38:03Z",
     "durationSec": 326,
-    "viewCount": 135,
+    "viewCount": 137,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35759,7 +35761,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T15:00:09Z",
     "durationSec": 405,
-    "viewCount": 5287,
+    "viewCount": 5295,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35863,7 +35865,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T08:15:27Z",
     "durationSec": 315,
-    "viewCount": 1574,
+    "viewCount": 1575,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -35967,7 +35969,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T04:00:02Z",
     "durationSec": 266,
-    "viewCount": 1617,
+    "viewCount": 1629,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36071,7 +36073,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T11:00:34Z",
     "durationSec": 307,
-    "viewCount": 1489,
+    "viewCount": 1490,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36441,7 +36443,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-31T19:00:10Z",
     "durationSec": 2469,
-    "viewCount": 6448,
+    "viewCount": 6453,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36493,7 +36495,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-09-02T15:00:16Z",
     "durationSec": 385,
-    "viewCount": 461,
+    "viewCount": 469,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36759,7 +36761,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-20T23:00:01Z",
     "durationSec": 520,
-    "viewCount": 8348,
+    "viewCount": 8349,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36863,7 +36865,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-09-03T19:00:31Z",
     "durationSec": 1516,
-    "viewCount": 317,
+    "viewCount": 321,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36915,7 +36917,7 @@
     "date": "2026-08-19",
     "publishedAt": "2026-08-19T21:39:02Z",
     "durationSec": 3082,
-    "viewCount": 1884,
+    "viewCount": 1885,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -36973,7 +36975,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T11:30:35Z",
     "durationSec": 2452,
-    "viewCount": 891,
+    "viewCount": 893,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -37077,7 +37079,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-26T12:30:13Z",
     "durationSec": 1830,
-    "viewCount": 1212,
+    "viewCount": 1214,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -37609,7 +37611,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T16:50:21Z",
     "durationSec": 1924,
-    "viewCount": 2788,
+    "viewCount": 2801,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -37939,7 +37941,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T09:31:57Z",
     "durationSec": 1083,
-    "viewCount": 423,
+    "viewCount": 426,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38361,7 +38363,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T03:00:26Z",
     "durationSec": 430,
-    "viewCount": 1717,
+    "viewCount": 1720,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38517,7 +38519,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T04:48:53Z",
     "durationSec": 2051,
-    "viewCount": 3315,
+    "viewCount": 3318,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38627,7 +38629,7 @@
     "date": "2026-08-15",
     "publishedAt": "2026-08-15T22:00:32Z",
     "durationSec": 740,
-    "viewCount": 2766,
+    "viewCount": 2767,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38835,7 +38837,7 @@
     "date": "2026-08-15",
     "publishedAt": "2026-08-15T17:33:56Z",
     "durationSec": 1873,
-    "viewCount": 2502,
+    "viewCount": 2503,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38893,7 +38895,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T12:00:38Z",
     "durationSec": 592,
-    "viewCount": 6689,
+    "viewCount": 6690,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -38945,7 +38947,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T03:00:33Z",
     "durationSec": 503,
-    "viewCount": 4379,
+    "viewCount": 4380,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -39165,7 +39167,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T15:00:19Z",
     "durationSec": 342,
-    "viewCount": 443,
+    "viewCount": 444,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -39529,7 +39531,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T22:00:36Z",
     "durationSec": 384,
-    "viewCount": 1902,
+    "viewCount": 1901,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -39947,7 +39949,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T19:40:20Z",
     "durationSec": 1630,
-    "viewCount": 398,
+    "viewCount": 400,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -40121,7 +40123,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T07:51:26Z",
     "durationSec": 2027,
-    "viewCount": 9904,
+    "viewCount": 9916,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -40179,7 +40181,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T02:24:31Z",
     "durationSec": 2310,
-    "viewCount": 212,
+    "viewCount": 213,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -40673,7 +40675,7 @@
     "date": "2026-08-09",
     "publishedAt": "2026-08-09T23:37:42Z",
     "durationSec": 2533,
-    "viewCount": 3189,
+    "viewCount": 3192,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -40777,7 +40779,7 @@
     "date": "2026-08-09",
     "publishedAt": "2026-08-09T05:00:09Z",
     "durationSec": 515,
-    "viewCount": 4907,
+    "viewCount": 4914,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -40945,7 +40947,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T23:00:11Z",
     "durationSec": 790,
-    "viewCount": 1783,
+    "viewCount": 1791,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41101,7 +41103,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T05:00:18Z",
     "durationSec": 633,
-    "viewCount": 1590,
+    "viewCount": 1595,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41153,7 +41155,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T17:00:14Z",
     "durationSec": 387,
-    "viewCount": 993,
+    "viewCount": 994,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41205,7 +41207,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T20:12:21Z",
     "durationSec": 2357,
-    "viewCount": 10333,
+    "viewCount": 10339,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41419,7 +41421,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T23:00:27Z",
     "durationSec": 470,
-    "viewCount": 5583,
+    "viewCount": 5588,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41471,7 +41473,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T18:06:48Z",
     "durationSec": 4067,
-    "viewCount": 9203,
+    "viewCount": 9241,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41529,7 +41531,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T07:40:48Z",
     "durationSec": 2539,
-    "viewCount": 4344,
+    "viewCount": 4346,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41587,7 +41589,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T11:00:16Z",
     "durationSec": 468,
-    "viewCount": 781,
+    "viewCount": 785,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41639,7 +41641,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T18:00:08Z",
     "durationSec": 2935,
-    "viewCount": 314,
+    "viewCount": 315,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41859,7 +41861,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T11:00:20Z",
     "durationSec": 900,
-    "viewCount": 3162,
+    "viewCount": 3180,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41911,7 +41913,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T23:00:21Z",
     "durationSec": 389,
-    "viewCount": 445,
+    "viewCount": 446,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -41963,7 +41965,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T15:15:35Z",
     "durationSec": 2712,
-    "viewCount": 4252,
+    "viewCount": 4256,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -42119,7 +42121,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T04:12:55Z",
     "durationSec": 2637,
-    "viewCount": 9863,
+    "viewCount": 9868,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42287,7 +42289,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T07:23:48Z",
     "durationSec": 2316,
-    "viewCount": 8481,
+    "viewCount": 8489,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42345,7 +42347,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T16:28:47Z",
     "durationSec": 2134,
-    "viewCount": 4077,
+    "viewCount": 4080,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42449,7 +42451,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T18:47:56Z",
     "durationSec": 769,
-    "viewCount": 8123,
+    "viewCount": 8145,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42617,7 +42619,7 @@
     "date": "2026-08-03",
     "publishedAt": "2026-08-03T16:27:44Z",
     "durationSec": 1391,
-    "viewCount": 334,
+    "viewCount": 335,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42669,7 +42671,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T22:56:29Z",
     "durationSec": 1378,
-    "viewCount": 243,
+    "viewCount": 244,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42785,7 +42787,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T18:32:10Z",
     "durationSec": 1675,
-    "viewCount": 11422,
+    "viewCount": 11444,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42895,7 +42897,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T02:53:14Z",
     "durationSec": 4421,
-    "viewCount": 522,
+    "viewCount": 526,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -42947,7 +42949,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T12:00:37Z",
     "durationSec": 1264,
-    "viewCount": 1133,
+    "viewCount": 1136,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43057,7 +43059,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T12:00:20Z",
     "durationSec": 466,
-    "viewCount": 260,
+    "viewCount": 261,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43109,7 +43111,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T03:14:34Z",
     "durationSec": 2234,
-    "viewCount": 543,
+    "viewCount": 544,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43219,7 +43221,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T23:00:26Z",
     "durationSec": 184,
-    "viewCount": 225,
+    "viewCount": 226,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43271,7 +43273,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T19:00:32Z",
     "durationSec": 413,
-    "viewCount": 438,
+    "viewCount": 440,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43427,7 +43429,7 @@
     "date": "2026-07-31",
     "publishedAt": "2026-07-31T16:27:58Z",
     "durationSec": 914,
-    "viewCount": 4282,
+    "viewCount": 4292,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43647,7 +43649,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T19:00:20Z",
     "durationSec": 426,
-    "viewCount": 874,
+    "viewCount": 875,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43751,7 +43753,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T12:00:25Z",
     "durationSec": 280,
-    "viewCount": 149,
+    "viewCount": 150,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -43907,7 +43909,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T18:11:58Z",
     "durationSec": 454,
-    "viewCount": 256,
+    "viewCount": 257,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -44612,7 +44614,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T06:24:45Z",
     "durationSec": 1693,
-    "viewCount": 27017,
+    "viewCount": 27033,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -44670,7 +44672,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T19:12:27Z",
     "durationSec": 701,
-    "viewCount": 7993,
+    "viewCount": 8005,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -44838,7 +44840,7 @@
     "date": "2026-07-28",
     "publishedAt": "2026-07-28T16:50:29Z",
     "durationSec": 789,
-    "viewCount": 3477,
+    "viewCount": 3481,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -45262,7 +45264,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:46:10Z",
     "durationSec": 425,
-    "viewCount": 92,
+    "viewCount": 93,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -45314,7 +45316,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T18:24:59Z",
     "durationSec": 4388,
-    "viewCount": 4812,
+    "viewCount": 4814,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -45847,7 +45849,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:55:49Z",
     "durationSec": 567,
-    "viewCount": 786,
+    "viewCount": 792,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -46054,7 +46056,7 @@
     "date": "2026-07-26",
     "publishedAt": "2026-07-26T15:26:24Z",
     "durationSec": 1046,
-    "viewCount": 12788,
+    "viewCount": 12798,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -47610,7 +47612,7 @@
     "date": "2026-07-25",
     "publishedAt": "2026-07-25T15:28:12Z",
     "durationSec": 978,
-    "viewCount": 7456,
+    "viewCount": 7469,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -47720,7 +47722,7 @@
     "date": "2026-07-24",
     "publishedAt": "2026-07-24T15:49:31Z",
     "durationSec": 3355,
-    "viewCount": 9034,
+    "viewCount": 9052,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
