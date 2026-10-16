@@ -19,7 +19,7 @@
  * ggst/ffcotw failure — "verify the vendor feed is COMPLETE before adopting it"
  * — arriving through a door neither of them had.
  *
- * So this reads THREE things, and a clean bill needs all three:
+ * So this reads FOUR things, and a clean bill needs all four:
  *   1. the news feed        what the vendor posted, with bodies
  *   2. the store events API `event_type`, a SECOND reading of the same posts
  *                          that survives a title rename — the exact blindness
@@ -27,9 +27,32 @@
  *                          skips an unmatched title without a word)
  *   3. the Steam build clock  the only signal that can see a patch the vendor
  *                          never posted on Steam at all
+ *   4. the vendor's web notes  avatarfighters.com/patchnotes and the
+ *                          paramountgames.com sitemap — ONE WAY ONLY, see below
  * A read that did not happen is reported as UNVERIFIED, never folded into a
  * tick: "not checked" and "clean" are different answers, and check-patches.sh
  * already has a colour for the first one.
+ *
+ * ── THE WEB NOTES CAN RAISE A FINDING AND CAN NEVER CLEAR ONE ──────────────
+ * Measured 2026-10-15 against origin and the Wayback Machine: avatarfighters.com
+ * /patchnotes is a Squarespace page (created 2026-08-20) holding ONE entry,
+ * overwritten in place — `Patch 2.5 / Updated September 9, 2026` — with no
+ * launch, 07-29, 08-06 or 3.0 entry eight days after 3.0 shipped. Its heading
+ * started as the release date ("September 2, 2026") and became an edit stamp on
+ * 09-09 when a line about console Ranked was added. The 3.0 notes went to a
+ * second first-party page instead, paramountgames.com/editorial/avatar-legends-
+ * the-fighting-game-patch-3-0-overall-patch-notes (the Steam post links it; the
+ * site's sitemap lists it with lastmod 2026-10-07T21:05Z). So:
+ *   · a version EITHER page states with no row labelled `Patch <v>` is DRIFT —
+ *     the one staleness a page that names versions cannot hide;
+ *   · their silence proves nothing. The page kept 2.5 over 3.0 for eight days,
+ *     so it cannot excuse a Steam build and never touches the build-clock
+ *     finding. They are read as a floor, never as a ceiling;
+ *   · no date they carry is a boundary date — an "Updated" stamp is an edit, a
+ *     bare heading date turned into one, and a sitemap <lastmod> is a CMS stamp
+ *     (21:05Z on a patch that went live at 14:03Z; the site's home page
+ *     re-stamps on every rebuild). The release day comes from the Steam post or
+ *     the build clock, never from here.
  *
  * ── THE FOUR HARD FAILURES THIS ENCODES ────────────────────────────────────
  * (a) AN UNREADABLE PATCH-SHAPED POST IS FATAL, NEVER A SKIP (checklist 4c).
@@ -61,10 +84,15 @@
  * trailer `patch-check: <STATE>`, which the workspace runner classifies on
  * (check-patches.sh:128-145) — never prose.
  *
- * THIS GAME IS NOT YET IN THAT RUNNER. Registering it means four edits to
- * check-patches.sh — GAMES, REPO_OF, SCRIPT_OF and the literal "unknown game:"
- * string — in the same commit as this repo's first real push, never before
- * (checklist 10g).
+ * THIS GAME HAS BEEN IN THAT RUNNER SINCE 2026-09-24 (GAMES, REPO_OF, SCRIPT_OF
+ * and the "unknown game:" string in check-patches.sh). The runner also greps a
+ * few PROSE substrings as fallbacks for the siblings that print no trailer
+ * (check-patches.sh:131-157: "whose date will not parse", "NOT in
+ * scripts/patches.ts", "fetch failed", the ENOTFOUND/ECONNREFUSED/ETIMEDOUT
+ * codes), with precedence UNREADABLE > DRIFT > UNVERIFIED > CURRENT. A line
+ * printed on a CURRENT run must not contain one of them or a clean table files
+ * as DRIFT — the BUILDS_OK and NOTES_OK reasons below are printed, so they are
+ * read by it too.
  *
  * The cadence alarm that makes a stale table DISCOVERABLE is STALE_PATCH_DAYS
  * in scripts/patches.ts, read by scripts/expiries.ts. It reads only dates and
@@ -104,6 +132,12 @@ const EVENTS = `https://store.steampowered.com/events/ajaxgetpartnereventspageab
  *  nothing first-party exposes a buildid. Read-only, unauthenticated, and its
  *  failure downgrades the run to UNVERIFIED rather than inventing a verdict. */
 const BUILD = `https://api.steamcmd.net/v1/info/${APPID}`;
+/** The vendor's own web patch notes — two first-party pages, read ONE WAY (see
+ *  the header). The Squarespace page is read as HTML, never through its
+ *  `?format=json` twins (robots-disallowed, and empty when they do answer); the
+ *  sitemap is read for its slugs alone, with no per-page fetch. */
+const NOTES_PAGE = 'https://avatarfighters.com/patchnotes';
+const NOTES_SITEMAP = 'https://www.paramountgames.com/sitemap.xml';
 
 /** Only the vendor's own announcements. Measured 2026-09-18: 20 community
  *  posts plus one syndicated PC Gamer article, which carries `feedname:
@@ -162,15 +196,45 @@ export const POST_DATE_OK: Record<string, { day: string; why: string }> = {
 };
 
 /**
- * Steam builds that shipped with no announcement anywhere, keyed by buildid
- * with the reason each is not a patch.
+ * Steam builds that moved the public branch with no announcement anywhere,
+ * keyed by buildid with the reason each is not a patch row.
  *
- * EMPTY TODAY: the public branch is buildid 25062979, timeupdated
- * 2026-09-02T10:00:11Z, which is Patch 2.5's own build. A store repack, a depot
- * re-upload or a platform SDK bump can move this clock without changing the
- * game, and when one does, the person who checked writes it here.
+ * READ BY diff(): a build newer than the table that no post explains is a
+ * fatal `~` finding UNLESS its buildid is here, in which case it prints as ⓘ
+ * with the reason. Declared 2026-09-18 and not read by anything until
+ * 2026-10-15 — the first build to need it (10-13) would have sat as DRIFT with
+ * its entry written and ignored. A store repack, a depot re-upload or a
+ * platform SDK bump can move this clock without changing the game; so can a
+ * build the vendor simply never posted, which is why the reason has to be a
+ * negative SWEEP of every readable surface, not a guess. Same shape as
+ * NOT_A_PATCH: a human decision with the evidence, not a mute button.
  */
-export const BUILDS_OK: Record<string, string> = {};
+export const BUILDS_OK: Record<string, string> = {
+  '25790171':
+    'set live 2026-10-13T14:01Z (SteamDB RSS), built 2026-10-07T22:45Z, 8.7 h after Patch 3.0 went ' +
+    'public, and held private until then. No announcement anywhere readable on 2026-10-15: Steam ' +
+    'news/events, avatarfighters.com/patchnotes (+sitemap), paramountgames.com (sitemap; the 3.0 ' +
+    'notes page last modified 10-07T21:05Z, before this build existed), YouTube, Bluesky, ' +
+    'thegameplaygroup.com, press. X unreadable (429/410/451). Xbox catalog record republished ' +
+    '10-12T17:41Z, price unchanged. Decided by the user 2026-10-15: no announced change, not a ' +
+    'patch row. Revisit if a post or notes page ever names it.',
+};
+
+/**
+ * What the vendor's web notes state that is deliberately NOT a row, with the
+ * reason: a version, keyed exactly as the page prints it (`3.0.1`), or a
+ * heading this script refuses to read, keyed by its flattened text.
+ *
+ * EMPTY TODAY, AND THAT IS A MEASUREMENT: the two versions the web notes state
+ * on 2026-10-15 (2.5 on avatarfighters.com, 3.0 in the paramountgames.com
+ * sitemap) are both labelled rows. It exists because a stated version with no
+ * labelled row is FATAL, and VENDOR_LABEL in scripts/patches.ts admits only
+ * `Patch \d+(\.\d+)?` — so a "Patch 3.0.1" hotfix page would be fatal forever
+ * with no row able to clear it, and a fatal check nobody can clear is a check
+ * people delete. Same shape as NOT_A_PATCH: a decision with a reason, not a
+ * mute button, and an excused version still prints as ⓘ every run.
+ */
+export const NOTES_OK: Record<string, string> = {};
 
 const MONTHS = [
   'january',
@@ -212,9 +276,38 @@ const HEADER_DATE = new RegExp(
  *  by someone who thinks it redundant and the other still holds (ggst rule d). */
 const ANY_DATE = new RegExp(`${MONTH}\\s+(\\d{1,2})\\s*,\\s*(\\d{4})`, 'gi');
 
-/** Tags out, entities decoded, all whitespace collapsed to single spaces —
- *  including newlines, which is what puts `[h1]Patch 2.5` and its `[i]` date on
- *  one line for HEADER_DATE. */
+/** One web-notes entry heading, tags already gone and whitespace collapsed:
+ *  `Patch 2.5 Updated September 9, 2026` (live) or `Patch 3.0 October 7, 2026`.
+ *  Anchored at BOTH ends and on the vendor's own `Patch` prefix for rule (d)'s
+ *  reason — the body says "Ranked Mode 1.0" — and the groups are NAMED because
+ *  MONTH is itself a capturing group. A `v`, a separator and an ordinal are
+ *  admitted because an unreadable heading is fatal, not forgiving. */
+const NOTES_ENTRY = new RegExp(
+  `^Patch\\s+v?(?<version>\\d+(?:\\.\\d+)*)\\s*(?:[—–:|-]\\s*)?(?<updated>Updated\\s+)?` +
+    `(?<month>${MONTH})\\s+(?<day>\\d{1,2})(?:st|nd|rd|th)?\\s*,\\s*(?<year>\\d{4})$`,
+  'i',
+);
+/** The page's banner — the one heading allowed to start with "Patch" and not be
+ *  an entry. */
+const NOTES_BANNER = /^patch\s+notes$/i;
+/** A heading shaped like a hotfix, an update or a version without being a
+ *  readable entry: a hotfix/update/version/build/patch word and a dotted number
+ *  in EITHER order — `Hotfix 3.0.1 is live`, `Update 3.1`, `Version 3.0`,
+ *  `3.0 Patch Notes`, `2.0 Update`. The "starts with Patch" rule passes every
+ *  one of these silently, which a refuter found on 2026-10-15. HEADINGS ONLY:
+ *  the body legitimately says "Ranked Mode 1.0", twice. */
+const NOTES_VERSION_SHAPED =
+  /\b(?:hot\s*fix|update|version|build|patch)\b[^\n]*\b\d+\.\d+|\b\d+\.\d+(?:\.\d+)?\b[^\n]*\b(?:hot\s*fix|update|version|build|patch)\b/i;
+/** The 3.0 notes page's slug in the paramountgames.com sitemap,
+ *  `/editorial/avatar-legends-the-fighting-game-patch-3-0-overall-patch-notes`
+ *  → `3.0`. The slug is the whole read; the page itself is never fetched. */
+const NOTES_SLUG = /\/editorial\/avatar-legends-the-fighting-game-patch-(\d+(?:-\d+)*)/;
+
+/** Entities decoded and all whitespace collapsed to single spaces — including
+ *  newlines, which is what puts `[h1]Patch 2.5` and its `[i]` date on one line
+ *  for HEADER_DATE. NOT tags: the Steam bodies are BBCode that HEADER_* read
+ *  as-is, and the one HTML reader here (readNotesPage) strips its own tags
+ *  first. This doc said "tags out" until 2026-10-15; the function never did. */
 export const flatten = (s: string | undefined): string =>
   (s ?? '')
     .replace(/&amp;/g, '&')
@@ -239,7 +332,7 @@ const daysBetween = (from: string, to: string): number =>
   Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
 const sleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
 
-// ── the three reads ─────────────────────────────────────────────────────────
+// ── the four reads ──────────────────────────────────────────────────────────
 
 interface NewsItem {
   gid: string;
@@ -267,6 +360,23 @@ async function getJson<T>(url: string, what: string): Promise<T> {
   });
   if (!res.ok) throw new Error(`${what} returned HTTP ${res.status}`);
   return (await res.json()) as T;
+}
+
+/** A web page as text. Takes its URL so the gate can point it at a closed port
+ *  (verify-gates `notes-fetch`): a rejection here is UNVERIFIED, and a fetcher
+ *  that swallowed one would hand readNotesPage an empty string and file a
+ *  network outage as UNREADABLE. `?cb=<epoch>` because the CDN copies measured
+ *  on 2026-10-15 were 10 h old (Squarespace in front of the page, Akamai in
+ *  front of the Next.js site); both robots.txt allow it, and Squarespace's
+ *  reserved `?format=` is never used. The Accept lists text/html first for the
+ *  page and admits the XML Next.js serves the sitemap as. */
+export async function getText(url: string, what: string): Promise<string> {
+  const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}cb=${Date.now()}`, {
+    headers: { 'user-agent': UA, accept: 'text/html, application/xml;q=0.9, */*;q=0.8' },
+    signal: AbortSignal.timeout(25_000),
+  });
+  if (!res.ok) throw new Error(`${what} returned HTTP ${res.status}`);
+  return res.text();
 }
 
 async function news(): Promise<NewsItem[]> {
@@ -483,6 +593,201 @@ export function classify(items: NewsItem[], byKey: Map<string, StoreEvent>): Cla
   return out;
 }
 
+// ── reading the web notes ───────────────────────────────────────────────────
+
+export interface NotesVersion {
+  /** The vendor's version as the page prints it: `2.5`, `3.0`. */
+  version: string;
+  /** The ISO day the entry carries. CONTEXT ONLY, NEVER A BOUNDARY DATE — see
+   *  `dayIs`. Empty when a sitemap row has no <lastmod>. */
+  day: string;
+  /** What `day` is: the day a heading states ('stated' — the 2.5 heading was
+   *  one until an edit turned it into a stamp), the heading's own "Updated"
+   *  edit stamp ('updated'), or a sitemap <lastmod> ('lastmod'). None of the
+   *  three is a release date this script will act on. */
+  dayIs: 'stated' | 'updated' | 'lastmod';
+  /** The page that states it, for the finding text. */
+  where: string;
+}
+
+export interface NotesRead {
+  /** Oldest first, by `day`: Fluid Engine DOM order is not visual order. */
+  entries: NotesVersion[];
+  /** Why the page cannot be trusted, one line each. Any line here is fatal —
+   *  rule (a), for a page instead of a post. */
+  unreadable: string[];
+  /** Headings allowlisted in NOTES_OK, printed so nobody has to open this file
+   *  to know why one is being ignored. */
+  excused: { heading: string; why: string }[];
+}
+
+/** How an entry's day is printed — always with what it is, so an "Updated"
+ *  stamp or a <lastmod> can never be read as a release day on the way past. */
+const stampOf = (n: NotesVersion): string =>
+  n.dayIs === 'lastmod'
+    ? `lastmod ${n.day || 'none'}`
+    : n.dayIs === 'updated'
+      ? `Updated ${n.day}`
+      : `dated ${n.day}`;
+
+/** `3.0` < `3.0.1` < `10.0` — numeric per part, never a string compare. */
+const compareVersions = (a: string, b: string): number => {
+  const pa = a.split('.').map(Number);
+  const pb = b.split('.').map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] ?? 0) - (pb[i] ?? 0);
+    if (d) return d;
+  }
+  return 0;
+};
+
+/**
+ * Read every heading inside the notes page's <main>. Pure, so a fixture can
+ * drive it without the network.
+ *
+ * Only <main>: the header and footer carry headings of their own ("Get the
+ * Latest from the Four Nations", "FOLLOW OUR SOCIALS"). Only HEADINGS: the body
+ * says "Ranked Mode 1.0" twice, and rule (d) applies here as it does to the
+ * Steam bodies. A heading this script cannot read is rule (a) for a page — a
+ * hotfix announced as `Hotfix / October 13, 2026` is indistinguishable from a
+ * patch the table lacks, and only one of those is safe to assume — so it is
+ * unreadable, never skipped, unless a person excused it in NOTES_OK.
+ */
+export function readNotesPage(html: string): NotesRead {
+  const out: NotesRead = { entries: [], unreadable: [], excused: [] };
+  const main = /<main\b[^>]*>([\s\S]*?)<\/main\s*>/i.exec(html)?.[1];
+  if (main === undefined) {
+    out.unreadable.push(
+      'the page has no <main> element — the layout changed, or this is not the page (on ' +
+        '2026-10-15 it was <main id="page"> holding one <h1> banner and one <h2> entry)',
+    );
+    return out;
+  }
+  // Fluid Engine puts 113 <script>/<style> blocks inside <main> (measured
+  // 2026-10-15); a heading quoted inside one of them is not a heading.
+  const body = main
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<(script|style|noscript)\b[\s\S]*?<\/\1\s*>/gi, ' ');
+  const seen = new Map<string, NotesVersion>();
+  for (const m of body.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi)) {
+    // Tags → space BEFORE flatten(): `Patch 2.5<br><em>Updated` must not fuse
+    // into `Patch 2.5Updated`.
+    const heading = flatten(m[2]!.replace(/<[^>]*>/g, ' '));
+    if (!heading || NOTES_BANNER.test(heading)) continue;
+    const excuse = NOTES_OK[heading];
+    if (excuse) {
+      out.excused.push({ heading, why: excuse });
+      continue;
+    }
+    const e = NOTES_ENTRY.exec(heading);
+    if (e) {
+      const g = e.groups!;
+      const day = isoDay(g.month!, g.day!, g.year!);
+      if (!day) {
+        out.unreadable.push(`${JSON.stringify(heading)} — its month is not one MONTHS knows`);
+        continue;
+      }
+      const entry: NotesVersion = {
+        version: g.version!,
+        day,
+        dayIs: g.updated ? 'updated' : 'stated',
+        where: NOTES_PAGE,
+      };
+      const prior = seen.get(entry.version);
+      if (prior && (prior.day !== day || prior.dayIs !== entry.dayIs)) {
+        out.unreadable.push(
+          `two headings state Patch ${entry.version} with different dates (${stampOf(prior)}, ` +
+            `${stampOf(entry)}) — which is the entry?`,
+        );
+        continue;
+      }
+      if (!prior) {
+        seen.set(entry.version, entry);
+        out.entries.push(entry);
+      }
+      continue;
+    }
+    if (/^patch\b/i.test(heading)) {
+      out.unreadable.push(
+        `${JSON.stringify(heading)} — starts with "Patch" and is neither the banner nor a ` +
+          '`Patch <n> <Month D, YYYY>` entry. Teach NOTES_ENTRY, or excuse the heading in NOTES_OK ' +
+          'with a reason',
+      );
+      continue;
+    }
+    const carriesDate = [...heading.matchAll(ANY_DATE)].length > 0;
+    if (carriesDate) {
+      out.unreadable.push(
+        `${JSON.stringify(heading)} — a dated heading with no "Patch <n>" in front of it; a hotfix ` +
+          'announced this way is a patch the table does not have. Teach NOTES_ENTRY, or excuse the ' +
+          'heading in NOTES_OK with a reason',
+      );
+      continue;
+    }
+    if (NOTES_VERSION_SHAPED.test(heading)) {
+      out.unreadable.push(
+        `${JSON.stringify(heading)} — names a version or an update without a readable ` +
+          '`Patch <n> <Month D, YYYY>` heading. Teach NOTES_ENTRY, or excuse the heading in NOTES_OK ' +
+          'with a reason',
+      );
+      continue;
+    }
+  }
+  // Zero entries is not "no patches": the page has held one entry on every read
+  // since its first Wayback capture (2026-09-02T20:23Z), so an empty read is a
+  // relayout or an empty page. A heading a person EXCUSED in NOTES_OK counts as
+  // read: the page holds exactly one heading, overwritten in place, so the
+  // realistic shape of an excuse is a page whose only heading is the excused one.
+  if (!out.entries.length && !out.unreadable.length && !out.excused.length) {
+    out.unreadable.push(
+      'no `Patch <n> <Month D, YYYY>` heading read or excused inside <main> — the page is empty ' +
+        'or the layout changed (it held exactly one entry, Patch 2.5, on every read from its ' +
+        'first Wayback capture, 2026-09-02T20:23Z, through 2026-10-15)',
+    );
+  }
+  out.entries.sort((a, b) => a.day.localeCompare(b.day));
+  return out;
+}
+
+/** Read the versions the paramountgames.com sitemap names in its slugs. Pure.
+ *  A sitemap with no matching slug is NOT unreadable — that was its state until
+ *  2026-10-07 — but a sitemap with no <url> rows at all, or one that became an
+ *  index, is a format change this script must not read as silence. */
+export function readNotesSitemap(xml: string): NotesRead {
+  const out: NotesRead = { entries: [], unreadable: [], excused: [] };
+  if (/<sitemapindex\b/i.test(xml)) {
+    out.unreadable.push(
+      'the sitemap became a sitemap INDEX (<sitemapindex>) — its children hold the <url> rows ' +
+        'now; teach readNotesSitemap to follow them',
+    );
+    return out;
+  }
+  const rows = [...xml.matchAll(/<url\b[^>]*>([\s\S]*?)<\/url\s*>/gi)];
+  if (!rows.length) {
+    out.unreadable.push(
+      'no <url> rows in the sitemap (21 on 2026-10-15) — not a sitemap, or its format changed',
+    );
+    return out;
+  }
+  const seen = new Set<string>();
+  for (const [, block] of rows) {
+    const loc = /<loc>\s*([^<\s]+)\s*<\/loc>/i.exec(block!)?.[1];
+    const slug = loc ? NOTES_SLUG.exec(loc) : null;
+    if (!loc || !slug) continue;
+    const version = slug[1]!.replace(/-/g, '.');
+    if (seen.has(version)) continue;
+    seen.add(version);
+    out.entries.push({
+      version,
+      day: /<lastmod>\s*(\d{4}-\d{2}-\d{2})/i.exec(block!)?.[1] ?? '',
+      dayIs: 'lastmod',
+      where: loc,
+    });
+  }
+  out.entries.sort((a, b) => a.day.localeCompare(b.day));
+  return out;
+}
+
 // ── the diff ────────────────────────────────────────────────────────────────
 
 export interface Finding {
@@ -493,12 +798,20 @@ export interface Finding {
 }
 export const fatal = (f: Finding): boolean => f.glyph !== 'ⓘ';
 
-/** Compare what the vendor announced with the table. Pure; `now` injectable. */
+export interface DiffOptions {
+  /** The public branch, from the build clock; null when that read failed. */
+  build?: { id: string; day: string } | null;
+  /** What the vendor's web notes state; null when neither page was read. */
+  notes?: NotesVersion[] | null;
+  now?: string;
+}
+
+/** Compare what the vendor announced with the table. Pure: everything the clock
+ *  or the network would supply arrives in `opts`, so a fixture can drive it. */
 export function diff(
   announced: Announced[],
   table: PatchBoundary[] = PATCHES,
-  buildDay: string | null = null,
-  now: string = today(),
+  { build = null, notes = null, now = today() }: DiffOptions = {},
 ): Finding[] {
   const findings: Finding[] = [];
   const rows = new Map(table.map((r) => [r.start, r]));
@@ -587,15 +900,72 @@ export function diff(
 
   // THE BUILD CLOCK. The one reading that can see a patch the vendor never
   // posted on Steam — which this vendor has already done once, on 2026-08-06.
+  // BUILDS_OK decides the GLYPH, never the test: an excused build still prints,
+  // as ⓘ with its reason, so the excuse is re-read every week it applies.
   const newest = table.reduce((a, b) => (a.start > b.start ? a : b));
-  if (buildDay && buildDay > newest.start && !announcedDays.has(buildDay)) {
-    findings.push({
-      glyph: '~',
-      text:
-        `a Steam build shipped on ${buildDay}, after the newest table row (${newest.start}), and no ` +
-        'announcement explains it — check @avatar_fighters, then either add the row with ' +
-        "announcedOn: 'x' and an OFF_STEAM_OK entry, or record the buildid in BUILDS_OK with a reason",
-    });
+  if (build && build.day > newest.start && !announcedDays.has(build.day)) {
+    const excuse = BUILDS_OK[build.id];
+    findings.push(
+      excuse
+        ? { glyph: 'ⓘ', text: `build ${build.id} shipped ${build.day} — excused: ${excuse}` }
+        : {
+            glyph: '~',
+            text:
+              `a Steam build (${build.id}) shipped on ${build.day}, after the newest table row ` +
+              `(${newest.start}), and no announcement explains it — check @avatar_fighters, then ` +
+              "either add the row with announcedOn: 'x' and an OFF_STEAM_OK entry, or record the " +
+              'buildid in BUILDS_OK with a reason',
+          },
+    );
+  }
+
+  // THE WEB NOTES, ONE WAY. A version either page states must be a labelled
+  // row; a labelled row the pages do not state is THEIR lag, not our drift
+  // (avatarfighters.com held 2.5 over 3.0 for eight days). Nothing in this block
+  // reads `build`: the notes' silence cannot excuse a Steam build.
+  if (notes) {
+    const labelled = new Map(table.filter((r) => r.label).map((r) => [r.label!, r]));
+    for (const n of notes) {
+      const row = labelled.get(`Patch ${n.version}`);
+      const stated = `Patch ${n.version} — stated by the vendor's web notes (${n.where}, ${stampOf(n)})`;
+      if (row) {
+        findings.push({ glyph: 'ⓘ', text: `${stated} and labelled on the ${row.start} row` });
+        continue;
+      }
+      const excuse = NOTES_OK[n.version];
+      if (excuse) {
+        findings.push({ glyph: 'ⓘ', text: `${stated}, excused: ${excuse}` });
+        continue;
+      }
+      findings.push({
+        glyph: '+',
+        text:
+          `${stated} and no row in scripts/patches.ts is labelled 'Patch ${n.version}'. The ` +
+          `${n.dayIs === 'lastmod' ? '<lastmod>' : 'heading date'} is not the release day (the 2.5 ` +
+          'heading became an edit stamp a week after the build): take the day from the Steam post or ' +
+          'the build clock and add the row with this label, or excuse the version in NOTES_OK with ' +
+          'a reason',
+      });
+    }
+    // Their lag, as information: the newest version the pages state against
+    // the table's newest label, compared NUMERICALLY (10.0 is newer than 3.0).
+    const newestStated = notes
+      .map((n) => n.version)
+      .sort(compareVersions)
+      .at(-1);
+    const newestLabel = [...labelled.keys()]
+      .map((l) => l.replace(/^Patch /, ''))
+      .sort(compareVersions)
+      .at(-1);
+    if (newestStated && newestLabel && compareVersions(newestStated, newestLabel) < 0) {
+      findings.push({
+        glyph: 'ⓘ',
+        text:
+          `vendor notes lag: the web notes stop at ${newestStated} while the table's newest label ` +
+          `is Patch ${newestLabel} — expected of a page that held 2.5 for eight days after 3.0 ` +
+          'shipped, and it clears nothing: the build clock is the authority on an unposted build',
+      });
+    }
   }
 
   // How often the title contradicts the body — the live number behind rule (c).
@@ -671,6 +1041,26 @@ if (isMain) {
   });
   const buildDay = pub ? dayOf(Number(pub.timeupdated)) : null;
 
+  // The web notes, read the same way the build clock is: a fetch that fails
+  // downgrades the run to UNVERIFIED, a page this script cannot read is
+  // UNREADABLE, and neither outcome is ever folded into a tick.
+  await sleep(1_500);
+  const notesHtml = await getText(NOTES_PAGE, "the vendor's patch notes page").catch(
+    (e: unknown): null => {
+      unverified.push(`the vendor's web patch notes (${NOTES_PAGE}) — ${reason(e)}`);
+      return null;
+    },
+  );
+  await sleep(1_500);
+  const sitemapXml = await getText(NOTES_SITEMAP, 'the paramountgames.com sitemap').catch(
+    (e: unknown): null => {
+      unverified.push(`the vendor's web patch notes (${NOTES_SITEMAP}) — ${reason(e)}`);
+      return null;
+    },
+  );
+  const pageRead = notesHtml === null ? null : readNotesPage(notesHtml);
+  const mapRead = sitemapXml === null ? null : readNotesSitemap(sitemapXml);
+
   const { announced, unreadable, excused, unjoined } = classify(community, byKey);
   if (evs && unjoined.length) {
     unverified.push(
@@ -678,7 +1068,26 @@ if (isMain) {
         `carry ${unjoined.map((t) => JSON.stringify(t)).join(', ')}`,
     );
   }
+  // The pages join the posts' own lists: an unreadable heading is rule (a) for
+  // a page and exits through the same block, with the URL where a gid would be.
+  const notes: NotesVersion[] = [];
+  const notesExcused: NotesRead['excused'] = [];
+  for (const [read, url, title] of [
+    [pageRead, NOTES_PAGE, 'avatarfighters.com/patchnotes'],
+    [mapRead, NOTES_SITEMAP, 'paramountgames.com sitemap'],
+  ] as const) {
+    if (!read) continue;
+    notes.push(...read.entries);
+    notesExcused.push(...read.excused);
+    for (const why of read.unreadable) unreadable.push({ gid: url, title, posted: '', why });
+  }
 
+  const stated = (read: NotesRead | null): string =>
+    read === null
+      ? 'UNREAD'
+      : read.entries.length
+        ? read.entries.map((n) => `Patch ${n.version} (${stampOf(n)})`).join(', ')
+        : 'no version stated';
   console.log(
     `Steam news: ${items.length} posts, ${community.length} from the vendor, ${announced.length} patch(es)` +
       `${excused.length ? `, ${excused.length} excused` : ''}` +
@@ -686,11 +1095,16 @@ if (isMain) {
       `${pub ? `; public build ${pub.buildid} @ ${buildDay}` : '; build clock UNREAD'}`,
   );
   console.log(
+    `Web notes:  avatarfighters.com/patchnotes → ${stated(pageRead)}; paramountgames.com sitemap → ${stated(mapRead)}`,
+  );
+  console.log(
     `Table:      ${PATCHES.length} rows, newest ${PATCHES.at(-1)?.start}` +
       `${PATCHES.at(-1)?.label ? ` (${PATCHES.at(-1)!.label})` : ''}\n`,
   );
   for (const e of excused)
     console.log(`  ⓘ ${e.posted}  ${JSON.stringify(e.title)} — excused: ${e.why}`);
+  for (const e of notesExcused)
+    console.log(`  ⓘ web notes heading ${JSON.stringify(e.heading)} — excused: ${e.why}`);
 
   if (unreadable.length) {
     console.error(`\n✖ ${unreadable.length} vendor post(s) this script cannot read:\n`);
@@ -708,7 +1122,10 @@ if (isMain) {
     process.exit(1);
   }
 
-  const findings = diff(announced, PATCHES, buildDay);
+  const findings = diff(announced, PATCHES, {
+    build: pub && buildDay ? { id: pub.buildid, day: buildDay } : null,
+    notes: pageRead || mapRead ? notes : null,
+  });
   for (const f of findings.filter((x) => !fatal(x))) console.log(`  ${f.glyph} ${f.text}`);
   const drift = findings.filter(fatal);
 
@@ -730,8 +1147,8 @@ if (isMain) {
     console.warn(`\n⚠ patch table NOT verified — ${unverified.length} read(s) did not happen:`);
     for (const u of unverified) console.warn(`    ${u}`);
     console.warn(
-      '  Nothing above contradicts the vendor, and that is not the same as a clean table: the two\n' +
-        '  unread checks are the only ones that can see a patch the vendor never posted on Steam — which\n' +
+      '  Nothing above contradicts the vendor, and that is not the same as a clean table: a read that\n' +
+        '  did not happen is exactly where a patch the vendor never posted on Steam would hide — which\n' +
         '  it has already done once, on 2026-08-06. Run it again later.',
     );
     console.log('patch-check: UNVERIFIED');
@@ -740,7 +1157,8 @@ if (isMain) {
 
   console.log(
     `\n✓ the patch table matches every vendor patch post — ${announced.length} announcements, every date ` +
-      'and every stated version identical, and no unexplained Steam build',
+      'and every stated version identical, no unexplained Steam build, and no web-notes version the ' +
+      'table lacks',
   );
 
   if (CONFIRM_QUIET) {

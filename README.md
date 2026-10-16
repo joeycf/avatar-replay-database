@@ -146,8 +146,12 @@ own fails `scripts/patches.ts --check`.
 
 `npm run data:patch-check` is the content check against the vendor's feed, and
 that feed is **known to be incomplete** — it is missing the 2026-08-06 balance
-patch entirely. So the checker reads three things (the news feed, the store
-events API, and the Steam build clock) and a clean bill needs all three.
+patch entirely. So the checker reads four things (the news feed, the store
+events API, the Steam build clock, and the vendor's own web patch notes on
+avatarfighters.com and paramountgames.com) and a clean bill needs all four. The
+web notes are read **one way**: a version they state must be a labelled row, but
+their silence clears nothing — the page still said Patch 2.5 eight days after 3.0
+shipped — and no date they carry is a boundary.
 
 ## Unicode normalization ships, and its control asserts IDENTITY
 
@@ -232,7 +236,7 @@ provenance.json` carries the citation and an expiry that re-checks for a fan kit
 | `data:catchup`      | fetch → theater → parse → emit, in that order, as one command                                    |
 | `data:characters`   | the fighter roster + the support registry + all their validators                                 |
 | `data:patches`      | the patch table's shape; also runs inside `npm run typecheck`                                    |
-| `data:patch-check`  | the vendor's three surfaces vs the table. Manual — never in the cron                             |
+| `data:patch-check`  | the vendor's four surfaces vs the table. Manual — never in the cron                              |
 | `data:roster-check` | Steam achievements + the vendor widget vs the roster. Manual                                     |
 | `data:tournaments`  | Liquipedia's Tier 1–2 winners/runners-up → `data/tournaments.json`. Manual; `--match`, `--check` |
 | `data:expiries`     | the clock-and-corpus gate: unreleased fighters, supports, patches                                |

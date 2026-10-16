@@ -13,20 +13,21 @@
  * them in types/index.ts; the committed contract for this build enumerates that
  * file and these are not in it, so one declaration, one owner.
  *
- * ── THE GRAMMAR: THE VENDOR VERSIONED ONE BUILD OUT OF FOUR ────────────────
- * Four post-launch builds shipped to a gameplay platform. The vendor published
- * a version string for exactly ONE of them, in the body of its own Steam post:
+ * ── THE GRAMMAR: THE VENDOR HAS VERSIONED TWO BUILDS OUT OF FIVE ───────────
+ * Four post-launch builds have shipped to a gameplay platform, five rows with
+ * launch. The vendor published a version string for exactly TWO of them: one
+ * in the body of its own Steam post —
  *
  *     [h1]Patch 2.5
  *     [i]September 2, 2026[/i][/h1]
  *
- * There is no 1.x, no 2.0–2.4 and no launch version anywhere on Steam,
- * avatarfighters.com or in the press (Stage 0, 2026-09-16; the two Steam bodies
- * re-read live 2026-09-18). "Patch 3" is teased with no number attached to any
- * shipped build.
+ * — and one only in a title, "PATCH 3.0 IS HERE" (2026-10-07; the row was
+ * added 2026-10-15). There is no 1.x, no 2.0–2.4 and no launch version anywhere
+ * on Steam, avatarfighters.com or in the press (Stage 0, 2026-09-16; the two
+ * Steam bodies re-read live 2026-09-18, the 3.0 post 2026-10-15).
  *
  * So rules 4 and 4b disagree row by row: 4 says copy the vendor's version, 4b
- * says use the date when there is none, and here three of four rows have none.
+ * says use the date when there is none, and here three of five rows have none.
  * Checklist 4d — written by this build from this table — resolves it: DATE
  * TOKENS FOR EVERY ROW, with the vendor's version carried as a display LABEL.
  * The reasons, in order of weight:
@@ -49,13 +50,19 @@
  * surface that is both machine-readable and a full archive (21 posts back to
  * 2025-10-28, re-read 2026-09-18). Everything else was measured and rejected in
  * Stage 0: avatarfighters.com/patchnotes is a single Squarespace page holding
- * only the newest patch, with `?format=rss` HTTP 400 and `?format=json`
- * disallowed by robots.txt; x.com needs a login (syndication HTTP 429); the
- * vendor's Bluesky has posted nothing since 2026-06-27; paramountgames.com and
- * thegameplaygroup.com carry no patch surface; pm-studios.com is behind a
- * Cloudflare 403.
+ * ONE entry, overwritten in place — it still said Patch 2.5 eight days after
+ * 3.0 shipped (re-read 2026-10-15) — with `?format=rss` HTTP 400 and
+ * `?format=json` disallowed by robots.txt; x.com needs a login (syndication
+ * HTTP 429); the vendor's Bluesky has posted nothing since 2026-06-27;
+ * thegameplaygroup.com carries no patch surface; pm-studios.com is behind a
+ * Cloudflare 403. paramountgames.com carried none either until
+ * 2026-10-07T13:44Z, when the 3.0 notes went up at
+ * /editorial/avatar-legends-the-fighting-game-patch-3-0-overall-patch-notes
+ * (linked from the Steam post, listed in that site's sitemap). Neither web page
+ * is an archive: scripts/patch-check.ts reads both ONE WAY, as versions this
+ * table must label, never as a date and never as a clearance.
  *
- * It carries 2 of the 3 post-launch builds that reached Steam. The 2026-08-06
+ * It carries 3 of the 4 post-launch builds that reached Steam. The 2026-08-06
  * build — Replay Takeover, Steam/PS5 crossplay, standardized knockdown hurtboxes
  * and changes to SEVEN fighters — was announced on X only. That is why
  * OFF_STEAM_OK exists below and why scripts/patch-check.ts reads the Steam build
