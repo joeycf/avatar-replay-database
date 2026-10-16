@@ -56,7 +56,7 @@
  */
 
 import { UNRELEASED } from './expiries';
-import { loadCharacters, loadSupports, scrapeRoster } from './roster';
+import { loadCharacters, loadSupports, scrapeRoster, VendorShapeError } from './roster';
 
 type State = 'CURRENT' | 'DRIFT' | 'UNVERIFIED' | 'UNREADABLE';
 
@@ -96,6 +96,16 @@ async function main(): Promise<void> {
   try {
     scrape = await scrapeRoster();
   } catch (e) {
+    // TWO VERDICTS, BECAUSE TWO DIFFERENT THINGS FAILED. HTML arrived and the
+    // route chunk is not in it: the site's layout changed, which is UNREADABLE
+    // — nothing this check says is trustworthy until the parser is re-taught.
+    // Everything else (network, HTTP, the edge handing back a cached RSC flight
+    // payload, as Akamai did for ~5 minutes at a time on 2026-10-15) is weather:
+    // UNVERIFIED, yellow in check-rosters.sh, run again later. Before the split
+    // a real layout change printed yellow too, and yellow is what gets skimmed.
+    if (e instanceof VendorShapeError) {
+      return void verdict('UNREADABLE', `✖ ${e.message}`);
+    }
     return void verdict(
       'UNVERIFIED',
       `! could not read the vendor surfaces — ${(e as Error).message}`,

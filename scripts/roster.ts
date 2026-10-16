@@ -703,12 +703,43 @@ export const CONFIRMED_CHARACTER_NAMED_PLAYERS: ConfirmedCharacterNamedPlayer[] 
 // count rather than as an enumeration.
 //
 // THE CHUNK URL IS DISCOVERED, NEVER TYPED. paramountgames.com is a Next.js app
-// and its route chunk is content-hashed: today
-// `page-997bea5bc54fdf44.js`, tomorrow something else, on every deploy. Stage 0
-// recorded that filename; hard-coding it would produce a checker that goes green
-// on a 404 the first time the vendor ships a change. The rule below is the ROUTE
-// PATH — `_next/static/chunks/app/games/<game route>/page-<hash>.js` — read out
-// of the page's own script tags.
+// and its route chunk is content-hashed: Stage 0 read
+// `page-997bea5bc54fdf44.js`, the 2026-10-07 deploy renamed it
+// `page-1b60cbedb174af22.js`, and every deploy will rename it again. Hard-coding
+// it would produce a checker that goes green on a 404 the first time the vendor
+// ships a change. The rule below is the ROUTE PATH —
+// `_next/static/chunks/app/games/<game route>/page-<hash>.js` — read out of the
+// page's own script tags.
+//
+// THE DOCUMENT IS FETCHED PAST THE EDGE CACHE, BECAUSE THE EDGE HAS SERVED THE
+// WRONG BODY FOR IT. paramountgames.com sits behind Akamai in front of Next.js
+// 16.2.9. On 2026-10-15, at least twice (01:12–01:13Z and 03:03–03:05Z) and for
+// ~5 minutes each, the edge answered the BARE document URL with the Next.js
+// `/_tree` prefetch flight payload — 3,213 B of `text/x-component` — regardless
+// of request headers; a client `Cache-Control: no-cache` was ignored. The route
+// had not changed: `?v=…` returned the real HTML at the same moment, 20 polls
+// over the following 10 minutes were all HTML, and the chunk still yielded the
+// same 8 triples. So this scrape read a transient CDN state as "the site's route
+// layout changed" — the one verdict here that sends a human to re-read the
+// vendor. Three rules follow, each measured rather than assumed:
+//   · THE CACHE KEY INCLUDES THE QUERY STRING, so getDocument() cache-busts with
+//     a neutral `?roster-check=<token>` and retries ONCE with a fresh token.
+//     `_rsc` is never the name: Next.js reserves it for flight requests, so it
+//     would ASK for the payload this avoids.
+//   · NO `RSC:` OR `Next-Router-*` HEADER IS EVER SENT to the bare URL. A probe
+//     carrying one that arrives as the edge copy expires would poison the bare
+//     key for every real visitor — the incident, re-created from our side.
+//   · A RESPONSE IS CLASSIFIED BY CONTENT-TYPE AND STRUCTURE ONLY (pageKind()),
+//     never by size or sha1: origin bakes the triggering query into ISR copies,
+//     so two correct documents need not be byte-identical.
+// A flight payload after the retry is a plain Error — roster-check.ts prints
+// UNVERIFIED and check-rosters.sh goes yellow. HTML with no route chunk in it is
+// a VendorShapeError (UNREADABLE), because that one IS a layout change.
+//
+// NOT DONE, ON PURPOSE: parsing the flight payload (the prefetch carries no
+// roster data, and the full RSC splits names across lazy rows), and moving the
+// name-and-nation control to the HTML roster dock (same document, same exposure,
+// and a ninth `data-fighter` on the hero intro would double-count Toph).
 
 const PG_PAGE = 'https://www.paramountgames.com/games/avatar-legends-the-fighting-game';
 const PG_ORIGIN = 'https://www.paramountgames.com';
@@ -741,6 +772,73 @@ async function get(url: string): Promise<string> {
   return body;
 }
 
+/**
+ * HTML was received and the route chunk is not in it — the ONE scrape failure
+ * that is a layout change rather than weather. roster-check.ts prints UNREADABLE
+ * (exit 1) for this and UNVERIFIED (exit 0) for every other throw: network,
+ * HTTP, a flight payload that survived the retry. Thrown nowhere else. A chunk
+ * that yields zero fighters is NOT this: the caller reports it, because the
+ * caller has the chunk URL to print and the verdict already written.
+ */
+export class VendorShapeError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'VendorShapeError';
+  }
+}
+
+/** What a response to the document URL turned out to be. */
+export type PageKind = 'html' | 'flight';
+
+/**
+ * Classify a response to the document URL by CONTENT-TYPE AND STRUCTURE — the
+ * 2026-10-15 incident, in the header above.
+ *
+ * `text/x-component` is the flight payload's own media type and settles it on
+ * its own. The body sniff is the second arm, for a payload that arrives labelled
+ * as HTML: a document begins `<!DOCTYPE` or `<html` (the live page begins
+ * `<!DOCTYPE html>`), while every flight row begins with a row id or a hint tag
+ * — the `/_tree` prefetch opens `:HL[`, the full RSC opens
+ * `1:"$Sreact.fragment"`. Testing for what a DOCUMENT starts with, rather than
+ * for `:HL[`, is what makes the second shape a flight payload too. Never size,
+ * never a hash.
+ */
+export function pageKind(contentType: string | null, body: string): PageKind {
+  if ((contentType ?? '').toLowerCase().includes('text/x-component')) return 'flight';
+  const head = body.trim().slice(0, 9).toLowerCase();
+  return head.startsWith('<!doctype') || head.startsWith('<html') ? 'html' : 'flight';
+}
+
+/**
+ * Fetch an HTML DOCUMENT past the edge cache (the 2026-10-15 incident, in the
+ * header above). The cache-buster is the whole mechanism — the Akamai key
+ * includes the query string and ignores a client `Cache-Control: no-cache` — so
+ * the token is fresh on every attempt and the parameter name is neutral (`_rsc`
+ * is the name Next.js reserves for flight requests and would ASK for the body
+ * this avoids). No `RSC` or `Next-Router-*` header is sent, ever: a probe
+ * carrying one would poison the bare key for real visitors. One retry, then a
+ * plain Error naming the transient state, so roster-check.ts prints UNVERIFIED
+ * rather than sending a human to re-read a route that did not move.
+ */
+async function getDocument(url: string): Promise<string> {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const target = new URL(url);
+    target.searchParams.set('roster-check', Date.now().toString(36));
+    const res = await fetch(target.href, {
+      headers: { 'user-agent': 'avatar-replay-database/roster-check', accept: 'text/html' },
+    });
+    if (!res.ok) throw new Error(`${url} → HTTP ${res.status}`);
+    const body = await res.text();
+    await sleep(PACING_MS);
+    if (pageKind(res.headers.get('content-type'), body) === 'html') return body;
+  }
+  throw new Error(
+    `the edge served a cached RSC flight payload for the document URL ${url}, on both attempts ` +
+      '— a transient CDN state, not a layout change (2026-10-15: Akamai answered the bare URL ' +
+      'with the Next.js /_tree prefetch for ~5 minutes at a time). Run again in a few minutes.',
+  );
+}
+
 /** Tags to spaces, then collapse — for reading prose out of the store's
  *  HTML-in-JSON description. */
 const textOf = (html: string): string =>
@@ -760,6 +858,35 @@ export interface VendorFighter {
   name: string;
   /** `fighters[].element` — air / water / earth / fire. */
   element: string;
+}
+
+/**
+ * The ABSOLUTE URL of the route chunk named in a document's own script tags, or
+ * null. Structure, not a filename — see PG_CHUNK_ROUTE. A flight payload names
+ * the same chunk WITHOUT the `/_next/` prefix (as a client reference), and this
+ * deliberately does not accept that form: a flight payload is refused by
+ * getDocument() before the chunk is looked for, and reading it here would be
+ * the first step toward parsing RSC, which the header declines.
+ */
+export function findRouteChunk(html: string): string | null {
+  const m = PG_CHUNK_ROUTE.exec(html);
+  return m ? `${PG_ORIGIN}/${m[0]}` : null;
+}
+
+/**
+ * Every `fighters[]` entry in a route chunk, in bundle order. Empty when the
+ * literal is not there — and the CALLER says so (roster-check.ts prints
+ * UNREADABLE with the chunk URL), never this function: zero is a parser that
+ * broke, and a throw here would file it with the network failures.
+ */
+export function parseVendorFighters(chunk: string): VendorFighter[] {
+  // The four fields are read as one ordered literal rather than four lookups:
+  // the array is minified and every other object in the bundle also has a
+  // `name`, so `key` immediately followed by `element` is what identifies a
+  // fighter entry.
+  return [
+    ...chunk.matchAll(/\{key:"([a-z0-9-]+)",element:"([a-z]+)",number:"[^"]*",name:"([^"]*)"/g),
+  ].map((m) => ({ key: m[1]!, element: m[2]!, name: normalizeText(m[3]!) }));
 }
 
 export interface RosterScrape {
@@ -788,26 +915,22 @@ export interface RosterScrape {
  * path, an object literal's field order, an achievement id prefix — rather than
  * on a hash, a position or a count. A scrape that reads zero is reported as
  * unreadable by the caller and never as "the vendor removed a character".
+ *
+ * The document is read through getDocument() and the three pure readers above,
+ * so the gates can drive each rule without a network, on bodies built in the
+ * 2026-10-15 incident's shape and on the live chunk's own fighters[] entries
+ * (scripts/verify-gates.ts, the `roster-*` probe cases).
  */
 export async function scrapeRoster(): Promise<RosterScrape> {
-  const page = await get(PG_PAGE);
-  const chunkPath = PG_CHUNK_ROUTE.exec(page);
-  if (!chunkPath) {
-    throw new Error(
+  const page = await getDocument(PG_PAGE);
+  const chunkUrl = findRouteChunk(page);
+  if (!chunkUrl) {
+    throw new VendorShapeError(
       `no ${PG_CHUNK_ROUTE.source} script on ${PG_PAGE} — the site's route layout changed; ` +
         `re-read the page's <script src> list before trusting anything else here`,
     );
   }
-  const chunkUrl = `${PG_ORIGIN}/${chunkPath[0]}`;
-  const chunk = await get(chunkUrl);
-
-  // The four fields are read as one ordered literal rather than four lookups:
-  // the array is minified and every other object in the bundle also has a
-  // `name`, so `key` immediately followed by `element` is what identifies a
-  // fighter entry.
-  const site: VendorFighter[] = [
-    ...chunk.matchAll(/\{key:"([a-z0-9-]+)",element:"([a-z]+)",number:"[^"]*",name:"([^"]*)"/g),
-  ].map((m) => ({ key: m[1]!, element: m[2]!, name: normalizeText(m[3]!) }));
+  const site = parseVendorFighters(await get(chunkUrl));
 
   const achJson = JSON.parse(await get(STEAM_ACHIEVEMENTS)) as {
     achievementpercentages?: { achievements?: { name: string }[] };

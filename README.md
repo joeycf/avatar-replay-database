@@ -288,11 +288,14 @@ does that the reference does not:
   rotted anchor is a FAILURE rather than a quiet "waiting". Every control in the
   file is proven able to place its defect today, whether or not its command can
   run yet.
-- Eight controls drive the pipeline's **exported functions** — `parseTitle`,
-  `playerId`, `isPlaceholderHandle`, `buildTheaterRecords` — through a probe
-  module written into a temp directory outside the repo. That is what makes this
-  game's own rules (5q, 5r, 13, 12k) testable offline, with no corpus, no API key
-  and no quota.
+- Twenty-five controls drive the pipeline's **exported functions** — `parseTitle`,
+  `playerId`, `isPlaceholderHandle`, `buildTheaterRecords`, the roster scrape's
+  `pageKind`/`findRouteChunk`/`parseVendorFighters` and the patch checker's
+  `readNotesPage`/`readNotesSitemap`/`diff`/`getText` — through a probe module
+  written into a temp directory outside the repo. That is what makes this game's
+  own rules (5q, 5r, 13, 12k), the one-way web-notes surface and the
+  flight-payload classifier testable offline, with no corpus, no API key, no
+  quota and no vendor.
 
 **No control in the suite calls the YouTube API.** Checklist 10j: the key is
 shared with six production crons and a recon pass on this game exhausted the

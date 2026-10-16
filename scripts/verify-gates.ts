@@ -40,15 +40,20 @@
  *
  * ── THE PROBE, AND WHY MOST OF THIS GAME'S OWN RULES ARE LIVE ─────────────
  * scripts/parse.ts exports `parseTitle`, `parseSide`, `channelMatcher`,
- * `handleRewrites`, `isPlaceholderHandle`; scripts/roster.ts exports `playerId`
- * and the matcher builders; scripts/parse-finish.ts exports
- * `buildTheaterRecords`. That export surface exists so the orientation and index
- * logic can be exercised WITHOUT running the pipeline, and this file is its
- * consumer: twelve controls drive a small probe module against those functions
- * with hand-built inputs. They are offline, they need no corpus, they need no
- * API key, and they are the controls for the four rules that are this game's
- * reason for existing — the pair-level slot order (5q), the CPU/arcade refusal
- * (5r), the support namespace (13) and the index offset/tag edges (12k).
+ * `handleRewrites`, `isPlaceholderHandle`; scripts/roster.ts exports `playerId`,
+ * the matcher builders and the vendor scrape's three pure readers (`pageKind`,
+ * `findRouteChunk`, `parseVendorFighters`); scripts/parse-finish.ts exports
+ * `buildTheaterRecords`; scripts/patch-check.ts exports `readNotesPage`,
+ * `readNotesSitemap`, `diff` and `getText`. That export surface exists so the
+ * orientation, index, patch-check and roster-scrape logic can be exercised
+ * WITHOUT running the pipeline or reaching a vendor, and this file is its
+ * consumer: twenty-five controls drive a small probe module against those
+ * functions with hand-built inputs. They are offline, they need no corpus, they
+ * need no API key, and they are the controls for the four rules that are this
+ * game's reason for existing — the pair-level slot order (5q), the CPU/arcade
+ * refusal (5r), the support namespace (13) and the index offset/tag edges (12k)
+ * — plus the patch checker's one-way web-notes surface and its build-clock
+ * excuse, and the roster scrape's flight-payload classifier (both 2026-10-15).
  *
  * THE PROBE IS WRITTEN OUTSIDE THE REPOSITORY, into an OS temp directory that is
  * removed on exit. Nothing is created under the project, so a suite that is
@@ -206,6 +211,13 @@ const PROBE_CASES = [
   'index-intro-skip',
   'index-zero-offset',
   'index-support-namespace',
+  'notes-page',
+  'notes-sitemap',
+  'notes-diff',
+  'notes-fetch',
+  'roster-flight',
+  'roster-chunk',
+  'roster-fighters',
 ] as const;
 
 let probeDir: string | null = null;
@@ -223,11 +235,23 @@ function probeSource(): string {
   return `/* Written by scripts/verify-gates.ts into a temp dir; removed on exit. */
 import { CHANNEL_BY_ID } from '${u('scripts/channels.ts')}';
 import { LAUNCH, patchWindows } from '${u('scripts/patches.ts')}';
+import type { PatchBoundary } from '${u('scripts/patches.ts')}';
+import {
+  diff,
+  fatal,
+  getText,
+  readNotesPage,
+  readNotesSitemap,
+} from '${u('scripts/patch-check.ts')}';
+import type { Announced, Finding, NotesVersion } from '${u('scripts/patch-check.ts')}';
 import {
   buildAliasMatcher,
   buildSupportIndex,
+  findRouteChunk,
   loadCharacters,
   loadSupports,
+  pageKind,
+  parseVendorFighters,
   playerId,
 } from '${u('scripts/roster.ts')}';
 import {
@@ -470,6 +494,276 @@ if (which.startsWith('index-')) {
       show(r),
     );
   }
+}
+
+// ── the patch checker's web-notes surface, and its build-clock excuse ───────
+if (which === 'notes-page') {
+  // The live page's <main>, verbatim where it matters: the banner <h1>, the one
+  // <h2> entry whose date is an EDIT stamp, "Ranked Mode 1.0" as body text, a
+  // heading quoted inside a <script>, and headings OUTSIDE <main> that would
+  // trip the version-shape rule if the reader strayed past it.
+  const live =
+    '<h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Patch 2.5<br><em>Updated September 9, 2026</em></strong></h2>';
+  const page = (inner: string): string =>
+    '<html><body><header><h2>Get the Latest from the Four Nations</h2></header>' +
+    '<main id="page" class="container" role="main">' +
+    '<h1 style="text-align: center; ; white-space:pre-wrap;" data-rte-preserve-empty="true"><span class="sqsrte-text-color--white"><strong>PATCH NOTES</strong></span></h1>' +
+    inner +
+    '<script>var quoted = "<h2>Patch 9.9 January 1, 2030</h2>";</script>' +
+    '</main><footer><h4>FOLLOW OUR SOCIALS</h4><h4>Update 1.0 of this footer</h4></footer></body></html>';
+  const show = (r: ReturnType<typeof readNotesPage>): string =>
+    'entries=[' + r.entries.map((e) => e.version + '/' + e.dayIs + '/' + e.day).join(', ') + '] unreadable=' + JSON.stringify(r.unreadable);
+  const r1 = readNotesPage(page(live + '<p>Ranked Mode 1.0 (now available for consoles)</p>'));
+  need(
+    'NOTES PAGE READS THE LIVE HEADING (Patch 2.5, an "Updated" stamp of 2026-09-09)',
+    r1.unreadable.length === 0 && show(r1).startsWith('entries=[2.5/updated/2026-09-09]'),
+    show(r1),
+  );
+  const r2 = readNotesPage(
+    page('<h2><strong>Patch 3.0<br><em>October 7, 2026</em></strong></h2><h2><strong>Patch 2.5<br><em>September 2, 2026</em></strong></h2>'),
+  );
+  need(
+    'NOTES PAGE READS A BARE DATED ENTRY AND SORTS BY DAY (2.5 before 3.0, whatever the DOM order)',
+    r2.unreadable.length === 0 && show(r2).startsWith('entries=[2.5/stated/2026-09-02, 3.0/stated/2026-10-07]'),
+    show(r2),
+  );
+  const r3 = readNotesPage(page('<p>Coming soon</p>'));
+  need(
+    'A BANNER-ONLY NOTES PAGE IS UNREADABLE, NEVER "NO PATCHES"',
+    r3.entries.length === 0 && r3.unreadable.length === 1,
+    show(r3),
+  );
+  const r4 = readNotesPage(page(live + '<h2>Hotfix<br>October 13, 2026</h2>'));
+  need(
+    'A DATED HOTFIX HEADING IS UNREADABLE',
+    r4.unreadable.some((w) => w.startsWith('"Hotfix October 13, 2026"')),
+    show(r4),
+  );
+  const r5 = readNotesPage(page(live + '<h2>Hotfix 3.0.1 is live</h2>'));
+  need(
+    'A VERSION-SHAPED HOTFIX HEADING IS UNREADABLE',
+    r5.unreadable.some((w) => w.startsWith('"Hotfix 3.0.1 is live"')),
+    show(r5),
+  );
+}
+
+if (which === 'notes-sitemap') {
+  // The live sitemap's shape: a flat <urlset> (21 rows on 2026-10-15), the 3.0
+  // notes row verbatim, and the site's unrelated editorials beside it.
+  const PG = 'https://www.paramountgames.com';
+  const row = (loc: string, lastmod: string): string =>
+    '<url>\\n<loc>' + loc + '</loc>\\n<lastmod>' + lastmod + '</lastmod>\\n<changefreq>monthly</changefreq>\\n<priority>0.7</priority>\\n</url>\\n';
+  const xml =
+    '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
+    row(PG, '2026-10-16T00:32:22.740Z') +
+    row(PG + '/editorial/avatar-legends-the-fighting-game-what-happened-with-xbox-and-the-journey-ahead', '2026-10-07T21:05:00.700Z') +
+    row(PG + '/editorial/avatar-legends-the-fighting-game-patch-3-0-overall-patch-notes', '2026-10-07T21:05:00.700Z') +
+    row(PG + '/editorial/justin-wong-for-avatar-legends', '2026-10-01T00:00:00.000Z') +
+    '</urlset>\\n';
+  const show = (r: ReturnType<typeof readNotesSitemap>): string =>
+    'entries=[' + r.entries.map((e) => e.version + '/' + e.dayIs + '/' + e.day + ' @ ' + e.where).join(', ') + '] unreadable=' + JSON.stringify(r.unreadable);
+  const r1 = readNotesSitemap(xml);
+  need(
+    'THE SITEMAP READS THE 3.0 NOTES PAGE FROM ITS SLUG (3.0, lastmod 2026-10-07) AND NOTHING ELSE',
+    show(r1) === 'entries=[3.0/lastmod/2026-10-07 @ ' + PG + '/editorial/avatar-legends-the-fighting-game-patch-3-0-overall-patch-notes] unreadable=[]',
+    show(r1),
+  );
+  const r2 = readNotesSitemap('<urlset>\\n' + row(PG + '/editorial/justin-wong-for-avatar-legends', '2026-10-01T00:00:00.000Z') + '</urlset>\\n');
+  need(
+    'AN UNRELATED EDITORIAL SLUG YIELDS NOTHING, AND NOTHING IS NOT UNREADABLE',
+    r2.entries.length === 0 && r2.unreadable.length === 0,
+    show(r2),
+  );
+}
+
+if (which === 'notes-diff') {
+  // A three-row fixture table and the two live Steam posts as diff() sees them,
+  // with \`now\` pinned. Everything the clock or the network would supply arrives
+  // in the options object, so nothing here reaches the network — and the
+  // assertions are on SPECIFIC finding text, never on "no fatal findings".
+  const steam = 'https://store.steampowered.com/news/app/2424420/view/';
+  const table: PatchBoundary[] = [
+    { version: '2026-07-23', start: '2026-07-23', announcedOn: 'launch' },
+    { version: '2026-09-02', start: '2026-09-02', label: 'Patch 2.5', announcedOn: 'steam', url: steam + '681886390551577351' },
+    { version: '2026-10-07', start: '2026-10-07', label: 'Patch 3.0', announcedOn: 'steam', url: steam + '683015461706662083' },
+  ];
+  const announced: Announced[] = [
+    { gid: '1842846814444872', title: 'Game Update - September 2, 2026', url: steam + '681886390551577351', posted: '2026-09-03', start: '2026-09-02', version: '2.5', titleDate: '2026-09-02', eventType: 13 },
+    { gid: '1846018067926374', title: 'PATCH 3.0 IS HERE', url: steam + '683015461706662083', posted: '2026-10-07', start: '2026-10-07', version: '3.0', titleDate: null, eventType: 14 },
+  ];
+  const now = '2026-10-15';
+  const PAGE = 'https://avatarfighters.com/patchnotes';
+  const LOC = 'https://www.paramountgames.com/editorial/avatar-legends-the-fighting-game-patch-3-0-overall-patch-notes';
+  const onPage = (version: string): NotesVersion => ({ version, day: '2026-09-09', dayIs: 'updated', where: PAGE });
+  const inSitemap = (version: string): NotesVersion => ({ version, day: '2026-10-07', dayIs: 'lastmod', where: LOC });
+  const texts = (fs: Finding[], glyph: string): string[] => fs.filter((f) => f.glyph === glyph).map((f) => f.text);
+  const list = (fs: Finding[]): string => fs.map((f) => f.glyph + ' ' + f.text.slice(0, 110)).join(' | ');
+
+  const a = diff(announced, table, { notes: [inSitemap('3.0'), onPage('3.0.1')], now });
+  need(
+    'A WEB-NOTES VERSION WITH NO LABELLED ROW IS DRIFT (fatal +)',
+    a.filter(fatal).length === 1 &&
+      texts(a, '+').some((t) =>
+        t.startsWith("Patch 3.0.1 — stated by the vendor's web notes (" + PAGE + ", Updated 2026-09-09) and no row in scripts/patches.ts is labelled 'Patch 3.0.1'"),
+      ) &&
+      texts(a, 'ⓘ').some((t) => t.startsWith('Patch 3.0 — stated by the vendor') && t.endsWith('and labelled on the 2026-10-07 row')),
+    list(a),
+  );
+  const b = diff(announced, table, { build: { id: '25790171', day: '2026-10-13' }, now });
+  need(
+    'AN EXCUSED BUILD IS INFORMATIONAL (BUILDS_OK is read; the 10-13 build prints as ⓘ, not ~)',
+    !b.some(fatal) &&
+      texts(b, 'ⓘ').some((t) => t.startsWith('build 25790171 shipped 2026-10-13 — excused: set live 2026-10-13T14:01Z')),
+    list(b),
+  );
+  const c = diff(announced, table, { build: { id: '1', day: '2026-10-13' }, notes: [inSitemap('3.0'), onPage('2.5')], now });
+  need(
+    'AN UNEXCUSED BUILD IS DRIFT (~), AND THE WEB NOTES CANNOT EXCUSE IT',
+    c.filter(fatal).length === 1 &&
+      texts(c, '~').some((t) =>
+        t.startsWith('a Steam build (1) shipped on 2026-10-13, after the newest table row (2026-10-07), and no announcement explains it'),
+      ),
+    list(c),
+  );
+  const d = diff(announced, table, { notes: [onPage('2.5')], now });
+  need(
+    'VENDOR NOTES LAG IS INFORMATIONAL (2.5 stated, 3.0 labelled)',
+    !d.some(fatal) &&
+      texts(d, 'ⓘ').some((t) => t.startsWith("vendor notes lag: the web notes stop at 2.5 while the table's newest label is Patch 3.0")),
+    list(d),
+  );
+  const e = diff(announced, table, { notes: [onPage('10.0')], now });
+  need(
+    'VERSIONS COMPARE NUMERICALLY (10.0 is newer than 3.0, not older)',
+    !e.some((f) => f.text.startsWith('vendor notes lag')) && e.some((f) => f.text.startsWith('Patch 10.0 — stated by')),
+    list(e),
+  );
+}
+
+if (which === 'notes-fetch') {
+  // A closed local port, so the control is offline (the tournaments control
+  // uses the same trick). The run block maps a rejection to UNVERIFIED; a
+  // fetcher that resolved instead would hand the reader an empty page and file
+  // a network outage as UNREADABLE.
+  const got = await getText('http://127.0.0.1:9/', 'probe').then(
+    (s) => 'resolved with ' + s.length + ' char(s)',
+    (e: unknown) => 'rejected: ' + (e instanceof Error ? e.message : String(e)),
+  );
+  need(
+    'THE NOTES FETCHER REJECTS ON AN UNREACHABLE HOST (UNVERIFIED, never a blank page)',
+    got.startsWith('rejected: '),
+    got,
+  );
+}
+
+// ── the roster scrape's document classifier, chunk finder and fighter reader ─
+// Bodies HAND-BUILT in the 2026-10-15 incident's shape: for ~5 minutes at a time
+// Akamai served the Next.js /_tree prefetch flight payload (3,213 B,
+// text/x-component) for the BARE document URL. What the 10-15 research
+// established is what these fixtures take from it — the opening tokens (\`:HL[\`
+// for the prefetch, \`1:"$Sreact.fragment"\` for a full RSC body), the size and
+// the media type. Every NAME in them is the live document's own, read from its
+// inline \`__next_f\` flight rows on 2026-10-16 (same deploy; the route chunk is
+// unchanged since 10-07): buildId 357M3KBInrInuZJWMAYJe, the STATIC segment
+// \`avatar-legends-the-fighting-game\` under \`games\` (a static route shadowing
+// app/games/[slug], so there is no \`["slug",…,"d"]\` row), css
+// 7619ce5ceb339fd3.css, font 04733d2630d38c3e-s.p.woff2, and the client
+// reference \`16:I[48059,["3893",…page-1b60cbedb174af22.js"],"AvatarRoot"]\`. The
+// rest of each row is hand-built, and the prefetch body itself was NOT
+// re-fetched: asking the bare URL for it means sending the RSC headers roster.ts
+// forbids. The classifier reads content-type and the first nine characters of
+// STRUCTURE — never size or sha1 — so only the opening token is load-bearing,
+// and the body sniff is the arm that catches a flight payload labelled
+// text/html.
+if (which === 'roster-flight') {
+  const HTML_CT = 'text/html; charset=utf-8';
+  const tree =
+    ':HL["/_next/static/css/7619ce5ceb339fd3.css","style"]\\n' +
+    ':HL["/_next/static/media/04733d2630d38c3e-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]\\n' +
+    '0:{"b":"357M3KBInrInuZJWMAYJe","p":"","c":["","games","avatar-legends-the-fighting-game"],"i":false,' +
+    '"f":[[["",{"children":["games",{"children":["avatar-legends-the-fighting-game",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true]],"m":"$undefined","G":["$1",[]],"s":false,"S":true}\\n';
+  const full =
+    '1:"$Sreact.fragment"\\n' +
+    '16:I[48059,["3893","static/chunks/app/games/avatar-legends-the-fighting-game/page-1b60cbedb174af22.js"],"AvatarRoot"]\\n';
+  const html =
+    '<!DOCTYPE html><html lang="en" data-scroll-behavior="smooth"><head><meta charSet="utf-8"/>' +
+    '<title>Avatar Legends: The Fighting Game — Official Site</title></head><body></body></html>';
+  need(
+    'A /_tree PREFETCH FLIGHT PAYLOAD IS A FLIGHT PAYLOAD, EVEN LABELLED text/html (2026-10-15)',
+    pageKind(HTML_CT, tree) === 'flight',
+    'pageKind(text/html, ":HL[…") = ' + pageKind(HTML_CT, tree),
+  );
+  need(
+    'A FULL RSC PAYLOAD (1:"$Sreact.fragment") IS A FLIGHT PAYLOAD — a :HL[ sniff alone misses it',
+    pageKind(HTML_CT, full) === 'flight',
+    'pageKind(text/html, 1:"$Sreact.fragment"…) = ' + pageKind(HTML_CT, full),
+  );
+  const docs = [html, '\\n  <!doctype html><html>', '<html lang="en"><head></head></html>'];
+  need(
+    'AN HTML DOCUMENT IS HTML, whatever the case of its doctype or the whitespace before it',
+    docs.every((b) => pageKind(HTML_CT, b) === 'html'),
+    docs.map((b) => pageKind(HTML_CT, b)).join(', '),
+  );
+  need(
+    'text/x-component IS A FLIGHT PAYLOAD WHATEVER THE BODY',
+    pageKind('text/x-component', html) === 'flight',
+    'pageKind(text/x-component, "<!DOCTYPE html>…") = ' + pageKind('text/x-component', html),
+  );
+}
+
+if (which === 'roster-chunk') {
+  // The live document's <head> after the 10-07 deploy, cut to three of its tags
+  // with their names verbatim (read 2026-10-16): a stylesheet, the webpack
+  // runtime and the route tag — the hash rotates on every deploy; the ROUTE PATH
+  // is the rule. Beside it, the same chunk as the document's own inline flight
+  // rows name it — a client reference WITHOUT the /_next/ prefix, which the
+  // finder refuses on purpose: a flight payload is refused before the chunk is
+  // looked for, and accepting the reference would be the first step toward
+  // parsing RSC.
+  const PG = 'https://www.paramountgames.com';
+  const ROUTE = 'static/chunks/app/games/avatar-legends-the-fighting-game/page-1b60cbedb174af22.js';
+  const doc = (scripts: string): string =>
+    '<!DOCTYPE html><html lang="en" data-scroll-behavior="smooth"><head><link rel="stylesheet" href="/_next/static/css/7619ce5ceb339fd3.css" data-precedence="next"/>' +
+    '<script src="/_next/static/chunks/webpack-de369461ee22e9ac.js" id="_R_" async=""></script>' +
+    scripts +
+    '</head><body><main></main></body></html>';
+  const live = doc('<script src="/_next/' + ROUTE + '" async=""></script>');
+  need(
+    'THE ROUTE CHUNK IS FOUND BY ROUTE PATH AND RETURNED ABSOLUTE',
+    findRouteChunk(live) === PG + '/_next/' + ROUTE,
+    String(findRouteChunk(live)),
+  );
+  const flight = '16:I[48059,["3893","' + ROUTE + '"],"AvatarRoot"]\\n';
+  need(
+    'A DOCUMENT WITH NO ROUTE CHUNK YIELDS null — and so does the un-prefixed client reference a flight payload carries',
+    findRouteChunk(doc('')) === null && findRouteChunk(flight) === null,
+    String(findRouteChunk(doc(''))) + ' / ' + String(findRouteChunk(flight)),
+  );
+}
+
+if (which === 'roster-fighters') {
+  // The first two of the live chunk's eight fighters[] entries, VERBATIM from
+  // page-1b60cbedb174af22.js (34,340 B, read 2026-10-16, unchanged since the
+  // 10-07 deploy) and closed after the second, with every field the reader has
+  // to step over between one entry's \`name\` and the next entry's \`key\`. Zero
+  // from a chunk without the literal is the CALLER's verdict (UNREADABLE), so
+  // the reader returns [] and never throws.
+  const chunk =
+    'fighters:[{key:"aang",element:"air",number:"#01 selected",name:"Aang",image:i("portraits/aang.jpg"),heroImage:i("characters/aang.png"),alt:"Aang official key art",seal:"seal-air",line:"Using his mastery of airbending to his advantage, Aang is tricky, fast and evasive. He uses his high mobility playstyle to cross opponents up, attacking from all directions.",support:"Air drift into staff route and corner carry",envImage:i("env/tiles/air.jpg")},' +
+    '{key:"katara",element:"water",number:"#02 selected",name:"Katara",image:i("portraits/katara.jpg"),heroImage:i("characters/katara.png"),alt:"Katara official key art",seal:"seal-water",line:"Katara harnesses water to whip opponents from range and maximize lengthy combos. Attack from range with water and ice projectiles to keep opponents on their toes.",support:"Water snare into ice-confirm reset",envImage:i("env/tiles/water.jpg")}]';
+  const show = (fs: ReturnType<typeof parseVendorFighters>): string =>
+    '[' + fs.map((f) => f.key + '/' + f.element + '/' + f.name).join(', ') + ']';
+  need(
+    'fighters[] IS READ AS ONE ORDERED LITERAL — key, element, name (the name-and-nation control)',
+    show(parseVendorFighters(chunk)) === '[aang/air/Aang, katara/water/Katara]',
+    show(parseVendorFighters(chunk)),
+  );
+  const none = parseVendorFighters('var e={name:"Aang",key:"aang"};');
+  need(
+    'A CHUNK WITHOUT THE LITERAL YIELDS [], NEVER A THROW (zero is UNREADABLE, and the caller says so)',
+    Array.isArray(none) && none.length === 0,
+    show(none),
+  );
 }
 
 if (!which) {
@@ -791,6 +1085,120 @@ const CONTROLS: Control[] = [
       ),
   },
 
+  // ── the patch checker (scripts/patch-check.ts), through the exported API ──
+  // The vendor's web notes became the checker's fourth surface on 2026-10-15,
+  // read ONE WAY: a version they state with no labelled row is drift; their
+  // silence clears nothing. Every control here is offline — the probe imports
+  // the readers, diff() and the fetcher, and drives them with the live page's
+  // heading, the live sitemap row and a three-row fixture table. The same
+  // change made BUILDS_OK LIVE: declared 2026-09-18 and read by nothing, so
+  // the 10-13 build would have sat as DRIFT with its excuse written and
+  // ignored — which is the defect the "declared and not read" control
+  // re-creates.
+  {
+    name: 'patch-check: the notes grammar forgets "Updated" — the live heading becomes unreadable',
+    cmd: PROBE('notes-page'),
+    files: ['scripts/patch-check.ts'],
+    names: /NOTES PAGE READS THE LIVE HEADING/,
+    inject: () =>
+      sub('scripts/patch-check.ts', '(?<updated>Updated\\\\s+)?', '(?<updated>NEVER\\\\s+)?'),
+  },
+  {
+    name: 'patch-check: a dated heading with no "Patch <n>" is passed over — a hotfix posted as `Hotfix / October 13, 2026` vanishes',
+    cmd: PROBE('notes-page'),
+    files: ['scripts/patch-check.ts'],
+    names: /A DATED HOTFIX HEADING IS UNREADABLE/,
+    inject: () =>
+      sub('scripts/patch-check.ts', '    if (carriesDate) {', '    if (false as boolean) {'),
+  },
+  {
+    name: 'patch-check: the version-shaped heading rule is disarmed — "Hotfix 3.0.1 is live" passes silently',
+    cmd: PROBE('notes-page'),
+    files: ['scripts/patch-check.ts'],
+    names: /A VERSION-SHAPED HOTFIX HEADING IS UNREADABLE/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '    if (NOTES_VERSION_SHAPED.test(heading)) {',
+        '    if (false as boolean) {',
+      ),
+  },
+  {
+    name: 'patch-check: an entry-less notes page reads as "no patches" instead of UNREADABLE',
+    cmd: PROBE('notes-page'),
+    files: ['scripts/patch-check.ts'],
+    names: /A BANNER-ONLY NOTES PAGE IS UNREADABLE/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '  if (!out.entries.length && !out.unreadable.length && !out.excused.length) {',
+        '  if (false as boolean) {',
+      ),
+  },
+  {
+    name: 'patch-check: the sitemap slug pattern drifts — the 3.0 notes page is no longer read',
+    cmd: PROBE('notes-sitemap'),
+    files: ['scripts/patch-check.ts'],
+    names: /THE SITEMAP READS THE 3\.0 NOTES PAGE FROM ITS SLUG/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        'avatar-legends-the-fighting-game-patch-(',
+        'avatar-legends-the-fighting-game-patchnotes-(',
+      ),
+  },
+  {
+    name: 'patch-check: every web-notes version is excused — a version with no labelled row stops being drift',
+    cmd: PROBE('notes-diff'),
+    files: ['scripts/patch-check.ts'],
+    names: /A WEB-NOTES VERSION WITH NO LABELLED ROW IS DRIFT/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '      const excuse = NOTES_OK[n.version];',
+        "      const excuse = NOTES_OK[n.version] ?? 'excused by the gate';",
+      ),
+  },
+  {
+    name: 'patch-check: BUILDS_OK is declared and not read — the excused 10-13 build is DRIFT again',
+    cmd: PROBE('notes-diff'),
+    files: ['scripts/patch-check.ts'],
+    names: /AN EXCUSED BUILD IS INFORMATIONAL/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '    const excuse = BUILDS_OK[build.id];',
+        '    const excuse = undefined as string | undefined;',
+      ),
+  },
+  {
+    name: 'patch-check: an unexplained Steam build is downgraded to ⓘ (the clock still ticks and nobody hears it)',
+    cmd: PROBE('notes-diff'),
+    files: ['scripts/patch-check.ts'],
+    names: /AN UNEXCUSED BUILD IS DRIFT/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        "            glyph: '~',\n            text:\n              `a Steam build (",
+        "            glyph: 'ⓘ',\n            text:\n              `a Steam build (",
+      ),
+  },
+  {
+    name: 'patch-check: the notes fetcher swallows a failed fetch — an outage would read as an empty page',
+    cmd: PROBE('notes-fetch'),
+    files: ['scripts/patch-check.ts'],
+    names: /THE NOTES FETCHER REJECTS ON AN UNREACHABLE HOST/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        'export async function getText(url: string, what: string): Promise<string> {',
+        'export async function getText(url: string, what: string): Promise<string> {\n' +
+          '  return getText0(url, what).catch(() => "");\n' +
+          '}\n' +
+          'async function getText0(url: string, what: string): Promise<string> {',
+      ),
+  },
+
   // ── the registries (scripts/characters.ts) ───────────────────────────────
   {
     // THE MEASURED TRAP, and it is this game's version of CotW's "Griffon" case.
@@ -878,6 +1286,60 @@ const CONTROLS: Control[] = [
     files: ['data/characters.json', 'data/supports.json', 'scripts/expiries.ts'],
     names: /toph is in ROSTER and in UNRELEASED/,
     inject: () => sub('scripts/expiries.ts', "    id: 'iroh',", "    id: 'toph',"),
+  },
+
+  // ── the roster scrape (scripts/roster.ts), through the exported API ──────
+  // 2026-10-15: at least twice, for ~5 minutes each, Akamai answered the BARE
+  // document URL with the Next.js /_tree prefetch flight payload (3,213 B,
+  // text/x-component), and `npm run data:roster-check` read it as "the site's
+  // route layout changed". The scrape now cache-busts the fetch, classifies the
+  // document before it looks for the chunk, and the verdict names the cause
+  // (UNVERIFIED for weather, UNREADABLE for a real layout change). Every control
+  // here is offline: the probe drives the three pure readers with bodies
+  // hand-built in the incident's shape — the research's opening tokens, the
+  // live document's own names (read 2026-10-16) and the live chunk's first two
+  // fighters[] entries verbatim. The prefetch body is not in the research record
+  // beyond its opening token, size and media type, and re-fetching it would mean
+  // sending the RSC headers roster.ts forbids.
+  {
+    name: 'roster-check: the flight-payload body sniff is disarmed — a /_tree payload labelled text/html reads as the document',
+    cmd: PROBE('roster-flight'),
+    files: ['scripts/roster.ts'],
+    names: /A \/_tree PREFETCH FLIGHT PAYLOAD IS A FLIGHT PAYLOAD/,
+    inject: () =>
+      sub(
+        'scripts/roster.ts',
+        "  return head.startsWith('<!doctype') || head.startsWith('<html') ? 'html' : 'flight';",
+        "  return 'html';",
+      ),
+  },
+  {
+    name: 'roster-check: the content-type arm is disarmed — text/x-component is no longer a flight payload',
+    cmd: PROBE('roster-flight'),
+    files: ['scripts/roster.ts'],
+    names: /text\/x-component IS A FLIGHT PAYLOAD WHATEVER THE BODY/,
+    inject: () =>
+      sub('scripts/roster.ts', "includes('text/x-component')", "includes('text/x-never')"),
+  },
+  {
+    name: 'roster-check: the route-path rule drifts from the live route — the document’s own script tag yields no chunk',
+    cmd: PROBE('roster-chunk'),
+    files: ['scripts/roster.ts'],
+    names: /THE ROUTE CHUNK IS FOUND BY ROUTE PATH AND RETURNED ABSOLUTE/,
+    inject: () =>
+      sub(
+        'scripts/roster.ts',
+        'games\\/avatar-legends-the-fighting-game\\/page-[a-z0-9]+\\.js/i;',
+        'games\\/avatar-legends\\/page-[a-z0-9]+\\.js/i;',
+      ),
+  },
+  {
+    name: 'roster-check: the fighters[] literal rule drifts — the live chunk yields zero fighters',
+    cmd: PROBE('roster-fighters'),
+    files: ['scripts/roster.ts'],
+    names: /fighters\[\] IS READ AS ONE ORDERED LITERAL/,
+    inject: () =>
+      sub('scripts/roster.ts', 'element:"([a-z]+)",number:', 'element:"([A-Z]+)",number:'),
   },
 
   // ── the parser and the index reader, through the exported API ────────────
