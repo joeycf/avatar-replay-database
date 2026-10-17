@@ -1,24 +1,24 @@
 {
   "totals": {
-    "replays": 846,
+    "replays": 847,
     "characters": 12,
-    "players": 507,
+    "players": 509,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 402,
-      "2026-10-07": 89
+      "2026-10-07": 90
     },
     "supports": 36,
-    "sidesWithSupport": 1016
+    "sidesWithSupport": 1018
   },
   "characterUsage": {
+    "katara": 191,
+    "kyoshi": 178,
     "azula": 190,
-    "kyoshi": 177,
     "korra": 188,
     "zaheer": 184,
-    "katara": 190,
     "sokka": 100,
     "ozai": 128,
     "toph": 231,
@@ -83,11 +83,11 @@
       "toph": 96
     },
     "2026-10-07": {
+      "katara": 17,
+      "kyoshi": 23,
       "azula": 24,
-      "kyoshi": 22,
       "korra": 11,
       "zaheer": 19,
-      "katara": 16,
       "sokka": 2,
       "ozai": 13,
       "toph": 40,
@@ -97,6 +97,12 @@
     }
   },
   "playerCharacters": {
+    "sister-salvation": {
+      "katara": 1
+    },
+    "anterdes": {
+      "kyoshi": 1
+    },
     "boaz070": {
       "azula": 2
     },
@@ -1652,6 +1658,8 @@
     }
   },
   "supportUsage": {
+    "hakoda": 3,
+    "rangi": 49,
     "firelord-sozin": 34,
     "the-hippo": 43,
     "ghazan": 59,
@@ -1660,7 +1668,6 @@
     "the-boulder": 53,
     "p'li": 39,
     "imperial-firebender": 24,
-    "hakoda": 2,
     "ming-hua": 30,
     "june": 39,
     "gyatso": 48,
@@ -1670,7 +1677,6 @@
     "vaatu": 13,
     "yun": 29,
     "badgermole": 37,
-    "rangi": 48,
     "kelsang": 26,
     "mai": 21,
     "master-pakku": 36,
