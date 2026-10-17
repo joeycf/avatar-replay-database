@@ -25,6 +25,7 @@ concurrency:
 
 jobs:
   refresh:
+    name: Refresh the archive — red means the live archive is stale or wrong
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +58,9 @@ jobs:
       # they read the vendor, and a vendor outage is not ours to go red on. Their
       # home is the workspace-level ../check-rosters.sh and ../check-patches.sh,
       # which read the `roster-check:` / `patch-check:` trailers those scripts
-      # print. The offline halves of both checks ARE here, after the commit.
+      # print. The offline half (the expiries) runs in pending-work.yml after
+      # this run completes; the patch table is validated by Emit before the
+      # commit.
       #
       # QUOTA. The key is SHARED with six other games' daily crons and a recon
       # pass on this game exhausted the whole day's allowance once already
@@ -97,13 +100,13 @@ jobs:
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
 
-      - name: Parse
+      - name: Parse — red means a wrong archive was refused, nothing committed
         run: npm run data:parse
 
-      - name: Emit
+      - name: Emit — red means an invalid table or pin, nothing committed
         run: npm run data:emit
 
-      - name: Commit if changed
+      - name: Commit if changed — red means nothing was published
         run: |
           git config user.name "avatar-data-refresh[bot]"
           git config user.email "data-refresh@users.noreply.github.com"
@@ -201,48 +204,10 @@ jobs:
       # that is perfectly healthy. Delete this `env:` block on the day the
       # rewrite ships, and not before.
       #
-      # Deliberately BEFORE the two checks below: those are designed to go red,
-      # and a red step stops the ones after it.
-      - name: Post-deploy smoke check
+      # The last step. A red anywhere in this workflow now means ONE thing: the
+      # archive is stale or wrong, or visitors are served the wrong one. Steps
+      # that mean "a person has work" live in pending-work.yml.
+      - name: Post-deploy smoke check — red means visitors get the wrong archive
         env:
           SMOKE_HOST: https://avatar-replay-database.vercel.app
         run: npm run verify:deployed
-
-      - name: Flag due expiries
-        # Deliberately failing (scripts/expiries.ts). The data has already been
-        # committed and pushed by the step above, so a red run never costs a
-        # refresh — it only makes the pending work impossible to miss.
-        #
-        # THIS IS ALSO THE ROSTER CHECK THE CRON CAN HONESTLY RUN. The vendor-
-        # facing scripts/roster-check.ts is manual; this arm is clock-and-corpus
-        # and nothing upstream can blind it. It carries three live gates on day
-        # one: the six announced-but-unreleased fighters, each with a window
-        # rather than a date the vendor never gave (checklist 11d); the SHIPPED
-        # arm, which scans the committed corpus for a gated fighter's name
-        # appearing in real footage; and the support-table sweep, which is
-        # knowingly two rows short (katara and avatar-aang own two supports each
-        # of the three the vendor states) and must not go quiet about it.
-        #
-        # Clear it by doing the work, NOT by deleting this step.
-        run: npm run data:expiries
-
-      - name: Validate the patch table
-        # `if: always()` because the step above is DESIGNED to go red, and a red
-        # step stops the ones after it. These two gates are independent and both
-        # have to be able to report on the same run.
-        #
-        # OFFLINE, AND CLOCK-DEPENDENT, WHICH IS WHY IT BELONGS IN A CRON rather
-        # than only in `npm run typecheck`. scripts/patches.ts `validate()` reads
-        # TODAY: a row dated in the future, an era left closed, a
-        # CONFIRMED_QUIET_THROUGH that has drifted ahead of the clock — all of
-        # them can go from valid to invalid on a day nobody touched the repo, and
-        # the parse would then file records against a table that is wrong. The
-        # staleness alarm rides here too (STALE_PATCH_DAYS, set clear of this
-        # table's own widest gap), and it is what says out loud that the vendor
-        # has gone quiet long enough to go and look.
-        #
-        # The CONTENT check against the vendor's own feed is scripts/patch-check.ts,
-        # which is manual for the reason in its header. Clear this by fixing the
-        # table, NOT by deleting this step.
-        if: always()
-        run: npm run data:patches

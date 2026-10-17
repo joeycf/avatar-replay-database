@@ -316,8 +316,10 @@ which Strive's workflow reserved by name for game seven. The platform's no-push
 window is now 06:00–09:30. Game eight takes 09:47.
 
 fetch → theater (allowed to fail, and last of the fetches) → parse → emit →
-commit-if-changed → smoke check → expiries → patch-table validate. The index pull
-is `continue-on-error` because the cron must never depend on a third party
+commit-if-changed → smoke check. The expiries run in `pending-work.yml`
+("Pending work", `workflow_run` after every completed data run); the patch table
+is validated by Emit, before the commit. The index pull is `continue-on-error`
+because the cron must never depend on a third party
 succeeding: on any failure there is no dump, parse carries the committed records
 against the pin, and the run stays green.
 
@@ -332,8 +334,9 @@ empty pathspec means "everything".
 `roster-check` and `patch-check` are **not** in the cron. Both read the vendor and
 say so in their own headers; a vendor outage is not ours to go red on, and their
 home is the workspace-level `../check-rosters.sh` and `../check-patches.sh`. The
-offline halves — the unreleased/support/patch expiries and the patch table's own
-clock-dependent validator — run after the commit, where a red step costs no data.
+offline half — the unreleased/support/patch expiries — runs in "Pending work"
+after the data run, where a red run costs no data and hides nothing; the patch
+table's validator runs inside Emit, before the commit.
 
 ## Vercel, and the flip
 

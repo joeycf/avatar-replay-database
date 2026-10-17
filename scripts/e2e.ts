@@ -96,6 +96,52 @@ const read = (p: string): string => readFileSync(join(OUT, p), 'utf8');
 const has = (p: string): boolean => existsSync(join(OUT, p));
 const src = (p: string): string => readFileSync(join(ROOT, p), 'utf8');
 
+// ── the two workflows agree ─────────────────────────────────────────────────
+// pending-work.yml fires on data-refresh.yml's EXACT `name:` (workflow_run
+// filters are globs over names), reads only, takes no secret, and is the only
+// home of the steps that mean "a person has work". Each line is a control:
+// rename either workflow, paste a TASK step back into the data run, or move
+// the smoke check off the end, and this goes red.
+console.log('\n▶ the two workflows agree\n');
+const drText = src('.github/workflows/data-refresh.yml');
+const pwText = src('.github/workflows/pending-work.yml');
+const drName = /^name:[ \t]*(.+?)[ \t]*$/m.exec(drText)?.[1] ?? '';
+check(
+  'data-refresh.yml is named "Daily data refresh"',
+  drName === 'Daily data refresh',
+  `read "${drName}"`,
+);
+check(
+  'pending-work.yml fires on workflow_run of that exact name, type completed',
+  new RegExp(`^\\s*workflows:\\s*\\[\\s*["']${drName}["']\\s*\\]`, 'm').test(pwText) &&
+    /^\s*types:\s*\[\s*completed\s*\]/m.test(pwText),
+);
+check(
+  'pending-work.yml reads only and takes no secret',
+  /^permissions:\n {2}contents: read$/m.test(pwText) && !/secrets\./.test(pwText),
+);
+const TASK_STEPS = [
+  'Flag due expiries',
+  'Flag stale redirects',
+  'Flag retired ids with no redirect',
+  'Validate the patch table',
+];
+check(
+  'no "a person has work" step is left in the data run',
+  TASK_STEPS.every((s) => !drText.includes(`- name: ${s}`)),
+);
+check(
+  "pending-work.yml carries the chores and the platform check's survival",
+  pwText.includes('- name: Flag due expiries') &&
+    pwText.includes('- name: Platform freshness schedule is alive'),
+);
+const stepNames = [...drText.matchAll(/^ {6}- name: (.+)$/gm)].map((m) => m[1]!);
+check(
+  "the smoke check is the data run's last step",
+  stepNames.at(-1)?.startsWith('Post-deploy smoke check') === true,
+  stepNames.at(-1),
+);
+
 /**
  * A wave-gated assertion. `stage('scripts/art.ts')` returns null once that file
  * exists — the assertion is then HARD — and a reason string until it does, which
