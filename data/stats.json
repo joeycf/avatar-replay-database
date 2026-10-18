@@ -1,29 +1,29 @@
 {
   "totals": {
-    "replays": 847,
+    "replays": 865,
     "characters": 12,
-    "players": 509,
+    "players": 515,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 402,
-      "2026-10-07": 90
+      "2026-10-07": 108
     },
     "supports": 36,
     "sidesWithSupport": 1018
   },
   "characterUsage": {
-    "katara": 191,
-    "kyoshi": 178,
-    "azula": 190,
-    "korra": 188,
-    "zaheer": 184,
+    "ozai": 139,
+    "katara": 193,
+    "azula": 192,
+    "korra": 193,
+    "kyoshi": 180,
+    "toph": 239,
+    "zaheer": 189,
+    "aang": 113,
     "sokka": 100,
-    "ozai": 128,
-    "toph": 231,
     "zuko": 109,
-    "aang": 112,
     "nightmare-korra": 57,
     "avatar-aang": 36
   },
@@ -83,20 +83,68 @@
       "toph": 96
     },
     "2026-10-07": {
-      "katara": 17,
-      "kyoshi": 23,
-      "azula": 24,
-      "korra": 11,
-      "zaheer": 19,
+      "ozai": 24,
+      "katara": 19,
+      "azula": 26,
+      "korra": 16,
+      "kyoshi": 25,
+      "toph": 48,
+      "zaheer": 24,
+      "aang": 10,
       "sokka": 2,
-      "ozai": 13,
-      "toph": 40,
       "zuko": 17,
-      "aang": 9,
       "nightmare-korra": 5
     }
   },
   "playerCharacters": {
+    "ken-imperial": {
+      "ozai": 2
+    },
+    "baconlord": {
+      "katara": 2
+    },
+    "arin-karin": {
+      "ozai": 7
+    },
+    "lanny": {
+      "azula": 1
+    },
+    "zwei": {
+      "katara": 1
+    },
+    "ziad": {
+      "korra": 20
+    },
+    "briggetchu": {
+      "kyoshi": 6
+    },
+    "arinkarin": {
+      "ozai": 50
+    },
+    "salskies": {
+      "toph": 2
+    },
+    "geff": {
+      "azula": 2
+    },
+    "fuerte": {
+      "toph": 14
+    },
+    "bustman": {
+      "toph": 3
+    },
+    "busta": {
+      "zaheer": 17
+    },
+    "ferno": {
+      "ozai": 2
+    },
+    "nosaparks": {
+      "aang": 1
+    },
+    "y-huss": {
+      "zaheer": 3
+    },
     "sister-salvation": {
       "katara": 1
     },
@@ -140,9 +188,6 @@
       "zaheer": 26,
       "nightmare-korra": 1
     },
-    "baconlord": {
-      "katara": 1
-    },
     "miller2b": {
       "zuko": 15,
       "aang": 1
@@ -178,15 +223,6 @@
     "missedinput-exe": {
       "azula": 1
     },
-    "fuerte": {
-      "toph": 10
-    },
-    "busta": {
-      "zaheer": 13
-    },
-    "arinkarin": {
-      "ozai": 49
-    },
     "mpgame": {
       "katara": 2
     },
@@ -211,9 +247,6 @@
     },
     "nxtrack": {
       "nightmare-korra": 1
-    },
-    "bustman": {
-      "toph": 1
     },
     "beartoe": {
       "zaheer": 2
@@ -302,9 +335,6 @@
     "yodeadman": {
       "zuko": 1
     },
-    "geff": {
-      "azula": 1
-    },
     "distort": {
       "azula": 2
     },
@@ -320,9 +350,6 @@
     "thesaviorzombie": {
       "ozai": 1,
       "toph": 1
-    },
-    "briggetchu": {
-      "kyoshi": 4
     },
     "biscuit": {
       "azula": 22
@@ -512,9 +539,6 @@
     },
     "aeduo": {
       "korra": 3
-    },
-    "ziad": {
-      "korra": 15
     },
     "shaudl": {
       "aang": 1
@@ -1027,9 +1051,6 @@
     "paige": {
       "kyoshi": 2
     },
-    "y-huss": {
-      "zaheer": 2
-    },
     "darkwater72": {
       "katara": 2
     },
@@ -1299,9 +1320,6 @@
     },
     "storm179": {
       "korra": 1
-    },
-    "arin-karin": {
-      "ozai": 1
     },
     "kang": {
       "nightmare-korra": 3

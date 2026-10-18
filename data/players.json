@@ -106,7 +106,12 @@
   },
   {
     "id": "arin-karin",
-    "handle": "ARIN KARIN"
+    "handle": "Arin Karin",
+    "extra": {
+      "aliases": [
+        "ARIN KARIN"
+      ]
+    }
   },
   {
     "id": "arinkarin",
@@ -264,7 +269,12 @@
   },
   {
     "id": "bustman",
-    "handle": "BustMan"
+    "handle": "Bustman",
+    "extra": {
+      "aliases": [
+        "BustMan"
+      ]
+    }
   },
   {
     "id": "buyachushun",
@@ -596,6 +606,10 @@
     "handle": "Feral Hoe Hours"
   },
   {
+    "id": "ferno",
+    "handle": "Ferno"
+  },
+  {
     "id": "finisher",
     "handle": "Finisher"
   },
@@ -654,7 +668,12 @@
   },
   {
     "id": "geff",
-    "handle": "geff_"
+    "handle": "Geff",
+    "extra": {
+      "aliases": [
+        "geff_"
+      ]
+    }
   },
   {
     "id": "giga-caras",
@@ -944,6 +963,10 @@
     "handle": "Kbzon"
   },
   {
+    "id": "ken-imperial",
+    "handle": "Ken Imperial"
+  },
+  {
     "id": "kenecrypt",
     "handle": "Kenecrypt"
   },
@@ -1026,6 +1049,10 @@
   {
     "id": "lakeryy",
     "handle": "Lakeryy"
+  },
+  {
+    "id": "lanny",
+    "handle": "Lanny"
   },
   {
     "id": "lannyva",
@@ -1323,6 +1350,10 @@
   {
     "id": "normal-ms",
     "handle": "NORMAL-MS"
+  },
+  {
+    "id": "nosaparks",
+    "handle": "Nosaparks"
   },
   {
     "id": "notalice",
@@ -1642,6 +1673,10 @@
   {
     "id": "saino",
     "handle": "Saino"
+  },
+  {
+    "id": "salskies",
+    "handle": "Salskies"
   },
   {
     "id": "sanay",
@@ -2126,7 +2161,12 @@
   },
   {
     "id": "y-huss",
-    "handle": "y-huss"
+    "handle": "y-huss",
+    "extra": {
+      "aliases": [
+        "Y huss"
+      ]
+    }
   },
   {
     "id": "yaboidre",
@@ -2197,5 +2237,9 @@
   {
     "id": "ziad",
     "handle": "Ziad"
+  },
+  {
+    "id": "zwei",
+    "handle": "Zwei"
   }
 ]

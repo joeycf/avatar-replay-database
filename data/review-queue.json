@@ -397,6 +397,35 @@
     "durationSec": 2130
   },
   {
+    "id": "EWj8QZYicvc@6862",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Busta (Zaheer) vs Ziad (Korra) ▰ Fire Nation Fridays 11",
+    "publishedAt": "2026-10-17T18:43:01Z",
+    "durationSec": 8782,
+    "handles": [
+      "Busta",
+      "Ziad"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "busta",
+          "ziad"
+        ],
+        "characters": [
+          "korra",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-17"
+      },
+      "ids": [
+        "EWj8QZYicvc@6862",
+        "EWj8QZYicvc@8361"
+      ]
+    }
+  },
+  {
     "id": "7UqqRt16KcA@2455",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
