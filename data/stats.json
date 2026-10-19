@@ -1,27 +1,27 @@
 {
   "totals": {
-    "replays": 865,
+    "replays": 868,
     "characters": 12,
-    "players": 515,
+    "players": 520,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 402,
-      "2026-10-07": 108
+      "2026-10-07": 111
     },
     "supports": 36,
-    "sidesWithSupport": 1018
+    "sidesWithSupport": 1022
   },
   "characterUsage": {
-    "ozai": 139,
+    "korra": 195,
+    "ozai": 141,
+    "aang": 114,
+    "kyoshi": 181,
     "katara": 193,
     "azula": 192,
-    "korra": 193,
-    "kyoshi": 180,
     "toph": 239,
     "zaheer": 189,
-    "aang": 113,
     "sokka": 100,
     "zuko": 109,
     "nightmare-korra": 57,
@@ -83,20 +83,38 @@
       "toph": 96
     },
     "2026-10-07": {
-      "ozai": 24,
+      "korra": 18,
+      "ozai": 26,
+      "aang": 11,
+      "kyoshi": 26,
       "katara": 19,
       "azula": 26,
-      "korra": 16,
-      "kyoshi": 25,
       "toph": 48,
       "zaheer": 24,
-      "aang": 10,
       "sokka": 2,
       "zuko": 17,
       "nightmare-korra": 5
     }
   },
   "playerCharacters": {
+    "ft-ziad": {
+      "korra": 1
+    },
+    "schoolbus": {
+      "korra": 6
+    },
+    "pichi": {
+      "ozai": 1
+    },
+    "majorseamen": {
+      "ozai": 1
+    },
+    "beef-set-rood": {
+      "aang": 1
+    },
+    "tufo": {
+      "kyoshi": 1
+    },
     "ken-imperial": {
       "ozai": 2
     },
@@ -1265,9 +1283,6 @@
     "ayyolado": {
       "zaheer": 1
     },
-    "schoolbus": {
-      "korra": 5
-    },
     "fish": {
       "katara": 1
     },
@@ -1676,19 +1691,19 @@
     }
   },
   "supportUsage": {
+    "firelord-sozin": 35,
+    "general-zhao": 14,
+    "gyatso": 49,
+    "rangi": 50,
     "hakoda": 3,
-    "rangi": 49,
-    "firelord-sozin": 34,
     "the-hippo": 43,
     "ghazan": 59,
-    "general-zhao": 13,
     "ursa": 49,
     "the-boulder": 53,
     "p'li": 39,
     "imperial-firebender": 24,
     "ming-hua": 30,
     "june": 39,
-    "gyatso": 48,
     "dark-avatar-unalaq": 9,
     "lo-and-li": 56,
     "joo-dee": 9,

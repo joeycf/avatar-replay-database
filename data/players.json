@@ -187,6 +187,10 @@
     "handle": "BearToe"
   },
   {
+    "id": "beef-set-rood",
+    "handle": "Beef Set Rood"
+  },
+  {
     "id": "bigbagmill",
     "handle": "BigBagMill"
   },
@@ -663,6 +667,10 @@
     "handle": "FT? SchoolBus"
   },
   {
+    "id": "ft-ziad",
+    "handle": "FT?? Ziad"
+  },
+  {
     "id": "fuerte",
     "handle": "Fuerte"
   },
@@ -1123,6 +1131,10 @@
     "handle": "Magma"
   },
   {
+    "id": "majorseamen",
+    "handle": "majorseamen"
+  },
+  {
     "id": "makpls",
     "handle": "Makpls"
   },
@@ -1458,6 +1470,10 @@
   {
     "id": "phuchi",
     "handle": "Phuchi"
+  },
+  {
+    "id": "pichi",
+    "handle": "Pichi"
   },
   {
     "id": "pinksquidz",
@@ -1997,6 +2013,10 @@
   {
     "id": "treeman",
     "handle": "Treeman"
+  },
+  {
+    "id": "tufo",
+    "handle": "Tufo"
   },
   {
     "id": "tutururu",
