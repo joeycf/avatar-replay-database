@@ -397,6 +397,64 @@
     "durationSec": 2130
   },
   {
+    "id": "ZIRoR2Q4hIc@3193",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Inahk (Kyoshi/Yun) vs Raymond Buller (Korra/Naga) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #9",
+    "publishedAt": "2026-10-19T12:51:23Z",
+    "durationSec": 8021,
+    "handles": [
+      "Inahk",
+      "Raymond Buller"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "inahk",
+          "raymond-buller"
+        ],
+        "characters": [
+          "korra",
+          "kyoshi"
+        ],
+        "playedOn": "2026-10-19"
+      },
+      "ids": [
+        "ZIRoR2Q4hIc@3193",
+        "ZIRoR2Q4hIc@6984"
+      ]
+    }
+  },
+  {
+    "id": "ZIRoR2Q4hIc@6038",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Raymond Buller (Korra/Naga) vs AWanderingTanuki (Toph/Badgermole) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #9",
+    "publishedAt": "2026-10-19T12:51:23Z",
+    "durationSec": 8021,
+    "handles": [
+      "Raymond Buller",
+      "AWanderingTanuki"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "awanderingtanuki",
+          "raymond-buller"
+        ],
+        "characters": [
+          "korra",
+          "toph"
+        ],
+        "playedOn": "2026-10-19"
+      },
+      "ids": [
+        "ZIRoR2Q4hIc@6038",
+        "ZIRoR2Q4hIc@7343"
+      ]
+    }
+  },
+  {
     "id": "EWj8QZYicvc@6862",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

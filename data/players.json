@@ -57,6 +57,10 @@
     "handle": "AfroRevoler"
   },
   {
+    "id": "agent",
+    "handle": "Agent"
+  },
+  {
     "id": "akendor",
     "handle": "Akendor"
   },
@@ -71,6 +75,10 @@
   {
     "id": "al-pigone-bodegacat",
     "handle": "Al Pigone/BodegaCat"
+  },
+  {
+    "id": "alfatwelve",
+    "handle": "alfatwelve"
   },
   {
     "id": "an11-mo",
@@ -588,6 +596,10 @@
   {
     "id": "f4b-4n",
     "handle": "F4B!4N"
+  },
+  {
+    "id": "falk",
+    "handle": "Falk"
   },
   {
     "id": "faltimux",
@@ -1492,6 +1504,10 @@
     "handle": "Plisno"
   },
   {
+    "id": "pokemaniachd",
+    "handle": "PokemaniacHD"
+  },
+  {
     "id": "poklazer",
     "handle": "PokLazer"
   },
@@ -1825,6 +1841,10 @@
   {
     "id": "soap996",
     "handle": "Soap996"
+  },
+  {
+    "id": "solid-faphands",
+    "handle": "Solid Faphands"
   },
   {
     "id": "solid-pajahands",
