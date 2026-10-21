@@ -397,6 +397,35 @@
     "durationSec": 2130
   },
   {
+    "id": "XvqC9WuYX7k@4003",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ GoneMad (Kyoshi/Rangi) vs Flankroast (Zaheer/Ming-Hua) ▰ Mix Masters Legends #5",
+    "publishedAt": "2026-10-20T15:34:54Z",
+    "durationSec": 9171,
+    "handles": [
+      "GoneMad",
+      "Flankroast"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "flankroast",
+          "gonemad"
+        ],
+        "characters": [
+          "kyoshi",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-20"
+      },
+      "ids": [
+        "XvqC9WuYX7k@4003",
+        "XvqC9WuYX7k@7860"
+      ]
+    }
+  },
+  {
     "id": "ZIRoR2Q4hIc@3193",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

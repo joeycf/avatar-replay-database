@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 883,
+    "replays": 902,
     "characters": 12,
-    "players": 525,
+    "players": 529,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 402,
-      "2026-10-07": 126
+      "2026-10-07": 145
     },
     "supports": 36,
-    "sidesWithSupport": 1051
+    "sidesWithSupport": 1083
   },
   "characterUsage": {
-    "zuko": 112,
-    "zaheer": 191,
-    "katara": 195,
-    "azula": 199,
-    "toph": 243,
-    "kyoshi": 186,
-    "korra": 201,
+    "sokka": 102,
+    "aang": 115,
+    "toph": 249,
+    "kyoshi": 197,
+    "ozai": 144,
+    "zaheer": 200,
+    "azula": 201,
+    "katara": 197,
+    "korra": 202,
+    "zuko": 113,
     "nightmare-korra": 58,
-    "ozai": 141,
-    "aang": 114,
-    "sokka": 100,
     "avatar-aang": 36
   },
   "byPatchUsage": {
@@ -83,20 +83,87 @@
       "toph": 96
     },
     "2026-10-07": {
-      "zuko": 20,
-      "zaheer": 26,
-      "katara": 21,
-      "azula": 33,
-      "toph": 52,
-      "kyoshi": 31,
-      "korra": 24,
-      "nightmare-korra": 6,
-      "ozai": 26,
-      "aang": 11,
-      "sokka": 2
+      "sokka": 4,
+      "aang": 12,
+      "toph": 58,
+      "kyoshi": 42,
+      "ozai": 29,
+      "zaheer": 35,
+      "azula": 35,
+      "katara": 23,
+      "korra": 25,
+      "zuko": 21,
+      "nightmare-korra": 6
     }
   },
   "playerCharacters": {
+    "tyrantmk": {
+      "sokka": 1
+    },
+    "weezerfan22": {
+      "aang": 1
+    },
+    "twist": {
+      "toph": 7
+    },
+    "bigblack": {
+      "kyoshi": 5
+    },
+    "thesaviorzombie": {
+      "ozai": 2,
+      "toph": 1
+    },
+    "arinkarin": {
+      "ozai": 52
+    },
+    "busta": {
+      "zaheer": 18
+    },
+    "icontrol": {
+      "toph": 3,
+      "azula": 1
+    },
+    "brian-f": {
+      "zaheer": 6,
+      "sokka": 1
+    },
+    "flankroast": {
+      "zaheer": 20
+    },
+    "gonemad": {
+      "kyoshi": 26
+    },
+    "missedfgc": {
+      "azula": 4
+    },
+    "cow": {
+      "toph": 35
+    },
+    "cwang-red": {
+      "azula": 4,
+      "korra": 2
+    },
+    "mpgame": {
+      "katara": 4
+    },
+    "jack-the-bucket": {
+      "kyoshi": 5
+    },
+    "deerskin": {
+      "kyoshi": 2
+    },
+    "manhattan-cafe": {
+      "kyoshi": 1
+    },
+    "briggetchu": {
+      "kyoshi": 7
+    },
+    "moose-lee": {
+      "zuko": 1
+    },
+    "toonie03": {
+      "sokka": 8
+    },
     "natsu": {
       "zuko": 6
     },
@@ -175,12 +242,6 @@
     "ziad": {
       "korra": 20
     },
-    "briggetchu": {
-      "kyoshi": 6
-    },
-    "arinkarin": {
-      "ozai": 50
-    },
     "salskies": {
       "toph": 2
     },
@@ -192,9 +253,6 @@
     },
     "bustman": {
       "toph": 3
-    },
-    "busta": {
-      "zaheer": 17
     },
     "ferno": {
       "ozai": 2
@@ -273,31 +331,17 @@
     "jiggynyc": {
       "toph": 15
     },
-    "brian-f": {
-      "zaheer": 4,
-      "sokka": 1
-    },
     "marsspitsbars": {
       "ozai": 12
     },
     "missedinput-exe": {
       "azula": 1
     },
-    "mpgame": {
-      "katara": 2
-    },
     "theorangejacket": {
       "toph": 1
     },
-    "flankroast": {
-      "zaheer": 14
-    },
     "ad6m": {
       "zuko": 1
-    },
-    "icontrol": {
-      "toph": 2,
-      "azula": 1
     },
     "rock-n-rollback": {
       "toph": 1
@@ -365,9 +409,6 @@
     "discount-hero": {
       "zaheer": 1
     },
-    "missedfgc": {
-      "azula": 3
-    },
     "cowthecat": {
       "kyoshi": 1
     },
@@ -377,18 +418,11 @@
     "distort": {
       "azula": 2
     },
-    "twist": {
-      "toph": 6
-    },
     "deadium": {
       "aang": 4
     },
     "faose": {
       "zaheer": 1
-    },
-    "thesaviorzombie": {
-      "ozai": 1,
-      "toph": 1
     },
     "biscuit": {
       "azula": 22
@@ -518,9 +552,6 @@
     "al-pigone": {
       "toph": 15
     },
-    "cow": {
-      "toph": 31
-    },
     "soap996": {
       "zuko": 1
     },
@@ -591,9 +622,6 @@
     "willow": {
       "zuko": 1
     },
-    "gonemad": {
-      "kyoshi": 22
-    },
     "xatchara": {
       "ozai": 1
     },
@@ -626,9 +654,6 @@
     },
     "rekt": {
       "zaheer": 2
-    },
-    "toonie03": {
-      "sokka": 7
     },
     "boogie": {
       "korra": 6
@@ -822,10 +847,6 @@
     "jemi-keiyns": {
       "kyoshi": 1
     },
-    "cwang-red": {
-      "korra": 1,
-      "azula": 3
-    },
     "testmyluck": {
       "nightmare-korra": 15,
       "zaheer": 1
@@ -835,9 +856,6 @@
     },
     "bar-barxii": {
       "azula": 13
-    },
-    "jack-the-bucket": {
-      "kyoshi": 2
     },
     "t-wong": {
       "korra": 2
@@ -1190,9 +1208,6 @@
     "mrfuk": {
       "aang": 2
     },
-    "bigblack": {
-      "kyoshi": 4
-    },
     "leonidas-daimon": {
       "korra": 5
     },
@@ -1423,9 +1438,6 @@
     },
     "foom": {
       "kyoshi": 2
-    },
-    "deerskin": {
-      "kyoshi": 1
     },
     "neonish": {
       "toph": 1
@@ -1706,26 +1718,26 @@
     }
   },
   "supportUsage": {
-    "mai": 24,
+    "firelord-sozin": 36,
+    "imperial-firebender": 25,
+    "p'li": 40,
+    "the-hippo": 45,
+    "ghazan": 62,
+    "ming-hua": 36,
+    "rangi": 56,
+    "ursa": 55,
+    "badgermole": 42,
+    "hakoda": 5,
+    "yun": 36,
+    "the-boulder": 55,
+    "kelsang": 28,
+    "naga": 98,
+    "mai": 25,
     "kanna": 45,
     "lo-and-li": 59,
-    "badgermole": 41,
-    "ursa": 53,
-    "kelsang": 27,
-    "naga": 97,
-    "yun": 33,
-    "ghazan": 60,
     "dark-spirit": 21,
-    "firelord-sozin": 35,
     "general-zhao": 14,
     "gyatso": 49,
-    "rangi": 50,
-    "hakoda": 3,
-    "the-hippo": 43,
-    "the-boulder": 53,
-    "p'li": 39,
-    "imperial-firebender": 24,
-    "ming-hua": 30,
     "june": 39,
     "dark-avatar-unalaq": 9,
     "joo-dee": 9,

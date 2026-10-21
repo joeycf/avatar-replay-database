@@ -204,7 +204,12 @@
   },
   {
     "id": "bigblack",
-    "handle": "BigBlack"
+    "handle": "BigBlack",
+    "extra": {
+      "aliases": [
+        "Bigblack"
+      ]
+    }
   },
   {
     "id": "bigbuttjackson",
@@ -443,7 +448,12 @@
   },
   {
     "id": "deerskin",
-    "handle": "Deerskin"
+    "handle": "Deerskin",
+    "extra": {
+      "aliases": [
+        "DeerSkin"
+      ]
+    }
   },
   {
     "id": "definest",
@@ -722,10 +732,10 @@
   },
   {
     "id": "gonemad",
-    "handle": "Gonemad",
+    "handle": "GoneMad",
     "extra": {
       "aliases": [
-        "GoneMad"
+        "Gonemad"
       ]
     }
   },
@@ -836,10 +846,10 @@
   },
   {
     "id": "icontrol",
-    "handle": "icontrol",
+    "handle": "iControl",
     "extra": {
       "aliases": [
-        "iControl"
+        "icontrol"
       ]
     }
   },
@@ -877,10 +887,10 @@
   },
   {
     "id": "jack-the-bucket",
-    "handle": "Jack The Bucket",
+    "handle": "jack the bucket",
     "extra": {
       "aliases": [
-        "jack the bucket"
+        "Jack The Bucket"
       ]
     }
   },
@@ -1151,6 +1161,10 @@
     "handle": "Makpls"
   },
   {
+    "id": "manhattan-cafe",
+    "handle": "Manhattan Cafe"
+  },
+  {
     "id": "mark-fafnir",
     "handle": "Mark Fafnir"
   },
@@ -1252,6 +1266,10 @@
   {
     "id": "moldynugget",
     "handle": "moldynugget"
+  },
+  {
+    "id": "moose-lee",
+    "handle": "Moose Lee"
   },
   {
     "id": "morflow",
@@ -2055,6 +2073,10 @@
     "handle": "twotoestoto"
   },
   {
+    "id": "tyrantmk",
+    "handle": "TyrantMK"
+  },
+  {
     "id": "unijorse",
     "handle": "unijorse"
   },
@@ -2130,6 +2152,10 @@
   {
     "id": "weebmaru",
     "handle": "Weebmaru"
+  },
+  {
+    "id": "weezerfan22",
+    "handle": "Weezerfan22"
   },
   {
     "id": "whim",
