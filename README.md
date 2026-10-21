@@ -344,7 +344,7 @@ Project `avatar-replay-database`. `NUXT_PUBLIC_SITE_URL` and `NUXT_APP_BASE_URL`
 (`/avatar/`) must both be set on **Production and Preview** before the first
 build, and **never copied from a sibling project** — checklist 10h exists because
 one game shipped its first build mounted at the previous game's base path exactly
-that way. The engine pin is `v0.15.1` and **that tag must exist on the remote**:
+that way. The engine pin is `v0.18.1` and **that tag must exist on the remote**:
 Vercel leaves `ENGINE_PATH` unset and clones the pinned ref.
 
 `observability.insights: '/avatar-insights'` pairs 1:1 with the shell's rewrite.
