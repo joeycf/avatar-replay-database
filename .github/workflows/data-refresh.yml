@@ -197,17 +197,15 @@ jobs:
       # 10h — the copied-env incident). The guard in parse.ts protects the
       # repository; this protects what visitors get.
       #
-      # SMOKE_HOST POINTS AT THE GAME'S OWN HOST UNTIL THE SHELL FLIP. The apex
-      # edge-rewrite of /avatar/* to this project does not exist yet, so the
-      # default (https://replaydatabase.com) reads the shell's 404 on every poll
-      # and the check times out as "never readable" — a red step for a deployment
-      # that is perfectly healthy. Delete this `env:` block on the day the
-      # rewrite ships, and not before.
+      # IT READS THE APEX (the default, https://replaydatabase.com) — what
+      # visitors are served, through the shell's /avatar/* rewrite. Until that
+      # rewrite shipped (shell 5b0d7b5, 2026-10-22) an `env: SMOKE_HOST` here
+      # pointed at the game's own host, because the apex answered the shell's
+      # 404; it was removed the day the rewrite went live, after verify-deployed
+      # passed against the apex.
       #
       # The last step. A red anywhere in this workflow now means ONE thing: the
       # archive is stale or wrong, or visitors are served the wrong one. Steps
       # that mean "a person has work" live in pending-work.yml.
       - name: Post-deploy smoke check — red means visitors get the wrong archive
-        env:
-          SMOKE_HOST: https://avatar-replay-database.vercel.app
         run: npm run verify:deployed

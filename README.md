@@ -350,13 +350,13 @@ Vercel leaves `ENGINE_PATH` unset and clones the pinned ref.
 `observability.insights: '/avatar-insights'` pairs 1:1 with the shell's rewrite.
 The two ship together or every analytics beacon 404s, silently.
 
-**The flip is gated, and the gate is in two files.** Until the shell's edge
-rewrite of `/avatar/*` to this project exists, `SMOKE_HOST` must point at
-`https://avatar-replay-database.vercel.app` — the workflow sets it explicitly, in
-a block that exists to be deleted on flip day. Pointed at the apex before then,
-every poll reads the shell's 404 and the smoke check times out as "never
-readable": a red step for a deployment that is perfectly healthy. And
-`verify:deployed` reads `summary.json` at the base path first, because a wrong
+**Live on the apex since 2026-10-22, as an open override of its launch gate.** The
+shell's edge rewrite of `/avatar/*` to this project shipped in shell 5b0d7b5,
+so the smoke check reads `https://replaydatabase.com`, the default, as every
+sibling's does; the `SMOKE_HOST` block that pointed it at
+`https://avatar-replay-database.vercel.app` until then is gone. The count-A gate
+in the engine's PLAN.md had not passed: the owner launched anyway, and the
+shell's flip commit says so with the counts. `verify:deployed` reads `summary.json` at the base path first, because a wrong
 `game` there means the archive it would otherwise compare against belongs to
 another project — that one is a hard failure the moment it is readable, and
 polling longer will never make it true.

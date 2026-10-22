@@ -59,7 +59,7 @@ export default defineAppConfig({
     name: 'Avatar Legends: The Fighting Game',
     // "AVATAR/REPLAY" in the header wordmark. The full title is four words and
     // would wrap at every breakpoint; "AVATAR" is what the vendor's own
-    // shorthand, the community and the shell's Coming Soon card all use. Pure
+    // shorthand, the community and the shell's selector card all use. Pure
     // ASCII, so no latin-ext dependency in the display face.
     shortName: 'AVATAR',
     // From the vendor's own legal notice, verbatim where it matters: the Steam

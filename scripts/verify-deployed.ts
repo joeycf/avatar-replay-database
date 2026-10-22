@@ -56,12 +56,12 @@
  * conclusion about production on this platform.
  *
  * Run: npm run verify:deployed
- *   SMOKE_HOST     default https://replaydatabase.com — the apex the shell owns.
- *                  BEFORE THE SHELL FLIP (the edge rewrite of /avatar/* to this
- *                  project does not exist yet) it must point at the game's own
- *                  https://avatar-replay-database.vercel.app, or every poll reads
- *                  the shell's 404 and the check times out as "never readable".
- *                  The workflow sets it explicitly for that reason.
+ *   SMOKE_HOST     default https://replaydatabase.com — the apex the shell owns,
+ *                  which edge-rewrites /avatar/* to this project (shell
+ *                  5b0d7b5, 2026-10-22). The workflow uses the default. Point it
+ *                  at https://avatar-replay-database.vercel.app to read the
+ *                  game's own host directly, which tells a broken rewrite from a
+ *                  broken deployment.
  *   SMOKE_TIMEOUT_SEC (900) · SMOKE_INTERVAL_SEC (20)
  */
 
@@ -265,8 +265,9 @@ if (last === null) {
   console.error(
     `\n✖ Never got a readable payload from ${replaysUrl} in ${TIMEOUT_SEC}s.\n` +
       '  That is not a slow deploy — the file is missing, unparseable, or the\n' +
-      '  route is broken. Check the deployment and the shell rewrite; before the\n' +
-      '  shell flip, SMOKE_HOST must be https://avatar-replay-database.vercel.app.',
+      '  route is broken. Check the deployment and the shell rewrite (shell\n' +
+      '  vercel.json /avatar/*); SMOKE_HOST=https://avatar-replay-database.vercel.app\n' +
+      '  reads the game host directly and tells the two apart.',
   );
   process.exit(1);
 }
