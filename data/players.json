@@ -45,6 +45,10 @@
     "handle": "ad6m"
   },
   {
+    "id": "adarsh",
+    "handle": "adarsh"
+  },
+  {
     "id": "aeduo",
     "handle": "Aeduo"
   },
@@ -167,6 +171,10 @@
     "handle": "AyYoLado"
   },
   {
+    "id": "azule",
+    "handle": "Azule"
+  },
+  {
     "id": "baba",
     "handle": "Baba"
   },
@@ -256,6 +264,10 @@
     "handle": "Boogie"
   },
   {
+    "id": "boomerrang-bang-gluvworld",
+    "handle": "BOOMERRANG BANG Gluvworld"
+  },
+  {
     "id": "bootyeatinbandit",
     "handle": "Bootyeatinbandit"
   },
@@ -300,6 +312,10 @@
   {
     "id": "buyacushun",
     "handle": "Buyacushun"
+  },
+  {
+    "id": "campaine",
+    "handle": "CamPaine"
   },
   {
     "id": "cassian",
@@ -540,6 +556,10 @@
     "handle": "Duckus6"
   },
   {
+    "id": "dudechan",
+    "handle": "DudeChan"
+  },
+  {
     "id": "dungeondice",
     "handle": "DungeonDice"
   },
@@ -578,6 +598,10 @@
   {
     "id": "endrsp",
     "handle": "EndrSP"
+  },
+  {
+    "id": "enigma",
+    "handle": "Enigma"
   },
   {
     "id": "eogrgr",
@@ -657,6 +681,10 @@
     }
   },
   {
+    "id": "flowedup",
+    "handle": "Flowedup"
+  },
+  {
     "id": "fluddsan",
     "handle": "FluddSan"
   },
@@ -695,6 +723,10 @@
   {
     "id": "fuerte",
     "handle": "Fuerte"
+  },
+  {
+    "id": "furete",
+    "handle": "Furete"
   },
   {
     "id": "geff",
@@ -823,6 +855,10 @@
   {
     "id": "holdbacktobark",
     "handle": "HoldBackToBark"
+  },
+  {
+    "id": "honeybae",
+    "handle": "HoneyBae"
   },
   {
     "id": "honeybee",
@@ -1001,6 +1037,10 @@
     "handle": "Kenecrypt"
   },
   {
+    "id": "key1dr",
+    "handle": "KEY1DR"
+  },
+  {
     "id": "khezmen",
     "handle": "Khezmen"
   },
@@ -1119,6 +1159,10 @@
   {
     "id": "lethalpop",
     "handle": "LethalPop"
+  },
+  {
+    "id": "lkblue",
+    "handle": "LKBLUE"
   },
   {
     "id": "loading",
@@ -1447,7 +1491,12 @@
   },
   {
     "id": "p-town-hero",
-    "handle": "P Town Hero"
+    "handle": "P Town Hero",
+    "extra": {
+      "aliases": [
+        "P-Town Hero"
+      ]
+    }
   },
   {
     "id": "pacstrife",
@@ -1504,6 +1553,10 @@
   {
     "id": "pichi",
     "handle": "Pichi"
+  },
+  {
+    "id": "piglou",
+    "handle": "Piglou"
   },
   {
     "id": "pinksquidz",
@@ -2176,6 +2229,10 @@
   {
     "id": "willow",
     "handle": "Willow"
+  },
+  {
+    "id": "windsage",
+    "handle": "WindSage"
   },
   {
     "id": "wubbiq",
