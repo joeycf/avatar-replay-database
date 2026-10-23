@@ -11,8 +11,12 @@ on:
     # WHOEVER ADDS GAME SEVEN … the next free slot is 09:17 and the window
     # becomes 06:00-09:30". Taking it does exactly that.
     #
-    # NOTE FOR WHOEVER ADDS GAME EIGHT: the pattern is +30 minutes alternating
-    # :17/:47, so the next free slot is 09:47 and the window becomes 06:00-10:00.
+    # GAME EIGHT HAS BEEN ADDED and this note is kept as history, not as an
+    # instruction: "the next free slot is 09:47 and the window becomes
+    # 06:00-10:00". Granblue Rising took 09:47 on 2026-09-30, and its own
+    # workflow carries the live note for game nine. GitHub starts these slots
+    # hours late (11:00-19:21 UTC over 223 runs, measured in Granblue's
+    # workflow), so check the Actions tab before any push, whatever the slot.
     - cron: '17 9 * * *'
   workflow_dispatch:
 
@@ -28,9 +32,9 @@ jobs:
     name: Refresh the archive — red means the live archive is stale or wrong
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           # matches engines.node (the platform's Node policy — STACK.md §1)
           node-version: 24
@@ -62,7 +66,7 @@ jobs:
       # this run completes; the patch table is validated by Emit before the
       # commit.
       #
-      # QUOTA. The key is SHARED with six other games' daily crons and a recon
+      # QUOTA. The key is SHARED with seven other games' daily crons and a recon
       # pass on this game exhausted the whole day's allowance once already
       # (checklist 10j). Nothing in this pipeline calls search.list — the walk is
       # uploads-playlist pages at 1 unit each plus one videos.list hydration

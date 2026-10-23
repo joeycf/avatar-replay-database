@@ -62,7 +62,7 @@
  *
  * ── NO CONTROL IN THIS FILE TOUCHES THE YOUTUBE API ───────────────────────
  * Deliberate, and it is checklist 10j rather than caution. The key is SHARED
- * with six production crons; a recon pass on this game exhausted the whole
+ * with seven production crons; a recon pass on this game exhausted the whole
  * daily quota once already. The reference spends a videos.list batch per theater
  * control — four of them — which is a cost this platform cannot carry on a
  * suite people are meant to run often. The index rules that CAN be exercised
@@ -1815,7 +1815,7 @@ const DECLARED_GAPS: string[] = [
   'index: an h/m/s `t=` offset (`1h11m20s`) that a seconds-only pattern drops — 7.8% of this ' +
     'catalogue’s rows carry one. The conversion lives inside scripts/fetch-theater.ts’s link ' +
     'reader, which exports nothing this suite can call, and the only other way to reach it is a ' +
-    'sweep whose YouTube join spends quota shared with six production crons (checklist 10j). ' +
+    'sweep whose YouTube join spends quota shared with seven production crons (checklist 10j). ' +
     'THE FIX IS ONE LINE IN THAT FILE: export the offset reader, and this becomes a probe case ' +
     'beside the other four index controls.',
   'theater: the cursor-ahead refusal, the full-sweep record floor and partial-resume identity. ' +

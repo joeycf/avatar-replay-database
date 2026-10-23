@@ -429,7 +429,7 @@ export const CHANNELS: ChannelConfig[] = [
       fighters: { 'nightmare-korra': ['Nightmare Korra'] },
     },
     // CHECKLIST 1b. 3,780 uploads is 76 playlistItems pages plus 76 videos.list
-    // calls — about 152 units EVERY DAY, on a key shared with six production
+    // calls — about 152 units EVERY DAY, on a key shared with seven production
     // crons, to harvest 57 marked uploads. The walk is newest-first, so this
     // floor is a stop condition and the steady-state cost falls to a page or
     // two. Its first marked upload is 2026-07-27, four days after the floor.

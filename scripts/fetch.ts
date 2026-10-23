@@ -48,7 +48,7 @@
  * ── QUOTA ───────────────────────────────────────────────────────────────────
  * playlistItems.list costs 1 unit per 50 ids and videos.list 1 unit per 50
  * hydrations. search.list costs 100 and is never called from anywhere in this
- * repo. The key is shared with six production crons, so this file does two
+ * repo. The key is shared with seven production crons, so this file does two
  * things the reference's fetcher does not:
  *
  *   · it applies the per-channel `fetchFrom` date floor DURING THE WALK
@@ -142,7 +142,7 @@ export class QuotaRefusal extends Error {
     readonly body: string,
   ) {
     super(
-      `YouTube refused the request (HTTP ${status}). This key is shared with six production ` +
+      `YouTube refused the request (HTTP ${status}). This key is shared with seven production ` +
         `crons, so the run STOPS here rather than backing off and retrying.\n${body.slice(0, 400)}`,
     );
     this.name = 'QuotaRefusal';
@@ -598,7 +598,7 @@ async function main(): Promise<void> {
       `${rows.reduce((n, r) => n + r.marked, 0)} marked across ${rows.length} channel(s)` +
       `${frozen.length ? `; ${frozen.length} frozen channel(s) skipped` : ''}` +
       `${index.length ? `; ${index.length} index source(s) pulled by \`npm run data:theater\`` : ''}` +
-      `\n  quota: ${QUOTA.units} unit(s) over ${QUOTA.calls} call(s) — shared with six production crons`,
+      `\n  quota: ${QUOTA.units} unit(s) over ${QUOTA.calls} call(s) — shared with seven production crons`,
   );
 }
 

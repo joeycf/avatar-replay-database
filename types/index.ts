@@ -579,7 +579,7 @@ export interface ChannelConfig {
    * 9,759 for 4, ndyTv 3,780 for 34, rood 2,334 for 14. The reference's fetcher
    * walks the whole playlist and hydrates every id (ggst scripts/fetch.ts:75-120),
    * which on those five is 810 playlistItems pages plus 810 videos.list calls —
-   * about 1,620 units EVERY DAY, on a key shared with six production crons, to
+   * about 1,620 units EVERY DAY, on a key shared with seven production crons, to
    * harvest 73 marked uploads. NdyTV alone is ~152.
    *
    * Set to the launch date on every channel whose playlist exceeds 2,000

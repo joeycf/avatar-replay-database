@@ -689,9 +689,9 @@ async function main(): Promise<void> {
   const summary = {
     // THE KEY IS `game`, NOT `id`. Every live game emits {"game": "<id>", …} and
     // the shell's apex cutover battery asserts `payload.game === <the game's
-    // id>`; checklist 10h adds the pre-flip read of
-    // <game-host>/<slug>/data/summary.json for exactly this, because
-    // verify:deployed reads replays.json and never looks at this file.
+    // id>`. verify:deployed reads this file too, first on every poll: a `game`
+    // that is not 'avatar' fails it at once (checklist 10h, the copied-env
+    // incident), which is the one failure replays.json cannot see.
     game: GAME_ID,
     name: GAME_NAME,
     replays: records.length,

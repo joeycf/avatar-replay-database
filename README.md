@@ -298,7 +298,7 @@ does that the reference does not:
   quota and no vendor.
 
 **No control in the suite calls the YouTube API.** Checklist 10j: the key is
-shared with six production crons and a recon pass on this game exhausted the
+shared with seven production crons and a recon pass on this game exhausted the
 whole day's allowance once already. The reference spends a `videos.list` batch
 per index control. The index rules that can be exercised offline are; the one
 that cannot is printed under "NOT COVERED, on purpose" at the end of every run,
@@ -312,8 +312,10 @@ script they are waiting on and arm themselves the day it ships.
 ## Daily data refresh
 
 `.github/workflows/data-refresh.yml`, **09:17 UTC** — the seventh stagger slot,
-which Strive's workflow reserved by name for game seven. The platform's no-push
-window is now 06:00–09:30. Game eight takes 09:47.
+which Strive's workflow reserved by name for game seven. Game eight, Granblue
+Rising, took 09:47 on 2026-09-30. GitHub starts these slots hours late
+(11:00–19:21 UTC over 223 runs, ending by 19:25), so check the Actions tab
+before any push, whatever the slot.
 
 fetch → theater (allowed to fail, and last of the fetches) → parse → emit →
 commit-if-changed → smoke check. The expiries run in `pending-work.yml`
