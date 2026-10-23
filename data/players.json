@@ -232,6 +232,10 @@
     "handle": "Biscuit"
   },
   {
+    "id": "blisterdark",
+    "handle": "Blisterdark"
+  },
+  {
     "id": "bloo",
     "handle": "Bloo"
   },
@@ -729,6 +733,10 @@
     "handle": "Furete"
   },
   {
+    "id": "gbhforever",
+    "handle": "Gbhforever"
+  },
+  {
     "id": "geff",
     "handle": "Geff",
     "extra": {
@@ -985,6 +993,10 @@
     "handle": "Jundo"
   },
   {
+    "id": "jurokudaisa",
+    "handle": "JurokuDaisa"
+  },
+  {
     "id": "justnasty",
     "handle": "JustNasty"
   },
@@ -1031,6 +1043,10 @@
   {
     "id": "ken-imperial",
     "handle": "Ken Imperial"
+  },
+  {
+    "id": "ken3mperial",
+    "handle": "ken3mperial"
   },
   {
     "id": "kenecrypt",
@@ -1368,6 +1384,10 @@
     "handle": "MysteryRacer21"
   },
   {
+    "id": "nagant",
+    "handle": "Nagant"
+  },
+  {
     "id": "nalice",
     "handle": "NAlice"
   },
@@ -1587,6 +1607,10 @@
     "handle": "porklazer"
   },
   {
+    "id": "postcard",
+    "handle": "Postcard"
+  },
+  {
     "id": "precho",
     "handle": "Precho",
     "featured": true,
@@ -1639,6 +1663,10 @@
     "handle": "Purple"
   },
   {
+    "id": "qncy",
+    "handle": "Qncy"
+  },
+  {
     "id": "rainmaker",
     "handle": "Rainmaker"
   },
@@ -1685,6 +1713,10 @@
   {
     "id": "renecup",
     "handle": "Renecup"
+  },
+  {
+    "id": "restassured",
+    "handle": "RestAssured"
   },
   {
     "id": "reverendbaka",
@@ -1832,6 +1864,10 @@
   {
     "id": "shaundude",
     "handle": "Shaundude"
+  },
+  {
+    "id": "shehateslionn",
+    "handle": "shehateslionn"
   },
   {
     "id": "shielddevil",

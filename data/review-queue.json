@@ -484,6 +484,35 @@
     }
   },
   {
+    "id": "Q3EAjCdkgmY@3659",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ ArinKarin (Ozai/Imperial Firebender) vs Gwen Stacy (Kyoshi/Rangi) ▰ ParagOnline #12",
+    "publishedAt": "2026-10-18T15:45:26Z",
+    "durationSec": 7205,
+    "handles": [
+      "ArinKarin",
+      "Gwen Stacy"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "arinkarin",
+          "gwen-stacy"
+        ],
+        "characters": [
+          "kyoshi",
+          "ozai"
+        ],
+        "playedOn": "2026-10-18"
+      },
+      "ids": [
+        "Q3EAjCdkgmY@3659",
+        "Q3EAjCdkgmY@6991"
+      ]
+    }
+  },
+  {
     "id": "EWj8QZYicvc@6862",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
