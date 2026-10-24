@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 953,
+    "replays": 960,
     "characters": 12,
-    "players": 551,
+    "players": 560,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
-      "2026-10-07": 195
+      "2026-10-07": 202
     },
     "supports": 36,
-    "sidesWithSupport": 1177
+    "sidesWithSupport": 1189
   },
   "characterUsage": {
-    "toph": 260,
+    "toph": 262,
+    "korra": 218,
     "ozai": 154,
     "azula": 210,
-    "korra": 213,
     "nightmare-korra": 66,
     "katara": 206,
-    "sokka": 104,
-    "aang": 122,
-    "kyoshi": 213,
-    "zaheer": 212,
-    "zuko": 119,
+    "sokka": 105,
+    "aang": 123,
+    "kyoshi": 215,
+    "zaheer": 214,
+    "zuko": 120,
     "avatar-aang": 37
   },
   "byPatchUsage": {
@@ -83,21 +83,27 @@
       "toph": 96
     },
     "2026-10-07": {
-      "toph": 69,
+      "toph": 71,
+      "korra": 41,
       "ozai": 39,
       "azula": 44,
-      "korra": 36,
       "nightmare-korra": 14,
       "katara": 31,
-      "sokka": 5,
-      "aang": 19,
-      "kyoshi": 58,
-      "zaheer": 47,
-      "zuko": 27,
+      "sokka": 6,
+      "aang": 20,
+      "kyoshi": 60,
+      "zaheer": 49,
+      "zuko": 28,
       "avatar-aang": 1
     }
   },
   "playerCharacters": {
+    "boulder": {
+      "toph": 1
+    },
+    "top-8-review": {
+      "korra": 1
+    },
     "versintos": {
       "toph": 9
     },
@@ -283,19 +289,19 @@
       "azula": 4
     },
     "moldynugget": {
-      "kyoshi": 12
+      "kyoshi": 13
     },
     "raymond-buller": {
-      "korra": 22
+      "korra": 23
     },
     "awanderingtanuki": {
-      "toph": 15
+      "toph": 16
     },
     "inahk": {
       "kyoshi": 10
     },
     "pokemaniachd": {
-      "zaheer": 1
+      "zaheer": 2
     },
     "alfatwelve": {
       "nightmare-korra": 1
@@ -374,6 +380,30 @@
     },
     "tufo": {
       "kyoshi": 1
+    },
+    "mianki": {
+      "korra": 1
+    },
+    "reso": {
+      "zaheer": 1
+    },
+    "konanza": {
+      "zuko": 1
+    },
+    "mirri": {
+      "aang": 1
+    },
+    "1600axthon": {
+      "korra": 16
+    },
+    "jalis": {
+      "kyoshi": 1
+    },
+    "frosteblaze": {
+      "sokka": 1
+    },
+    "ayre": {
+      "korra": 1
     },
     "baconlord": {
       "katara": 2
@@ -511,9 +541,6 @@
     },
     "domitto": {
       "katara": 7
-    },
-    "1600axthon": {
-      "korra": 15
     },
     "sn3akuni": {
       "azula": 2
@@ -1790,37 +1817,37 @@
     "imperial-firebender": 31,
     "firelord-sozin": 38,
     "p'li": 40,
-    "ghazan": 66,
+    "ghazan": 68,
     "ming-hua": 44,
     "rangi": 65,
     "ursa": 60,
-    "badgermole": 43,
+    "badgermole": 44,
     "hakoda": 5,
     "yun": 40,
     "the-boulder": 58,
-    "kelsang": 31,
-    "naga": 108,
+    "kelsang": 33,
+    "naga": 111,
     "mai": 25,
     "gyatso": 55,
     "vaatu": 15,
     "master-pakku": 42,
-    "june": 44,
-    "princess-yue": 30,
+    "june": 45,
+    "princess-yue": 31,
     "dark-avatar-unalaq": 10,
     "dark-spirit": 25,
     "lo-and-li": 62,
     "ran-and-shaw": 17,
     "roku": 25,
-    "momo": 22,
+    "momo": 23,
     "kanna": 46,
     "general-zhao": 15,
+    "tonraq": 10,
     "joo-dee": 9,
     "suki": 10,
     "katara": 2,
     "guru-pathik": 4,
     "appa": 23,
     "master-piandao": 1,
-    "tonraq": 9,
     "raava": 6
   }
 }
