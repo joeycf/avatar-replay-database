@@ -397,6 +397,35 @@
     "durationSec": 2130
   },
   {
+    "id": "CPwTEGrsc4E",
+    "kind": "duplicate-candidate",
+    "channel": "superSalemFighters",
+    "title": "[10/24/26] #AvatarLegends GF: SSF|HoldBackToBark (Korra) VS ReverendBaka (Nightmare Korra)",
+    "publishedAt": "2026-10-25T04:34:49Z",
+    "durationSec": 260,
+    "handles": [
+      "HoldBackToBark",
+      "ReverendBaka"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "holdbacktobark",
+          "reverendbaka"
+        ],
+        "characters": [
+          "korra",
+          "nightmare-korra"
+        ],
+        "playedOn": "2026-10-25"
+      },
+      "ids": [
+        "CPwTEGrsc4E",
+        "Zw_akIN-xz4"
+      ]
+    }
+  },
+  {
     "id": "XvqC9WuYX7k@4003",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
