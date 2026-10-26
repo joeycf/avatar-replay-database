@@ -25,6 +25,10 @@
     "handle": "76Darhk"
   },
   {
+    "id": "7ruth",
+    "handle": "7ruth"
+  },
+  {
     "id": "a-wanderingtanuki",
     "handle": "A WanderingTanuki"
   },
@@ -584,6 +588,10 @@
     "handle": "EcCaFU"
   },
   {
+    "id": "eevtbh",
+    "handle": "eevtbh"
+  },
+  {
     "id": "eggbo",
     "handle": "eggbo"
   },
@@ -676,6 +684,10 @@
     "handle": "Ferno"
   },
   {
+    "id": "fibonacci",
+    "handle": "fibonacci"
+  },
+  {
     "id": "finisher",
     "handle": "Finisher"
   },
@@ -754,10 +766,10 @@
   },
   {
     "id": "geff",
-    "handle": "Geff",
+    "handle": "geff_",
     "extra": {
       "aliases": [
-        "geff_"
+        "Geff"
       ]
     }
   },
@@ -833,6 +845,10 @@
     "handle": "GwynStylish"
   },
   {
+    "id": "hakke",
+    "handle": "Hakke"
+  },
+  {
     "id": "hallowhavyn",
     "handle": "hallowhavyn"
   },
@@ -889,6 +905,10 @@
     "handle": "HoneyBee"
   },
   {
+    "id": "hoplan",
+    "handle": "Hoplan"
+  },
+  {
     "id": "hynes",
     "handle": "Hynes"
   },
@@ -924,6 +944,10 @@
   {
     "id": "inahk",
     "handle": "Inahk"
+  },
+  {
+    "id": "infamousblu",
+    "handle": "InfamousBlu-"
   },
   {
     "id": "infinite",
@@ -1416,6 +1440,10 @@
     "handle": "MysteryRacer21"
   },
   {
+    "id": "mythicphoenix",
+    "handle": "MythicPhoenix"
+  },
+  {
     "id": "nagant",
     "handle": "Nagant"
   },
@@ -1662,6 +1690,10 @@
     }
   },
   {
+    "id": "prince-legit",
+    "handle": "PRINCE LEGIT"
+  },
+  {
     "id": "princess-slim",
     "handle": "Princess Slim"
   },
@@ -1697,6 +1729,10 @@
   {
     "id": "purple",
     "handle": "Purple"
+  },
+  {
+    "id": "puuro",
+    "handle": "Puuro"
   },
   {
     "id": "qncy",
@@ -1793,6 +1829,10 @@
   {
     "id": "rood",
     "handle": "Rood"
+  },
+  {
+    "id": "rosvo-rolle",
+    "handle": "Rosvo-Rolle"
   },
   {
     "id": "rucan",
@@ -1916,6 +1956,10 @@
   {
     "id": "shielddevil",
     "handle": "ShieldDevil"
+  },
+  {
+    "id": "shmurtle",
+    "handle": "Shmurtle"
   },
   {
     "id": "shostakovich",
@@ -2142,6 +2186,10 @@
     "handle": "The IRS"
   },
   {
+    "id": "the-moogy",
+    "handle": "The Moogy"
+  },
+  {
     "id": "the-painted-lady",
     "handle": "The Painted Lady"
   },
@@ -2168,6 +2216,10 @@
   {
     "id": "thrillhouse",
     "handle": "Thrillhouse"
+  },
+  {
+    "id": "thunder-kitty",
+    "handle": "Thunder Kitty"
   },
   {
     "id": "tobirjay",
@@ -2228,6 +2280,10 @@
     }
   },
   {
+    "id": "updatefailed",
+    "handle": "UpdateFailed"
+  },
+  {
     "id": "v",
     "handle": "V"
   },
@@ -2271,6 +2327,10 @@
   {
     "id": "vivi",
     "handle": "Vivi"
+  },
+  {
+    "id": "wadim",
+    "handle": "Wadim"
   },
   {
     "id": "walkemdownmarko",
@@ -2402,6 +2462,10 @@
   {
     "id": "yordie",
     "handle": "yordie"
+  },
+  {
+    "id": "z-w-e-i",
+    "handle": "Z.W.E.I"
   },
   {
     "id": "zachiderp",
