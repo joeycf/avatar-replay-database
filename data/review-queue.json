@@ -113,7 +113,7 @@
     "channel": "ndyTv",
     "title": "Moscow Slam 2026 🇷🇺 — OhDatsApplesMate vs Donteyyy | Winners Final | Avatar Legends",
     "publishedAt": "2026-09-10T22:27:24Z",
-    "durationSec": 450
+    "durationSec": 451
   },
   {
     "id": "HiAb_uhILlU",
@@ -403,6 +403,64 @@
     "title": "AVATAR LEGENDS SET - Redblade vs Bustafat",
     "publishedAt": "2026-08-23T19:03:43Z",
     "durationSec": 2130
+  },
+  {
+    "id": "wezi_By7U9U@13276",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ AWanderingTanuki (Toph/Badgermole) vs Scythe (Katara/Kanna) ▰ DOUBLE K.O: AVATAR LEGENDS BRACKET",
+    "publishedAt": "2026-10-26T17:02:43Z",
+    "durationSec": 16669,
+    "handles": [
+      "AWanderingTanuki",
+      "Scythe"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "awanderingtanuki",
+          "scythe"
+        ],
+        "characters": [
+          "katara",
+          "toph"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "wezi_By7U9U@13276",
+        "wezi_By7U9U@15660"
+      ]
+    }
+  },
+  {
+    "id": "wezi_By7U9U@14877",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Scythe (Katara/Kanna) vs 1600Axthon (Korra/Naga) ▰ DOUBLE K.O: AVATAR LEGENDS BRACKET",
+    "publishedAt": "2026-10-26T17:02:43Z",
+    "durationSec": 16669,
+    "handles": [
+      "Scythe",
+      "1600Axthon"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "1600axthon",
+          "scythe"
+        ],
+        "characters": [
+          "katara",
+          "korra"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "wezi_By7U9U@14877",
+        "wezi_By7U9U@9464"
+      ]
+    }
   },
   {
     "id": "CPwTEGrsc4E",
@@ -1455,7 +1513,7 @@
     "channel": "kmlTournaments",
     "title": "KMLocal 73: Winners Semis - Xyned (Zaheer) Vs Sno (Toph) ALTFG",
     "publishedAt": "2026-09-07T19:55:31Z",
-    "durationSec": 459,
+    "durationSec": 460,
     "handles": [
       "Xyned",
       "Sno"

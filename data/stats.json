@@ -1,31 +1,31 @@
 {
   "totals": {
-    "replays": 998,
+    "replays": 1009,
     "characters": 12,
-    "players": 579,
+    "players": 582,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
-      "2026-10-07": 240
+      "2026-10-07": 251
     },
     "supports": 36,
-    "sidesWithSupport": 1248
+    "sidesWithSupport": 1270
   },
   "characterUsage": {
-    "toph": 275,
+    "katara": 222,
+    "avatar-aang": 40,
+    "zaheer": 221,
+    "nightmare-korra": 78,
+    "azula": 223,
+    "toph": 278,
     "ozai": 157,
+    "kyoshi": 227,
+    "korra": 224,
     "sokka": 106,
-    "nightmare-korra": 77,
-    "katara": 211,
-    "kyoshi": 226,
     "zuko": 125,
-    "aang": 127,
-    "korra": 222,
-    "azula": 221,
-    "avatar-aang": 39,
-    "zaheer": 220
+    "aang": 127
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -83,26 +83,60 @@
       "toph": 96
     },
     "2026-10-07": {
-      "toph": 84,
+      "katara": 47,
+      "avatar-aang": 4,
+      "zaheer": 56,
+      "nightmare-korra": 26,
+      "azula": 57,
+      "toph": 87,
       "ozai": 42,
+      "kyoshi": 72,
+      "korra": 47,
       "sokka": 7,
-      "nightmare-korra": 25,
-      "katara": 36,
-      "kyoshi": 71,
       "zuko": 33,
-      "aang": 24,
-      "korra": 45,
-      "azula": 55,
-      "avatar-aang": 3,
-      "zaheer": 55
+      "aang": 24
     }
   },
   "playerCharacters": {
+    "scythe": {
+      "katara": 22
+    },
+    "narath": {
+      "avatar-aang": 15
+    },
+    "k7-showoff": {
+      "zaheer": 7
+    },
+    "testmyluck": {
+      "nightmare-korra": 16,
+      "zaheer": 1
+    },
+    "biscuit": {
+      "azula": 28
+    },
     "cow": {
       "toph": 40
     },
     "teo1029": {
       "ozai": 13
+    },
+    "boobusmcscoobus": {
+      "azula": 7
+    },
+    "saximus": {
+      "toph": 1
+    },
+    "awanderingtanuki": {
+      "toph": 20
+    },
+    "buzerio": {
+      "kyoshi": 1
+    },
+    "1600axthon": {
+      "korra": 18
+    },
+    "benji-buckley": {
+      "katara": 1
     },
     "charey": {
       "sokka": 1
@@ -186,9 +220,6 @@
     "rekt": {
       "zaheer": 5
     },
-    "biscuit": {
-      "azula": 27
-    },
     "ziad": {
       "korra": 25
     },
@@ -226,9 +257,6 @@
     "mirri": {
       "aang": 2
     },
-    "awanderingtanuki": {
-      "toph": 18
-    },
     "hatemani": {
       "zuko": 6
     },
@@ -237,9 +265,6 @@
     },
     "kroutis": {
       "toph": 3
-    },
-    "boobusmcscoobus": {
-      "azula": 6
     },
     "rucan": {
       "zaheer": 1
@@ -379,9 +404,6 @@
       "aang": 5,
       "zaheer": 3
     },
-    "narath": {
-      "avatar-aang": 14
-    },
     "aeduo": {
       "korra": 4
     },
@@ -486,9 +508,6 @@
     },
     "reso": {
       "zaheer": 1
-    },
-    "1600axthon": {
-      "korra": 16
     },
     "jalis": {
       "kyoshi": 1
@@ -672,17 +691,11 @@
     "shugarwuggs-li-loo": {
       "azula": 1
     },
-    "scythe": {
-      "katara": 12
-    },
     "dawnrde": {
       "azula": 6
     },
     "pepe-uehara": {
       "toph": 4
-    },
-    "k7-showoff": {
-      "zaheer": 6
     },
     "moe-inkling-firelord": {
       "azula": 1
@@ -1020,10 +1033,6 @@
     },
     "jemi-keiyns": {
       "kyoshi": 1
-    },
-    "testmyluck": {
-      "nightmare-korra": 15,
-      "zaheer": 1
     },
     "irk": {
       "aang": 4
@@ -1871,26 +1880,28 @@
     }
   },
   "supportUsage": {
+    "kanna": 58,
+    "roku": 26,
+    "ghazan": 73,
+    "vaatu": 21,
+    "joo-dee": 10,
     "firelord-sozin": 40,
+    "lo-and-li": 69,
+    "the-boulder": 62,
+    "badgermole": 49,
+    "rangi": 73,
+    "naga": 114,
     "yun": 42,
     "june": 48,
     "momo": 25,
     "ursa": 65,
     "appa": 24,
-    "vaatu": 20,
     "master-pakku": 43,
     "the-hippo": 57,
-    "lo-and-li": 68,
-    "kanna": 47,
     "guru-pathik": 6,
-    "ghazan": 72,
-    "rangi": 72,
-    "the-boulder": 61,
     "dark-avatar-unalaq": 11,
-    "naga": 112,
     "dark-spirit": 26,
     "ming-hua": 45,
-    "badgermole": 47,
     "mai": 26,
     "gyatso": 56,
     "imperial-firebender": 31,
@@ -1899,10 +1910,8 @@
     "kelsang": 33,
     "princess-yue": 31,
     "ran-and-shaw": 17,
-    "roku": 25,
     "general-zhao": 15,
     "tonraq": 10,
-    "joo-dee": 9,
     "suki": 10,
     "katara": 2,
     "master-piandao": 1,
