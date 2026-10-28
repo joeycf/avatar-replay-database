@@ -348,6 +348,18 @@
     "durationSec": 459
   },
   {
+    "id": "6353Iph9AS4",
+    "kind": "character-completion",
+    "channel": "arinKarin",
+    "title": "Avatar Legends - TNS Winner 1 (Saxxie) Vs TNS Winner 2 (ArinKarin)",
+    "publishedAt": "2026-10-28T03:24:15Z",
+    "durationSec": 3890,
+    "handles": [
+      "TNS Winner 1",
+      "TNS Winner 2"
+    ]
+  },
+  {
     "id": "zGRzZENO9N8",
     "kind": "support-overlap",
     "channel": "rood",
@@ -405,6 +417,35 @@
     "durationSec": 2130
   },
   {
+    "id": "sQ_1h3BUiSQ@4848",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Heartless (Aang/Appa) vs Raymond Buller (Korra/Naga) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #10",
+    "publishedAt": "2026-10-26T22:31:30Z",
+    "durationSec": 6871,
+    "handles": [
+      "Heartless",
+      "Raymond Buller"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "heartless",
+          "raymond-buller"
+        ],
+        "characters": [
+          "aang",
+          "korra"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "sQ_1h3BUiSQ@4848",
+        "sQ_1h3BUiSQ@6281"
+      ]
+    }
+  },
+  {
     "id": "wezi_By7U9U@13276",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
@@ -459,6 +500,35 @@
       "ids": [
         "wezi_By7U9U@14877",
         "wezi_By7U9U@9464"
+      ]
+    }
+  },
+  {
+    "id": "yldRy2F2DPY@10772",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ ArinKarin (Ozai/Imperial Firebender) vs Solve (Korra/Tonraq) ▰ TNS Flow State #2",
+    "publishedAt": "2026-10-26T16:00:18Z",
+    "durationSec": 12556,
+    "handles": [
+      "ArinKarin",
+      "Solve"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "arinkarin",
+          "solve"
+        ],
+        "characters": [
+          "korra",
+          "ozai"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "yldRy2F2DPY@10772",
+        "yldRy2F2DPY@12206"
       ]
     }
   },

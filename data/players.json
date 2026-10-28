@@ -338,6 +338,10 @@
     "handle": "Buzerio"
   },
   {
+    "id": "cadence",
+    "handle": "Cadence"
+  },
+  {
     "id": "campaine",
     "handle": "CamPaine"
   },
@@ -357,6 +361,10 @@
   {
     "id": "catthew",
     "handle": "Catthew"
+  },
+  {
+    "id": "cedar",
+    "handle": "Cedar"
   },
   {
     "id": "cesulion",
@@ -885,6 +893,10 @@
     "handle": "Havok"
   },
   {
+    "id": "heartless",
+    "handle": "Heartless"
+  },
+  {
     "id": "hexanoid",
     "handle": "HexaNoid"
   },
@@ -948,6 +960,10 @@
   {
     "id": "idunknown",
     "handle": "IDUnknown"
+  },
+  {
+    "id": "imzonfgc",
+    "handle": "ImzonFGC"
   },
   {
     "id": "inahk",
@@ -1130,7 +1146,12 @@
   },
   {
     "id": "kingkc",
-    "handle": "KingKC"
+    "handle": "Kingkc",
+    "extra": {
+      "aliases": [
+        "KingKC"
+      ]
+    }
   },
   {
     "id": "kingofninjas",
@@ -1470,6 +1491,10 @@
   {
     "id": "narath",
     "handle": "Narath"
+  },
+  {
+    "id": "native",
+    "handle": "Native"
   },
   {
     "id": "natsu",
@@ -1966,6 +1991,10 @@
     "handle": "shehateslionn"
   },
   {
+    "id": "shidosha",
+    "handle": "Shidosha"
+  },
+  {
     "id": "shielddevil",
     "handle": "ShieldDevil"
   },
@@ -2206,6 +2235,10 @@
     "handle": "The Painted Lady"
   },
   {
+    "id": "the18th-kylo",
+    "handle": "The18th_Kylo"
+  },
+  {
     "id": "thearm",
     "handle": "TheArm"
   },
@@ -2339,6 +2372,10 @@
   {
     "id": "vivi",
     "handle": "Vivi"
+  },
+  {
+    "id": "vortex-dragon",
+    "handle": "Vortex_Dragon"
   },
   {
     "id": "wadim",
@@ -2520,6 +2557,10 @@
   {
     "id": "ziad",
     "handle": "Ziad"
+  },
+  {
+    "id": "zintai",
+    "handle": "Zintai"
   },
   {
     "id": "zwei",
