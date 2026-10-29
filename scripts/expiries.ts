@@ -190,7 +190,17 @@ export interface UnreleasedFighter {
 // reimagined), neither naming a fighter or a date; and no EVO France date
 // announcement could be found. RE-DATED to 2026-10-27: two weeks out, and after
 // the Switch 2 version's 10-23 launch, the next point a vendor is likely to talk.
-const REVIEW_AFTER = '2026-10-27';
+// LOOKED AGAIN 2026-10-29, and no fighter has moved: the achievement schema
+// still has twelve fighter rows (roster-check CURRENT), the store sentence is
+// unchanged, and the corpus scan of 1,048 records sights no gated name. The
+// vendor did ship Patch 4.0 on 10-28 (Avatar State Aang and Nightmare Korra
+// reimagined, two stages). Its notes open "Voting for Year One Character Pass"
+// in game (pre-order 1 pass, Deluxe 1, Deluxe pre-order 2; "Vote works by
+// choosing the order of wanted characters") and state no close date, no
+// winner and no date for any Pass fighter or for Tagah. RE-DATED to
+// 2026-11-18: three weeks after the vote opened, the soonest a result or the
+// first Pass fighter is plausibly announced.
+const REVIEW_AFTER = '2026-11-18';
 const YEAR_1_PASS_SENTENCE =
   'Adds five iconic characters over the course of the season: Iroh, Ty Lee, ' +
   'Lin Beifong, Bolin and the winner of the Year 1 Character Vote.';

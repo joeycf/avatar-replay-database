@@ -193,6 +193,14 @@ export const POST_DATE_OK: Record<string, { day: string; why: string }> = {
       '2026-10-07T14:41Z saying the patch is already out, and Final Weapon reported it ' +
       '"Now Live" the same day (decided 2026-10-15).',
   },
+  '1847920302231143': {
+    day: '2026-10-28',
+    why:
+      '"THE AVATAR STATE PATCH IS HERE" has no [h1]Patch header and no date in body or title. It ' +
+      'was posted 2026-10-28T14:07Z saying the patch is already out; the public build moved to ' +
+      '26270745 the same day, and the paramountgames.com notes page it links (Patch 4.0) says ' +
+      '"Last Updated: October 28, 2026" (decided 2026-10-29).',
+  },
 };
 
 /**
@@ -855,11 +863,24 @@ export function diff(
           : `${row.start} — the vendor's body states ${JSON.stringify(want)}; the row carries no label`,
       });
     }
+    // A post with no version can still carry a label the vendor's WEB NOTES
+    // state: Patch 4.0's post ("THE AVATAR STATE PATCH IS HERE") names none and
+    // links the notes page that does. Without this, the notes block below
+    // demands the label and this line forbids it, and no row clears both.
+    const notesSay =
+      row.label !== undefined && (notes ?? []).some((n) => `Patch ${n.version}` === row.label);
     if (!want && row.label) {
-      findings.push({
-        glyph: '~',
-        text: `${row.start} — the table labels this ${JSON.stringify(row.label)}, the vendor's post states no version`,
-      });
+      findings.push(
+        notesSay
+          ? {
+              glyph: 'ⓘ',
+              text: `${row.start} — the vendor's post states no version; the label ${JSON.stringify(row.label)} is the web notes' own`,
+            }
+          : {
+              glyph: '~',
+              text: `${row.start} — the table labels this ${JSON.stringify(row.label)}, the vendor's post states no version`,
+            },
+      );
     }
   }
 

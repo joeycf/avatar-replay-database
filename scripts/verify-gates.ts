@@ -638,6 +638,33 @@ if (which === 'notes-diff') {
     !e.some((f) => f.text.startsWith('vendor notes lag')) && e.some((f) => f.text.startsWith('Patch 10.0 — stated by')),
     list(e),
   );
+  // Patch 4.0's shape: a post with no version, a labelled row, and a notes
+  // page that states the label. The notes back the label; without them the
+  // same row is still drift.
+  const LOC4 = 'https://www.paramountgames.com/editorial/avatar-legends-the-fighting-game-patch-4-0-overall-patch-notes';
+  const table4: PatchBoundary[] = [
+    ...table,
+    { version: '2026-10-28', start: '2026-10-28', label: 'Patch 4.0', announcedOn: 'steam', url: steam + '690898663290962215' },
+  ];
+  const announced4: Announced[] = [
+    ...announced,
+    { gid: '1847920302231143', title: 'THE AVATAR STATE PATCH IS HERE', url: steam + '690898663290962215', posted: '2026-10-28', start: '2026-10-28', titleDate: null, eventType: 14 },
+  ];
+  const sitemap4: NotesVersion = { version: '4.0', day: '2026-10-28', dayIs: 'lastmod', where: LOC4 };
+  const f = diff(announced4, table4, { notes: [inSitemap('3.0'), sitemap4], now: '2026-10-29' });
+  need(
+    'A LABEL THE WEB NOTES STATE IS NOT DRIFT ON A POST WITH NO VERSION (Patch 4.0)',
+    !f.some(fatal) &&
+      texts(f, 'ⓘ').some((t) => t === "2026-10-28 — the vendor's post states no version; the label \\"Patch 4.0\\" is the web notes' own"),
+    list(f),
+  );
+  const g = diff(announced4, table4, { notes: [inSitemap('3.0')], now: '2026-10-29' });
+  need(
+    'THE SAME LABEL WITH NO NOTES BEHIND IT IS STILL DRIFT (~)',
+    g.filter(fatal).length === 1 &&
+      texts(g, '~').some((t) => t === "2026-10-28 — the table labels this \\"Patch 4.0\\", the vendor's post states no version"),
+    list(g),
+  );
 }
 
 if (which === 'notes-fetch') {
@@ -1181,6 +1208,30 @@ const CONTROLS: Control[] = [
         'scripts/patch-check.ts',
         "            glyph: '~',\n            text:\n              `a Steam build (",
         "            glyph: 'ⓘ',\n            text:\n              `a Steam build (",
+      ),
+  },
+  {
+    name: 'patch-check: the web notes stop backing a label — Patch 4.0 is drift with no row able to clear it',
+    cmd: PROBE('notes-diff'),
+    files: ['scripts/patch-check.ts'],
+    names: /A LABEL THE WEB NOTES STATE IS NOT DRIFT/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '    const notesSay = row.label !== undefined && (notes ?? []).some((n) => `Patch ${n.version}` === row.label);',
+        '    const notesSay = false;',
+      ),
+  },
+  {
+    name: 'patch-check: any label passes on a post with no version — a typed label nobody stated goes unseen',
+    cmd: PROBE('notes-diff'),
+    files: ['scripts/patch-check.ts'],
+    names: /THE SAME LABEL WITH NO NOTES BEHIND IT IS STILL DRIFT/,
+    inject: () =>
+      sub(
+        'scripts/patch-check.ts',
+        '    const notesSay = row.label !== undefined && (notes ?? []).some((n) => `Patch ${n.version}` === row.label);',
+        '    const notesSay = row.label !== undefined;',
       ),
   },
   {
