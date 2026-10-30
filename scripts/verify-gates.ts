@@ -903,6 +903,140 @@ function departureFixture(bound: boolean): Injected {
   return true;
 }
 
+// ── checklist 5n: refuse the record, not the day ────────────────────────────
+//
+// On Strive, 2026-10-25, one NEW upload carried "Plugging on ram" (a Ky player
+// whose handle resolves to Ramlethal), the registry invariant refused the whole
+// day, and nothing published for four days. Since 2026-10-30 a new record like
+// that is HELD in the review queue and the day ships. The allow-list here is
+// EMPTY, so there is no row to pull: the fixture instead names a one-record
+// player after a fighter at the side constructor every title record passes
+// through (the STiLL control's anchor), and takes that record out of the
+// committed videos.json so it is NEW again. `confirm` adds the row.
+interface HoldRecord {
+  id: string;
+  intake: string;
+  title: string;
+  publishedAt: string;
+  durationSec: number;
+  sides: { player: string; handle: string }[];
+}
+const HOLD = { player: 'ghosrtkat', record: '7wrNWmS16Y8', as: 'Zaheer', fighter: 'zaheer' };
+/** An index record: the intake is a cursor, so a held one lives in the queue. */
+const HOLD_INDEX = { player: 'sen', record: '4vT3Dxg--nA@2705', as: 'Zaheer', fighter: 'zaheer' };
+let holdPin = 0;
+
+function holdFixture(
+  h: { player: string; record: string; as: string },
+  o: { confirm?: boolean; viaQueue?: boolean; noDump?: boolean } = {},
+): Injected {
+  const videos = readJson<HoldRecord[]>('data/videos.json');
+  const rec = videos.find((v) => v.id === h.record);
+  if (!rec)
+    return `${h.record} is not in data/videos.json — the fixture re-news a published record`;
+  const side = rec.sides.find((sd) => sd.player === h.player);
+  if (!side) return false;
+  if (!o.viaQueue) {
+    const dump = `raw/${rec.intake}.json`;
+    if (!existsSync(join(ROOT, dump))) return needRaw(rec.intake)!;
+    if (!readJson<{ id: string }[]>(dump).some((v) => v.id === h.record))
+      return `${dump} does not hold ${h.record} — run \`npm run data:fetch\``;
+    if (
+      !sub(
+        'scripts/parse.ts',
+        '          handle: s.handle,',
+        `          handle: s.handle === '${side.handle}' ? '${h.as}' : s.handle,`,
+      )
+    )
+      return false;
+  }
+  if (
+    o.confirm &&
+    !sub(
+      'scripts/roster.ts',
+      'export const CONFIRMED_CHARACTER_NAMED_PLAYERS: ConfirmedCharacterNamedPlayer[] = [];',
+      'export const CONFIRMED_CHARACTER_NAMED_PLAYERS: ConfirmedCharacterNamedPlayer[] = [\n' +
+        `  { id: '${h.player}', handle: '${h.as}', video: '${h.record}', note: 'verify-gates' },\n];`,
+    )
+  )
+    return false;
+  write(
+    'data/videos.json',
+    `${JSON.stringify(
+      videos.filter((v) => v.id !== h.record),
+      null,
+      2,
+    )}\n`,
+  );
+  if (o.viaQueue) {
+    // The state a held index record is in on every morning after the first:
+    // in the committed queue under the handle it was held on, not in
+    // videos.json, and not in the pin.
+    side.handle = h.as;
+    const pins = readJson<Record<string, number>>('data/source-pins.json');
+    if (typeof pins.replayTheater !== 'number') return false;
+    holdPin = pins.replayTheater - 1;
+    write(
+      'data/source-pins.json',
+      `${JSON.stringify({ ...pins, replayTheater: holdPin }, null, 2)}\n`,
+    );
+    const queue = readJson<unknown[]>('data/review-queue.json');
+    queue.push({
+      id: rec.id,
+      kind: 'fighter-named-handle',
+      channel: rec.intake,
+      title: rec.title,
+      publishedAt: rec.publishedAt,
+      durationSec: rec.durationSec,
+      held: [{ side: rec.sides.indexOf(side), handle: h.as, player: h.player, resolvesTo: [] }],
+      record: rec,
+    });
+    write('data/review-queue.json', `${JSON.stringify(queue, null, 2)}\n`);
+  }
+  // A failed or empty pull: the CARRY branch, which asserts the pin against
+  // the committed records — the morning a held record in the pin would break.
+  if (o.noDump) write('raw/replayTheater.json', '[]');
+  return true;
+}
+
+type QueueLite = { id: string; kind: string; held?: { player: string; resolvesTo: string[] }[] };
+
+/** The held half: exit 0, the record queued and out of videos.json and the
+ *  registry, the report naming the handle. */
+const assertHeld =
+  (player: string, recordId: string, fighter: string) =>
+  (r: Run): Verdict => {
+    if (r.status !== 0)
+      return fail(
+        `parse refused the day for one record — exit ${r.status ?? r.signal}: ${head(r)}`,
+      );
+    const item = readJson<QueueLite[]>('data/review-queue.json').find((q) => q.id === recordId);
+    if (item?.kind !== 'fighter-named-handle') return fail(`${recordId} is not held in the queue`);
+    const held = item.held?.find((x) => x.player === player);
+    if (!held) return fail(`the held item does not name ${player}`);
+    if (held.resolvesTo.length && !held.resolvesTo.includes(fighter))
+      return fail(
+        `${player} is held as resolving to ${held.resolvesTo.join(', ')}, not ${fighter}`,
+      );
+    if (readJson<{ id: string }[]>('data/videos.json').some((v) => v.id === recordId))
+      return fail(`${recordId} was published while held`);
+    if (readJson<{ id: string }[]>('data/players.json').some((x) => x.id === player))
+      return fail(`${player} is in players.json while held — a /players page would be minted`);
+    if (!/record\(s\) held on unconfirmed fighter-named handle/.test(read('data/report.md')))
+      return fail('report.md does not name the held handle');
+    return pass(`${recordId} held, ${player} out of the registry, the day shipped`);
+  };
+
+/** The pin counts what ships: after any morning, the theater pin equals the
+ *  index records in videos.json, or the next failed pull refuses the day. */
+const pinShips = (): string | null => {
+  const pin = readJson<Record<string, number>>('data/source-pins.json').replayTheater;
+  const shipped = readJson<{ intake: string }[]>('data/videos.json').filter(
+    (v) => v.intake === 'replayTheater',
+  ).length;
+  return pin === shipped ? null : `pin ${pin} ≠ ${shipped} index record(s) in videos.json`;
+};
+
 interface Control {
   /** What the gate protects, phrased as the failure it refuses. */
   name: string;
@@ -1703,19 +1837,24 @@ const CONTROLS: Control[] = [
     },
   },
   {
-    // CHECKLIST 5n, AT PARSE TIME, OVER BOTH NAMESPACES. The failure is a
-    // character filed as a person. The SUPPORT half is this game's and every
-    // sibling's guard is blind to it: a fighters-only comparison passes `Sozin`
-    // silently, because `Sozin` resolves to no fighter.
+    // CHECKLIST 5n, AT PARSE TIME, OVER BOTH NAMESPACES — THE HARD HALF. The
+    // failure is a character filed as a person. The SUPPORT half is this game's
+    // and every sibling's guard is blind to it: a fighters-only comparison
+    // passes `Sozin` silently, because `Sozin` resolves to no fighter.
+    //
+    // STiLL's records are ALREADY PUBLISHED, so since 2026-10-30 (when a NEW
+    // record began to be held instead, below) this must still stop the run:
+    // holding them would unpublish live pages with exit 0.
     //
     // CONFIRMED_CHARACTER_NAMED_PLAYERS ships EMPTY — measured, not skipped: zero
     // collisions over 178 catalogue player names and every admitted channel's
     // handles. So the control ADDS a fighter-named player to the registry rather
     // than removing an allow-list row, because there is no row to remove.
-    name: 'parse: THE REGISTRY INVARIANT — a roster-named handle with no allow-list row',
+    name: 'parse: THE REGISTRY INVARIANT — a PUBLISHED roster-named handle with no allow-list row',
     cmd: ['tsx', 'scripts/parse.ts'],
     files: ['scripts/parse.ts', ...PARSE_OUTPUTS],
-    names: /REGISTRY INVARIANT: \d+ player handle/,
+    names:
+      /REGISTRY INVARIANT: \d+ player handle\(s\) on ALREADY-PUBLISHED records[\s\S]*"Zaheer" → zaheer/,
     precondition: needCleanParse,
     // THE INJECTION POINT IS THE SIDE CONSTRUCTOR EVERY RECORD PASSES THROUGH.
     // The first version rewrote the handle inside sideFromDescription(), which
@@ -1729,6 +1868,177 @@ const CONTROLS: Control[] = [
         '          handle: s.handle,',
         "          handle: s.handle === 'STiLL' ? 'Zaheer' : s.handle,",
       ),
+  },
+
+  {
+    // CHECKLIST 5n — REFUSE THE RECORD, NOT THE DAY. Strive's 2026-10-25
+    // morning, rebuilt here: a one-record player arrives under a fighter's
+    // name and has no row. Before 2026-10-30 this run exited 1 and nothing
+    // shipped; now it must exit 0 with that record held and everything else
+    // written.
+    name: 'parse: a NEW record with an unconfirmed fighter-named handle is held, the day ships',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['scripts/parse.ts', ...PARSE_OUTPUTS],
+    names: /held on unconfirmed fighter-named handle/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD),
+    assert: assertHeld(HOLD.player, HOLD.record, HOLD.fighter),
+  },
+  {
+    // THE OTHER HALF OF THE SAME MORNING: the row is added, and the next parse
+    // publishes the record and clears the item. A hold that never released
+    // would pass the control above.
+    name: 'parse: the CONFIRMED row releases a held record on the next parse',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['scripts/parse.ts', 'scripts/roster.ts', ...PARSE_OUTPUTS],
+    names: /records?/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD, { confirm: true }),
+    assert: (r) => {
+      if (r.status !== 0) return fail(`parse exited ${r.status ?? r.signal}: ${head(r)}`);
+      if (!readJson<{ id: string }[]>('data/videos.json').some((v) => v.id === HOLD.record))
+        return fail(`${HOLD.record} is not published with its row in place`);
+      const held = readJson<QueueLite[]>('data/review-queue.json').filter(
+        (q) => q.kind === 'fighter-named-handle',
+      );
+      if (held.length)
+        return fail(`${held.length} item(s) still held: ${held.map((q) => q.id).join(', ')}`);
+      return pass(`${HOLD.record} published, nothing held`);
+    },
+  },
+  {
+    // THE INDEX INTAKE IS A CURSOR. A held index record is in no later dump and
+    // not in videos.json, so it lives in the committed queue (`record`) and
+    // must come back from there every morning — or the hold is a deletion.
+    // And the pin must count what SHIPS, or the next failed pull (the carry
+    // branch, below) refuses the day.
+    name: 'parse: a held INDEX record is carried from the queue and kept out of the pin',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: [...PARSE_OUTPUTS],
+    names: /held record\(s\) carried from the review queue/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD_INDEX, { viaQueue: true }),
+    assert: (r) => {
+      const held = assertHeld(HOLD_INDEX.player, HOLD_INDEX.record, HOLD_INDEX.fighter)(r);
+      if (held.kind !== 'pass') return held;
+      if (!/1 held record\(s\) carried from the review queue/.test(read('data/report.md')))
+        return fail('the held index record was not carried from the queue');
+      const pin = pinShips();
+      return pin
+        ? fail(pin)
+        : pass(`${HOLD_INDEX.record} carried and still held; pin ${holdPin} ships`);
+    },
+  },
+  {
+    name: 'parse: a held INDEX record survives a failed pull (the carry branch keeps the pin)',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['raw/replayTheater.json', ...PARSE_OUTPUTS],
+    names: /held record\(s\) carried from the review queue/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD_INDEX, { viaQueue: true, noDump: true }),
+    assert: (r) => {
+      const held = assertHeld(HOLD_INDEX.player, HOLD_INDEX.record, HOLD_INDEX.fighter)(r);
+      if (held.kind !== 'pass') return held;
+      const pin = pinShips();
+      return pin ? fail(pin) : pass(`carried through an empty pull; pin ${holdPin} ships`);
+    },
+  },
+  {
+    name: 'parse: a CONFIRMED row releases a held INDEX record from the queue into the pin',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['scripts/roster.ts', ...PARSE_OUTPUTS],
+    names: /records?/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD_INDEX, { viaQueue: true, confirm: true }),
+    assert: (r) => {
+      if (r.status !== 0) return fail(`parse exited ${r.status ?? r.signal}: ${head(r)}`);
+      if (!readJson<{ id: string }[]>('data/videos.json').some((v) => v.id === HOLD_INDEX.record))
+        return fail(`${HOLD_INDEX.record} did not come back from the queue with its row in place`);
+      if (
+        readJson<QueueLite[]>('data/review-queue.json').some(
+          (q) => q.kind === 'fighter-named-handle',
+        )
+      )
+        return fail('an item is still held');
+      const pin = pinShips();
+      return pin
+        ? fail(pin)
+        : pass(`${HOLD_INDEX.record} published from the queue; pin ${holdPin + 1}`);
+    },
+  },
+  {
+    // THE SAME RELEASE ON A FAILED PULL — the carry branch, which asserts the
+    // pin against the committed records. Measured 2026-10-30 on Avatar (whose
+    // local dump was `[]`): the first cut left a released record OUT of the
+    // pin, so the next failed pull would have refused the day. Forced here so
+    // it no longer depends on what the local dump happens to hold.
+    name: 'parse: a CONFIRMED row releases a held INDEX record on a failed pull, into the pin',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['scripts/roster.ts', 'raw/replayTheater.json', ...PARSE_OUTPUTS],
+    names: /records?/,
+    precondition: needCleanParse,
+    inject: () => holdFixture(HOLD_INDEX, { viaQueue: true, confirm: true, noDump: true }),
+    assert: (r) => {
+      if (r.status !== 0) return fail(`parse exited ${r.status ?? r.signal}: ${head(r)}`);
+      if (!readJson<{ id: string }[]>('data/videos.json').some((v) => v.id === HOLD_INDEX.record))
+        return fail(`${HOLD_INDEX.record} did not come back from the queue with its row in place`);
+      if (
+        readJson<QueueLite[]>('data/review-queue.json').some(
+          (q) => q.kind === 'fighter-named-handle',
+        )
+      )
+        return fail('an item is still held');
+      const pin = pinShips();
+      return pin
+        ? fail(pin)
+        : pass(`${HOLD_INDEX.record} published from the queue; pin ${holdPin + 1}`);
+    },
+  },
+  {
+    // The queue now carries held index records, so it is a baseline: read as
+    // [] on a parse error, it would drop them without a word.
+    name: 'parse: an unreadable review-queue.json is a hard stop, never "treat it as empty"',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['data/review-queue.json'],
+    names: /review-queue\.json is unreadable/,
+    inject: () => {
+      write('data/review-queue.json', '{ this is not json');
+      return true;
+    },
+  },
+  {
+    // THE TASK RED. Pending work runs `expiries.ts --check` on the committed
+    // queue; a held item must turn it red naming the handle and the count.
+    // The green twin is the CLEAN list's expiries run on the real queue.
+    name: 'expiries: a held fighter-named handle turns Pending work red, by name and count',
+    cmd: ['tsx', 'scripts/expiries.ts', '--check'],
+    files: ['data/review-queue.json'],
+    names:
+      /1 RECORD\(S\) HELD ON 1 UNCONFIRMED FIGHTER-NAMED HANDLE[\s\S]*1 record\(s\) held on unconfirmed fighter-named handle "Zaheer"/,
+    inject: () => {
+      const queue = readJson<unknown[]>('data/review-queue.json');
+      queue.push({
+        id: HOLD.record,
+        kind: 'fighter-named-handle',
+        channel: 'rood',
+        title: 'Rood (Aang Gyatso) vs Zaheer (Korra)',
+        publishedAt: '2026-10-29T02:19:41Z',
+        durationSec: 0,
+        held: [{ side: 1, handle: HOLD.as, player: HOLD.player, resolvesTo: [HOLD.fighter] }],
+      });
+      write('data/review-queue.json', `${JSON.stringify(queue, null, 2)}\n`);
+      return true;
+    },
+  },
+  {
+    name: 'expiries: an unreadable review-queue.json is red, never "nothing held"',
+    cmd: ['tsx', 'scripts/expiries.ts', '--check'],
+    files: ['data/review-queue.json'],
+    names: /review-queue\.json is unreadable/,
+    inject: () => {
+      write('data/review-queue.json', '{ this is not json');
+      return true;
+    },
   },
 
   // ── emit: the two-schema boundary (scripts/emit.ts) ──────────────────────

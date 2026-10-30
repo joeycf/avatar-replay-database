@@ -677,6 +677,20 @@ export interface ConfirmedCharacterNamedPlayer {
 
 export const CONFIRMED_CHARACTER_NAMED_PLAYERS: ConfirmedCharacterNamedPlayer[] = [];
 
+/**
+ * THE ONE PREDICATE FOR CHECKLIST 5n, OVER BOTH NAMESPACES: what a player's
+ * voted display handle resolves to — a fighter id, or a support id marked
+ * `(support)` — [] when it names neither. parse-finish.ts holds records on it
+ * and e2e.ts asserts the published archive with it, so the hold and the check
+ * that the hold worked cannot drift apart.
+ */
+export function characterNamedHits(handle: string, matcher: AliasMatcher): string[] {
+  return matcher
+    .find(handle)
+    .filter((s) => s.fighter || s.support)
+    .map((s) => (s.fighter ? s.fighter : `${s.support} (support)`));
+}
+
 // ── VENDOR SCRAPE ───────────────────────────────────────────────────────────
 // The provenance half. Everything below talks to the vendor's own surfaces and
 // answers one question: do they still say what data/characters.json says they

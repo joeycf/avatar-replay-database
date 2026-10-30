@@ -29,8 +29,13 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { CHANNELS, stripTheaterSponsor } from './channels';
-import { dueExpiries, expiryBlock, UNRELEASED } from './expiries';
-import { CONFIRMED_CHARACTER_NAMED_PLAYERS, normalizeText, playerId } from './roster';
+import { dueExpiries, expiryBlock, HELD_HOW, heldHandles, heldLine, UNRELEASED } from './expiries';
+import {
+  characterNamedHits,
+  CONFIRMED_CHARACTER_NAMED_PLAYERS,
+  normalizeText,
+  playerId,
+} from './roster';
 import { LAUNCH, patchForDate, patchWindows, seasonForDate, seasonToken } from './patches';
 import { DURATION_BUCKETS, MIN_MATCH_SEC, isPlaceholderHandle } from './parse';
 import {
@@ -206,6 +211,43 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   const pullRan = theaterStats !== null && existsSync(dumpFile);
   let theater: TheaterMerge | null = null;
   let theaterCarried: number | null = null;
+
+  // HELD INDEX RECORDS RIDE THE QUEUE (checklist 5n, step 6 below). A
+  // 'fighter-named-handle' hold keeps a record out of videos.json, and this
+  // intake is read through a cursor: tomorrow's dump starts past it. Neither
+  // the committed file nor the dump would ever produce it again, so without
+  // this the hold would be a silent deletion. The committed queue carries the
+  // record (ReviewQueueItem.record) and it re-enters HERE, before the overrides
+  // and the hold, so a CONFIRMED row releases it and a verdict applies to it
+  // exactly as to a fresh one. Title intakes need none of this: every run walks
+  // every upload down to its floor. Read strictly — this file is now a
+  // baseline, and a fallback to [] would drop the held records without a word.
+  const queuePath = join(DATA, 'review-queue.json');
+  let prevQueue: ReviewQueueItem[] = [];
+  if (existsSync(queuePath)) {
+    try {
+      prevQueue = JSON.parse(await readFile(queuePath, 'utf8')) as ReviewQueueItem[];
+    } catch (err) {
+      throw new Error(
+        `data/review-queue.json is unreadable (${(err as Error).message}). It carries the held ` +
+          `index records (checklist 5n), and reading it as empty would drop them. Nothing written.`,
+        { cause: err },
+      );
+    }
+  }
+  const heldIndex: MatchVideo[] = prevQueue.flatMap((q) =>
+    q.kind === 'fighter-named-handle' &&
+    q.record !== undefined &&
+    q.record.intake === idx?.id &&
+    !overrides[q.id]?.exclude
+      ? [q.record]
+      : [],
+  );
+  /** The ids the theater pin counted. Records the hold routes are subtracted
+   *  from the pin after step 6, so the pin counts what SHIPS: a failed pull
+   *  carries committed records only, and a pin inflated by a held record
+   *  would refuse that morning — the whole-day refusal this hold replaces. */
+  let theaterPinned = new Set<string>();
   if (idx?.index) {
     const dump = existsSync(dumpFile) ? await readJsonLocal<TheaterRawRecord[]>(dumpFile, []) : [];
     if (dump.length > 0) {
@@ -240,6 +282,16 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
         survivors.push(v);
       }
       const absorbed = survivors.filter((v) => build.known.has(v.videoId ?? v.id)).length;
+      // Held records the dump did not reproduce come back from the queue. The
+      // dump's own copy wins when it has one, as it does for survivors.
+      let heldBack = 0;
+      for (const v of heldIndex) {
+        if (byRecordId.has(v.id)) continue;
+        byRecordId.set(v.id, v);
+        heldBack++;
+      }
+      if (heldBack)
+        notes.push(`${idx.id}: ${heldBack} held record(s) carried from the review queue.`);
       const theaterRecords = [...byRecordId.values()];
       records = records.concat(theaterRecords);
       theater = {
@@ -266,6 +318,7 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
         );
       }
       pins.replayTheater = theaterRecords.length;
+      theaterPinned = new Set(theaterRecords.map((v) => v.id));
     } else {
       // CARRY. The cron works from a fresh checkout and raw/ is gitignored, so a
       // run whose pull failed has no dump — and the pipeline must not publish
@@ -291,6 +344,19 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
       if (carried.length > 0) pins.replayTheater = carried.length;
       records = records.concat(carried);
       theaterCarried = carried.length;
+      // Held records ride along too, AFTER the pin was asserted (it counts
+      // committed records, and a held one is by definition not committed). They
+      // join the pin here and the hold (step 6) takes back out every one still
+      // held, so a record whose row landed overnight enters the pin as it
+      // publishes — and the next failed pull carries a count that matches.
+      const carriedIds = new Set(carried.map((v) => v.id));
+      const heldBack = heldIndex.filter((v) => !carriedIds.has(v.id));
+      records = records.concat(heldBack);
+      if (heldBack.length) {
+        notes.push(`${idx.id}: ${heldBack.length} held record(s) carried from the review queue.`);
+        pins.replayTheater = (pins.replayTheater ?? 0) + heldBack.length;
+      }
+      theaterPinned = new Set([...carriedIds, ...heldBack.map((v) => v.id)]);
     }
   }
 
@@ -540,16 +606,6 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   // channel, 'Solid Pajahands'/'Solid PajaHands' on another, 'STiLL'/'STILL'
   // between a channel and the catalogue. The losing spellings are kept as
   // aliases so search still finds them.
-  const spellings = new Map<string, Map<string, number>>();
-  const evidence = new Map<string, string>();
-  for (const r of records) {
-    for (const s of r.sides) {
-      const m = spellings.get(s.player) ?? new Map<string, number>();
-      m.set(s.handle, (m.get(s.handle) ?? 0) + 1);
-      spellings.set(s.player, m);
-      if (!evidence.has(s.player)) evidence.set(s.player, r.id);
-    }
-  }
   const casingRank = (h: string): number => {
     const up = h.toUpperCase();
     const lo = h.toLowerCase();
@@ -558,36 +614,34 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
     if (h === lo) return 1; // all-lower
     return 0; // mixed — the spelling a person most likely typed
   };
-  const players = new Map<string, PlayerRecord>();
-  let multiSpelling = 0;
-  for (const [id, m] of spellings) {
-    const ranked = [...m.entries()].sort(
-      (a, b) => b[1] - a[1] || casingRank(a[0]) - casingRank(b[0]) || a[0].localeCompare(b[0]),
-    );
-    const [handle] = ranked[0] as [string, number];
-    const aliases = ranked.slice(1).map(([h]) => h);
-    if (aliases.length) multiSpelling++;
-    players.set(id, { id, handle, ...(aliases.length ? { extra: { aliases } } : {}) });
-  }
-
-  // ── 6b. tournament placements → featured + extra.titles ──────────────────
-  // data/tournaments.json is Liquipedia's Tier 1–2 winners and runners-up,
-  // fetched by hand (scripts/tournaments.ts — NETWORK, MANUAL, NEVER IN THE
-  // CRON). The match runs HERE, against the registry this run just built, so a
-  // champion with no replay yet costs nothing today and is featured the morning
-  // their first video is ingested. Names the matcher will not decide on its own
-  // (a fighter's OR a support's name, under three alphanumerics, two candidates)
-  // are reported for data/tournament-aliases.json, never guessed: a wrong person
-  // featured is worse than a right one missed. The roster test is the same one
-  // the registry invariant below runs — both namespaces, through the matcher.
-  const tournaments = matchTournaments(
-    players.values(),
-    readTournaments(),
-    readAliases().aliases,
-    playerId,
-    (h) => matcher.find(h).some((s) => s.fighter || s.support),
-  );
-  const titled = applyTournamentTitles(players, tournaments);
+  // A FUNCTION BECAUSE IT RUNS TWICE: over everything assembled, and again
+  // after the registry invariant below has held records back, so a held
+  // player is never in players.json and no /players/<id> page is minted.
+  const buildRegistry = (from: MatchVideo[]) => {
+    const spellings = new Map<string, Map<string, number>>();
+    for (const r of from) {
+      for (const s of r.sides) {
+        const m = spellings.get(s.player) ?? new Map<string, number>();
+        m.set(s.handle, (m.get(s.handle) ?? 0) + 1);
+        spellings.set(s.player, m);
+      }
+    }
+    const players = new Map<string, PlayerRecord>();
+    let multiSpelling = 0;
+    for (const [id, m] of spellings) {
+      const ranked = [...m.entries()].sort(
+        (a, b) => b[1] - a[1] || casingRank(a[0]) - casingRank(b[0]) || a[0].localeCompare(b[0]),
+      );
+      const [handle] = ranked[0] as [string, number];
+      const aliases = ranked.slice(1).map(([h]) => h);
+      if (aliases.length) multiSpelling++;
+      players.set(id, { id, handle, ...(aliases.length ? { extra: { aliases } } : {}) });
+    }
+    return { spellings, players, multiSpelling };
+  };
+  const registry = buildRegistry(records);
+  const { spellings } = registry;
+  let { players, multiSpelling } = registry;
 
   // THE REGISTRY INVARIANT (checklist 5n), AT PARSE TIME, THROUGH THE MATCHER,
   // OVER BOTH NAMESPACES. No player-registry entry may resolve to a roster
@@ -600,44 +654,137 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   // passes it silently because 'Sozin' resolves to no fighter. Same for 'Suki'
   // on phoenixWrong and 'Kanna'/'Pakku' on STiLL.
   //
-  // A HARD STOP, with the evidence a human needs to add the row: the id, the
-  // handle, what it resolves to, and a record it appears in. All offenders are
+  // REFUSE THE RECORD, NOT THE DAY (2026-10-30). This was a hard stop on any
+  // offender. It never fired in this repo's cron, but on Strive one new handle
+  // ("Plugging on ram", a Ky player) held the whole day's data from 2026-10-25
+  // for four days. The guarantee is unchanged: a character-named handle never
+  // publishes unconfirmed. What changed is what waits. An offender whose
+  // records are all NEW — not in the committed videos.json, not from a frozen
+  // channel — is HELD: every record carrying it goes to the review queue as
+  // 'fighter-named-handle' (the platform's name for the task; here it covers a
+  // support too), out of videos.json and out of the registry, and the rest of
+  // the day ships. Pending work (scripts/expiries.ts --check) goes red naming
+  // it; a row with a video id releases it on the next parse.
+  //
+  // IT STAYS A HARD STOP, with the evidence a human needs to add the row, when
+  // any record of the offender is ALREADY PUBLISHED. Holding one would
+  // unpublish a live page with exit 0, after the collapse guard has run — a
+  // silent deletion. And it only happens after a human change: a roster,
+  // support or alias edit, an allow-list row removed, or a parser regression.
+  // New uploads are never already published. Frozen-channel records count as
+  // published: they are carried from the committed file, and on the seeding
+  // path a hold would break the freeze pin's equality. All hard offenders are
   // printed at once — one stop per handle would be a bad morning.
   const confirmedById = new Map(CONFIRMED_CHARACTER_NAMED_PLAYERS.map((p) => [p.id, p]));
+  const committedIds = new Set(committed.map((v) => v.id));
+  const frozenIntakes = new Set<string>(CHANNELS.filter((c) => c.frozen).map((c) => c.id));
+  const offenders = (reg: Map<string, PlayerRecord>) =>
+    [...reg.values()].flatMap((p) => {
+      if (confirmedById.has(p.id)) return [];
+      const hits = characterNamedHits(p.handle, matcher);
+      return hits.length ? [{ p, hits }] : [];
+    });
   const collisions: string[] = [];
-  const confirmedSeen: string[] = [];
-  for (const p of players.values()) {
-    const spans = matcher.find(p.handle);
-    const hits = spans.filter((s) => s.fighter || s.support);
-    if (hits.length === 0) continue;
-    if (confirmedById.has(p.id)) {
-      confirmedSeen.push(p.id);
+  const routed = new Map<string, string[]>();
+  for (const { p, hits } of offenders(players)) {
+    const mine = records.filter((r) => r.sides.some((s) => s.player === p.id));
+    const published = mine.filter((r) => committedIds.has(r.id) || frozenIntakes.has(r.intake));
+    if (!published.length) {
+      routed.set(p.id, hits);
       continue;
     }
     const seen = spellings.get(p.id);
     const n = seen ? [...seen.values()].reduce((a, b) => a + b, 0) : 0;
-    const what = hits
-      .map((s) => `${s.fighter ?? s.support}${s.fighter ? '' : ' (support)'}`)
-      .join(', ');
     collisions.push(
-      `  ${p.id.padEnd(24)} "${p.handle}" → ${what}  (${n} side(s), e.g. ${evidence.get(p.id) ?? '?'})`,
+      `  ${p.id.padEnd(24)} "${p.handle}" → ${hits.join(', ')}  (${n} side(s), ` +
+        `${published.length} already published, e.g. ${published[0]!.id})`,
     );
   }
   if (collisions.length) {
     throw new Error(
       [
-        `✖ REGISTRY INVARIANT: ${collisions.length} player handle(s) resolve to a roster fighter`,
-        `  or support and are not on CONFIRMED_CHARACTER_NAMED_PLAYERS (scripts/roster.ts).`,
+        `✖ REGISTRY INVARIANT: ${collisions.length} player handle(s) on ALREADY-PUBLISHED records`,
+        `  resolve to a roster fighter or support and are not on`,
+        `  CONFIRMED_CHARACTER_NAMED_PLAYERS (scripts/roster.ts).`,
         ...collisions,
         ``,
         `  Each line is either a character filed as a person (a slot-order or namespace defect —`,
         `  fix the parse) or a person named after one (watch the video, then add the row WITH its`,
-        `  id as evidence). Nothing is written until every line is one or the other.`,
+        `  id as evidence). A NEW record is held for review instead; these are live, so holding`,
+        `  them would unpublish them, and that only follows a roster, alias, allow-list or parser`,
+        `  change. Nothing is written until every line is one or the other.`,
       ].join('\n'),
     );
   }
+
+  // THE HOLD. One queue item per record, naming every held side.
+  const heldItems: ReviewQueueItem[] = [];
+  if (routed.size) {
+    const kept: MatchVideo[] = [];
+    for (const r of records) {
+      const held = r.sides.flatMap((s, i) => {
+        const hits = routed.get(s.player);
+        return hits
+          ? [{ side: i as 0 | 1, handle: s.handle, player: s.player, resolvesTo: hits }]
+          : [];
+      });
+      if (!held.length) {
+        kept.push(r);
+        continue;
+      }
+      heldItems.push({
+        id: r.id,
+        kind: 'fighter-named-handle',
+        channel: r.intake,
+        title: r.title,
+        publishedAt: r.publishedAt,
+        durationSec: r.durationSec,
+        held,
+        record: r,
+      });
+      afterByIntake.set(r.intake, (afterByIntake.get(r.intake) ?? 0) - 1);
+      if (r.intake === idx?.id && theaterPinned.has(r.id) && pins.replayTheater !== undefined) {
+        pins.replayTheater--;
+      }
+    }
+    records = kept;
+    ({ players, multiSpelling } = buildRegistry(records));
+    // Holding records only REMOVES spellings, but it can shift a casing vote.
+    // Anything that offends now is a defect in the hold, not a new handle.
+    const left = offenders(players);
+    if (left.length) {
+      throw new Error(
+        `✖ REGISTRY INVARIANT: the hold left ${left.length} offender(s) in the registry ` +
+          `(${left.map((o) => o.p.id).join(', ')}). Nothing written.`,
+      );
+    }
+  }
+  const held = heldHandles(heldItems);
+  const confirmedSeen = [...players.values()]
+    .filter((p) => confirmedById.has(p.id) && characterNamedHits(p.handle, matcher).length > 0)
+    .map((p) => p.id);
   const confirmedUnseen = CONFIRMED_CHARACTER_NAMED_PLAYERS.filter((p) => !players.has(p.id));
   const confirmedNoEvidence = CONFIRMED_CHARACTER_NAMED_PLAYERS.filter((p) => p.video === null);
+
+  // ── 6b. tournament placements → featured + extra.titles ──────────────────
+  // data/tournaments.json is Liquipedia's Tier 1–2 winners and runners-up,
+  // fetched by hand (scripts/tournaments.ts — NETWORK, MANUAL, NEVER IN THE
+  // CRON). The match runs HERE, against the registry this run just built (after
+  // the hold, so a held player is never featured), so a
+  // champion with no replay yet costs nothing today and is featured the morning
+  // their first video is ingested. Names the matcher will not decide on its own
+  // (a fighter's OR a support's name, under three alphanumerics, two candidates)
+  // are reported for data/tournament-aliases.json, never guessed: a wrong person
+  // featured is worse than a right one missed. The roster test is the same one
+  // the registry invariant above runs — both namespaces, through the matcher.
+  const tournaments = matchTournaments(
+    players.values(),
+    readTournaments(),
+    readAliases().aliases,
+    playerId,
+    (h) => matcher.find(h).some((s) => s.fighter || s.support),
+  );
+  const titled = applyTournamentTitles(players, tournaments);
 
   // ── 7. MATCH IDENTITY — REPORT ONLY, NEVER A DROP KEY (checklist 2b) ─────
   // The intake key cannot see the duplicate that matters once an organiser posts
@@ -692,9 +839,16 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   // 'duplicate-candidate', whose whole point is that both records are published
   // and a human has to say whether they are one match (step 7).
   const publishedIds = new Set(records.map((r) => r.id));
-  const pending = queue.filter(
-    (q) => !overrides[q.id] && (q.kind === 'duplicate-candidate' || !publishedIds.has(q.id)),
-  );
+  //
+  // The held items skip the `!overrides[q.id]` test on purpose: the hold is
+  // derived AFTER the overrides were applied, so an override that fixed the
+  // side already released the record, and one that did not leaves it held. Any
+  // entry clearing the item would publish nothing and lose it.
+  const pending = queue
+    .filter(
+      (q) => !overrides[q.id] && (q.kind === 'duplicate-candidate' || !publishedIds.has(q.id)),
+    )
+    .concat(heldItems);
 
   // ── 9. residue, and the unreleased-fighter early warning ─────────────────
   // The residue gate is also how an UNRELEASED fighter announces themselves:
@@ -757,6 +911,16 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
       '',
     );
   }
+  if (held.length) {
+    lines.push(
+      '## ⚠ HELD FOR REVIEW — fighter-named handles',
+      '',
+      ...held.map((h) => `- ${heldLine(h)}`),
+      '',
+      ...HELD_HOW,
+      '',
+    );
+  }
   lines.push(
     '# Avatar Legends pipeline report',
     '',
@@ -769,6 +933,8 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
     `- **${dropped}** duplicate id(s) resolved by intake precedence`,
     `- **${confirmedSeen.length}** of ${CONFIRMED_CHARACTER_NAMED_PLAYERS.length} confirmed ` +
       'character-named player(s) present; every other handle resolves to no fighter and no support',
+    `- **${heldItems.length}** record(s) held on ${held.length} unconfirmed fighter- or ` +
+      'support-named handle(s) — absent from the site until confirmed (checklist 5n)',
     '',
     '## Per intake',
     '',
@@ -1078,6 +1244,11 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
       `list (scripts/roster.ts): ` +
       (confirmedSeen.length ? confirmedSeen.map((id) => `\`${id}\``).join(', ') : '—') +
       '.',
+    held.length
+      ? `Held for review — NEW records whose handle resolves to a fighter or support with no row, ` +
+          `kept out of videos.json and the registry: ` +
+          `${held.map((h) => `\`${h.player}\` (${h.ids.length})`).join(', ')}.`
+      : 'Held for review: none.',
     ...(confirmedUnseen.length
       ? [
           `Confirmed rows NOT present in this registry (stale, or a spelling the parser now reads ` +
@@ -1149,7 +1320,8 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   await writeFile(join(DATA, 'report.md'), `${lines.filter((l) => l !== undefined).join('\n')}\n`);
 
   console.log(
-    `✓ ${records.length} record(s) · ${players.size} player(s) · ${titled} titled · ${pending.length} pending · ` +
+    `✓ ${records.length} record(s) · ${players.size} player(s) · ${titled} titled · ${pending.length} pending ` +
+      `(${heldItems.length} held on a fighter-named handle) · ` +
       `${residueRows.length} residue line(s) · ${dupGroups.length} duplicate signature(s) · ` +
       `${mirrors} mirror(s)` +
       (cursorWrite !== null ? ` · theater cursor → ${cursorWrite}` : ''),
@@ -1158,6 +1330,12 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
     console.error(
       `\n⚠ ${due.length} expiry(s) due — see the ACTION REQUIRED block in data/report.md`,
     );
+  }
+  if (held.length) {
+    console.error(
+      `\n⚠ HELD FOR REVIEW (Pending work goes red until each is confirmed or rejected):`,
+    );
+    for (const h of held) console.error(`  ${heldLine(h)}`);
   }
 }
 

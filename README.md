@@ -325,6 +325,22 @@ because the cron must never depend on a third party
 succeeding: on any failure there is no dump, parse carries the committed records
 against the pin, and the run stays green.
 
+Pending work is also red while a record is **held on an unconfirmed
+character-named handle** (checklist 5n, since 2026-10-30). A new record whose
+handle resolves to a fighter **or a support** with no
+`CONFIRMED_CHARACTER_NAMED_PLAYERS` row goes to `data/review-queue.json` as
+`fighter-named-handle` and stays off the site; the rest of the day ships, and
+Pending work names each handle and its record count. Confirm with the row and its
+video id (or reject with a `sides` override in `data/overrides.json`), push, then
+dispatch the data run; Pending work follows it. A held index record has no later
+dump to come back from (the pull is a cursor), so parse carries it from the
+queue, and the theater pin counts only what ships. It stays a hard stop in Parse
+when the handle is on an already-published record: holding that would unpublish a
+live page, and only a roster, support, alias, allow-list or parser change gets
+there. Until 2026-10-30 any hit refused the whole day; the allow-list is still
+empty and it never fired in this repo's cron, but it held Strive's data for four
+days from 10-25.
+
 The commit guard stages data files **by name** (checklist 9b) and leaves
 `data/overrides.json` out — that file is a human's. Two diffs are suppressed when
 they are the only thing that changed: `report.md`'s generated timestamp, and

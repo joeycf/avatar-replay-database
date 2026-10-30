@@ -1080,7 +1080,16 @@ export type VideoOverride = Partial<
  *                            One case exists in the live data ('Katara' as
  *                            Avatar Aang's support) and it is never guessed.
  *   'duplicate-candidate'  — two records share a MatchSignature. Reported and
- *                            queued, NEVER dropped: see MatchSignature. */
+ *                            queued, NEVER dropped: see MatchSignature.
+ *   'fighter-named-handle' — a NEW record (not yet published) whose handle
+ *                            resolves to a fighter OR a support and is not on
+ *                            CONFIRMED_CHARACTER_NAMED_PLAYERS (checklist 5n;
+ *                            the kind keeps the platform's name). The record
+ *                            is held, the rest of the day ships, and Pending
+ *                            work goes red naming the handle. A row with a
+ *                            video id releases it on the next parse; a `sides`
+ *                            override or an `exclude` resolves it the way the
+ *                            other kinds resolve. */
 export interface ReviewQueueItem {
   id: string;
   kind:
@@ -1089,7 +1098,8 @@ export interface ReviewQueueItem {
     | 'index-conflict'
     | 'slot-ambiguous'
     | 'support-overlap'
-    | 'duplicate-candidate';
+    | 'duplicate-candidate'
+    | 'fighter-named-handle';
   channel: ChannelKey;
   title: string;
   publishedAt: string;
@@ -1109,6 +1119,16 @@ export interface ReviewQueueItem {
   /** For 'duplicate-candidate': the other record ids sharing the signature, and
    *  the signature itself. Up to five ids have been observed on one pairing. */
   duplicates?: { signature: MatchSignature; ids: string[] };
+  /** For 'fighter-named-handle': each side whose handle resolves to a fighter
+   *  or a support with no CONFIRMED row — the side index, the handle as
+   *  written, the player id the registry would mint, and what it resolves to
+   *  (a fighter id, or a support id marked "(support)"). */
+  held?: { side: 0 | 1; handle: string; player: string; resolvesTo: string[] }[];
+  /** For 'fighter-named-handle': the held record itself, post-override. The
+   *  index intake is read through a cursor, so a held index record is in no
+   *  later dump and not in videos.json; parse-finish.ts carries it forward
+   *  from HERE until it is confirmed or rejected. */
+  record?: MatchVideo;
 }
 
 /** A time-bomb that has gone off: something the data can tell us is due, rather

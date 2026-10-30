@@ -61,6 +61,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
+import { buildAliasMatcher, characterNamedHits, CONFIRMED_CHARACTER_NAMED_PLAYERS } from './roster';
+import type { FighterAliasSource, SupportAliasSource } from './roster';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SLUG = 'avatar';
 const OUT = join(ROOT, '.vercel', 'output', 'static', SLUG);
@@ -892,6 +895,7 @@ if (EMPTY) {
 
   const players = JSON.parse(src('data/players.json')) as {
     id: string;
+    handle: string;
     featured?: boolean;
     extra?: { titles?: { event: string }[] };
   }[];
@@ -899,6 +903,31 @@ if (EMPTY) {
   check(
     'player pages prerendered (they must not 404 on static hosting)',
     !!p && has(`players/${p}/index.html`),
+  );
+
+  // CHECKLIST 5n ON WHAT SHIPPED, OVER BOTH NAMESPACES. parse-finish.ts holds
+  // a NEW record whose handle resolves to a fighter or a support with no
+  // CONFIRMED row in the review queue ('fighter-named-handle') and ships the
+  // rest of the day. This is the check that the hold held: every published
+  // side's player, read through players.json, against the SAME predicate the
+  // hold uses (roster.ts characterNamedHits). A side whose player is missing
+  // from players.json is read by its id, so it cannot pass by default.
+  const matcher = buildAliasMatcher(
+    JSON.parse(src('data/characters.json')) as FighterAliasSource[],
+    JSON.parse(src('data/supports.json')) as SupportAliasSource[],
+  );
+  const confirmed = new Set(CONFIRMED_CHARACTER_NAMED_PLAYERS.map((c) => c.id));
+  const handleOf = new Map(players.map((x) => [x.id, x.handle]));
+  const unconfirmed = [...new Set(replays.flatMap((r) => r.sides.map((sd) => sd.player)))].filter(
+    (id) => !confirmed.has(id) && characterNamedHits(handleOf.get(id) ?? id, matcher).length > 0,
+  );
+  check(
+    'no published side names a fighter- or support-named handle without a CONFIRMED row',
+    unconfirmed.length === 0,
+    unconfirmed
+      .slice(0, 3)
+      .map((id) => `${id} "${handleOf.get(id) ?? id}"`)
+      .join(', '),
   );
 
   // ── tournament placements (engine v0.17.0; scripts/tournaments.ts) ────────
