@@ -1,26 +1,3 @@
-## ⚠ ACTION REQUIRED
-
-6 self-expiring gate(s) are due:
-
-- **iroh** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "over the course of the season" (https://store.steampowered.com/api/appdetails?appids=2424420) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. The accent is already derived: --char-iroh #FCB26F in design/handoff/tokens.css and app/app.config.ts. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-- **ty-lee** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "over the course of the season" (https://store.steampowered.com/api/appdetails?appids=2424420) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. The accent is already derived: --char-ty-lee #F59ECF in design/handoff/tokens.css and app/app.config.ts. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-- **lin-beifong** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "over the course of the season" (https://store.steampowered.com/api/appdetails?appids=2424420) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. The accent is already derived: --char-lin-beifong #A8BEAC in design/handoff/tokens.css and app/app.config.ts. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-- **bolin** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "over the course of the season" (https://store.steampowered.com/api/appdetails?appids=2424420) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. The accent is already derived: --char-bolin #D3D979 in design/handoff/tokens.css and app/app.config.ts. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-- **year-1-vote-winner** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "the winner of the Year 1 Character Vote" (https://store.steampowered.com/api/appdetails?appids=2424420) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. Get an accent from a Claude Design session — never invent one — and add --char-<id> to design/handoff/tokens.css AND accents in app/app.config.ts; scripts/characters.ts fails on either one missing. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-- **tagah** (unreleased-character, due 2026-10-27)
-  REVIEW — this is a look-again date, NOT a release date. The vendor's own words are still "for FREE later this year" (https://x.com/avatar_fighters/status/2080398201811558791) and it has published no date. Run `npm run data:roster-check` — it reads Valve's achievement schema for app 2424420, which gains an `ach_match_won_<token>` row the day a fighter ships and is the only complete machine-readable enumeration of this roster. IF THEY HAVE SHIPPED: add a ROSTER row in scripts/characters.ts with the vendor's SHORT display name (the achievement text and the patch notes, never the handoff's longer form), its `steamToken` from that schema, its `siteKey` if the paramountgames widget now lists it, its nation, and the aliases its uploaders actually write — respecting BANNED_ALIASES, which already refuses `Beifong` because two Beifongs cannot share a surname. Add its THREE supports to SUPPORTS with an index row id each; a support with no index row stays out. The accent is already derived: --char-tagah #F7E6C3 in design/handoff/tokens.css and app/app.config.ts. Drop this row from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. IF THEY HAVE NOT SHIPPED: re-date `reviewAfter` and say in the note what you checked — do not delete the row, and do not write a release date the vendor has not published.
-
-
 # Avatar Legends pipeline report
 
 - **1067** published record(s) · **594** player(s) · **12** fighter(s) · **36** support(s)
@@ -40,7 +17,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 396 | 87 | 76 | 76 | 0 (120s) | 11 (3600s) | 0 | 0 |
-| still | still | 159 | 96 | 61 | 61 | 1 (120s) | 0 (—) | 0 | 21 |
+| still | still | 161 | 97 | 61 | 61 | 2 (120s) | 0 (—) | 0 | 21 |
 | ndyTv | ndyTv | 3354 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 982 | 46 | 46 | 46 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 205 | 23 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -52,7 +29,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | rood | rood | 41 | 28 | 27 | 27 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 44 | 24 | 23 | 23 | 1 (120s) | 0 (—) | 0 | 0 |
 | natsuXenoblade _(watch)_ | natsuXenoblade | 180 | 19 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 1 |
-| takeANappa | takeANappa | 305 | 32 | 10 | 10 | 10 (120s) | 0 (—) | 0 | 4 |
+| takeANappa | takeANappa | 309 | 36 | 10 | 10 | 14 (120s) | 0 (—) | 0 | 4 |
 | versusFestival | versusFestival | 485 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
 | kmlTournaments | kmlTournaments | 1137 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -61,7 +38,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 308 | 12 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 4 |
 | superSalemFighters | superSalemFighters | 233 | 9 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 0 |
-| redVsFantasy | redVsFantasy | 556 | 53 | 8 | 8 | 0 (120s) | 0 (—) | 1 | 17 |
+| redVsFantasy | redVsFantasy | 557 | 54 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 19 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | phoenixWrong | phoenixWrong | 26 | 5 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 2 |
@@ -71,7 +48,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 12 | 4 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 2 |
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 588 | — | — | — | — |
+| replayTheater _(index, carried)_ | replayTheater | — | — | — | 588 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 9 of 33 intake(s)_
 _with records commit more than 20, so on the other 24 its second arm cannot fire at all_
@@ -87,11 +64,7 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 17 built this run, 571 carried (add-only), **588** total; pin 588. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
-
-Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
-
-Segment ids: **17** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+The pull ran and found nothing newer than the cursor, so the committed catalogue was carried unchanged: **588** record(s), pin 588. A quiet morning is the ordinary case here, not a failed one.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -130,7 +103,7 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 309 | 0 | 0 | 0 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 63 | 0 | 0 | 1 | 0 | 23 | 0 | 10 | 1 | 0 | 0 | 0 | 0 |
+| still | 64 | 0 | 0 | 2 | 0 | 23 | 0 | 10 | 1 | 0 | 0 | 0 | 0 |
 | ndyTv | 3289 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 936 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
@@ -142,7 +115,7 @@ no player to complete.
 | rood | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo | 20 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade | 161 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| takeANappa | 273 | 0 | 0 | 10 | 0 | 10 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+| takeANappa | 273 | 0 | 0 | 14 | 0 | 10 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 477 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kmlTournaments | 1130 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -151,7 +124,7 @@ no player to complete.
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | schoolBus | 296 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | superSalemFighters | 224 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy | 503 | 0 | 1 | 0 | 0 | 43 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| redVsFantasy | 503 | 0 | 0 | 0 | 0 | 45 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | phoenixWrong | 21 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -242,7 +215,7 @@ Where a channel titles a set with the day it was PLAYED, that day is the record 
 is misdated AND its backlog is credited to the weeks it was uploaded in — which is how a
 corpus looks like it is accelerating while ambient volume is flat.
 
-- **still**: 75 marked upload(s) dated from the title, 4 token(s) refused as outside the 26-day bound, 17 carrying no token at all; largest lag used 26 day(s)
+- **still**: 75 marked upload(s) dated from the title, 4 token(s) refused as outside the 26-day bound, 18 carrying no token at all; largest lag used 26 day(s)
 
 ## Duration histogram, per intake
 
@@ -258,7 +231,7 @@ or ceiling would admit.
 | aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 12 | 6 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still · other misses | 0 | 1 | 0 | 0 | 1 | 11 | 16 | 6 |
+| still · other misses | 0 | 1 | 1 | 0 | 1 | 11 | 16 | 6 |
 | ndyTv · records | 0 | 0 | 0 | 4 | 27 | 1 | 0 | 0 |
 | ndyTv · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | ndyTv · other misses | 0 | 0 | 0 | 2 | 31 | 0 | 0 | 0 |
@@ -294,7 +267,7 @@ or ceiling would admit.
 | natsuXenoblade · other misses | 0 | 0 | 0 | 0 | 1 | 1 | 4 | 8 |
 | takeANappa · records | 0 | 0 | 0 | 0 | 3 | 4 | 1 | 2 |
 | takeANappa · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| takeANappa · other misses | 0 | 2 | 8 | 0 | 0 | 0 | 0 | 12 |
+| takeANappa · other misses | 0 | 5 | 9 | 0 | 0 | 0 | 0 | 12 |
 | versusFestival · records | 0 | 0 | 0 | 1 | 7 | 0 | 0 | 0 |
 | versusFestival · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -321,7 +294,7 @@ or ceiling would admit.
 | superSalemFighters · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy · records | 0 | 0 | 0 | 0 | 3 | 1 | 4 | 0 |
 | redVsFantasy · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy · other misses | 1 | 0 | 0 | 0 | 5 | 11 | 13 | 15 |
+| redVsFantasy · other misses | 0 | 0 | 0 | 0 | 6 | 11 | 13 | 16 |
 | mikeyChiFgc · records | 0 | 0 | 0 | 0 | 0 | 1 | 2 | 0 |
 | mikeyChiFgc · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -418,8 +391,10 @@ construction — it names two fighters by definition and would drown the table.
 - `9sUXgo-WLyo` no-vs: [Avatar Legends] Paragon Online Tournament #4 run with Korra (SchoolBus)
 - `SAPklV2CGKk` no-vs: [Avatar Legends] HIGH LEVEL KORRA MIRROR (SchoolBus vs Dinotail)
 
-**redVsFantasy** — 17
+**redVsFantasy** — 19
 
+- `6iVnesaQPcE` no-vs: Is it Korrover? Zuko training... (Sponsored by STG and !CORSAIR)  | Avatar Legends TFG
+- `2RnppLNAOnc` no-vs: Small Breakdown of the Zaheer MU | Avatar Legends the Fighting Game
 - `aaGRoaSpeuU` no-vs: Avatar Aang/Nightmare Korra Trailer Breakdown! ft @Diaphone and Testmyluck | Avatar Legends TFG
 - `ltKkFCNFOY8` no-vs: The BEST Nightmare Korra has been found. | Avatar Legends the Fighting Game (Donteyyy N.Korra)
 - `I8sFK6xqqaY` no-vs: Zuko is a REAL problem now | Avatar Legends the Fighting Game (Terapevt Zuko)
@@ -428,8 +403,6 @@ construction — it names two fighters by definition and would drown the table.
 - `zORjtjZqVzk` no-vs: Studying the Korra Bros! @dekillsage and @BoogieFGC | Avatar Legends the Fighting Game
 - `LUo0qDGmJGY` no-vs: Reacting to High Level Russian Aang??? | Avatar Legends the Fighting Game (OhDatsApplesMate Aang)
 - `uDiTmzbxgT8` no-vs: Teaching a lost Azula Player COMBO THEORY | Avatar Legends the Fighting Game
-- `rXCAoz8hO6g` no-vs: Reacting to FIRST Zuko Tournament Win! | Avatar Legends the Fighting Game (Saxxie Zuko)
-- `zbFATuuOUsE` no-vs: Reacting to 1st place Sokka at Paragon Online! w/@dekillsage | Avatar Legends the Fighting Game
 
 **phoenixWrong** — 2
 
@@ -489,8 +462,8 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `How State SAVED This`
 - 1× `I fear reimagining was greatly over exaggerated`
 - 1× `I Start playing character GAMES V S First time SFL Soap`
-- … 106 more
+- … 108 more
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-10-29T16:09:23.863Z_
+_Generated 2026-10-30T15:57:41.119Z_

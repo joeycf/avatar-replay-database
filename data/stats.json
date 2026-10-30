@@ -8,7 +8,8 @@
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
-      "2026-10-07": 309
+      "2026-10-07": 307,
+      "2026-10-28": 2
     },
     "supports": 36,
     "sidesWithSupport": 1383
@@ -83,10 +84,9 @@
       "toph": 96
     },
     "2026-10-07": {
-      "aang": 32,
-      "korra": 74,
-      "nightmare-korra": 34,
       "toph": 110,
+      "aang": 30,
+      "korra": 73,
       "kyoshi": 79,
       "zaheer": 66,
       "azula": 66,
@@ -94,7 +94,13 @@
       "zuko": 40,
       "ozai": 50,
       "avatar-aang": 6,
+      "nightmare-korra": 33,
       "sokka": 9
+    },
+    "2026-10-28": {
+      "aang": 2,
+      "korra": 1,
+      "nightmare-korra": 1
     }
   },
   "playerCharacters": {
