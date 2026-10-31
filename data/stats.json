@@ -1,28 +1,28 @@
 {
   "totals": {
-    "replays": 1067,
+    "replays": 1075,
     "characters": 12,
-    "players": 594,
+    "players": 599,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
-      "2026-10-07": 307,
-      "2026-10-28": 2
+      "2026-10-07": 314,
+      "2026-10-28": 3
     },
     "supports": 36,
-    "sidesWithSupport": 1383
+    "sidesWithSupport": 1399
   },
   "characterUsage": {
-    "aang": 135,
-    "korra": 251,
+    "aang": 137,
+    "korra": 253,
     "nightmare-korra": 86,
-    "toph": 301,
+    "toph": 302,
     "kyoshi": 234,
     "zaheer": 231,
-    "azula": 232,
-    "katara": 227,
+    "azula": 236,
+    "katara": 234,
     "zuko": 132,
     "ozai": 165,
     "avatar-aang": 42,
@@ -84,13 +84,13 @@
       "toph": 96
     },
     "2026-10-07": {
-      "toph": 110,
+      "toph": 111,
       "aang": 30,
-      "korra": 73,
+      "korra": 75,
       "kyoshi": 79,
       "zaheer": 66,
-      "azula": 66,
-      "katara": 52,
+      "azula": 70,
+      "katara": 59,
       "zuko": 40,
       "ozai": 50,
       "avatar-aang": 6,
@@ -98,12 +98,18 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "aang": 2,
+      "aang": 4,
       "korra": 1,
       "nightmare-korra": 1
     }
   },
   "playerCharacters": {
+    "an11-mo": {
+      "aang": 24
+    },
+    "heartless": {
+      "aang": 5
+    },
     "rood": {
       "aang": 11,
       "katara": 3,
@@ -214,9 +220,6 @@
     },
     "hatemani": {
       "zuko": 9
-    },
-    "heartless": {
-      "aang": 4
     },
     "elfry": {
       "nightmare-korra": 5
@@ -416,8 +419,20 @@
     "mirri": {
       "aang": 2
     },
-    "an11-mo": {
-      "aang": 23
+    "tavtavtavtav": {
+      "katara": 3
+    },
+    "tommy": {
+      "azula": 4
+    },
+    "squidy": {
+      "korra": 2
+    },
+    "juno": {
+      "katara": 4
+    },
+    "vivi-luna": {
+      "toph": 1
     },
     "rucan": {
       "zaheer": 1
@@ -1923,27 +1938,27 @@
     }
   },
   "supportUsage": {
-    "gyatso": 59,
+    "gyatso": 60,
+    "appa": 29,
     "badgermole": 59,
     "the-boulder": 69,
     "momo": 26,
-    "naga": 134,
+    "naga": 136,
     "rangi": 79,
     "ghazan": 82,
-    "the-hippo": 62,
+    "the-hippo": 63,
     "ursa": 70,
-    "kanna": 60,
+    "kanna": 64,
     "june": 52,
-    "master-pakku": 46,
+    "master-pakku": 49,
     "imperial-firebender": 37,
     "ming-hua": 46,
     "roku": 27,
     "vaatu": 22,
-    "joo-dee": 12,
+    "joo-dee": 16,
     "firelord-sozin": 41,
     "lo-and-li": 71,
     "mai": 29,
-    "appa": 28,
     "dark-spirit": 31,
     "princess-yue": 33,
     "tonraq": 16,

@@ -591,6 +591,35 @@
     }
   },
   {
+    "id": "JBS6YuDfATQ@11483",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ tavtavtavtav (Katara/Master Pakku) vs juno! (Katara/Kanna) ▰ Vis-à-Vis #15",
+    "publishedAt": "2026-10-24T11:05:01Z",
+    "durationSec": 27071,
+    "handles": [
+      "tavtavtavtav",
+      "juno!"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "juno",
+          "tavtavtavtav"
+        ],
+        "characters": [
+          "katara",
+          "katara"
+        ],
+        "playedOn": "2026-10-24"
+      },
+      "ids": [
+        "JBS6YuDfATQ@11483",
+        "JBS6YuDfATQ@8579"
+      ]
+    }
+  },
+  {
     "id": "XvqC9WuYX7k@4003",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
