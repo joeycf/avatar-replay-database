@@ -417,6 +417,35 @@
     "durationSec": 2130
   },
   {
+    "id": "nyg5o83uB8c@5649",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Kitoro (Zaheer/Ming-Hua) vs Roadery (Kyoshi/Rangi) ▰ Soul Read #1",
+    "publishedAt": "2026-10-30T16:55:14Z",
+    "durationSec": 8744,
+    "handles": [
+      "Kitoro",
+      "Roadery"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "kitoro",
+          "roadery"
+        ],
+        "characters": [
+          "kyoshi",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-30"
+      },
+      "ids": [
+        "nyg5o83uB8c@5649",
+        "nyg5o83uB8c@7454"
+      ]
+    }
+  },
+  {
     "id": "sQ_1h3BUiSQ@4848",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

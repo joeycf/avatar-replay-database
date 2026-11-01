@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 1075,
+    "replays": 1088,
     "characters": 12,
-    "players": 599,
+    "players": 606,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 3
+      "2026-10-28": 16
     },
     "supports": 36,
-    "sidesWithSupport": 1399
+    "sidesWithSupport": 1425
   },
   "characterUsage": {
-    "aang": 137,
-    "korra": 253,
+    "aang": 142,
+    "katara": 237,
+    "korra": 259,
+    "azula": 237,
+    "toph": 304,
+    "kyoshi": 239,
+    "zaheer": 234,
+    "ozai": 166,
     "nightmare-korra": 86,
-    "toph": 302,
-    "kyoshi": 234,
-    "zaheer": 231,
-    "azula": 236,
-    "katara": 234,
     "zuko": 132,
-    "ozai": 165,
     "avatar-aang": 42,
     "sokka": 108
   },
@@ -98,8 +98,14 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "aang": 4,
-      "korra": 1,
+      "aang": 9,
+      "katara": 3,
+      "korra": 7,
+      "azula": 1,
+      "toph": 2,
+      "kyoshi": 5,
+      "zaheer": 3,
+      "ozai": 1,
       "nightmare-korra": 1
     }
   },
@@ -109,6 +115,36 @@
     },
     "heartless": {
       "aang": 5
+    },
+    "thicc-man-meat": {
+      "aang": 2
+    },
+    "juno": {
+      "katara": 7
+    },
+    "squidy": {
+      "korra": 7
+    },
+    "tommy": {
+      "azula": 5
+    },
+    "gracialchasm": {
+      "toph": 2
+    },
+    "roadery": {
+      "kyoshi": 5
+    },
+    "kitoro": {
+      "zaheer": 3
+    },
+    "dale": {
+      "aang": 3
+    },
+    "liamgrayson": {
+      "ozai": 1
+    },
+    "laurablacklodge": {
+      "korra": 1
     },
     "rood": {
       "aang": 11,
@@ -421,15 +457,6 @@
     },
     "tavtavtavtav": {
       "katara": 3
-    },
-    "tommy": {
-      "azula": 4
-    },
-    "squidy": {
-      "korra": 2
-    },
-    "juno": {
-      "katara": 4
     },
     "vivi-luna": {
       "toph": 1
@@ -1938,24 +1965,24 @@
     }
   },
   "supportUsage": {
-    "gyatso": 60,
+    "gyatso": 63,
     "appa": 29,
+    "momo": 28,
+    "kanna": 67,
+    "naga": 142,
+    "joo-dee": 17,
+    "the-hippo": 65,
+    "rangi": 84,
+    "ming-hua": 49,
+    "imperial-firebender": 38,
     "badgermole": 59,
     "the-boulder": 69,
-    "momo": 26,
-    "naga": 136,
-    "rangi": 79,
     "ghazan": 82,
-    "the-hippo": 63,
     "ursa": 70,
-    "kanna": 64,
     "june": 52,
     "master-pakku": 49,
-    "imperial-firebender": 37,
-    "ming-hua": 46,
     "roku": 27,
     "vaatu": 22,
-    "joo-dee": 16,
     "firelord-sozin": 41,
     "lo-and-li": 71,
     "mai": 29,
