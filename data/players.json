@@ -215,6 +215,10 @@
     "handle": "Beef Set Rood"
   },
   {
+    "id": "bel-ehto",
+    "handle": "Bel Ehto"
+  },
+  {
     "id": "benji-buckley",
     "handle": "Benji Buckley"
   },
@@ -1200,6 +1204,10 @@
   {
     "id": "konanza",
     "handle": "Konanza"
+  },
+  {
+    "id": "koro-sdtc",
+    "handle": "Koro SDTC"
   },
   {
     "id": "koustics",
