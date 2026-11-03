@@ -576,6 +576,10 @@
     "handle": "Domitto"
   },
   {
+    "id": "dona",
+    "handle": "Dona"
+  },
+  {
     "id": "donnandwarf",
     "handle": "DonnanDwarf"
   },
@@ -859,6 +863,10 @@
         "Graycapedhero"
       ]
     }
+  },
+  {
+    "id": "guessing-game",
+    "handle": "Guessing__Game"
   },
   {
     "id": "guttercat",
@@ -1814,6 +1822,10 @@
   {
     "id": "rainmaker",
     "handle": "Rainmaker"
+  },
+  {
+    "id": "raven",
+    "handle": "Raven_"
   },
   {
     "id": "raymond-buller",

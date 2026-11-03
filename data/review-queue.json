@@ -417,6 +417,35 @@
     "durationSec": 2130
   },
   {
+    "id": "-eS4jLL_gEs@5842",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ AWanderingTanuki (Toph/Badgermole) vs Inahk (Kyoshi/Yun) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #11",
+    "publishedAt": "2026-11-01T22:56:32Z",
+    "durationSec": 9451,
+    "handles": [
+      "AWanderingTanuki",
+      "Inahk"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "awanderingtanuki",
+          "inahk"
+        ],
+        "characters": [
+          "kyoshi",
+          "toph"
+        ],
+        "playedOn": "2026-11-01"
+      },
+      "ids": [
+        "-eS4jLL_gEs@5842",
+        "-eS4jLL_gEs@7879"
+      ]
+    }
+  },
+  {
     "id": "nyg5o83uB8c@5649",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

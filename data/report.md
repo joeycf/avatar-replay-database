@@ -1,9 +1,9 @@
 # Avatar Legends pipeline report
 
-- **1095** published record(s) · **608** player(s) · **12** fighter(s) · **36** support(s)
-- **733** record(s) state at least one support (66.9%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
-- **98** mirror match(es) (8.9%)
-- **110** pending review item(s) — absent from the site, never guessed
+- **1110** published record(s) · **611** player(s) · **12** fighter(s) · **36** support(s)
+- **748** record(s) state at least one support (67.4%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
+- **99** mirror match(es) (8.9%)
+- **111** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 - **0** of 0 confirmed character-named player(s) present; every other handle resolves to no fighter and no support
 - **0** record(s) held on 0 unconfirmed fighter- or support-named handle(s) — absent from the site until confirmed (checklist 5n)
@@ -29,11 +29,11 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | normalMs | normalMs | 491 | 31 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
 | rood | rood | 41 | 28 | 27 | 27 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 45 | 25 | 24 | 24 | 1 (120s) | 0 (—) | 0 | 0 |
-| natsuXenoblade _(watch)_ | natsuXenoblade | 180 | 19 | 5 | 5 | 0 (120s) | 0 (—) | 0 | 1 |
+| natsuXenoblade _(watch)_ | natsuXenoblade | 181 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
 | takeANappa | takeANappa | 311 | 38 | 10 | 10 | 14 (120s) | 0 (—) | 0 | 5 |
 | versusFestival | versusFestival | 486 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 1192 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 1208 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 16 | 12 | 11 | 11 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -49,7 +49,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 13 | 4 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 2 |
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 615 | — | — | — | — |
+| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 629 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 9 of 33 intake(s)_
 _with records commit more than 20, so on the other 24 its second arm cannot fire at all_
@@ -65,11 +65,11 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 7 built this run, 608 carried (add-only), **615** total; pin 615. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
+Rebuilt from a **cursor delta**: 14 built this run, 615 carried (add-only), **629** total; pin 629. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
 
 Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
 
-Segment ids: **6** row(s) took a `videoId@startSeconds` id and **1** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+Segment ids: **14** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -78,10 +78,11 @@ about footage identity, not a verdict: the RUNBACK is a legitimate collision —
 players, same two fighters, same day, winners final then grand final — so nothing is dropped
 on it. Composite segment ids stay the mechanism for index-within-VOD.
 
-- **60** signature(s) cover more than one record, **122** record(s) in all (11.1% of the archive)
+- **61** signature(s) cover more than one record, **124** record(s) in all (11.2% of the archive)
 - **0** of those span more than one intake — the case the intake key cannot see
 - every one is queued as `duplicate-candidate` and every one is still published
 
+- `awanderingtanuki vs inahk` on `kyoshi / toph`, 2026-11-01: `-eS4jLL_gEs@5842` (replayTheater), `-eS4jLL_gEs@7879` (replayTheater)
 - `kitoro vs roadery` on `kyoshi / zaheer`, 2026-10-30: `nyg5o83uB8c@5649` (replayTheater), `nyg5o83uB8c@7454` (replayTheater)
 - `heartless vs raymond-buller` on `aang / korra`, 2026-10-26: `sQ_1h3BUiSQ@4848` (replayTheater), `sQ_1h3BUiSQ@6281` (replayTheater)
 - `awanderingtanuki vs scythe` on `katara / toph`, 2026-10-26: `wezi_By7U9U@13276` (replayTheater), `wezi_By7U9U@15660` (replayTheater)
@@ -93,8 +94,7 @@ on it. Composite segment ids stay the mechanism for index-within-VOD.
 - `flankroast vs gonemad` on `kyoshi / zaheer`, 2026-10-20: `XvqC9WuYX7k@4003` (replayTheater), `XvqC9WuYX7k@7860` (replayTheater)
 - `inahk vs raymond-buller` on `korra / kyoshi`, 2026-10-19: `ZIRoR2Q4hIc@3193` (replayTheater), `ZIRoR2Q4hIc@6984` (replayTheater)
 - `awanderingtanuki vs raymond-buller` on `korra / toph`, 2026-10-19: `ZIRoR2Q4hIc@6038` (replayTheater), `ZIRoR2Q4hIc@7343` (replayTheater)
-- `arinkarin vs gwen-stacy` on `kyoshi / ozai`, 2026-10-18: `Q3EAjCdkgmY@3659` (replayTheater), `Q3EAjCdkgmY@6991` (replayTheater)
-- … 48 more
+- … 49 more
 
 ## Misses, per intake
 
@@ -123,7 +123,7 @@ no player to complete.
 | takeANappa | 273 | 0 | 0 | 14 | 0 | 12 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 478 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 1185 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 1201 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -161,7 +161,7 @@ covering a channel — which is why this is printed rather than merely collected
 | normalMs | handle-outside | 44 | 0 | 0 | 0 | 0 (0.0%) | 0 | 44 |
 | rood | handle-outside | 34 | 0 | 20 | 0 | 0 (0.0%) | 1 | 54 |
 | an11Mo | handle-outside | 48 | 0 | 0 | 0 | 0 (0.0%) | 0 | 48 |
-| natsuXenoblade | handle-outside | 10 | 0 | 0 | 0 | 0 (0.0%) | 0 | 10 |
+| natsuXenoblade | handle-outside | 12 | 0 | 0 | 0 | 0 (0.0%) | 0 | 12 |
 | takeANappa | chars-outside | 8 | 12 | 0 | 0 | 0 (0.0%) | 0 | 20 |
 | versusFestival | handle-outside | 16 | 0 | 0 | 0 | 0 (0.0%) | 0 | 16 |
 | avianZebra | handle-outside | 20 | 0 | 0 | 0 | 0 (0.0%) | 0 | 20 |
@@ -202,7 +202,7 @@ while the record is kept.
 | normalMs | 28 | 28 | 0 | 0 | 0 |
 | rood | 30 | 30 | 0 | 1 | 0 |
 | an11Mo | 47 | 47 | 0 | 0 | 0 |
-| natsuXenoblade | 8 | 8 | 0 | 0 | 0 |
+| natsuXenoblade | 10 | 9 | 1 | 0 | 0 |
 | takeANappa | 20 | 20 | 0 | 0 | 0 |
 | avianZebra | 20 | 20 | 0 | 0 | 0 |
 | teo1029 | 20 | 20 | 0 | 0 | 0 |
@@ -267,7 +267,7 @@ or ceiling would admit.
 | an11Mo · records | 0 | 0 | 0 | 0 | 1 | 5 | 12 | 6 |
 | an11Mo · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | an11Mo · other misses | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| natsuXenoblade · records | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 2 |
+| natsuXenoblade · records | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 3 |
 | natsuXenoblade · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade · other misses | 0 | 0 | 0 | 0 | 1 | 1 | 4 | 8 |
 | takeANappa · records | 0 | 0 | 0 | 0 | 3 | 4 | 1 | 2 |
@@ -327,7 +327,7 @@ or ceiling would admit.
 
 ## Handles
 
-- word count per side: 1 → 888 · 2 → 48 · 3 → 10 · 4 → 3 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 890 · 2 → 48 · 3 → 10 · 4 → 3 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 33 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
@@ -338,7 +338,7 @@ Held for review: none.
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
 
-2 events with placements read; 3 of 608 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+2 events with placements read; 3 of 611 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
 
 **Titled:** `precho` 1W/0R · `sachio` 0W/1R · `xcaliburbladez` 1W/0R
 
@@ -473,4 +473,4 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-11-02T19:31:27.071Z_
+_Generated 2026-11-03T17:03:51.425Z_
