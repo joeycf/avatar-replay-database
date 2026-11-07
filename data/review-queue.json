@@ -1,5 +1,18 @@
 [
   {
+    "id": "nw95XL29HfE",
+    "kind": "support-overlap",
+    "channel": "still",
+    "title": "K7 ShowOff (Zaheer x Zuko) V.S. STiLL (Katara x Norra x Ozai) | AVATAR LEGENDS MEGA SET | 10.06.2026",
+    "publishedAt": "2026-11-06T20:00:37Z",
+    "durationSec": 4546,
+    "overlap": {
+      "span": "Katara",
+      "fighterId": "katara",
+      "supportId": "katara"
+    }
+  },
+  {
     "id": "-FeIkwePQZY",
     "kind": "character-completion",
     "channel": "still",
