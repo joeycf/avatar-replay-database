@@ -1,12 +1,15 @@
 ## ⚠ ACTION REQUIRED
 
-2 self-expiring gate(s) are due:
+3 self-expiring gate(s) are due:
 
 - **natsuXenoblade** (dormant-channel, due 2026-08-07)
-  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 92 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 93 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+
+- **mysteryRacer21** (dormant-channel, due 2026-08-09)
+  MysteryRacer21 has published nothing marked since 2026-08-09 — 91 days, past its 90-day watch. It held 6 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 - **kovac** (dormant-channel, due 2026-08-08)
-  Kovac has published nothing marked since 2026-08-08 — 91 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Kovac has published nothing marked since 2026-08-08 — 92 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 
 # Avatar Legends pipeline report
@@ -29,8 +32,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 396 | 87 | 76 | 76 | 0 (120s) | 11 (3600s) | 0 | 0 |
-| still | still | 177 | 107 | 61 | 61 | 6 (120s) | 0 (—) | 0 | 25 |
-| ndyTv | ndyTv | 3449 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
+| still | still | 178 | 108 | 61 | 61 | 6 (120s) | 0 (—) | 0 | 26 |
+| ndyTv | ndyTv | 3510 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 982 | 46 | 46 | 46 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 205 | 23 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 95 | 30 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -40,16 +43,16 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | normalMs | normalMs | 491 | 31 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
 | rood | rood | 41 | 28 | 27 | 27 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 47 | 27 | 26 | 26 | 1 (120s) | 0 (—) | 0 | 0 |
-| natsuXenoblade _(watch)_ | natsuXenoblade | 181 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
+| natsuXenoblade _(watch)_ | natsuXenoblade | 182 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
 | takeANappa | takeANappa | 323 | 42 | 10 | 10 | 17 (120s) | 0 (—) | 0 | 5 |
 | versusFestival | versusFestival | 487 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 1325 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 1369 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 16 | 12 | 11 | 11 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 308 | 12 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 4 |
-| superSalemFighters | superSalemFighters | 252 | 9 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 0 |
+| superSalemFighters | superSalemFighters | 269 | 9 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 0 |
 | redVsFantasy | redVsFantasy | 567 | 64 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 23 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -115,8 +118,8 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 309 | 0 | 0 | 0 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 70 | 0 | 0 | 6 | 0 | 27 | 0 | 10 | 2 | 0 | 0 | 1 | 0 |
-| ndyTv | 3384 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| still | 70 | 0 | 0 | 6 | 0 | 28 | 0 | 10 | 2 | 0 | 0 | 1 | 0 |
+| ndyTv | 3445 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 936 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | cow | 65 | 1 | 0 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -126,16 +129,16 @@ no player to complete.
 | normalMs | 460 | 8 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rood | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo | 20 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| natsuXenoblade | 161 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| natsuXenoblade | 162 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | takeANappa | 281 | 0 | 0 | 17 | 0 | 13 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 479 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 1318 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 1362 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | schoolBus | 296 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| superSalemFighters | 243 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| superSalemFighters | 260 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy | 503 | 0 | 0 | 0 | 0 | 55 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -228,7 +231,7 @@ Where a channel titles a set with the day it was PLAYED, that day is the record 
 is misdated AND its backlog is credited to the weeks it was uploaded in — which is how a
 corpus looks like it is accelerating while ambient volume is flat.
 
-- **still**: 75 marked upload(s) dated from the title, 5 token(s) refused as outside the 26-day bound, 27 carrying no token at all; largest lag used 26 day(s)
+- **still**: 75 marked upload(s) dated from the title, 6 token(s) refused as outside the 26-day bound, 27 carrying no token at all; largest lag used 26 day(s)
 
 ## Duration histogram, per intake
 
@@ -244,7 +247,7 @@ or ceiling would admit.
 | aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 12 | 6 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still · other misses | 0 | 2 | 4 | 0 | 1 | 11 | 16 | 12 |
+| still · other misses | 0 | 2 | 4 | 0 | 1 | 11 | 17 | 12 |
 | ndyTv · records | 0 | 0 | 0 | 4 | 27 | 1 | 0 | 0 |
 | ndyTv · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | ndyTv · other misses | 0 | 0 | 0 | 2 | 31 | 0 | 0 | 0 |
@@ -358,8 +361,9 @@ Grammar variants are found by reading REJECTS, not successes (checklist 5e). Ten
 intake; the count is the whole population. A `matchup-only` refusal is excluded by
 construction — it names two fighters by definition and would drown the table.
 
-**still** — 25
+**still** — 26
 
+- `sonBZGpEVCY` no-vs: THIS AANG PLAYER TAPPED IN | Sand(AANG) AVATAR LEGENDS MEGA SET | 10.06.2026
 - `nw95XL29HfE` support-overlap: K7 ShowOff (Zaheer x Zuko) V.S. STiLL (Katara x Norra x Ozai) | AVATAR LEGENDS MEGA SET | 10.06.2026
 - `Ac2f5AsTrk0` no-vs: Rookie Ranked 2 Chosen w/ Norra | Nightmare Korra First Ranked Matches | Avatar Legends
 - `Bi-HvGJpGwY` no-vs: VOD Review Flow State #2: Korra/Zaheer CHEAP|Flow drain combo| Sozin Crit| Patch Talk|Avatar Legends
@@ -369,7 +373,6 @@ construction — it names two fighters by definition and would drown the table.
 - `KkOTy8K7qmU` no-vs: AVATAR STATE BATTLES NORRA(STiLL) x AANGRY(KidKuroo) | AVATAR LEGENDS MEGA SET 09.22.26
 - `7mMO8PZnSCg` no-char: NORRA 3X MIRROR MATCHES AVATAR LEGENDS MEGA SET | V.S. @prohibtedlands x Reigan Rensha | 09.22.26
 - `FcmoxHle8No` no-vs: PRE PATCH OZAI RANKED FOOTAGE AVATAR LEGENDS
-- `5-q1FiiukYg` no-vs: Kanna Support Is THE BEST For Katara | Avatar Legends AEGIS ESPORTS Top 8 09.29.26
 
 **arinKarin** — 1
 
@@ -477,8 +480,8 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `GENERATIONAL v Run with Ryuki`
 - 1× `GoneMad Kilo Mix Masters`
 - 1× `GoneMad xcaliburbladez Quarter Mix Masters`
-- … 126 more
+- … 127 more
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-11-07T15:41:34.965Z_
+_Generated 2026-11-08T15:59:42.796Z_
