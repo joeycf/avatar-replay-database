@@ -1,32 +1,32 @@
 {
   "totals": {
-    "replays": 1147,
+    "replays": 1185,
     "characters": 12,
-    "players": 622,
+    "players": 633,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 75
+      "2026-10-28": 113
     },
     "supports": 36,
-    "sidesWithSupport": 1542
+    "sidesWithSupport": 1618
   },
   "characterUsage": {
-    "aang": 156,
-    "ozai": 171,
-    "sokka": 114,
-    "zaheer": 254,
-    "zuko": 142,
-    "azula": 247,
-    "nightmare-korra": 91,
-    "toph": 317,
-    "kyoshi": 252,
-    "korra": 273,
-    "katara": 242,
-    "avatar-aang": 45
+    "zuko": 146,
+    "avatar-aang": 47,
+    "katara": 244,
+    "azula": 252,
+    "aang": 158,
+    "zaheer": 263,
+    "toph": 330,
+    "korra": 287,
+    "kyoshi": 261,
+    "sokka": 121,
+    "nightmare-korra": 93,
+    "ozai": 178
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -98,21 +98,157 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "aang": 23,
-      "ozai": 6,
-      "sokka": 6,
-      "zaheer": 23,
-      "zuko": 10,
-      "azula": 11,
-      "nightmare-korra": 6,
-      "toph": 15,
-      "kyoshi": 18,
-      "korra": 21,
-      "katara": 8,
-      "avatar-aang": 3
+      "zuko": 14,
+      "avatar-aang": 5,
+      "katara": 10,
+      "azula": 16,
+      "aang": 25,
+      "zaheer": 32,
+      "toph": 28,
+      "korra": 35,
+      "kyoshi": 27,
+      "sokka": 13,
+      "nightmare-korra": 8,
+      "ozai": 13
     }
   },
   "playerCharacters": {
+    "carobou": {
+      "zuko": 1
+    },
+    "abyssion": {
+      "avatar-aang": 1
+    },
+    "sister-salvation": {
+      "katara": 3
+    },
+    "puuro": {
+      "azula": 2
+    },
+    "bel-ehto": {
+      "aang": 2
+    },
+    "reso": {
+      "zaheer": 2
+    },
+    "lykehere": {
+      "toph": 1
+    },
+    "kroutis": {
+      "toph": 8
+    },
+    "chad-light": {
+      "zaheer": 1
+    },
+    "kahoo-slayer": {
+      "korra": 1
+    },
+    "bowman": {
+      "toph": 1
+    },
+    "hoplan": {
+      "kyoshi": 3
+    },
+    "cow": {
+      "toph": 49
+    },
+    "saxxie": {
+      "zuko": 28
+    },
+    "al-pigone": {
+      "toph": 18
+    },
+    "kingkc": {
+      "avatar-aang": 3
+    },
+    "toonie03": {
+      "sokka": 13
+    },
+    "lkblue": {
+      "nightmare-korra": 4
+    },
+    "p-town-hero": {
+      "zaheer": 3
+    },
+    "cwang-red": {
+      "korra": 7,
+      "azula": 5
+    },
+    "realtimmythicc": {
+      "kyoshi": 5
+    },
+    "nalice": {
+      "katara": 4
+    },
+    "biscuit": {
+      "azula": 33
+    },
+    "eevtbh": {
+      "aang": 2
+    },
+    "bar-barxii": {
+      "azula": 18
+    },
+    "chickenmanphil": {
+      "kyoshi": 1
+    },
+    "solve": {
+      "korra": 9,
+      "ozai": 3
+    },
+    "archer-rules": {
+      "korra": 2
+    },
+    "infinite": {
+      "nightmare-korra": 1,
+      "azula": 1
+    },
+    "busta": {
+      "zaheer": 22
+    },
+    "fuerte": {
+      "toph": 20
+    },
+    "arinkarin": {
+      "ozai": 68
+    },
+    "briggetchu": {
+      "kyoshi": 9,
+      "nightmare-korra": 1
+    },
+    "jundo": {
+      "kyoshi": 18
+    },
+    "khezmen": {
+      "ozai": 3
+    },
+    "samy": {
+      "toph": 3
+    },
+    "cassian": {
+      "korra": 3
+    },
+    "pokemaniachd": {
+      "zaheer": 6
+    },
+    "ruib": {
+      "zaheer": 7
+    },
+    "precho": {
+      "korra": 11
+    },
+    "shmeric": {
+      "sokka": 3
+    },
+    "hatemani": {
+      "zuko": 11
+    },
+    "meowskii": {
+      "toph": 1
+    },
+    "billz": {
+      "kyoshi": 1
+    },
     "an11-mo": {
       "aang": 26
     },
@@ -171,10 +307,6 @@
     "flankroast": {
       "zaheer": 33
     },
-    "briggetchu": {
-      "nightmare-korra": 1,
-      "kyoshi": 8
-    },
     "mysteryracer21": {
       "korra": 8
     },
@@ -186,10 +318,6 @@
     },
     "braynor": {
       "aang": 1
-    },
-    "cwang-red": {
-      "korra": 4,
-      "azula": 4
     },
     "ferno": {
       "ozai": 3
@@ -210,9 +338,6 @@
       "nightmare-korra": 1,
       "azula": 2
     },
-    "saxxie": {
-      "zuko": 27
-    },
     "jack-the-bucket": {
       "kyoshi": 9
     },
@@ -223,20 +348,11 @@
     "diaphone": {
       "avatar-aang": 5
     },
-    "cow": {
-      "toph": 47
-    },
     "versintos": {
       "toph": 15
     },
-    "biscuit": {
-      "azula": 32
-    },
     "slyspencex": {
       "nightmare-korra": 1
-    },
-    "busta": {
-      "zaheer": 19
     },
     "1600axthon": {
       "korra": 23
@@ -278,9 +394,6 @@
     "nxtrack": {
       "nightmare-korra": 2
     },
-    "sister-salvation": {
-      "katara": 2
-    },
     "heartless": {
       "aang": 6
     },
@@ -293,17 +406,8 @@
     "falk": {
       "azula": 6
     },
-    "bel-ehto": {
-      "aang": 1
-    },
     "koro-sdtc": {
       "zuko": 1
-    },
-    "hoplan": {
-      "kyoshi": 2
-    },
-    "kroutis": {
-      "toph": 7
     },
     "konanza": {
       "zuko": 3
@@ -332,9 +436,6 @@
     "faltimux": {
       "nightmare-korra": 2
     },
-    "fuerte": {
-      "toph": 19
-    },
     "ryuki": {
       "aang": 6,
       "azula": 1,
@@ -346,15 +447,6 @@
     "sen": {
       "kyoshi": 1
     },
-    "ruib": {
-      "zaheer": 5
-    },
-    "bar-barxii": {
-      "azula": 16
-    },
-    "precho": {
-      "korra": 6
-    },
     "k7-showoff": {
       "zaheer": 8
     },
@@ -364,17 +456,11 @@
     "gonemad": {
       "kyoshi": 29
     },
-    "jundo": {
-      "kyoshi": 15
-    },
     "magicrider": {
       "zuko": 6
     },
     "dawnrde": {
       "azula": 7
-    },
-    "arinkarin": {
-      "ozai": 63
     },
     "enigma": {
       "aang": 6
@@ -398,14 +484,8 @@
     "saximus": {
       "toph": 1
     },
-    "hatemani": {
-      "zuko": 9
-    },
     "elfry": {
       "nightmare-korra": 5
-    },
-    "pokemaniachd": {
-      "zaheer": 5
     },
     "alfatwelve": {
       "nightmare-korra": 2
@@ -416,18 +496,8 @@
     "benji-buckley": {
       "katara": 1
     },
-    "solve": {
-      "korra": 6,
-      "ozai": 3
-    },
-    "toonie03": {
-      "sokka": 9
-    },
     "zintai": {
       "kyoshi": 1
-    },
-    "kingkc": {
-      "avatar-aang": 2
     },
     "piglou": {
       "nightmare-korra": 2
@@ -441,14 +511,8 @@
     "zachiderp": {
       "ozai": 2
     },
-    "nalice": {
-      "katara": 3
-    },
     "cadence": {
       "toph": 1
-    },
-    "lkblue": {
-      "nightmare-korra": 3
     },
     "vortex-dragon": {
       "zuko": 2
@@ -477,9 +541,6 @@
     },
     "the-moogy": {
       "kyoshi": 2
-    },
-    "eevtbh": {
-      "aang": 1
     },
     "pineapples": {
       "kyoshi": 2
@@ -547,9 +608,6 @@
     },
     "thunder-kitty": {
       "nightmare-korra": 1
-    },
-    "puuro": {
-      "azula": 1
     },
     "tavtavtavtav": {
       "katara": 3
@@ -628,17 +686,11 @@
     "honeybae": {
       "zuko": 1
     },
-    "p-town-hero": {
-      "zaheer": 2
-    },
     "princess-slim": {
       "nightmare-korra": 3
     },
     "campaine": {
       "kyoshi": 1
-    },
-    "realtimmythicc": {
-      "kyoshi": 3
     },
     "adarsh": {
       "kyoshi": 1
@@ -660,9 +712,6 @@
     },
     "solid-faphands": {
       "zaheer": 1
-    },
-    "cassian": {
-      "korra": 2
     },
     "ft-ziad": {
       "korra": 1
@@ -714,9 +763,6 @@
     },
     "mianki": {
       "korra": 1
-    },
-    "reso": {
-      "zaheer": 1
     },
     "jalis": {
       "kyoshi": 1
@@ -958,9 +1004,6 @@
     "desselie": {
       "avatar-aang": 2
     },
-    "al-pigone": {
-      "toph": 15
-    },
     "soap996": {
       "zuko": 1
     },
@@ -1026,9 +1069,6 @@
     },
     "lx-raf": {
       "ozai": 5
-    },
-    "khezmen": {
-      "ozai": 1
     },
     "a-wanderingtanuki": {
       "toph": 1
@@ -1906,9 +1946,6 @@
     "lordzaraki": {
       "kyoshi": 1
     },
-    "archer-rules": {
-      "korra": 1
-    },
     "plisno": {
       "toph": 3
     },
@@ -1917,9 +1954,6 @@
     },
     "ddive": {
       "zaheer": 1
-    },
-    "infinite": {
-      "azula": 1
     },
     "pg13": {
       "toph": 1
@@ -2022,38 +2056,38 @@
     }
   },
   "supportUsage": {
-    "gyatso": 71,
+    "mai": 33,
+    "roku": 32,
+    "hakoda": 7,
+    "ursa": 74,
+    "gyatso": 72,
+    "ghazan": 98,
+    "the-hippo": 77,
+    "badgermole": 67,
+    "p'li": 45,
+    "naga": 164,
+    "rangi": 94,
+    "june": 61,
+    "princess-yue": 46,
+    "vaatu": 24,
+    "the-boulder": 75,
+    "master-pakku": 51,
+    "lo-and-li": 79,
+    "momo": 30,
+    "yun": 52,
+    "tonraq": 20,
+    "imperial-firebender": 46,
+    "kelsang": 36,
     "general-zhao": 18,
-    "princess-yue": 39,
-    "imperial-firebender": 39,
-    "ghazan": 93,
-    "june": 60,
     "joo-dee": 20,
     "dark-spirit": 35,
     "ming-hua": 57,
-    "the-hippo": 72,
-    "rangi": 87,
-    "ursa": 71,
     "raava": 7,
-    "naga": 154,
-    "lo-and-li": 77,
     "firelord-sozin": 43,
-    "kelsang": 35,
-    "master-pakku": 50,
-    "yun": 51,
     "kanna": 70,
     "ran-and-shaw": 18,
-    "roku": 30,
-    "p'li": 41,
-    "the-boulder": 70,
     "appa": 34,
-    "badgermole": 64,
     "dark-avatar-unalaq": 13,
-    "hakoda": 6,
-    "momo": 29,
-    "mai": 30,
-    "vaatu": 22,
-    "tonraq": 16,
     "guru-pathik": 7,
     "suki": 10,
     "katara": 2,

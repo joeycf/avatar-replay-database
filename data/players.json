@@ -41,6 +41,10 @@
     "handle": "Aaronx3"
   },
   {
+    "id": "abyssion",
+    "handle": "Abyssion"
+  },
+  {
     "id": "aces-high",
     "handle": "Aces_High"
   },
@@ -102,7 +106,12 @@
   },
   {
     "id": "archer-rules",
-    "handle": "Archer Rules"
+    "handle": "Archer Rules",
+    "extra": {
+      "aliases": [
+        "Archer_Rules"
+      ]
+    }
   },
   {
     "id": "archit3ct",
@@ -240,6 +249,10 @@
     "handle": "BigButtJackson"
   },
   {
+    "id": "billz",
+    "handle": "billz"
+  },
+  {
     "id": "biosludge-dispenser",
     "handle": "Biosludge Dispenser"
   },
@@ -294,6 +307,10 @@
   {
     "id": "boulder",
     "handle": "Boulder"
+  },
+  {
+    "id": "bowman",
+    "handle": "Bowman"
   },
   {
     "id": "brae",
@@ -358,6 +375,10 @@
     "handle": "CamPaine"
   },
   {
+    "id": "carobou",
+    "handle": "Carobou"
+  },
+  {
     "id": "cassian",
     "handle": "Cassian"
   },
@@ -391,6 +412,10 @@
     "handle": "cgtf92"
   },
   {
+    "id": "chad-light",
+    "handle": "Chad Light"
+  },
+  {
     "id": "chara",
     "handle": "Chara"
   },
@@ -401,6 +426,10 @@
   {
     "id": "chichionlyfans",
     "handle": "ChiChiOnlyFans"
+  },
+  {
+    "id": "chickenmanphil",
+    "handle": "ChickenManPhil"
   },
   {
     "id": "chimpo383",
@@ -1019,7 +1048,12 @@
   },
   {
     "id": "infinite",
-    "handle": "Infinite"
+    "handle": "Infinite",
+    "extra": {
+      "aliases": [
+        "infinite"
+      ]
+    }
   },
   {
     "id": "informa-tica-abood",
@@ -1123,6 +1157,10 @@
   {
     "id": "k7-showoff",
     "handle": "K7 Showoff"
+  },
+  {
+    "id": "kahoo-slayer",
+    "handle": "Kahoo_Slayer"
   },
   {
     "id": "kaiji",
@@ -1350,6 +1388,10 @@
     "handle": "[lx]Raf"
   },
   {
+    "id": "lykehere",
+    "handle": "LykeHere"
+  },
+  {
     "id": "m3rcy",
     "handle": "M3RCY"
   },
@@ -1431,6 +1473,10 @@
   {
     "id": "menace",
     "handle": "Menace"
+  },
+  {
+    "id": "meowskii",
+    "handle": "meowskii"
   },
   {
     "id": "mianki",
@@ -1684,10 +1730,10 @@
   },
   {
     "id": "p-town-hero",
-    "handle": "P Town Hero",
+    "handle": "P-Town Hero",
     "extra": {
       "aliases": [
-        "P-Town Hero"
+        "P Town Hero"
       ]
     }
   },
@@ -2023,6 +2069,10 @@
     "handle": "Salskies"
   },
   {
+    "id": "samy",
+    "handle": "Samy"
+  },
+  {
     "id": "sanay",
     "handle": "Sanay"
   },
@@ -2093,6 +2143,10 @@
   {
     "id": "shielddevil",
     "handle": "ShieldDevil"
+  },
+  {
+    "id": "shmeric",
+    "handle": "Shmeric"
   },
   {
     "id": "shmurtle",

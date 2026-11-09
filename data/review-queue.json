@@ -430,6 +430,35 @@
     "durationSec": 2130
   },
   {
+    "id": "wQmUOGceZ94@5655",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Precho (Korra/Naga) vs Shmeric (Sokka/Princess Yue) ▰ CROSSOVER 2026 Top 8",
+    "publishedAt": "2026-11-06T22:31:04Z",
+    "durationSec": 7868,
+    "handles": [
+      "Precho",
+      "Shmeric"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "precho",
+          "shmeric"
+        ],
+        "characters": [
+          "korra",
+          "sokka"
+        ],
+        "playedOn": "2026-11-06"
+      },
+      "ids": [
+        "wQmUOGceZ94@5655",
+        "wQmUOGceZ94@73"
+      ]
+    }
+  },
+  {
     "id": "-eS4jLL_gEs@5842",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
