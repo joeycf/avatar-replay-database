@@ -430,6 +430,64 @@
     "durationSec": 2130
   },
   {
+    "id": "k7kjOXvXdOM@0",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ porklazer (Azula/Lo and Li) vs V (Korra/Naga) ▰ ParagOnline #15",
+    "publishedAt": "2026-11-08T16:53:04Z",
+    "durationSec": 9498,
+    "handles": [
+      "porklazer",
+      "V"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "porklazer",
+          "v"
+        ],
+        "characters": [
+          "azula",
+          "korra"
+        ],
+        "playedOn": "2026-11-08"
+      },
+      "ids": [
+        "k7kjOXvXdOM@0",
+        "k7kjOXvXdOM@6716"
+      ]
+    }
+  },
+  {
+    "id": "k7kjOXvXdOM@6314",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs Fuerte (Toph/The Boulder) ▰ ParagOnline #15",
+    "publishedAt": "2026-11-08T16:53:04Z",
+    "durationSec": 9498,
+    "handles": [
+      "Zane",
+      "Fuerte"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "fuerte",
+          "zane"
+        ],
+        "characters": [
+          "toph",
+          "zaheer"
+        ],
+        "playedOn": "2026-11-08"
+      },
+      "ids": [
+        "k7kjOXvXdOM@6314",
+        "k7kjOXvXdOM@8628"
+      ]
+    }
+  },
+  {
     "id": "wQmUOGceZ94@5655",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

@@ -3,21 +3,21 @@
 3 self-expiring gate(s) are due:
 
 - **natsuXenoblade** (dormant-channel, due 2026-08-07)
-  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 94 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 95 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 - **mysteryRacer21** (dormant-channel, due 2026-08-09)
-  MysteryRacer21 has published nothing marked since 2026-08-09 — 92 days, past its 90-day watch. It held 6 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  MysteryRacer21 has published nothing marked since 2026-08-09 — 93 days, past its 90-day watch. It held 6 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 - **kovac** (dormant-channel, due 2026-08-08)
-  Kovac has published nothing marked since 2026-08-08 — 93 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Kovac has published nothing marked since 2026-08-08 — 94 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 
 # Avatar Legends pipeline report
 
-- **1185** published record(s) · **633** player(s) · **12** fighter(s) · **36** support(s)
-- **823** record(s) state at least one support (69.5%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
-- **103** mirror match(es) (8.7%)
-- **113** pending review item(s) — absent from the site, never guessed
+- **1207** published record(s) · **641** player(s) · **12** fighter(s) · **36** support(s)
+- **845** record(s) state at least one support (70.0%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
+- **103** mirror match(es) (8.5%)
+- **115** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 - **0** of 0 confirmed character-named player(s) present; every other handle resolves to no fighter and no support
 - **0** record(s) held on 0 unconfirmed fighter- or support-named handle(s) — absent from the site until confirmed (checklist 5n)
@@ -31,21 +31,21 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| aegisEsports | aegisEsports | 396 | 87 | 76 | 76 | 0 (120s) | 11 (3600s) | 0 | 0 |
-| still | still | 178 | 108 | 61 | 61 | 6 (120s) | 0 (—) | 0 | 26 |
-| ndyTv | ndyTv | 3529 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
+| aegisEsports | aegisEsports | 397 | 88 | 76 | 76 | 0 (120s) | 12 (3600s) | 0 | 0 |
+| still | still | 180 | 108 | 61 | 61 | 6 (120s) | 0 (—) | 0 | 26 |
+| ndyTv | ndyTv | 3537 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 982 | 46 | 46 | 46 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 205 | 23 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 96 | 31 | 23 | 23 | 0 (120s) | 0 (—) | 0 | 1 |
 | saltyRecoveryCenter | saltyRecoveryCenter | 212 | 20 | 19 | 19 | 0 (120s) | 0 (—) | 0 | 0 |
 | skeet | skeet | 138 | 22 | 18 | 18 | 0 (120s) | 0 (—) | 0 | 0 |
 | unrivaledTournaments | unrivaledTournaments | 184 | 15 | 15 | 15 | 0 (120s) | 0 (—) | 0 | 0 |
-| normalMs | normalMs | 491 | 31 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
+| normalMs | normalMs | 494 | 32 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
 | rood | rood | 41 | 28 | 27 | 27 | 0 (120s) | 0 (—) | 0 | 1 |
 | an11Mo | an11Mo | 47 | 27 | 26 | 26 | 1 (120s) | 0 (—) | 0 | 0 |
-| natsuXenoblade _(watch)_ | natsuXenoblade | 182 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
-| takeANappa | takeANappa | 324 | 42 | 10 | 10 | 17 (120s) | 0 (—) | 0 | 5 |
-| versusFestival | versusFestival | 487 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
+| natsuXenoblade _(watch)_ | natsuXenoblade | 183 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
+| takeANappa | takeANappa | 326 | 43 | 11 | 11 | 17 (120s) | 0 (—) | 0 | 5 |
+| versusFestival | versusFestival | 489 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
 | kmlTournaments | kmlTournaments | 1371 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 16 | 12 | 11 | 11 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -53,7 +53,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 308 | 12 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 4 |
 | superSalemFighters | superSalemFighters | 269 | 9 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 0 |
-| redVsFantasy | redVsFantasy | 570 | 67 | 8 | 8 | 0 (120s) | 0 (—) | 1 | 23 |
+| redVsFantasy | redVsFantasy | 571 | 68 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 24 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | phoenixWrong | phoenixWrong | 26 | 5 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 2 |
@@ -63,7 +63,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 14 | 4 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 2 |
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 701 | — | — | — | — |
+| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 722 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 9 of 33 intake(s)_
 _with records commit more than 20, so on the other 24 its second arm cannot fire at all_
@@ -79,11 +79,11 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 37 built this run, 664 carried (add-only), **701** total; pin 701. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
+Rebuilt from a **cursor delta**: 21 built this run, 701 carried (add-only), **722** total; pin 722. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
 
 Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
 
-Segment ids: **37** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+Segment ids: **21** row(s) took a `videoId@startSeconds` id and **0** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -92,10 +92,12 @@ about footage identity, not a verdict: the RUNBACK is a legitimate collision —
 players, same two fighters, same day, winners final then grand final — so nothing is dropped
 on it. Composite segment ids stay the mechanism for index-within-VOD.
 
-- **62** signature(s) cover more than one record, **126** record(s) in all (10.6% of the archive)
+- **64** signature(s) cover more than one record, **130** record(s) in all (10.8% of the archive)
 - **0** of those span more than one intake — the case the intake key cannot see
 - every one is queued as `duplicate-candidate` and every one is still published
 
+- `porklazer vs v` on `azula / korra`, 2026-11-08: `k7kjOXvXdOM@0` (replayTheater), `k7kjOXvXdOM@6716` (replayTheater)
+- `fuerte vs zane` on `toph / zaheer`, 2026-11-08: `k7kjOXvXdOM@6314` (replayTheater), `k7kjOXvXdOM@8628` (replayTheater)
 - `precho vs shmeric` on `korra / sokka`, 2026-11-06: `wQmUOGceZ94@5655` (replayTheater), `wQmUOGceZ94@73` (replayTheater)
 - `awanderingtanuki vs inahk` on `kyoshi / toph`, 2026-11-01: `-eS4jLL_gEs@5842` (replayTheater), `-eS4jLL_gEs@7879` (replayTheater)
 - `kitoro vs roadery` on `kyoshi / zaheer`, 2026-10-30: `nyg5o83uB8c@5649` (replayTheater), `nyg5o83uB8c@7454` (replayTheater)
@@ -106,9 +108,7 @@ on it. Composite segment ids stay the mechanism for index-within-VOD.
 - `holdbacktobark vs reverendbaka` on `korra / nightmare-korra`, 2026-10-25: `CPwTEGrsc4E` (superSalemFighters), `Zw_akIN-xz4` (superSalemFighters)
 - `biscuit vs hakke` on `azula / toph`, 2026-10-25: `dnIPrwxGVig@5512` (replayTheater), `dnIPrwxGVig@8076` (replayTheater)
 - `juno vs tavtavtavtav` on `katara / katara`, 2026-10-24: `JBS6YuDfATQ@11483` (replayTheater), `JBS6YuDfATQ@8579` (replayTheater)
-- `flankroast vs gonemad` on `kyoshi / zaheer`, 2026-10-20: `XvqC9WuYX7k@4003` (replayTheater), `XvqC9WuYX7k@7860` (replayTheater)
-- `inahk vs raymond-buller` on `korra / kyoshi`, 2026-10-19: `ZIRoR2Q4hIc@3193` (replayTheater), `ZIRoR2Q4hIc@6984` (replayTheater)
-- … 50 more
+- … 52 more
 
 ## Misses, per intake
 
@@ -121,21 +121,21 @@ no player to complete.
 
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| aegisEsports | 309 | 0 | 0 | 0 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 70 | 0 | 0 | 6 | 0 | 28 | 0 | 10 | 2 | 0 | 0 | 1 | 0 |
-| ndyTv | 3464 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| aegisEsports | 309 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| still | 72 | 0 | 0 | 6 | 0 | 28 | 0 | 10 | 2 | 0 | 0 | 1 | 0 |
+| ndyTv | 3472 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 936 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | cow | 65 | 1 | 0 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | saltyRecoveryCenter | 192 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | skeet | 116 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | unrivaledTournaments | 169 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| normalMs | 460 | 8 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| normalMs | 462 | 8 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rood | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 | an11Mo | 20 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| natsuXenoblade | 162 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| takeANappa | 282 | 0 | 0 | 17 | 0 | 13 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
-| versusFestival | 479 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| natsuXenoblade | 163 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| takeANappa | 283 | 0 | 0 | 17 | 0 | 13 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+| versusFestival | 481 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kmlTournaments | 1364 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -143,7 +143,7 @@ no player to complete.
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | schoolBus | 296 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | superSalemFighters | 260 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy | 503 | 0 | 1 | 0 | 0 | 57 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| redVsFantasy | 503 | 0 | 0 | 0 | 0 | 59 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | phoenixWrong | 21 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -176,7 +176,7 @@ covering a channel — which is why this is printed rather than merely collected
 | rood | handle-outside | 34 | 0 | 20 | 0 | 0 (0.0%) | 1 | 54 |
 | an11Mo | handle-outside | 52 | 0 | 0 | 0 | 0 (0.0%) | 0 | 52 |
 | natsuXenoblade | handle-outside | 12 | 0 | 0 | 0 | 0 (0.0%) | 0 | 12 |
-| takeANappa | chars-outside | 8 | 12 | 0 | 0 | 0 (0.0%) | 0 | 20 |
+| takeANappa | chars-outside | 8 | 14 | 0 | 0 | 0 (0.0%) | 0 | 22 |
 | versusFestival | handle-outside | 16 | 0 | 0 | 0 | 0 (0.0%) | 0 | 16 |
 | avianZebra | handle-outside | 20 | 0 | 0 | 0 | 0 (0.0%) | 0 | 20 |
 | kmlTournaments | handle-outside | 14 | 0 | 0 | 0 | 0 (0.0%) | 0 | 14 |
@@ -218,7 +218,7 @@ while the record is kept.
 | rood | 30 | 30 | 0 | 1 | 0 |
 | an11Mo | 51 | 51 | 0 | 0 | 0 |
 | natsuXenoblade | 10 | 9 | 1 | 0 | 0 |
-| takeANappa | 20 | 20 | 0 | 0 | 0 |
+| takeANappa | 22 | 22 | 0 | 0 | 0 |
 | avianZebra | 20 | 20 | 0 | 0 | 0 |
 | teo1029 | 20 | 20 | 0 | 0 | 0 |
 | mikeyChiFgc | 6 | 6 | 0 | 0 | 0 |
@@ -248,7 +248,7 @@ or ceiling would admit.
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports · records | 0 | 0 | 0 | 9 | 63 | 4 | 0 | 0 |
 | aegisEsports · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
+| aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 12 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 12 | 6 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | still · other misses | 0 | 2 | 4 | 0 | 1 | 11 | 17 | 12 |
@@ -275,7 +275,7 @@ or ceiling would admit.
 | unrivaledTournaments · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | normalMs · records | 0 | 0 | 0 | 0 | 13 | 6 | 3 | 0 |
 | normalMs · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| normalMs · other misses | 0 | 0 | 2 | 0 | 3 | 3 | 1 | 0 |
+| normalMs · other misses | 0 | 0 | 2 | 0 | 3 | 3 | 2 | 0 |
 | rood · records | 0 | 0 | 0 | 2 | 17 | 5 | 3 | 0 |
 | rood · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rood · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
@@ -285,7 +285,7 @@ or ceiling would admit.
 | natsuXenoblade · records | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 3 |
 | natsuXenoblade · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade · other misses | 0 | 0 | 0 | 0 | 1 | 1 | 4 | 8 |
-| takeANappa · records | 0 | 0 | 0 | 0 | 3 | 4 | 1 | 2 |
+| takeANappa · records | 0 | 0 | 0 | 0 | 3 | 5 | 1 | 2 |
 | takeANappa · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | takeANappa · other misses | 0 | 5 | 12 | 0 | 0 | 0 | 0 | 15 |
 | versusFestival · records | 0 | 0 | 0 | 1 | 7 | 0 | 0 | 0 |
@@ -314,7 +314,7 @@ or ceiling would admit.
 | superSalemFighters · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy · records | 0 | 0 | 0 | 0 | 3 | 1 | 4 | 0 |
 | redVsFantasy · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy · other misses | 1 | 0 | 0 | 0 | 8 | 13 | 16 | 21 |
+| redVsFantasy · other misses | 0 | 0 | 0 | 0 | 8 | 13 | 17 | 22 |
 | mikeyChiFgc · records | 0 | 0 | 0 | 0 | 0 | 1 | 2 | 0 |
 | mikeyChiFgc · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -342,7 +342,7 @@ or ceiling would admit.
 
 ## Handles
 
-- word count per side: 1 → 896 · 2 → 48 · 3 → 10 · 4 → 3 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
+- word count per side: 1 → 898 · 2 → 48 · 3 → 10 · 4 → 3 · 5 → 5 — the cap is 5 words (parse.ts MAX_HANDLE_WORDS). The real 4- and 5-word handles measured here are "OneDrive Isnt Signed In" and "Data Xigbar In Real Life"; a bump at 5 is where decoration leaks show first.
 - 35 player(s) seen under more than one spelling; the display casing is the majority spelling, tie-broken toward mixed case, and the rest are kept as aliases
 - placeholder handles refused: 0 on the channels, 0 in the catalogue. The predicate refuses by NAME only — `♱` (U+2671) is a REAL handle on arinKarin and in the catalogue, and the shared all-punctuation rule would delete it (checklist 12k).
 
@@ -353,7 +353,7 @@ Held for review: none.
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
 
-2 events with placements read; 3 of 633 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+2 events with placements read; 3 of 641 registry players carry a title (2 wins). 1 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
 
 **Titled:** `precho` 1W/0R · `sachio` 0W/1R · `xcaliburbladez` 1W/0R
 
@@ -413,8 +413,9 @@ construction — it names two fighters by definition and would drown the table.
 - `9sUXgo-WLyo` no-vs: [Avatar Legends] Paragon Online Tournament #4 run with Korra (SchoolBus)
 - `SAPklV2CGKk` no-vs: [Avatar Legends] HIGH LEVEL KORRA MIRROR (SchoolBus vs Dinotail)
 
-**redVsFantasy** — 23
+**redVsFantasy** — 24
 
+- `4fEUlWI3ssY` no-vs: Can I get Top 8 with a Week 1 Zuko..? | Avatar Legends the Fighting Game
 - `eRqKJA3D7_o` no-vs: Zuko IS TOP 1 in Avatar Legends the Fighting Game
 - `w7wdHWuR1vw` no-vs: Aegis Run using Zuko (Sponsored by STG and !CORSAIR)  | Avatar Legends TFG
 - `9Hkxxhqq0Zg` no-vs: Small Breakdown of the Toph MU | Avatar Legends the Fighting Game
@@ -424,7 +425,6 @@ construction — it names two fighters by definition and would drown the table.
 - `aaGRoaSpeuU` no-vs: Avatar Aang/Nightmare Korra Trailer Breakdown! ft @Diaphone and Testmyluck | Avatar Legends TFG
 - `ltKkFCNFOY8` no-vs: The BEST Nightmare Korra has been found. | Avatar Legends the Fighting Game (Donteyyy N.Korra)
 - `I8sFK6xqqaY` no-vs: Zuko is a REAL problem now | Avatar Legends the Fighting Game (Terapevt Zuko)
-- `-z1pjBtfu9Y` no-vs: Russian Toph CAN'T be stopped.... | Avatar Legends the Fighting Game (Bobby Toph)
 
 **phoenixWrong** — 2
 
@@ -467,6 +467,7 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `Bohío Nexus REBORN Robin ft Punguinz Natsu Fooly Gh uly`
 - 1× `Bread Butter`
 - 1× `call me great Houzini way I make my flow gauge disappear`
+- 1× `Can I get with Week`
 - 1× `Can I win FOUR Tournaments in row`
 - 1× `Characters in TFG`
 - 1× `CHRONICLES PART ROAD TO CHOSEN`
@@ -483,9 +484,8 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `Flow Reversal Primer Examples ft Must Watch`
 - 1× `Focus Edition`
 - 1× `GAMES`
-- 1× `GENERATIONAL v Run with Ryuki`
-- … 129 more
+- … 132 more
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-11-09T19:49:35.999Z_
+_Generated 2026-11-10T17:04:34.777Z_

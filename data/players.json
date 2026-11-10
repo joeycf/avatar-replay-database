@@ -484,6 +484,10 @@
     "handle": "Coke"
   },
   {
+    "id": "cold",
+    "handle": "Cold"
+  },
+  {
     "id": "coolcalmsam",
     "handle": "coolcalmsam"
   },
@@ -1131,6 +1135,10 @@
     "handle": "JOE MAMA"
   },
   {
+    "id": "jorjareyouthere",
+    "handle": "JorjAreYouThere"
+  },
+  {
     "id": "jrome",
     "handle": "Jrome"
   },
@@ -1189,6 +1197,10 @@
   {
     "id": "karmav112",
     "handle": "Karmav112"
+  },
+  {
+    "id": "kazunkai",
+    "handle": "Kazunkai"
   },
   {
     "id": "kbzon",
@@ -1310,6 +1322,10 @@
   {
     "id": "lakeryy",
     "handle": "Lakeryy"
+  },
+  {
+    "id": "landen",
+    "handle": "Landen"
   },
   {
     "id": "lanny",
@@ -1529,6 +1545,10 @@
   {
     "id": "moldynugget",
     "handle": "moldynugget"
+  },
+  {
+    "id": "monkey",
+    "handle": "Monkey :)"
   },
   {
     "id": "moose-lee",
@@ -2328,6 +2348,10 @@
     "handle": "STORM179"
   },
   {
+    "id": "sup3rior",
+    "handle": "SUP3RIOR"
+  },
+  {
     "id": "super-x-silver",
     "handle": "Super-X-SIlver"
   },
@@ -2366,6 +2390,10 @@
   {
     "id": "tavtavtavtav",
     "handle": "tavtavtavtav"
+  },
+  {
+    "id": "tdah21",
+    "handle": "tdah21"
   },
   {
     "id": "teo1029",
@@ -2437,6 +2465,10 @@
     "handle": "Thunder Kitty"
   },
   {
+    "id": "tire",
+    "handle": "Tire"
+  },
+  {
     "id": "tobirjay",
     "handle": "TobiRjay"
   },
@@ -2493,8 +2525,8 @@
     "handle": "UnsafeonHit",
     "extra": {
       "aliases": [
-        "UnsafeOnHit",
-        "Unsafeonhit"
+        "Unsafeonhit",
+        "UnsafeOnHit"
       ]
     }
   },
