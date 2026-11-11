@@ -430,6 +430,35 @@
     "durationSec": 2130
   },
   {
+    "id": "-O6LE9hi6PQ@4340",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Cow (Toph/The Boulder) vs Native (Ozai/General Zhao) ▰ TNS Flow State #4",
+    "publishedAt": "2026-11-09T19:00:39Z",
+    "durationSec": 10946,
+    "handles": [
+      "Cow",
+      "Native"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "cow",
+          "native"
+        ],
+        "characters": [
+          "ozai",
+          "toph"
+        ],
+        "playedOn": "2026-11-09"
+      },
+      "ids": [
+        "-O6LE9hi6PQ@4340",
+        "-O6LE9hi6PQ@9056"
+      ]
+    }
+  },
+  {
     "id": "k7kjOXvXdOM@0",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
