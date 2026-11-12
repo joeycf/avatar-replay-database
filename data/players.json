@@ -721,6 +721,10 @@
     "handle": "ETlibra"
   },
   {
+    "id": "eutro",
+    "handle": "Eutro"
+  },
+  {
     "id": "evasion",
     "handle": "Evasion"
   },
@@ -1414,6 +1418,10 @@
   {
     "id": "lou-minaudi",
     "handle": "Lou Minaudi"
+  },
+  {
+    "id": "luca",
+    "handle": "luca!"
   },
   {
     "id": "lx-raf",

@@ -430,6 +430,35 @@
     "durationSec": 2130
   },
   {
+    "id": "T7uXKSH7-bM@2828",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Eutro (Sokka/Suki) vs Kitoro (Zaheer/Ming-Hua) ▰ Soul Read #3",
+    "publishedAt": "2026-11-10T11:22:16Z",
+    "durationSec": 8146,
+    "handles": [
+      "Eutro",
+      "Kitoro"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "eutro",
+          "kitoro"
+        ],
+        "characters": [
+          "sokka",
+          "zaheer"
+        ],
+        "playedOn": "2026-11-10"
+      },
+      "ids": [
+        "T7uXKSH7-bM@2828",
+        "T7uXKSH7-bM@6419"
+      ]
+    }
+  },
+  {
     "id": "-O6LE9hi6PQ@4340",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
