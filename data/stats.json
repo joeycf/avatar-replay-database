@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 1240,
+    "replays": 1241,
     "characters": 12,
     "players": 647,
     "byPatch": {
@@ -9,20 +9,20 @@
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 168
+      "2026-10-28": 169
     },
     "supports": 36,
-    "sidesWithSupport": 1728
+    "sidesWithSupport": 1730
   },
   "characterUsage": {
+    "toph": 347,
+    "sokka": 127,
     "zuko": 153,
     "ozai": 191,
     "zaheer": 280,
     "korra": 301,
     "azula": 263,
     "kyoshi": 269,
-    "sokka": 126,
-    "toph": 346,
     "katara": 249,
     "aang": 165,
     "avatar-aang": 49,
@@ -98,14 +98,14 @@
       "sokka": 9
     },
     "2026-10-28": {
+      "toph": 45,
+      "sokka": 19,
       "zuko": 21,
       "ozai": 26,
       "zaheer": 49,
       "korra": 49,
       "azula": 27,
       "kyoshi": 35,
-      "sokka": 18,
-      "toph": 44,
       "katara": 15,
       "aang": 32,
       "avatar-aang": 7,
@@ -113,6 +113,12 @@
     }
   },
   "playerCharacters": {
+    "jiggynyc": {
+      "toph": 16
+    },
+    "toonie03": {
+      "sokka": 15
+    },
     "unsafeonhit": {
       "zuko": 1,
       "toph": 9
@@ -204,9 +210,6 @@
     },
     "gdom": {
       "korra": 1
-    },
-    "toonie03": {
-      "sokka": 14
     },
     "dmon": {
       "avatar-aang": 5,
@@ -908,9 +911,6 @@
     },
     "havard": {
       "kyoshi": 1
-    },
-    "jiggynyc": {
-      "toph": 15
     },
     "marsspitsbars": {
       "ozai": 12
@@ -2100,6 +2100,8 @@
     }
   },
   "supportUsage": {
+    "the-hippo": 81,
+    "master-piandao": 4,
     "june": 68,
     "firelord-sozin": 47,
     "ghazan": 107,
@@ -2119,9 +2121,7 @@
     "gyatso": 75,
     "the-boulder": 86,
     "general-zhao": 25,
-    "master-piandao": 3,
     "roku": 33,
-    "the-hippo": 80,
     "mai": 33,
     "hakoda": 7,
     "lo-and-li": 85,
