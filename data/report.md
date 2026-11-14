@@ -1,15 +1,18 @@
 ## ⚠ ACTION REQUIRED
 
-3 self-expiring gate(s) are due:
+4 self-expiring gate(s) are due:
 
 - **natsuXenoblade** (dormant-channel, due 2026-08-07)
-  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 98 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Natsu_Xenoblade has published nothing marked since 2026-08-07 — 99 days, past its 90-day watch. It held 10 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 - **mysteryRacer21** (dormant-channel, due 2026-08-09)
-  MysteryRacer21 has published nothing marked since 2026-08-09 — 96 days, past its 90-day watch. It held 6 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  MysteryRacer21 has published nothing marked since 2026-08-09 — 97 days, past its 90-day watch. It held 6 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 - **kovac** (dormant-channel, due 2026-08-08)
-  Kovac has published nothing marked since 2026-08-08 — 97 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+  Kovac has published nothing marked since 2026-08-08 — 98 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
+
+- **towito** (dormant-channel, due 2026-08-15)
+  Towito has published nothing marked since 2026-08-15 — 91 days, past its 90-day watch. It held 2 record(s) at recon. Check the channel: if it has moved on to another game, set `frozen: { since, reason, records }` on its entry in scripts/channels.ts with the record count the last full parse produced — that pin is hard-asserted and is the deliberate-prune mechanism. If it is simply slow, push `freezeWatch.lastMarked` to its newest marked upload. Do not delete the channel: its committed records are still real.
 
 
 # Avatar Legends pipeline report
@@ -17,7 +20,7 @@
 - **1241** published record(s) · **647** player(s) · **12** fighter(s) · **36** support(s)
 - **879** record(s) state at least one support (70.8%) — the support is a SECOND NAMESPACE and never enters `Side.characters` (checklist 13)
 - **106** mirror match(es) (8.5%)
-- **117** pending review item(s) — absent from the site, never guessed
+- **118** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 - **0** of 0 confirmed character-named player(s) present; every other handle resolves to no fighter and no support
 - **0** record(s) held on 0 unconfirmed fighter- or support-named handle(s) — absent from the site until confirmed (checklist 5n)
@@ -32,8 +35,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 398 | 89 | 76 | 76 | 0 (120s) | 13 (3600s) | 0 | 0 |
-| still | still | 185 | 111 | 61 | 61 | 7 (120s) | 0 (—) | 0 | 27 |
-| ndyTv | ndyTv | 3667 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
+| still | still | 187 | 112 | 61 | 61 | 7 (120s) | 0 (—) | 0 | 27 |
+| ndyTv | ndyTv | 3734 | 65 | 32 | 32 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 982 | 46 | 46 | 46 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 205 | 23 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 96 | 31 | 23 | 23 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -47,7 +50,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | takeANappa | takeANappa | 332 | 43 | 11 | 11 | 17 (120s) | 0 (—) | 0 | 5 |
 | versusFestival | versusFestival | 489 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 1402 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 1415 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 16 | 12 | 11 | 11 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
@@ -63,7 +66,7 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | redblade | redblade | 52 | 2 | 1 | 1 | 0 (120s) | 0 (—) | 0 | 0 |
 | saxxiefone | saxxiefone | 14 | 4 | 2 | 2 | 0 (120s) | 0 (—) | 0 | 2 |
 | drewShoto _(frozen)_ | drewShoto | — | — | — | 3 | — | — | — | — |
-| replayTheater _(index, cursor)_ | replayTheater | — | — | — | 756 | — | — | — | — |
+| replayTheater _(index, carried)_ | replayTheater | — | — | — | 756 | — | — | — | — |
 
 _The collapse guard needs a per-intake loss of >10% AND >20 records. 9 of 33 intake(s)_
 _with records commit more than 20, so on the other 24 its second arm cannot fire at all_
@@ -79,11 +82,7 @@ catalogue still lists it, so this count can only rise. The cron does not depend 
 succeeding — on any failure there is no dump, the committed records are carried against the
 pin, and the run stays green (checklist 12d, 9c).
 
-Rebuilt from a **cursor delta**: 1 built this run, 755 carried (add-only), **756** total; pin 756. "Not in this pull" is withheld: on a cursor morning it is every record older than the pages read and means nothing.
-
-Rows the build refused, counted never guessed: 0 placeholder handle(s), 0 before the 2026-07-23 floor, 0 live, 0 whole-video row(s) under 120s, 0 excluded by hand, 0 duplicate record id(s) inside the dump. Rows whose own game label is not this game's are refused one stage earlier, by the fetcher, and counted as 0 above (checklist 12a).
-
-Segment ids: **0** row(s) took a `videoId@startSeconds` id and **1** took the bare YouTube id. The boundary is `segmentOffsetMinShare` on a SINGLE-row video (types/index.ts: 26 of 29 single-row offsets are 5-51s intro skips, and the two real segments sit at 50% and 56% of their VOD) and "every row" on a multi-row one, where a t=0 first segment is still a segment.
+The pull ran and found nothing newer than the cursor, so the committed catalogue was carried unchanged: **756** record(s), pin 756. A quiet morning is the ordinary case here, not a failed one.
 
 ## Match identity — a REPORT-ONLY tier (checklist 2b)
 
@@ -122,8 +121,8 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 309 | 0 | 0 | 0 | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 74 | 0 | 0 | 7 | 0 | 30 | 0 | 10 | 2 | 0 | 0 | 1 | 0 |
-| ndyTv | 3602 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| still | 75 | 0 | 0 | 7 | 0 | 30 | 0 | 11 | 2 | 0 | 0 | 1 | 0 |
+| ndyTv | 3669 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 936 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | cow | 65 | 1 | 0 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -137,7 +136,7 @@ no player to complete.
 | takeANappa | 289 | 0 | 0 | 17 | 0 | 13 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 481 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 1395 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 1408 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -235,7 +234,7 @@ Where a channel titles a set with the day it was PLAYED, that day is the record 
 is misdated AND its backlog is credited to the weeks it was uploaded in — which is how a
 corpus looks like it is accelerating while ambient volume is flat.
 
-- **still**: 75 marked upload(s) dated from the title, 7 token(s) refused as outside the 26-day bound, 29 carrying no token at all; largest lag used 26 day(s)
+- **still**: 75 marked upload(s) dated from the title, 7 token(s) refused as outside the 26-day bound, 30 carrying no token at all; largest lag used 26 day(s)
 
 ## Duration histogram, per intake
 
@@ -251,7 +250,7 @@ or ceiling would admit.
 | aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 13 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 12 | 6 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still · other misses | 0 | 3 | 4 | 1 | 1 | 11 | 18 | 12 |
+| still · other misses | 0 | 3 | 4 | 1 | 2 | 11 | 18 | 12 |
 | ndyTv · records | 0 | 0 | 0 | 4 | 27 | 1 | 0 | 0 |
 | ndyTv · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | ndyTv · other misses | 0 | 0 | 0 | 2 | 31 | 0 | 0 | 0 |
@@ -457,6 +456,7 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `Aegis Run using Sponsored by STG CORSAIR TFG`
 - 1× `Aegis with Ryuki`
 - 1× `Agni Kai Arena League Trolli k Prize Pool Run October`
+- 1× `Air Hoemads V S Pass Da Fist W W W v`
 - 1× `ArinKarin`
 - 1× `ASSUMING POSITION POWER`
 - 1× `Back on MR Demon`
@@ -483,9 +483,8 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `FIRST TIME GAMES STiLL V S ScaryBusey BASUAL`
 - 1× `Flankroast BigBlack Quarter Mix Masters`
 - 1× `Flow Reversal Primer Examples ft Must Watch`
-- 1× `Focus Edition`
-- … 137 more
+- … 138 more
 
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-11-13T17:16:42.580Z_
+_Generated 2026-11-14T15:50:18.751Z_
