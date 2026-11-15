@@ -713,6 +713,10 @@
     "handle": "Enigma"
   },
   {
+    "id": "entenmk",
+    "handle": "EntenMK"
+  },
+  {
     "id": "eogrgr",
     "handle": "Eogrgr"
   },
@@ -2131,6 +2135,10 @@
   {
     "id": "saxxie",
     "handle": "Saxxie"
+  },
+  {
+    "id": "schemer",
+    "handle": "Schemer"
   },
   {
     "id": "schmeric",

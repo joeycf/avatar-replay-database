@@ -1,32 +1,32 @@
 {
   "totals": {
-    "replays": 1241,
+    "replays": 1247,
     "characters": 12,
-    "players": 647,
+    "players": 649,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 169
+      "2026-10-28": 175
     },
     "supports": 36,
-    "sidesWithSupport": 1730
+    "sidesWithSupport": 1742
   },
   "characterUsage": {
-    "toph": 347,
+    "zuko": 155,
+    "korra": 302,
+    "azula": 264,
+    "zaheer": 282,
+    "katara": 250,
+    "ozai": 192,
+    "nightmare-korra": 99,
+    "toph": 349,
+    "aang": 166,
     "sokka": 127,
-    "zuko": 153,
-    "ozai": 191,
-    "zaheer": 280,
-    "korra": 301,
-    "azula": 263,
     "kyoshi": 269,
-    "katara": 249,
-    "aang": 165,
-    "avatar-aang": 49,
-    "nightmare-korra": 98
+    "avatar-aang": 49
   },
   "byPatchUsage": {
     "2026-07-23": {
@@ -98,21 +98,57 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "toph": 45,
+      "zuko": 23,
+      "korra": 50,
+      "azula": 28,
+      "zaheer": 51,
+      "katara": 16,
+      "ozai": 27,
+      "nightmare-korra": 14,
+      "toph": 47,
+      "aang": 33,
       "sokka": 19,
-      "zuko": 21,
-      "ozai": 26,
-      "zaheer": 49,
-      "korra": 49,
-      "azula": 27,
       "kyoshi": 35,
-      "katara": 15,
-      "aang": 32,
-      "avatar-aang": 7,
-      "nightmare-korra": 13
+      "avatar-aang": 7
     }
   },
   "playerCharacters": {
+    "carobou": {
+      "zuko": 2
+    },
+    "kahoo-slayer": {
+      "korra": 2
+    },
+    "puuro": {
+      "azula": 3
+    },
+    "reso": {
+      "zaheer": 3
+    },
+    "hatemani": {
+      "zuko": 12
+    },
+    "agent": {
+      "katara": 5
+    },
+    "schemer": {
+      "ozai": 1
+    },
+    "thunder-kitty": {
+      "nightmare-korra": 2
+    },
+    "entenmk": {
+      "toph": 1
+    },
+    "awanderingtanuki": {
+      "toph": 30
+    },
+    "bel-ehto": {
+      "aang": 3
+    },
+    "pokemaniachd": {
+      "zaheer": 7
+    },
     "jiggynyc": {
       "toph": 16
     },
@@ -221,23 +257,11 @@
     "ziad": {
       "korra": 39
     },
-    "carobou": {
-      "zuko": 1
-    },
     "abyssion": {
       "avatar-aang": 1
     },
     "sister-salvation": {
       "katara": 3
-    },
-    "puuro": {
-      "azula": 2
-    },
-    "bel-ehto": {
-      "aang": 2
-    },
-    "reso": {
-      "zaheer": 2
     },
     "lykehere": {
       "toph": 1
@@ -247,9 +271,6 @@
     },
     "chad-light": {
       "zaheer": 1
-    },
-    "kahoo-slayer": {
-      "korra": 1
     },
     "bowman": {
       "toph": 1
@@ -386,9 +407,6 @@
     "cassian": {
       "korra": 3
     },
-    "pokemaniachd": {
-      "zaheer": 6
-    },
     "ruib": {
       "zaheer": 7
     },
@@ -397,9 +415,6 @@
     },
     "shmeric": {
       "sokka": 3
-    },
-    "hatemani": {
-      "zuko": 11
     },
     "meowskii": {
       "toph": 1
@@ -484,9 +499,6 @@
     "raven": {
       "kyoshi": 2
     },
-    "awanderingtanuki": {
-      "toph": 29
-    },
     "inahk": {
       "kyoshi": 15
     },
@@ -501,9 +513,6 @@
     },
     "raymond-buller": {
       "korra": 29
-    },
-    "agent": {
-      "katara": 4
     },
     "moldynugget": {
       "kyoshi": 14
@@ -674,9 +683,6 @@
     },
     "rosvo-rolle": {
       "korra": 1
-    },
-    "thunder-kitty": {
-      "nightmare-korra": 1
     },
     "tavtavtavtav": {
       "katara": 3
@@ -2100,36 +2106,36 @@
     }
   },
   "supportUsage": {
+    "mai": 35,
+    "naga": 177,
+    "ursa": 77,
+    "ghazan": 109,
+    "kanna": 74,
+    "general-zhao": 26,
+    "dark-spirit": 40,
+    "badgermole": 71,
+    "gyatso": 76,
     "the-hippo": 81,
     "master-piandao": 4,
     "june": 68,
     "firelord-sozin": 47,
-    "ghazan": 107,
-    "naga": 176,
     "joo-dee": 23,
     "ming-hua": 62,
     "rangi": 100,
     "suki": 13,
     "p'li": 48,
     "imperial-firebender": 48,
-    "badgermole": 69,
     "kelsang": 38,
-    "ursa": 76,
-    "kanna": 73,
     "raava": 9,
     "momo": 33,
-    "gyatso": 75,
     "the-boulder": 86,
-    "general-zhao": 25,
     "roku": 33,
-    "mai": 33,
     "hakoda": 7,
     "lo-and-li": 85,
     "appa": 35,
     "guru-pathik": 8,
     "vaatu": 25,
     "master-pakku": 53,
-    "dark-spirit": 39,
     "princess-yue": 46,
     "yun": 52,
     "tonraq": 20,
