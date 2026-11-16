@@ -821,7 +821,10 @@ export const CHANNELS: ChannelConfig[] = [
     aliases: {
       supports: { 'the-boulder': ['The Boulder'] },
     },
-    freezeWatch: { lastMarked: '2026-08-07', recordsAtRecon: 10, reviewAfterDays: 90 },
+    // WATCH RE-READ 2026-11-16: not dormant. Five marked uploads since 08-07, the
+    // newest 2026-11-02 ("Avatar Legends Matches - Punguinz (Zuko [June]) vs Natsu
+    // (N.Korra [Dark Spirit]) FT20"), between Marvel Tōkon sets. Pushed lastMarked.
+    freezeWatch: { lastMarked: '2026-11-02', recordsAtRecon: 10, reviewAfterDays: 90 },
     // Its post-launch grammar appeared only two uploads in, which reads as a
     // format the uploader means to keep — so this is a watch, not a freeze. Its
     // 4727s bracket VOD is a real set series and must NOT be cut by a ceiling.
@@ -1017,9 +1020,13 @@ export const CHANNELS: ChannelConfig[] = [
     // Six uploads in six days (2026-08-03..08-09) and then nothing, on a channel
     // whose prior history had a 3.4-year gap. The first description promised
     // more; it has not happened.
+    //
+    // WATCH RE-READ 2026-11-16: slow, not gone. One more marked upload on
+    // 2026-09-30 (WalkEmDownMarko vs MysteryRacer21), its only upload of any game
+    // since 08-09, and the 7th committed record. Pushed lastMarked to it.
     slotOrder: 'handle-outside',
     gateMode: 'title',
-    freezeWatch: { lastMarked: '2026-08-09', recordsAtRecon: 6, reviewAfterDays: 90 },
+    freezeWatch: { lastMarked: '2026-09-30', recordsAtRecon: 6, reviewAfterDays: 90 },
   },
   {
     id: 'xcaliburBladez',
@@ -1304,7 +1311,16 @@ export const CHANNELS: ChannelConfig[] = [
     aliases: {
       supports: { 'master-pakku': ['Pakku'], 'princess-yue': ['Yue'] },
     },
-    freezeWatch: { lastMarked: '2026-08-08', recordsAtRecon: 2, reviewAfterDays: 90 },
+    // FROZEN 2026-11-16, when its 90-day watch (lastMarked 2026-08-08) went red on
+    // 11-07. The uploads playlist read that day holds 4 uploads in all: two Under
+    // Night sets from 2024 and the two Avatar sets of 2026-08-08. Nothing of any
+    // game since, so there is no newer marked upload to push the watch to. Its 2
+    // committed records are carried. Unfreeze if it posts Avatar sets again.
+    frozen: {
+      since: '2026-08-08',
+      reason: 'two sets on 2026-08-08 and no upload of any game since',
+      records: 2,
+    },
   },
   {
     id: 'atma00',
@@ -1360,7 +1376,15 @@ export const CHANNELS: ChannelConfig[] = [
       prefix: [/^\s*FT\s*\d+\s*[-|:]?\s*/i],
       suffix: [/\s*FT\s*\d+\s*$/i],
     },
-    freezeWatch: { lastMarked: '2026-08-15', recordsAtRecon: 2, reviewAfterDays: 90 },
+    // FROZEN 2026-11-16, when its 90-day watch (lastMarked 2026-08-15) went red on
+    // 11-14. It has moved on: its one upload since is a Spark the Electric Jester 3
+    // speedrun guide (2026-09-18), which is what the channel mostly posts. Its 2
+    // committed records are carried. Unfreeze if it posts Avatar sets again.
+    frozen: {
+      since: '2026-08-15',
+      reason: 'two sets on 2026-08-12/15, then back to Spark 3 speedruns',
+      records: 2,
+    },
     // No support in either title, so the index's char2 is the only support
     // source for these records — which makes it a genuinely independent witness
     // here rather than a re-reading of the same title.
