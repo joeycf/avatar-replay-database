@@ -101,6 +101,10 @@
     "handle": "Anterdes"
   },
   {
+    "id": "apollogom",
+    "handle": "ApolloGOM"
+  },
+  {
     "id": "arbiter",
     "handle": "Arbiter"
   },
@@ -267,6 +271,10 @@
   {
     "id": "bloo",
     "handle": "Bloo"
+  },
+  {
+    "id": "bloocard",
+    "handle": "BlooCard"
   },
   {
     "id": "boaventura345",
@@ -502,6 +510,10 @@
   {
     "id": "cowthecat",
     "handle": "cowthecat"
+  },
+  {
+    "id": "crocks",
+    "handle": "Crocks"
   },
   {
     "id": "cwang-red",

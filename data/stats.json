@@ -1,31 +1,31 @@
 {
   "totals": {
-    "replays": 1247,
+    "replays": 1262,
     "characters": 12,
-    "players": 649,
+    "players": 652,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 175
+      "2026-10-28": 190
     },
     "supports": 36,
-    "sidesWithSupport": 1742
+    "sidesWithSupport": 1772
   },
   "characterUsage": {
+    "toph": 354,
+    "kyoshi": 273,
     "zuko": 155,
-    "korra": 302,
-    "azula": 264,
+    "korra": 311,
+    "azula": 272,
     "zaheer": 282,
     "katara": 250,
-    "ozai": 192,
+    "ozai": 195,
     "nightmare-korra": 99,
-    "toph": 349,
-    "aang": 166,
+    "aang": 167,
     "sokka": 127,
-    "kyoshi": 269,
     "avatar-aang": 49
   },
   "byPatchUsage": {
@@ -98,21 +98,27 @@
       "sokka": 9
     },
     "2026-10-28": {
+      "toph": 52,
+      "kyoshi": 39,
       "zuko": 23,
-      "korra": 50,
-      "azula": 28,
+      "korra": 59,
+      "azula": 36,
       "zaheer": 51,
       "katara": 16,
-      "ozai": 27,
+      "ozai": 30,
       "nightmare-korra": 14,
-      "toph": 47,
-      "aang": 33,
+      "aang": 34,
       "sokka": 19,
-      "kyoshi": 35,
       "avatar-aang": 7
     }
   },
   "playerCharacters": {
+    "cow": {
+      "toph": 57
+    },
+    "crocks": {
+      "kyoshi": 1
+    },
     "carobou": {
       "zuko": 2
     },
@@ -190,9 +196,6 @@
     "liamgrayson": {
       "ozai": 3
     },
-    "cow": {
-      "toph": 56
-    },
     "saxxie": {
       "zuko": 32
     },
@@ -264,10 +267,10 @@
       "katara": 3
     },
     "lykehere": {
-      "toph": 1
+      "toph": 4
     },
     "kroutis": {
-      "toph": 8
+      "toph": 9
     },
     "chad-light": {
       "zaheer": 1
@@ -277,6 +280,33 @@
     },
     "hoplan": {
       "kyoshi": 3
+    },
+    "jundo": {
+      "kyoshi": 20
+    },
+    "cassian": {
+      "korra": 7
+    },
+    "guessing-game": {
+      "ozai": 4
+    },
+    "dawnrde": {
+      "azula": 12
+    },
+    "persi": {
+      "azula": 20
+    },
+    "raymond-buller": {
+      "korra": 33
+    },
+    "raven": {
+      "kyoshi": 3
+    },
+    "bloocard": {
+      "aang": 1
+    },
+    "apollogom": {
+      "korra": 1
     },
     "porklazer": {
       "azula": 12
@@ -395,17 +425,11 @@
     "busta": {
       "zaheer": 22
     },
-    "jundo": {
-      "kyoshi": 18
-    },
     "khezmen": {
       "ozai": 3
     },
     "samy": {
       "toph": 3
-    },
-    "cassian": {
-      "korra": 3
     },
     "ruib": {
       "zaheer": 7
@@ -489,30 +513,18 @@
     "1600axthon": {
       "korra": 23
     },
-    "persi": {
-      "azula": 17
-    },
     "gxblack": {
       "aang": 4,
       "toph": 1
     },
-    "raven": {
-      "kyoshi": 2
-    },
     "inahk": {
       "kyoshi": 15
-    },
-    "guessing-game": {
-      "ozai": 1
     },
     "dona": {
       "zaheer": 1
     },
     "imzonfgc": {
       "sokka": 2
-    },
-    "raymond-buller": {
-      "korra": 29
     },
     "moldynugget": {
       "kyoshi": 14
@@ -573,9 +585,6 @@
     },
     "magicrider": {
       "zuko": 6
-    },
-    "dawnrde": {
-      "azula": 7
     },
     "enigma": {
       "aang": 6
@@ -2106,39 +2115,39 @@
     }
   },
   "supportUsage": {
+    "the-boulder": 87,
+    "rangi": 103,
     "mai": 35,
-    "naga": 177,
-    "ursa": 77,
+    "naga": 185,
+    "ursa": 81,
     "ghazan": 109,
     "kanna": 74,
-    "general-zhao": 26,
+    "general-zhao": 29,
     "dark-spirit": 40,
-    "badgermole": 71,
+    "badgermole": 72,
     "gyatso": 76,
-    "the-hippo": 81,
+    "the-hippo": 84,
     "master-piandao": 4,
     "june": 68,
     "firelord-sozin": 47,
     "joo-dee": 23,
     "ming-hua": 62,
-    "rangi": 100,
     "suki": 13,
     "p'li": 48,
     "imperial-firebender": 48,
     "kelsang": 38,
     "raava": 9,
     "momo": 33,
-    "the-boulder": 86,
     "roku": 33,
     "hakoda": 7,
-    "lo-and-li": 85,
-    "appa": 35,
+    "lo-and-li": 89,
+    "yun": 53,
+    "appa": 36,
+    "tonraq": 21,
     "guru-pathik": 8,
     "vaatu": 25,
     "master-pakku": 53,
     "princess-yue": 46,
-    "yun": 52,
-    "tonraq": 20,
     "ran-and-shaw": 18,
     "dark-avatar-unalaq": 13,
     "katara": 2

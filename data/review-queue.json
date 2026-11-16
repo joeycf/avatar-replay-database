@@ -1,5 +1,21 @@
 [
   {
+    "id": "VSg1pmMx7-Q",
+    "kind": "character-completion",
+    "channel": "still",
+    "title": "W.W.W. #4 | Losers Semifinal: WWW Champs vs PassDaFists | Avatar Legends 2v2",
+    "publishedAt": "2026-11-16T19:00:35Z",
+    "durationSec": 756
+  },
+  {
+    "id": "Z5cIo9bdgP4",
+    "kind": "character-completion",
+    "channel": "still",
+    "title": "W.W.W. #4 | Losers Final: WWW Champs vs Lotus | Avatar Legends 2v2",
+    "publishedAt": "2026-11-16T16:00:16Z",
+    "durationSec": 1346
+  },
+  {
     "id": "ires0cz6rB4",
     "kind": "character-completion",
     "channel": "still",
@@ -516,6 +532,35 @@
       "ids": [
         "-O6LE9hi6PQ@4340",
         "-O6LE9hi6PQ@9056"
+      ]
+    }
+  },
+  {
+    "id": "cOMyGWXRGxs@5613",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Cassian (Korra/Naga) vs Raymond Buller (Korra/Naga) ▰ WELCOME TO THE JALTA LEAGUE'S ETERNITY #12",
+    "publishedAt": "2026-11-08T22:40:30Z",
+    "durationSec": 8331,
+    "handles": [
+      "Cassian",
+      "Raymond Buller"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "cassian",
+          "raymond-buller"
+        ],
+        "characters": [
+          "korra",
+          "korra"
+        ],
+        "playedOn": "2026-11-08"
+      },
+      "ids": [
+        "cOMyGWXRGxs@5613",
+        "cOMyGWXRGxs@7114"
       ]
     }
   },
