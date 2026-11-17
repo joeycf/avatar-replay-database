@@ -57,6 +57,10 @@
     "handle": "adarsh"
   },
   {
+    "id": "adisan",
+    "handle": "Adisan"
+  },
+  {
     "id": "aeduo",
     "handle": "Aeduo"
   },
@@ -923,6 +927,10 @@
   {
     "id": "goose",
     "handle": "Goose"
+  },
+  {
+    "id": "gorgo",
+    "handle": "Gorgo"
   },
   {
     "id": "gracialchasm",
@@ -2390,6 +2398,10 @@
   {
     "id": "storm179",
     "handle": "STORM179"
+  },
+  {
+    "id": "suleymon",
+    "handle": "Suleymon"
   },
   {
     "id": "sup3rior",

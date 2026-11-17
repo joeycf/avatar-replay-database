@@ -1,5 +1,13 @@
 [
   {
+    "id": "mgxGwnd8VQA",
+    "kind": "character-completion",
+    "channel": "still",
+    "title": "RANKED VS M3RCY AVATAR LEGENDS KYOSHI VS KATARA",
+    "publishedAt": "2026-11-17T18:30:05Z",
+    "durationSec": 639
+  },
+  {
     "id": "VSg1pmMx7-Q",
     "kind": "character-completion",
     "channel": "still",
@@ -476,6 +484,35 @@
     "title": "AVATAR LEGENDS SET - Redblade vs Bustafat",
     "publishedAt": "2026-08-23T19:03:43Z",
     "durationSec": 2130
+  },
+  {
+    "id": "7uFkoC-6Adg",
+    "kind": "duplicate-candidate",
+    "channel": "ndyTv",
+    "title": "Mix Masters Legends #9 — Raymond Buller (Korra) vs AWanderingTanuki (Toph) | GF | Avatar Legends",
+    "publishedAt": "2026-11-16T23:18:19Z",
+    "durationSec": 642,
+    "handles": [
+      "Raymond Buller",
+      "AWanderingTanuki"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "awanderingtanuki",
+          "raymond-buller"
+        ],
+        "characters": [
+          "korra",
+          "toph"
+        ],
+        "playedOn": "2026-11-16"
+      },
+      "ids": [
+        "7uFkoC-6Adg",
+        "vmEC8EL7zNs"
+      ]
+    }
   },
   {
     "id": "T7uXKSH7-bM@2828",
