@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 1272,
+    "replays": 1283,
     "characters": 12,
     "players": 655,
     "byPatch": {
@@ -9,21 +9,21 @@
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 200
+      "2026-10-28": 211
     },
     "supports": 36,
-    "sidesWithSupport": 1772
+    "sidesWithSupport": 1794
   },
   "characterUsage": {
-    "zuko": 159,
-    "korra": 315,
-    "toph": 357,
+    "katara": 254,
+    "korra": 318,
+    "toph": 361,
+    "zaheer": 289,
+    "nightmare-korra": 103,
+    "zuko": 160,
+    "ozai": 197,
     "kyoshi": 277,
     "azula": 274,
-    "zaheer": 284,
-    "nightmare-korra": 100,
-    "katara": 250,
-    "ozai": 195,
     "aang": 167,
     "sokka": 127,
     "avatar-aang": 49
@@ -98,21 +98,49 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "zuko": 27,
-      "korra": 63,
-      "toph": 55,
+      "katara": 20,
+      "korra": 66,
+      "toph": 59,
+      "zaheer": 58,
+      "nightmare-korra": 18,
+      "zuko": 28,
+      "ozai": 32,
       "kyoshi": 43,
       "azula": 38,
-      "zaheer": 53,
-      "nightmare-korra": 15,
-      "katara": 16,
-      "ozai": 30,
       "aang": 34,
       "sokka": 19,
       "avatar-aang": 7
     }
   },
   "playerCharacters": {
+    "juno": {
+      "katara": 11
+    },
+    "squidy": {
+      "korra": 11
+    },
+    "gracialchasm": {
+      "toph": 8
+    },
+    "brae": {
+      "zaheer": 8
+    },
+    "roadery": {
+      "nightmare-korra": 4,
+      "kyoshi": 9
+    },
+    "kitoro": {
+      "zaheer": 15
+    },
+    "nolbie": {
+      "zuko": 3
+    },
+    "liamgrayson": {
+      "ozai": 5
+    },
+    "laurablacklodge": {
+      "korra": 2
+    },
     "adisan": {
       "zuko": 4
     },
@@ -189,33 +217,14 @@
     "graycapedhero": {
       "ozai": 13
     },
-    "brae": {
-      "zaheer": 7
-    },
-    "squidy": {
-      "korra": 9
-    },
     "tommy": {
       "azula": 7
-    },
-    "kitoro": {
-      "zaheer": 11
-    },
-    "roadery": {
-      "kyoshi": 9,
-      "nightmare-korra": 1
     },
     "eutro": {
       "sokka": 2
     },
-    "nolbie": {
-      "zuko": 2
-    },
     "luca": {
       "kyoshi": 3
-    },
-    "liamgrayson": {
-      "ozai": 3
     },
     "saxxie": {
       "zuko": 32
@@ -476,9 +485,6 @@
     "shroomyd": {
       "zuko": 1
     },
-    "gracialchasm": {
-      "toph": 4
-    },
     "obassasin": {
       "azula": 1
     },
@@ -561,12 +567,6 @@
     },
     "thicc-man-meat": {
       "aang": 2
-    },
-    "juno": {
-      "katara": 7
-    },
-    "laurablacklodge": {
-      "korra": 1
     },
     "rood": {
       "aang": 11,
@@ -2124,26 +2124,26 @@
     }
   },
   "supportUsage": {
-    "the-boulder": 87,
+    "kanna": 78,
+    "naga": 188,
+    "the-hippo": 87,
+    "ghazan": 110,
+    "dark-spirit": 43,
+    "the-boulder": 88,
+    "ming-hua": 64,
+    "june": 69,
+    "imperial-firebender": 50,
+    "p'li": 50,
     "rangi": 103,
     "mai": 35,
-    "naga": 185,
     "ursa": 81,
-    "ghazan": 109,
-    "kanna": 74,
     "general-zhao": 29,
-    "dark-spirit": 40,
     "badgermole": 72,
     "gyatso": 76,
-    "the-hippo": 84,
     "master-piandao": 4,
-    "june": 68,
     "firelord-sozin": 47,
     "joo-dee": 23,
-    "ming-hua": 62,
     "suki": 13,
-    "p'li": 48,
-    "imperial-firebender": 48,
     "kelsang": 38,
     "raava": 9,
     "momo": 33,

@@ -486,6 +486,35 @@
     "durationSec": 2130
   },
   {
+    "id": "bgXuaIOzQ-s@2976",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ GracialChasm (Toph/The Boulder) vs Kitoro (Zaheer/Ming-Hua) ▰ Soul Read #4",
+    "publishedAt": "2026-11-17T11:03:35Z",
+    "durationSec": 7144,
+    "handles": [
+      "GracialChasm",
+      "Kitoro"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "gracialchasm",
+          "kitoro"
+        ],
+        "characters": [
+          "toph",
+          "zaheer"
+        ],
+        "playedOn": "2026-11-17"
+      },
+      "ids": [
+        "bgXuaIOzQ-s@2976",
+        "bgXuaIOzQ-s@6027"
+      ]
+    }
+  },
+  {
     "id": "7uFkoC-6Adg",
     "kind": "duplicate-candidate",
     "channel": "ndyTv",
