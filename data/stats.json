@@ -1,28 +1,28 @@
 {
   "totals": {
-    "replays": 1283,
+    "replays": 1287,
     "characters": 12,
-    "players": 655,
+    "players": 659,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 211
+      "2026-10-28": 215
     },
     "supports": 36,
-    "sidesWithSupport": 1794
+    "sidesWithSupport": 1796
   },
   "characterUsage": {
+    "ozai": 201,
+    "zuko": 162,
+    "zaheer": 290,
+    "kyoshi": 278,
+    "nightmare-korra": 104,
     "katara": 254,
     "korra": 318,
     "toph": 361,
-    "zaheer": 289,
-    "nightmare-korra": 103,
-    "zuko": 160,
-    "ozai": 197,
-    "kyoshi": 277,
     "azula": 274,
     "aang": 167,
     "sokka": 127,
@@ -98,14 +98,14 @@
       "sokka": 9
     },
     "2026-10-28": {
+      "ozai": 36,
+      "zuko": 30,
+      "zaheer": 59,
+      "kyoshi": 44,
+      "nightmare-korra": 19,
       "katara": 20,
       "korra": 66,
       "toph": 59,
-      "zaheer": 58,
-      "nightmare-korra": 18,
-      "zuko": 28,
-      "ozai": 32,
-      "kyoshi": 43,
       "azula": 38,
       "aang": 34,
       "sokka": 19,
@@ -113,6 +113,22 @@
     }
   },
   "playerCharacters": {
+    "allan": {
+      "ozai": 4,
+      "zaheer": 1
+    },
+    "karsin": {
+      "zuko": 1
+    },
+    "neth": {
+      "kyoshi": 1
+    },
+    "majinakudama": {
+      "zuko": 1
+    },
+    "faltimux": {
+      "nightmare-korra": 3
+    },
     "juno": {
       "katara": 11
     },
@@ -576,9 +592,6 @@
     },
     "ghosrtkat": {
       "korra": 1
-    },
-    "faltimux": {
-      "nightmare-korra": 2
     },
     "sen": {
       "kyoshi": 1
@@ -2124,6 +2137,8 @@
     }
   },
   "supportUsage": {
+    "mai": 36,
+    "rangi": 104,
     "kanna": 78,
     "naga": 188,
     "the-hippo": 87,
@@ -2134,8 +2149,6 @@
     "june": 69,
     "imperial-firebender": 50,
     "p'li": 50,
-    "rangi": 103,
-    "mai": 35,
     "ursa": 81,
     "general-zhao": 29,
     "badgermole": 72,
