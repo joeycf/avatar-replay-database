@@ -41,8 +41,8 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | intake | source | raw | marked | parsed | published | too-short (floor) | too-long (ceil) | live | rejects naming a character |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | aegisEsports | 400 | 90 | 76 | 76 | 0 (120s) | 14 (3600s) | 0 | 0 |
-| still | still | 198 | 119 | 61 | 61 | 8 (120s) | 0 (—) | 0 | 28 |
-| ndyTv | ndyTv | 3800 | 75 | 42 | 42 | 0 (120s) | 0 (—) | 0 | 0 |
+| still | still | 199 | 120 | 61 | 61 | 8 (120s) | 0 (—) | 0 | 28 |
+| ndyTv | ndyTv | 3823 | 75 | 42 | 42 | 0 (120s) | 0 (—) | 0 | 0 |
 | toledoLocals | toledoLocals | 982 | 46 | 46 | 46 | 0 (120s) | 0 (—) | 0 | 0 |
 | arinKarin | arinKarin | 205 | 23 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 1 |
 | cow | cow | 97 | 32 | 24 | 24 | 0 (120s) | 0 (—) | 0 | 1 |
@@ -51,18 +51,18 @@ of 4,840-7,112s would each become ONE record standing for a whole bracket (check
 | unrivaledTournaments | unrivaledTournaments | 184 | 15 | 15 | 15 | 0 (120s) | 0 (—) | 0 | 0 |
 | normalMs | normalMs | 494 | 32 | 22 | 22 | 0 (120s) | 0 (—) | 0 | 0 |
 | rood | rood | 45 | 32 | 31 | 31 | 0 (120s) | 0 (—) | 0 | 1 |
-| an11Mo | an11Mo | 47 | 27 | 26 | 26 | 1 (120s) | 0 (—) | 0 | 0 |
+| an11Mo | an11Mo | 48 | 27 | 26 | 26 | 1 (120s) | 0 (—) | 0 | 0 |
 | natsuXenoblade _(watch)_ | natsuXenoblade | 183 | 20 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 1 |
 | takeANappa | takeANappa | 332 | 43 | 11 | 11 | 17 (120s) | 0 (—) | 0 | 5 |
 | versusFestival | versusFestival | 491 | 8 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 0 |
 | avianZebra | avianZebra | 43 | 10 | 10 | 10 | 0 (120s) | 0 (—) | 0 | 0 |
-| kmlTournaments | kmlTournaments | 1531 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
+| kmlTournaments | kmlTournaments | 1532 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | teo1029 | teo1029 | 16 | 12 | 11 | 11 | 0 (120s) | 0 (—) | 0 | 1 |
 | mysteryRacer21 _(watch)_ | mysteryRacer21 | 315 | 7 | 7 | 7 | 0 (120s) | 0 (—) | 0 | 0 |
 | xcaliburBladez _(watch)_ | xcaliburBladez | 182 | 6 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 0 |
 | schoolBus | schoolBus | 308 | 12 | 6 | 6 | 0 (120s) | 0 (—) | 0 | 4 |
 | superSalemFighters | superSalemFighters | 292 | 9 | 9 | 9 | 0 (120s) | 0 (—) | 0 | 0 |
-| redVsFantasy | redVsFantasy | 580 | 77 | 8 | 8 | 0 (120s) | 0 (—) | 0 | 26 |
+| redVsFantasy | redVsFantasy | 581 | 78 | 8 | 8 | 0 (120s) | 0 (—) | 1 | 26 |
 | mikeyChiFgc | mikeyChiFgc | 21 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | kang | kang | 3 | 3 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 0 |
 | phoenixWrong | phoenixWrong | 26 | 5 | 3 | 3 | 0 (120s) | 0 (—) | 0 | 2 |
@@ -127,8 +127,8 @@ no player to complete.
 | intake | no-marker | before-floor | live | too-short | too-long | no-vs | vs-count | no-char | no-handle | matchup-only | slot-ambiguous | support-overlap | excluded |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | aegisEsports | 310 | 0 | 0 | 0 | 14 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still | 79 | 0 | 0 | 8 | 0 | 30 | 0 | 17 | 2 | 0 | 0 | 1 | 0 |
-| ndyTv | 3725 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
+| still | 79 | 0 | 0 | 8 | 0 | 31 | 0 | 17 | 2 | 0 | 0 | 1 | 0 |
+| ndyTv | 3748 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 0 | 0 | 0 | 0 |
 | toledoLocals | 936 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | arinKarin | 182 | 11 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | cow | 65 | 1 | 0 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -137,18 +137,18 @@ no player to complete.
 | unrivaledTournaments | 169 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | normalMs | 462 | 8 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rood | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
-| an11Mo | 20 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| an11Mo | 21 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | natsuXenoblade | 163 | 10 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | takeANappa | 289 | 0 | 0 | 17 | 0 | 13 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | versusFestival | 483 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | avianZebra | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| kmlTournaments | 1524 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| kmlTournaments | 1525 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | teo1029 | 4 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mysteryRacer21 | 308 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xcaliburBladez | 176 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | schoolBus | 296 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | superSalemFighters | 283 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy | 503 | 0 | 0 | 0 | 0 | 68 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| redVsFantasy | 503 | 0 | 1 | 0 | 0 | 68 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | kang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | phoenixWrong | 21 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -235,7 +235,7 @@ Where a channel titles a set with the day it was PLAYED, that day is the record 
 is misdated AND its backlog is credited to the weeks it was uploaded in — which is how a
 corpus looks like it is accelerating while ambient volume is flat.
 
-- **still**: 75 marked upload(s) dated from the title, 7 token(s) refused as outside the 26-day bound, 37 carrying no token at all; largest lag used 26 day(s)
+- **still**: 75 marked upload(s) dated from the title, 7 token(s) refused as outside the 26-day bound, 38 carrying no token at all; largest lag used 26 day(s)
 
 ## Duration histogram, per intake
 
@@ -251,7 +251,7 @@ or ceiling would admit.
 | aegisEsports · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 14 |
 | still · records | 0 | 0 | 0 | 1 | 38 | 4 | 12 | 6 |
 | still · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| still · other misses | 0 | 4 | 4 | 1 | 5 | 14 | 18 | 12 |
+| still · other misses | 0 | 4 | 4 | 1 | 5 | 14 | 19 | 12 |
 | ndyTv · records | 0 | 0 | 0 | 5 | 36 | 1 | 0 | 0 |
 | ndyTv · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | ndyTv · other misses | 0 | 0 | 0 | 2 | 31 | 0 | 0 | 0 |
@@ -314,7 +314,7 @@ or ceiling would admit.
 | superSalemFighters · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | redVsFantasy · records | 0 | 0 | 0 | 0 | 3 | 1 | 4 | 0 |
 | redVsFantasy · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| redVsFantasy · other misses | 0 | 0 | 0 | 0 | 9 | 14 | 20 | 26 |
+| redVsFantasy · other misses | 1 | 0 | 0 | 0 | 9 | 14 | 20 | 26 |
 | mikeyChiFgc · records | 0 | 0 | 0 | 0 | 0 | 1 | 2 | 0 |
 | mikeyChiFgc · match-shaped misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | mikeyChiFgc · other misses | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -478,10 +478,10 @@ be able to parse into a record. `Hakoda` waited here until the index printed it 
 - 1× `FIRST EVER v Water Whippin Wednesday VOD`
 - 1× `FIRST TIME GAMES STiLL V S ScaryBusey BASUAL`
 - 1× `Flankroast BigBlack Quarter Mix Masters`
-- … 149 more
+- … 150 more
 
 > kovac: frozen since 2026-08-08, 2 record(s) carried.
 > towito: frozen since 2026-08-15, 2 record(s) carried.
 > drewShoto: frozen since 2026-09-07, 3 record(s) carried.
 
-_Generated 2026-11-19T18:18:10.971Z_
+_Generated 2026-11-20T17:48:57.476Z_
