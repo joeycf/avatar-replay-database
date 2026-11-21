@@ -1,30 +1,30 @@
 {
   "totals": {
-    "replays": 1287,
+    "replays": 1290,
     "characters": 12,
-    "players": 659,
+    "players": 663,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
       "2026-08-06": 250,
       "2026-09-02": 403,
       "2026-10-07": 314,
-      "2026-10-28": 215
+      "2026-10-28": 218
     },
     "supports": 36,
-    "sidesWithSupport": 1796
+    "sidesWithSupport": 1802
   },
   "characterUsage": {
-    "ozai": 201,
+    "ozai": 204,
     "zuko": 162,
     "zaheer": 290,
-    "kyoshi": 278,
+    "kyoshi": 279,
     "nightmare-korra": 104,
     "katara": 254,
     "korra": 318,
-    "toph": 361,
+    "toph": 362,
     "azula": 274,
-    "aang": 167,
+    "aang": 168,
     "sokka": 127,
     "avatar-aang": 49
   },
@@ -98,16 +98,16 @@
       "sokka": 9
     },
     "2026-10-28": {
-      "ozai": 36,
+      "ozai": 39,
       "zuko": 30,
       "zaheer": 59,
-      "kyoshi": 44,
+      "kyoshi": 45,
       "nightmare-korra": 19,
       "katara": 20,
       "korra": 66,
-      "toph": 59,
+      "toph": 60,
       "azula": 38,
-      "aang": 34,
+      "aang": 35,
       "sokka": 19,
       "avatar-aang": 7
     }
@@ -180,6 +180,18 @@
     },
     "gorgo": {
       "nightmare-korra": 1
+    },
+    "kenecr-t": {
+      "ozai": 3
+    },
+    "trento": {
+      "toph": 1
+    },
+    "argenfrost": {
+      "kyoshi": 1
+    },
+    "c4ppa": {
+      "aang": 1
     },
     "cow": {
       "toph": 57
@@ -2138,21 +2150,21 @@
   },
   "supportUsage": {
     "mai": 36,
-    "rangi": 104,
+    "rangi": 105,
     "kanna": 78,
     "naga": 188,
-    "the-hippo": 87,
+    "the-hippo": 88,
     "ghazan": 110,
     "dark-spirit": 43,
     "the-boulder": 88,
     "ming-hua": 64,
     "june": 69,
-    "imperial-firebender": 50,
+    "imperial-firebender": 53,
     "p'li": 50,
+    "gyatso": 77,
     "ursa": 81,
     "general-zhao": 29,
     "badgermole": 72,
-    "gyatso": 76,
     "master-piandao": 4,
     "firelord-sozin": 47,
     "joo-dee": 23,
