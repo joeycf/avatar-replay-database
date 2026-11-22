@@ -1051,10 +1051,22 @@ export const CHANNELS: ChannelConfig[] = [
       prefix: [/^\s*Avatar\s*Legends\s*(?:FT\s*\d+\s*)?(?:High\s?Level\s*Set\s*)?/i],
     },
     aliases: { fighters: { kyoshi: ['Kiyoshi'] } },
-    freezeWatch: { lastMarked: '2026-08-23', recordsAtRecon: 6, reviewAfterDays: 90 },
     // It historically hops games (DOA, BBCF, GGST, Tekken) and posted a Dead or
     // Alive 6 upload on 2026-09-10 with no Avatar since 08-23. Freeze rather
     // than prune if that continues.
+    //
+    // FROZEN 2026-11-22, when its 90-day watch (lastMarked 2026-08-23) went red on
+    // 11-21. It continued: the channel feed read that day has six Avatar sets
+    // (2026-08-02..08-23) and one upload since, the DOA6 "Let me show you how to
+    // Minato" of 2026-09-10, newest of any game. Before August it was BBCF and
+    // DOA6. Its 6 committed records are carried. The owner still plays: the index
+    // has xcaliburbladez sides through 2026-09-18, which this freeze does not touch.
+    // Unfreeze if it posts Avatar sets again.
+    frozen: {
+      since: '2026-08-23',
+      reason: 'six sets 2026-08-02..08-23, then back to Dead or Alive 6',
+      records: 6,
+    },
   },
   {
     id: 'schoolBus',

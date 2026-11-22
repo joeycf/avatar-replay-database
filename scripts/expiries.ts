@@ -206,7 +206,18 @@ export interface UnreleasedFighter {
 // winner and no date for any Pass fighter or for Tagah. RE-DATED to
 // 2026-11-18: three weeks after the vote opened, the soonest a result or the
 // first Pass fighter is plausibly announced.
-const REVIEW_AFTER = '2026-11-18';
+// LOOKED AGAIN 2026-11-22, and still nothing has moved: roster-check is CURRENT
+// (12 fighter achievements, 12 in characters.json), the store sentence and the
+// `dlc` array ([5017890]) are unchanged, and the corpus scan of 1,290 records
+// sights no gated name. The vendor's Steam feed since 10-29 is Patch 4.5
+// (11-05: rematch timer, draw offer), a Game Awards "Best Fighting Game"
+// nomination (11-18) and a TNS Flow State #5 sign-up (11-20). None names a
+// fighter, a date or a vote winner, and none says when the vote closes.
+// RE-DATED to 2026-12-14: three weeks out, as last time, and past the first
+// half of December, when The Game Awards has aired in recent years. The 11-18
+// post says the game is nominated there, which makes that the next stage the
+// vendor is likely to talk on.
+const REVIEW_AFTER = '2026-12-14';
 const YEAR_1_PASS_SENTENCE =
   'Adds five iconic characters over the course of the season: Iroh, Ty Lee, ' +
   'Lin Beifong, Bolin and the winner of the Year 1 Character Vote.';

@@ -13,9 +13,9 @@
  * them in types/index.ts; the committed contract for this build enumerates that
  * file and these are not in it, so one declaration, one owner.
  *
- * ── THE GRAMMAR: THE VENDOR HAS VERSIONED THREE BUILDS OUT OF SIX ──────────
- * Five post-launch builds have shipped to a gameplay platform, six rows with
- * launch. The vendor published a version string for exactly THREE of them: one
+ * ── THE GRAMMAR: THE VENDOR HAS VERSIONED FOUR BUILDS OUT OF SEVEN ─────────
+ * Six post-launch builds have shipped to a gameplay platform, seven rows with
+ * launch. The vendor published a version string for exactly FOUR of them: one
  * in the body of its own Steam post —
  *
  *     [h1]Patch 2.5
@@ -23,13 +23,15 @@
  *
  * — one only in a title, "PATCH 3.0 IS HERE" (2026-10-07; the row was added
  * 2026-10-15), and one only in its web notes, "(Patch 4.0)", linked from a post
- * titled "THE AVATAR STATE PATCH IS HERE" (2026-10-28; added 2026-10-29).
+ * titled "THE AVATAR STATE PATCH IS HERE" (2026-10-28; added 2026-10-29), and
+ * one in a body heading, "Patch 4.5 is rolling out now!", under a title that
+ * dates it, "Game Update - November 5, 2026" (added 2026-11-22).
  * There is no 1.x, no 2.0–2.4 and no launch version anywhere on Steam,
  * avatarfighters.com or in the press (Stage 0, 2026-09-16; the two Steam
  * bodies re-read live 2026-09-18, the 3.0 post 2026-10-15).
  *
  * So rules 4 and 4b disagree row by row: 4 says copy the vendor's version, 4b
- * says use the date when there is none, and here three of six rows have none.
+ * says use the date when there is none, and here three of seven rows have none.
  * Checklist 4d — written by this build from this table — resolves it: DATE
  * TOKENS FOR EVERY ROW, with the vendor's version carried as a display LABEL.
  * The reasons, in order of weight:
@@ -302,9 +304,9 @@ export const SEASONS: SeasonBoundary[] = [
 /**
  * Every build the vendor shipped to a gameplay platform, oldest first.
  *
- * NEVER INVENT A VERSION TO FILL A GAP. Three of these six rows have no vendor
+ * NEVER INVENT A VERSION TO FILL A GAP. Three of these seven rows have no vendor
  * version and are absent from every published version sequence; a reader
- * noticing that only three rows carry a `label` (2.5, 3.0 and 4.0) is the intended
+ * noticing that only four rows carry a `label` (2.5, 3.0, 4.0 and 4.5) is the intended
  * outcome. There is deliberately no validator asserting that versions
  * increment — it would fail on the first honest row here.
  */
@@ -393,6 +395,24 @@ export const PATCHES: PatchBoundary[] = [
     // day and by the linked paramountgames.com notes, headed "(Patch 4.0)" and
     // "Last Updated: October 28, 2026". Added 2026-10-29, one day late: the
     // checker read the post as UNREADABLE until the POST_DATE_OK row existed.
+  },
+  {
+    version: '2026-11-05',
+    start: '2026-11-05',
+    label: 'Patch 4.5',
+    announcedOn: 'steam',
+    url: 'https://store.steampowered.com/news/app/2424420/view/690899407629975739',
+    note: 'Ranked rematch timer, mutual draw offer, fixes to Korra, N.Korra, Zaheer, Zuko, Ozai',
+    // Steam post title, verbatim: "Game Update - November 5, 2026" (gid
+    // 1848664643342749, posted 2026-11-05T18:59Z). The body has no date: it
+    // opens "[h2]Patch 4.5 is rolling out now!" and says "Today's patch", so the
+    // title's date is the authority under rule (c), and the body carries the
+    // version. The linked paramountgames.com notes are headed "(Patch 4.5)" and
+    // "Last Updated: November 5, 2026", and the public build moved to 26465934
+    // that day (patch-check, read 2026-11-22). Added 2026-11-22, seventeen days late:
+    // patch-check is manual, and the table's 40-day alarm would not have fired
+    // until 12-07. Every record from 11-05 to 11-21 was filed under Patch 4.0
+    // until the next parse after this row.
   },
 ];
 
