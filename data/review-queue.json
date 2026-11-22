@@ -784,6 +784,151 @@
     }
   },
   {
+    "id": "-_r8Q8F1_JA@10635",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Biscuit (Azula/Lo and Li) vs ArinKarin (Ozai/Imperial Firebender) ▰ BOOGIE'S BEATDOWNS: FIRST BLOOD 🩸",
+    "publishedAt": "2026-10-26T06:59:02Z",
+    "durationSec": 12803,
+    "handles": [
+      "Biscuit",
+      "ArinKarin"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "arinkarin",
+          "biscuit"
+        ],
+        "characters": [
+          "azula",
+          "ozai"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "-_r8Q8F1_JA@10635",
+        "-_r8Q8F1_JA@4275"
+      ]
+    }
+  },
+  {
+    "id": "-_r8Q8F1_JA@11959",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Cow (Toph/The Hippo) vs ProDoubleSushi (Azula/Ursa) ▰ BOOGIE'S BEATDOWNS: FIRST BLOOD 🩸",
+    "publishedAt": "2026-10-26T06:59:02Z",
+    "durationSec": 12803,
+    "handles": [
+      "Cow",
+      "ProDoubleSushi"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "cow",
+          "prodoublesushi"
+        ],
+        "characters": [
+          "azula",
+          "toph"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "-_r8Q8F1_JA@11959",
+        "-_r8Q8F1_JA@9878"
+      ]
+    }
+  },
+  {
+    "id": "-_r8Q8F1_JA@3282",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Ziad (Korra/Naga) vs Solve (Korra/Tonraq) ▰ BOOGIE'S BEATDOWNS: FIRST BLOOD 🩸",
+    "publishedAt": "2026-10-26T06:59:02Z",
+    "durationSec": 12803,
+    "handles": [
+      "Ziad",
+      "Solve"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "solve",
+          "ziad"
+        ],
+        "characters": [
+          "korra",
+          "korra"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "-_r8Q8F1_JA@3282",
+        "yldRy2F2DPY@11696"
+      ]
+    }
+  },
+  {
+    "id": "-_r8Q8F1_JA@5501",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ K7 Showoff (Zaheer/Ghazan) vs Scythe (Katara/Kanna) ▰ BOOGIE'S BEATDOWNS: FIRST BLOOD 🩸",
+    "publishedAt": "2026-10-26T06:59:02Z",
+    "durationSec": 12803,
+    "handles": [
+      "K7 Showoff",
+      "Scythe"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "k7-showoff",
+          "scythe"
+        ],
+        "characters": [
+          "katara",
+          "zaheer"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "-_r8Q8F1_JA@5501",
+        "-_r8Q8F1_JA@5502"
+      ]
+    }
+  },
+  {
+    "id": "-_r8Q8F1_JA@8221",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ TestMyLuck (Nightmare Korra/Vaatu) vs Scythe (Katara/Kanna) ▰ BOOGIE'S BEATDOWNS: FIRST BLOOD",
+    "publishedAt": "2026-10-26T06:59:02Z",
+    "durationSec": 12803,
+    "handles": [
+      "TestMyLuck",
+      "Scythe"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "scythe",
+          "testmyluck"
+        ],
+        "characters": [
+          "katara",
+          "nightmare-korra"
+        ],
+        "playedOn": "2026-10-26"
+      },
+      "ids": [
+        "-_r8Q8F1_JA@8221",
+        "-_r8Q8F1_JA@8223"
+      ]
+    }
+  },
+  {
     "id": "sQ_1h3BUiSQ@4848",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",

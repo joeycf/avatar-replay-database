@@ -196,6 +196,10 @@
     "handle": "AWanderingTanuki"
   },
   {
+    "id": "axeice",
+    "handle": "AxeIce"
+  },
+  {
     "id": "ayre",
     "handle": "Ayre"
   },
@@ -675,6 +679,10 @@
   {
     "id": "drewski-27",
     "handle": "Drewski-27"
+  },
+  {
+    "id": "dubu",
+    "handle": "dubu"
   },
   {
     "id": "duburu",
@@ -1456,6 +1464,10 @@
     "handle": "Lorenzo"
   },
   {
+    "id": "lost-rekt",
+    "handle": "Lost Rekt"
+  },
+  {
     "id": "lou-minadi",
     "handle": "Lou Minadi"
   },
@@ -1636,7 +1648,12 @@
   },
   {
     "id": "mr-gentleman",
-    "handle": "Mr Gentleman"
+    "handle": "Mr. Gentleman",
+    "extra": {
+      "aliases": [
+        "Mr Gentleman"
+      ]
+    }
   },
   {
     "id": "mr-madgear",
@@ -1894,6 +1911,10 @@
     "handle": "Piglou"
   },
   {
+    "id": "pineapple-consultant",
+    "handle": "pineapple_consultant"
+  },
+  {
     "id": "pineapples",
     "handle": "Pineapples"
   },
@@ -1945,6 +1966,10 @@
     }
   },
   {
+    "id": "prestidigination",
+    "handle": "prestidigination"
+  },
+  {
     "id": "prince-legit",
     "handle": "PRINCE LEGIT"
   },
@@ -1964,6 +1989,10 @@
         "Prodoublesushi"
       ]
     }
+  },
+  {
+    "id": "proteus",
+    "handle": "Proteus"
   },
   {
     "id": "psyf",
@@ -2171,6 +2200,10 @@
   {
     "id": "sanay",
     "handle": "Sanay"
+  },
+  {
+    "id": "sand",
+    "handle": "Sand"
   },
   {
     "id": "saximus",
