@@ -494,6 +494,35 @@
     "durationSec": 2130
   },
   {
+    "id": "bVdSwrnEShc@30707",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ Receita Federal (Zaheer/Ghazan) vs Crocks (Kyoshi/Rangi) ▰ Battle Coliseum 2026",
+    "publishedAt": "2026-11-20T23:56:05Z",
+    "durationSec": 34388,
+    "handles": [
+      "Receita Federal",
+      "Crocks"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "crocks",
+          "receita-federal"
+        ],
+        "characters": [
+          "kyoshi",
+          "zaheer"
+        ],
+        "playedOn": "2026-11-20"
+      },
+      "ids": [
+        "bVdSwrnEShc@30707",
+        "bVdSwrnEShc@32829"
+      ]
+    }
+  },
+  {
     "id": "bgXuaIOzQ-s@2976",
     "kind": "duplicate-candidate",
     "channel": "replayTheater",
