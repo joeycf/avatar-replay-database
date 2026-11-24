@@ -1,8 +1,8 @@
 {
   "totals": {
-    "replays": 1334,
+    "replays": 1335,
     "characters": 12,
-    "players": 680,
+    "players": 681,
     "byPatch": {
       "2026-07-23": 53,
       "2026-07-29": 52,
@@ -10,18 +10,18 @@
       "2026-09-02": 403,
       "2026-10-07": 335,
       "2026-10-28": 202,
-      "2026-11-05": 39
+      "2026-11-05": 40
     },
     "supports": 36,
-    "sidesWithSupport": 1880
+    "sidesWithSupport": 1882
   },
   "characterUsage": {
-    "aang": 175,
+    "aang": 176,
+    "toph": 374,
     "nightmare-korra": 112,
     "avatar-aang": 53,
     "sokka": 132,
     "ozai": 215,
-    "toph": 373,
     "korra": 323,
     "zaheer": 298,
     "katara": 261,
@@ -113,12 +113,12 @@
       "avatar-aang": 7
     },
     "2026-11-05": {
-      "aang": 5,
+      "aang": 6,
+      "toph": 12,
       "nightmare-korra": 7,
       "avatar-aang": 1,
       "sokka": 2,
       "ozai": 10,
-      "toph": 11,
       "korra": 5,
       "zaheer": 10,
       "katara": 4,
@@ -128,6 +128,12 @@
     }
   },
   "playerCharacters": {
+    "an11-mo": {
+      "aang": 27
+    },
+    "desktop-2sam4": {
+      "toph": 1
+    },
     "mr-gentleman": {
       "aang": 4
     },
@@ -571,9 +577,6 @@
     },
     "billz": {
       "kyoshi": 1
-    },
-    "an11-mo": {
-      "aang": 26
     },
     "puur": {
       "ozai": 1
@@ -2216,10 +2219,11 @@
     }
   },
   "supportUsage": {
+    "gyatso": 80,
+    "badgermole": 74,
     "imperial-firebender": 62,
     "the-hippo": 94,
     "naga": 192,
-    "badgermole": 73,
     "ghazan": 117,
     "rangi": 108,
     "dark-spirit": 46,
@@ -2233,7 +2237,6 @@
     "p'li": 50,
     "ursa": 87,
     "general-zhao": 31,
-    "gyatso": 79,
     "master-piandao": 4,
     "firelord-sozin": 47,
     "joo-dee": 24,
