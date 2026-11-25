@@ -471,7 +471,7 @@
     "channel": "schoolBus",
     "title": "[Avatar Legends] High Level FT10 SchoolBus (Korra) vs Monty's Mystery Mix (Norra)",
     "publishedAt": "2026-09-20T20:50:03Z",
-    "durationSec": 2178,
+    "durationSec": 2179,
     "handles": [
       "SchoolBus",
       "Monty's Mystery Mix"
@@ -492,6 +492,35 @@
     "title": "AVATAR LEGENDS SET - Redblade vs Bustafat",
     "publishedAt": "2026-08-23T19:03:43Z",
     "durationSec": 2130
+  },
+  {
+    "id": "p7aQo5wUkl4@10528",
+    "kind": "duplicate-candidate",
+    "channel": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs Cow (Toph/The Boulder) ▰ TNS Flow State #5",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "handles": [
+      "1999 Honda Civic",
+      "Cow"
+    ],
+    "duplicates": {
+      "signature": {
+        "players": [
+          "1999-honda-civic",
+          "cow"
+        ],
+        "characters": [
+          "sokka",
+          "toph"
+        ],
+        "playedOn": "2026-11-23"
+      },
+      "ids": [
+        "p7aQo5wUkl4@10528",
+        "p7aQo5wUkl4@9386"
+      ]
+    }
   },
   {
     "id": "bVdSwrnEShc@30707",

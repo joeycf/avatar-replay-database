@@ -134,6 +134,10 @@
     "handle": "Architech"
   },
   {
+    "id": "areyouthere",
+    "handle": "AreYouThere"
+  },
+  {
     "id": "argenfrost",
     "handle": "Argenfrost"
   },
@@ -360,6 +364,10 @@
         "Briggetchu"
       ]
     }
+  },
+  {
+    "id": "brozybra",
+    "handle": "Brozybra"
   },
   {
     "id": "buffkyoshi",
@@ -1971,6 +1979,10 @@
     "handle": "PokLazer"
   },
   {
+    "id": "pork-lazer",
+    "handle": "PORK LAZER"
+  },
+  {
     "id": "porklazer",
     "handle": "porklazer"
   },
@@ -2109,6 +2121,10 @@
   {
     "id": "rekt",
     "handle": "Rekt"
+  },
+  {
+    "id": "remedy",
+    "handle": "Remedy"
   },
   {
     "id": "renecup",
@@ -2366,6 +2382,10 @@
     "handle": "Sleepy Nipa"
   },
   {
+    "id": "sleepyalpacas",
+    "handle": "SleepyAlpacas"
+  },
+  {
     "id": "sleepysnax",
     "handle": "[sleepysnax]"
   },
@@ -2419,7 +2439,12 @@
   },
   {
     "id": "solve",
-    "handle": "Solve"
+    "handle": "Solve",
+    "extra": {
+      "aliases": [
+        "solvé"
+      ]
+    }
   },
   {
     "id": "son-dula",
@@ -2898,6 +2923,10 @@
   {
     "id": "zaidi",
     "handle": "Zaidi"
+  },
+  {
+    "id": "zan",
+    "handle": "Zan"
   },
   {
     "id": "zane",

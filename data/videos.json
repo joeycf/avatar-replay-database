@@ -1,5 +1,63 @@
 [
   {
+    "id": "P3rDIk14idk",
+    "channel": "an11Mo",
+    "intake": "an11Mo",
+    "title": "Avatar Legends | An11-_-MO (Aang/Gyatso) Vs. donteyyy(Nightmare Korra/Vaatu) FT15",
+    "date": "2026-11-25",
+    "publishedAt": "2026-11-25T14:00:10Z",
+    "durationSec": 3260,
+    "viewCount": 17,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "sides": [
+      {
+        "player": "an11-mo",
+        "handle": "An11-_-MO",
+        "characters": [
+          "aang"
+        ],
+        "support": "gyatso",
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "aang"
+          ],
+          "slotOrder": "handle-outside",
+          "supportTier": "title",
+          "complete": true
+        }
+      },
+      {
+        "player": "donteyyy",
+        "handle": "donteyyy",
+        "characters": [
+          "nightmare-korra"
+        ],
+        "support": "vaatu",
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "nightmare-korra"
+          ],
+          "slotOrder": "handle-outside",
+          "supportTier": "title",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "gyatso",
+      "vaatu"
+    ]
+  },
+  {
     "id": "WM5HQH0r7QQ",
     "channel": "an11Mo",
     "intake": "an11Mo",
@@ -7,7 +65,7 @@
     "date": "2026-11-24",
     "publishedAt": "2026-11-24T17:30:35Z",
     "durationSec": 1947,
-    "viewCount": 15,
+    "viewCount": 205,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -58,6 +116,1446 @@
     ]
   },
   {
+    "id": "p7aQo5wUkl4@10163",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Flankroast (Zaheer/Ghazan) vs 1999 Honda Civic (Sokka/Princess Yue) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 10163,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "flankroast",
+        "handle": "Flankroast",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ghazan",
+      "princess-yue"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@10528",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs Cow (Toph/The Boulder) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 10528,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "cow",
+        "handle": "Cow",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "princess-yue",
+      "the-boulder"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@1226",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ BriggetChu (Kyoshi/Kelsang) vs solvé (Korra/Tonraq) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 1226,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "briggetchu",
+        "handle": "BriggetChu",
+        "characters": [
+          "kyoshi"
+        ],
+        "support": "kelsang",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "kyoshi"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "solve",
+        "handle": "solvé",
+        "characters": [
+          "korra"
+        ],
+        "support": "tonraq",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "kelsang",
+      "tonraq"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@1859",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Saxxie (Zuko/June) vs PORK LAZER (Azula/Joo Dee) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 1859,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "saxxie",
+        "handle": "Saxxie",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "pork-lazer",
+        "handle": "PORK LAZER",
+        "characters": [
+          "azula"
+        ],
+        "support": "joo-dee",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "azula"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "june",
+      "joo-dee"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@2356",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ GoneMad (Kyoshi/Rangi) vs Flowedup (Katara/Kanna) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 2356,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "gonemad",
+        "handle": "GoneMad",
+        "characters": [
+          "kyoshi"
+        ],
+        "support": "rangi",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "kyoshi"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "flowedup",
+        "handle": "Flowedup",
+        "characters": [
+          "katara"
+        ],
+        "support": "kanna",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "katara"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "rangi",
+      "kanna"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@260",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs AreYouThere (Aang/Gyatso) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 260,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "areyouthere",
+        "handle": "AreYouThere",
+        "characters": [
+          "aang"
+        ],
+        "support": "gyatso",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "aang"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "princess-yue",
+      "gyatso"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@2711",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs RED (Korra/Naga) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 2711,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "red",
+        "handle": "RED",
+        "characters": [
+          "korra"
+        ],
+        "support": "naga",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "princess-yue",
+      "naga"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@3270",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ DudeChan (Toph/The Hippo) vs TheSaviorZombie (Ozai/Firelord Sozin) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 3270,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "dudechan",
+        "handle": "DudeChan",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-hippo",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "thesaviorzombie",
+        "handle": "TheSaviorZombie",
+        "characters": [
+          "ozai"
+        ],
+        "support": "firelord-sozin",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "ozai"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "the-hippo",
+      "firelord-sozin"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@3885",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs 1999 Honda Civic (Sokka/Princess Yue) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 3885,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "zane",
+        "handle": "Zane",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ghazan",
+      "princess-yue"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@39",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ petra (Kyoshi/Rangi) vs cowthecat (Azula/Ursa) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 39,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "petra",
+        "handle": "petra",
+        "characters": [
+          "kyoshi"
+        ],
+        "support": "rangi",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "kyoshi"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "cowthecat",
+        "handle": "cowthecat",
+        "characters": [
+          "azula"
+        ],
+        "support": "ursa",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "azula"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "rangi",
+      "ursa"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@4411",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ solvé (Nightmare Korra/Dark Spirit) vs Cow (Toph/The Boulder) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 4411,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "solve",
+        "handle": "solvé",
+        "characters": [
+          "nightmare-korra"
+        ],
+        "support": "dark-spirit",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "nightmare-korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "cow",
+        "handle": "Cow",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "dark-spirit",
+      "the-boulder"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@4848",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ SleepyAlpacas (Toph/The Boulder) vs Remedy (Zaheer/Ghazan) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 4848,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "sleepyalpacas",
+        "handle": "SleepyAlpacas",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "remedy",
+        "handle": "Remedy",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "the-boulder",
+      "ghazan"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@5271",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ K7 Showoff (Zaheer/Ming-Hua) vs Flowedup (Katara/Kanna) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 5271,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "k7-showoff",
+        "handle": "K7 Showoff",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "flowedup",
+        "handle": "Flowedup",
+        "characters": [
+          "katara"
+        ],
+        "support": "kanna",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "katara"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ming-hua",
+      "kanna"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@5605",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs Versintos (Toph/The Hippo) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 5605,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "zane",
+        "handle": "Zane",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "versintos",
+        "handle": "Versintos",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-hippo",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ghazan",
+      "the-hippo"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@6112",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Saxxie (Zuko/June) vs Cow (Toph/The Boulder) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 6112,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "saxxie",
+        "handle": "Saxxie",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "cow",
+        "handle": "Cow",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "june",
+      "the-boulder"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@634",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Zane (Zaheer/Ghazan) vs Brozybra (Aang/Appa) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 634,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "zane",
+        "handle": "Zane",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "brozybra",
+        "handle": "Brozybra",
+        "characters": [
+          "aang"
+        ],
+        "support": "appa",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "aang"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ghazan",
+      "appa"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@6696",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Remedy (Zaheer/Ghazan) vs 1999 Honda Civic (Sokka/Princess Yue) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 6696,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "remedy",
+        "handle": "Remedy",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "ghazan",
+      "princess-yue"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@7135",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Versintos (Toph/The Hippo) vs Flankroast (Zaheer/Ming-Hua) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 7135,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "versintos",
+        "handle": "Versintos",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-hippo",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "flankroast",
+        "handle": "Flankroast",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ming-hua",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "the-hippo",
+      "ming-hua"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@7798",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ solvé (Korra/Tonraq) vs TheSaviorZombie (Ozai/Firelord Sozin) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 7798,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "solve",
+        "handle": "solvé",
+        "characters": [
+          "korra"
+        ],
+        "support": "tonraq",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "thesaviorzombie",
+        "handle": "TheSaviorZombie",
+        "characters": [
+          "ozai"
+        ],
+        "support": "firelord-sozin",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "ozai"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "tonraq",
+      "firelord-sozin"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@8335",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Saxxie (Zuko/June) vs Flankroast (Zaheer/Ghazan) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 8335,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "saxxie",
+        "handle": "Saxxie",
+        "characters": [
+          "zuko"
+        ],
+        "support": "june",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zuko"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "flankroast",
+        "handle": "Flankroast",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "june",
+      "ghazan"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@9000",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ solvé (Nightmare Korra/Dark Spirit) vs Remedy (Zaheer/Ghazan) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 9000,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "solve",
+        "handle": "solvé",
+        "characters": [
+          "nightmare-korra"
+        ],
+        "support": "dark-spirit",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "nightmare-korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "remedy",
+        "handle": "Remedy",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "dark-spirit",
+      "ghazan"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@9386",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ 1999 Honda Civic (Sokka/Princess Yue) vs Cow (Toph/The Boulder) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 9386,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "1999-honda-civic",
+        "handle": "1999 Honda Civic",
+        "characters": [
+          "sokka"
+        ],
+        "support": "princess-yue",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "cow",
+        "handle": "Cow",
+        "characters": [
+          "toph"
+        ],
+        "support": "the-boulder",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "toph"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "princess-yue",
+      "the-boulder"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@972",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ Toonie03 (Sokka/Master Piandao) vs Zan (Sokka/Suki) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 972,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "toonie03",
+        "handle": "Toonie03",
+        "characters": [
+          "sokka"
+        ],
+        "support": "master-piandao",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "zan",
+        "handle": "Zan",
+        "characters": [
+          "sokka"
+        ],
+        "support": "suki",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "sokka"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "master-piandao",
+      "suki"
+    ]
+  },
+  {
+    "id": "p7aQo5wUkl4@9762",
+    "channel": "replayTheater",
+    "intake": "replayTheater",
+    "title": "Avatar Legends ▰ solvé (Nightmare Korra/Dark Spirit) vs Flankroast (Zaheer/Ghazan) ▰ TNS Flow State #5",
+    "date": "2026-11-23",
+    "publishedAt": "2026-11-23T19:00:27Z",
+    "durationSec": 10817,
+    "era": "S1",
+    "patch": "2026-11-05",
+    "videoId": "p7aQo5wUkl4",
+    "startSeconds": 9762,
+    "event": "TNS Flow State #5",
+    "sides": [
+      {
+        "player": "solve",
+        "handle": "solvé",
+        "characters": [
+          "nightmare-korra"
+        ],
+        "support": "dark-spirit",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "nightmare-korra"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      },
+      {
+        "player": "flankroast",
+        "handle": "Flankroast",
+        "characters": [
+          "zaheer"
+        ],
+        "support": "ghazan",
+        "provenance": {
+          "tier": "index",
+          "tiers": [
+            "index"
+          ],
+          "fromTitle": [],
+          "fromIndex": [
+            "zaheer"
+          ],
+          "supportTier": "index",
+          "complete": true
+        }
+      }
+    ],
+    "supports": [
+      "dark-spirit",
+      "ghazan"
+    ]
+  },
+  {
     "id": "3BhqehXHjiQ",
     "channel": "superSalemFighters",
     "intake": "superSalemFighters",
@@ -65,7 +1563,7 @@
     "date": "2026-11-22",
     "publishedAt": "2026-11-22T05:37:11Z",
     "durationSec": 202,
-    "viewCount": 15,
+    "viewCount": 16,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -117,7 +1615,7 @@
     "date": "2026-11-22",
     "publishedAt": "2026-11-22T05:36:52Z",
     "durationSec": 192,
-    "viewCount": 7,
+    "viewCount": 8,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -331,7 +1829,7 @@
     "date": "2026-11-22",
     "publishedAt": "2026-11-22T17:09:59Z",
     "durationSec": 1364,
-    "viewCount": 2329,
+    "viewCount": 2430,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -389,7 +1887,7 @@
     "date": "2026-11-21",
     "publishedAt": "2026-11-21T19:00:40Z",
     "durationSec": 4537,
-    "viewCount": 229,
+    "viewCount": 241,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -1099,7 +2597,7 @@
     "date": "2026-11-18",
     "publishedAt": "2026-11-18T22:10:44Z",
     "durationSec": 897,
-    "viewCount": 68,
+    "viewCount": 69,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -1156,7 +2654,7 @@
     "date": "2026-11-18",
     "publishedAt": "2026-11-18T21:56:42Z",
     "durationSec": 965,
-    "viewCount": 3,
+    "viewCount": 4,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -1215,7 +2713,7 @@
     "date": "2026-11-18",
     "publishedAt": "2026-11-18T22:14:04Z",
     "durationSec": 1043,
-    "viewCount": 7,
+    "viewCount": 8,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -1267,7 +2765,7 @@
     "date": "2026-11-18",
     "publishedAt": "2026-11-18T22:08:47Z",
     "durationSec": 613,
-    "viewCount": 59,
+    "viewCount": 64,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2037,7 +3535,7 @@
     "date": "2026-11-16",
     "publishedAt": "2026-11-16T23:18:10Z",
     "durationSec": 362,
-    "viewCount": 4,
+    "viewCount": 5,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2089,7 +3587,7 @@
     "date": "2026-11-16",
     "publishedAt": "2026-11-16T23:18:19Z",
     "durationSec": 642,
-    "viewCount": 9,
+    "viewCount": 12,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2580,7 +4078,7 @@
     "date": "2026-11-16",
     "publishedAt": "2026-11-16T23:17:50Z",
     "durationSec": 707,
-    "viewCount": 5,
+    "viewCount": 6,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2632,7 +4130,7 @@
     "date": "2026-11-16",
     "publishedAt": "2026-11-16T23:16:53Z",
     "durationSec": 275,
-    "viewCount": 4,
+    "viewCount": 5,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2684,7 +4182,7 @@
     "date": "2026-11-16",
     "publishedAt": "2026-11-16T23:17:02Z",
     "durationSec": 450,
-    "viewCount": 5,
+    "viewCount": 7,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -2736,7 +4234,7 @@
     "date": "2026-11-15",
     "publishedAt": "2026-11-15T16:51:29Z",
     "durationSec": 4438,
-    "viewCount": 4030,
+    "viewCount": 4066,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -7828,7 +9326,7 @@
     "date": "2026-11-08",
     "publishedAt": "2026-11-08T16:59:41Z",
     "durationSec": 4377,
-    "viewCount": 3782,
+    "viewCount": 3804,
     "era": "S1",
     "patch": "2026-11-05",
     "sides": [
@@ -9804,7 +11302,7 @@
     "date": "2026-11-04",
     "publishedAt": "2026-11-04T17:00:18Z",
     "durationSec": 1479,
-    "viewCount": 488,
+    "viewCount": 489,
     "era": "S1",
     "patch": "2026-10-28",
     "sides": [
@@ -10582,7 +12080,7 @@
     "date": "2026-11-03",
     "publishedAt": "2026-11-03T19:29:53Z",
     "durationSec": 1228,
-    "viewCount": 2495,
+    "viewCount": 2496,
     "era": "S1",
     "patch": "2026-10-28",
     "sides": [
@@ -10640,7 +12138,7 @@
     "date": "2026-11-02",
     "publishedAt": "2026-11-02T22:00:28Z",
     "durationSec": 5212,
-    "viewCount": 24,
+    "viewCount": 25,
     "era": "S1",
     "patch": "2026-10-28",
     "sides": [
@@ -13335,7 +14833,7 @@
     "date": "2026-10-31",
     "publishedAt": "2026-10-31T11:07:41Z",
     "durationSec": 3226,
-    "viewCount": 913,
+    "viewCount": 914,
     "era": "S1",
     "patch": "2026-10-28",
     "sides": [
@@ -14231,7 +15729,7 @@
     "date": "2026-10-29",
     "publishedAt": "2026-10-29T02:19:41Z",
     "durationSec": 516,
-    "viewCount": 813,
+    "viewCount": 827,
     "era": "S1",
     "patch": "2026-10-28",
     "sides": [
@@ -15365,7 +16863,7 @@
     "date": "2026-10-27",
     "publishedAt": "2026-10-27T19:19:57Z",
     "durationSec": 3209,
-    "viewCount": 2364,
+    "viewCount": 2373,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -15423,7 +16921,7 @@
     "date": "2026-10-27",
     "publishedAt": "2026-10-27T20:06:39Z",
     "durationSec": 7279,
-    "viewCount": 1157,
+    "viewCount": 1167,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -16980,7 +18478,7 @@
     "date": "2026-10-26",
     "publishedAt": "2026-10-26T07:41:31Z",
     "durationSec": 1830,
-    "viewCount": 3406,
+    "viewCount": 3408,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -19727,7 +21225,7 @@
     "date": "2026-10-25",
     "publishedAt": "2026-10-25T20:38:49Z",
     "durationSec": 293,
-    "viewCount": 451,
+    "viewCount": 454,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -19842,7 +21340,7 @@
     "date": "2026-10-25",
     "publishedAt": "2026-10-25T20:50:57Z",
     "durationSec": 929,
-    "viewCount": 32,
+    "viewCount": 33,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -19900,7 +21398,7 @@
     "date": "2026-10-25",
     "publishedAt": "2026-10-25T01:00:27Z",
     "durationSec": 708,
-    "viewCount": 1411,
+    "viewCount": 1419,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -21144,7 +22642,7 @@
     "date": "2026-10-25",
     "publishedAt": "2026-10-25T06:00:03Z",
     "durationSec": 472,
-    "viewCount": 4671,
+    "viewCount": 4707,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -22196,7 +23694,7 @@
     "date": "2026-10-24",
     "publishedAt": "2026-10-24T20:19:53Z",
     "durationSec": 619,
-    "viewCount": 649,
+    "viewCount": 653,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -22416,7 +23914,7 @@
     "date": "2026-10-22",
     "publishedAt": "2026-10-22T03:30:30Z",
     "durationSec": 322,
-    "viewCount": 342,
+    "viewCount": 345,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -22468,7 +23966,7 @@
     "date": "2026-10-22",
     "publishedAt": "2026-10-22T00:00:18Z",
     "durationSec": 327,
-    "viewCount": 650,
+    "viewCount": 653,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -22624,7 +24122,7 @@
     "date": "2026-10-20",
     "publishedAt": "2026-10-20T21:21:43Z",
     "durationSec": 599,
-    "viewCount": 1850,
+    "viewCount": 1858,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -23636,7 +25134,7 @@
     "date": "2026-10-20",
     "publishedAt": "2026-10-20T21:13:32Z",
     "durationSec": 298,
-    "viewCount": 682,
+    "viewCount": 686,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -26265,7 +27763,7 @@
     "date": "2026-10-18",
     "publishedAt": "2026-10-18T16:05:43Z",
     "durationSec": 3755,
-    "viewCount": 2001,
+    "viewCount": 2003,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -28894,7 +30392,7 @@
     "date": "2026-10-15",
     "publishedAt": "2026-10-15T10:51:19Z",
     "durationSec": 654,
-    "viewCount": 33,
+    "viewCount": 36,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -29206,7 +30704,7 @@
     "date": "2026-10-15",
     "publishedAt": "2026-10-15T10:51:29Z",
     "durationSec": 294,
-    "viewCount": 41,
+    "viewCount": 42,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -31353,7 +32851,7 @@
     "date": "2026-10-12",
     "publishedAt": "2026-10-12T19:34:15Z",
     "durationSec": 476,
-    "viewCount": 953,
+    "viewCount": 956,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -33435,7 +34933,7 @@
     "date": "2026-10-09",
     "publishedAt": "2026-10-09T21:00:24Z",
     "durationSec": 2350,
-    "viewCount": 889,
+    "viewCount": 892,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -33487,7 +34985,7 @@
     "date": "2026-10-08",
     "publishedAt": "2026-10-08T15:30:07Z",
     "durationSec": 6530,
-    "viewCount": 751,
+    "viewCount": 752,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -33545,7 +35043,7 @@
     "date": "2026-10-08",
     "publishedAt": "2026-10-08T22:00:34Z",
     "durationSec": 3298,
-    "viewCount": 248,
+    "viewCount": 249,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -33758,7 +35256,7 @@
     "date": "2026-10-07",
     "publishedAt": "2026-10-07T22:21:45Z",
     "durationSec": 1759,
-    "viewCount": 1500,
+    "viewCount": 1501,
     "era": "S1",
     "patch": "2026-10-07",
     "sides": [
@@ -34030,7 +35528,7 @@
     "date": "2026-10-06",
     "publishedAt": "2026-10-06T04:52:52Z",
     "durationSec": 235,
-    "viewCount": 394,
+    "viewCount": 397,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -36117,7 +37615,7 @@
     "date": "2026-10-04",
     "publishedAt": "2026-10-04T16:04:52Z",
     "durationSec": 1500,
-    "viewCount": 3373,
+    "viewCount": 3374,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -36987,7 +38485,7 @@
     "date": "2026-10-01",
     "publishedAt": "2026-10-01T15:00:37Z",
     "durationSec": 4153,
-    "viewCount": 121,
+    "viewCount": 122,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -38474,7 +39972,7 @@
     "date": "2026-09-30",
     "publishedAt": "2026-09-30T18:13:23Z",
     "durationSec": 1972,
-    "viewCount": 101,
+    "viewCount": 103,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -38913,7 +40411,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-09-28T01:30:34Z",
     "durationSec": 696,
-    "viewCount": 1549,
+    "viewCount": 1557,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -38965,7 +40463,7 @@
     "date": "2026-09-28",
     "publishedAt": "2026-09-28T13:45:16Z",
     "durationSec": 602,
-    "viewCount": 4312,
+    "viewCount": 4318,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -39075,7 +40573,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T17:00:05Z",
     "durationSec": 638,
-    "viewCount": 1676,
+    "viewCount": 1680,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -39237,7 +40735,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T15:00:05Z",
     "durationSec": 506,
-    "viewCount": 761,
+    "viewCount": 762,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -40729,7 +42227,7 @@
     "date": "2026-09-27",
     "publishedAt": "2026-09-27T19:00:36Z",
     "durationSec": 586,
-    "viewCount": 826,
+    "viewCount": 828,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -40781,7 +42279,7 @@
     "date": "2026-09-26",
     "publishedAt": "2026-09-26T03:21:51Z",
     "durationSec": 2339,
-    "viewCount": 1979,
+    "viewCount": 1980,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -41379,7 +42877,7 @@
     "date": "2026-09-25",
     "publishedAt": "2026-09-25T23:08:27Z",
     "durationSec": 1275,
-    "viewCount": 29758,
+    "viewCount": 29787,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -41603,7 +43101,7 @@
     "date": "2026-09-23",
     "publishedAt": "2026-09-23T19:24:13Z",
     "durationSec": 324,
-    "viewCount": 716,
+    "viewCount": 717,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -43397,7 +44895,7 @@
     "date": "2026-09-22",
     "publishedAt": "2026-09-22T02:45:27Z",
     "durationSec": 297,
-    "viewCount": 1093,
+    "viewCount": 1095,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -43668,7 +45166,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T15:27:36Z",
     "durationSec": 606,
-    "viewCount": 908,
+    "viewCount": 916,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -43830,7 +45328,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T10:09:00Z",
     "durationSec": 894,
-    "viewCount": 1064,
+    "viewCount": 1065,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -43888,7 +45386,7 @@
     "date": "2026-09-21",
     "publishedAt": "2026-09-21T20:00:35Z",
     "durationSec": 1317,
-    "viewCount": 4879,
+    "viewCount": 4882,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -43940,7 +45438,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T21:34:51Z",
     "durationSec": 3145,
-    "viewCount": 1391,
+    "viewCount": 1393,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -44532,7 +46030,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T21:55:00Z",
     "durationSec": 667,
-    "viewCount": 59,
+    "viewCount": 60,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -45184,7 +46682,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T15:34:11Z",
     "durationSec": 2030,
-    "viewCount": 6186,
+    "viewCount": 6189,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -45242,7 +46740,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T03:00:32Z",
     "durationSec": 555,
-    "viewCount": 2033,
+    "viewCount": 2034,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -45294,7 +46792,7 @@
     "date": "2026-09-20",
     "publishedAt": "2026-09-20T23:45:15Z",
     "durationSec": 580,
-    "viewCount": 324,
+    "viewCount": 325,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -46544,7 +48042,7 @@
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T14:45:21Z",
     "durationSec": 1058,
-    "viewCount": 6891,
+    "viewCount": 6896,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -48126,7 +49624,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:29:45Z",
     "durationSec": 572,
-    "viewCount": 812,
+    "viewCount": 813,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -49200,7 +50698,7 @@
     "date": "2026-09-14",
     "publishedAt": "2026-09-14T20:31:10Z",
     "durationSec": 803,
-    "viewCount": 1180,
+    "viewCount": 1183,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -51503,7 +53001,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T11:00:22Z",
     "durationSec": 2312,
-    "viewCount": 446,
+    "viewCount": 448,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -51561,7 +53059,7 @@
     "date": "2026-09-12",
     "publishedAt": "2026-09-12T04:08:00Z",
     "durationSec": 516,
-    "viewCount": 890,
+    "viewCount": 895,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -51827,7 +53325,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T01:26:25Z",
     "durationSec": 379,
-    "viewCount": 1049,
+    "viewCount": 1051,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -51879,7 +53377,7 @@
     "date": "2026-09-11",
     "publishedAt": "2026-09-11T15:00:10Z",
     "durationSec": 491,
-    "viewCount": 2232,
+    "viewCount": 2233,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -52967,7 +54465,7 @@
     "date": "2026-09-09",
     "publishedAt": "2026-09-09T02:00:16Z",
     "durationSec": 3156,
-    "viewCount": 3245,
+    "viewCount": 3247,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -53019,7 +54517,7 @@
     "date": "2026-09-07",
     "publishedAt": "2026-09-07T19:55:31Z",
     "durationSec": 553,
-    "viewCount": 74,
+    "viewCount": 75,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -53835,7 +55333,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T15:10:50Z",
     "durationSec": 731,
-    "viewCount": 6708,
+    "viewCount": 6709,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -53945,7 +55443,7 @@
     "date": "2026-09-06",
     "publishedAt": "2026-09-06T13:12:05Z",
     "durationSec": 3112,
-    "viewCount": 8881,
+    "viewCount": 8892,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -54119,7 +55617,7 @@
     "date": "2026-09-05",
     "publishedAt": "2026-09-05T19:28:21Z",
     "durationSec": 377,
-    "viewCount": 2609,
+    "viewCount": 2610,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -56388,7 +57886,7 @@
     "date": "2026-09-04",
     "publishedAt": "2026-09-04T14:32:25Z",
     "durationSec": 3806,
-    "viewCount": 5211,
+    "viewCount": 5212,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -56718,7 +58216,7 @@
     "date": "2026-09-03",
     "publishedAt": "2026-09-03T03:17:27Z",
     "durationSec": 525,
-    "viewCount": 67,
+    "viewCount": 68,
     "era": "S1",
     "patch": "2026-09-02",
     "sides": [
@@ -58154,7 +59652,7 @@
     "date": "2026-08-30",
     "publishedAt": "2026-08-30T14:36:45Z",
     "durationSec": 3230,
-    "viewCount": 15561,
+    "viewCount": 15565,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58380,7 +59878,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T03:00:19Z",
     "durationSec": 618,
-    "viewCount": 4412,
+    "viewCount": 4414,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58432,7 +59930,7 @@
     "date": "2026-08-29",
     "publishedAt": "2026-08-29T16:43:56Z",
     "durationSec": 789,
-    "viewCount": 11470,
+    "viewCount": 11478,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58548,7 +60046,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T14:06:01Z",
     "durationSec": 545,
-    "viewCount": 2186,
+    "viewCount": 2187,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58652,7 +60150,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:12:39Z",
     "durationSec": 2380,
-    "viewCount": 9536,
+    "viewCount": 9540,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58704,7 +60202,7 @@
     "date": "2026-08-28",
     "publishedAt": "2026-08-28T19:00:14Z",
     "durationSec": 355,
-    "viewCount": 5089,
+    "viewCount": 5094,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -58756,7 +60254,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T03:02:09Z",
     "durationSec": 2181,
-    "viewCount": 7418,
+    "viewCount": 7419,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -60194,7 +61692,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T19:54:18Z",
     "durationSec": 2469,
-    "viewCount": 18635,
+    "viewCount": 18649,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -60246,7 +61744,7 @@
     "date": "2026-08-27",
     "publishedAt": "2026-08-27T14:00:17Z",
     "durationSec": 2007,
-    "viewCount": 949,
+    "viewCount": 951,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -60420,7 +61918,7 @@
     "date": "2026-08-26",
     "publishedAt": "2026-08-26T00:00:13Z",
     "durationSec": 561,
-    "viewCount": 5293,
+    "viewCount": 5295,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -60524,7 +62022,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T02:00:19Z",
     "durationSec": 384,
-    "viewCount": 634,
+    "viewCount": 636,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -61500,7 +62998,7 @@
     "date": "2026-08-25",
     "publishedAt": "2026-08-25T03:25:30Z",
     "durationSec": 1890,
-    "viewCount": 117,
+    "viewCount": 118,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -61664,7 +63162,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-19T01:00:33Z",
     "durationSec": 527,
-    "viewCount": 48,
+    "viewCount": 49,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -61976,7 +63474,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-08-24T15:00:26Z",
     "durationSec": 676,
-    "viewCount": 1391,
+    "viewCount": 1393,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -62190,7 +63688,7 @@
     "date": "2026-08-24",
     "publishedAt": "2026-09-18T23:00:33Z",
     "durationSec": 465,
-    "viewCount": 51,
+    "viewCount": 53,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -63676,7 +65174,7 @@
     "date": "2026-08-22",
     "publishedAt": "2026-08-22T00:52:39Z",
     "durationSec": 2641,
-    "viewCount": 13004,
+    "viewCount": 13018,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -64222,7 +65720,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T18:36:13Z",
     "durationSec": 2180,
-    "viewCount": 4921,
+    "viewCount": 4922,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -64652,7 +66150,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T15:00:09Z",
     "durationSec": 405,
-    "viewCount": 5363,
+    "viewCount": 5368,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -64756,7 +66254,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T08:15:27Z",
     "durationSec": 315,
-    "viewCount": 1603,
+    "viewCount": 1604,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -64808,7 +66306,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T21:00:05Z",
     "durationSec": 495,
-    "viewCount": 3511,
+    "viewCount": 3513,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -64860,7 +66358,7 @@
     "date": "2026-08-21",
     "publishedAt": "2026-08-21T04:00:02Z",
     "durationSec": 266,
-    "viewCount": 1726,
+    "viewCount": 1727,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -65548,7 +67046,7 @@
     "date": "2026-08-20",
     "publishedAt": "2026-08-31T17:00:36Z",
     "durationSec": 572,
-    "viewCount": 420,
+    "viewCount": 421,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -66502,7 +68000,7 @@
     "date": "2026-08-18",
     "publishedAt": "2026-08-18T16:50:21Z",
     "durationSec": 1924,
-    "viewCount": 2987,
+    "viewCount": 2990,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -67092,7 +68590,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T22:43:26Z",
     "durationSec": 2485,
-    "viewCount": 4553,
+    "viewCount": 4554,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -67254,7 +68752,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T03:00:26Z",
     "durationSec": 430,
-    "viewCount": 1803,
+    "viewCount": 1804,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -67410,7 +68908,7 @@
     "date": "2026-08-16",
     "publishedAt": "2026-08-16T04:48:53Z",
     "durationSec": 2051,
-    "viewCount": 3376,
+    "viewCount": 3377,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -67786,7 +69284,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T12:00:38Z",
     "durationSec": 592,
-    "viewCount": 6778,
+    "viewCount": 6779,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -68110,7 +69608,7 @@
     "date": "2026-08-14",
     "publishedAt": "2026-08-14T19:00:04Z",
     "durationSec": 483,
-    "viewCount": 1523,
+    "viewCount": 1525,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -68840,7 +70338,7 @@
     "date": "2026-08-13",
     "publishedAt": "2026-08-13T19:40:20Z",
     "durationSec": 1630,
-    "viewCount": 494,
+    "viewCount": 495,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -68956,7 +70454,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T15:32:25Z",
     "durationSec": 754,
-    "viewCount": 3430,
+    "viewCount": 3432,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -69014,7 +70512,7 @@
     "date": "2026-08-12",
     "publishedAt": "2026-08-12T07:51:26Z",
     "durationSec": 2027,
-    "viewCount": 10464,
+    "viewCount": 10466,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -69338,7 +70836,7 @@
     "date": "2026-08-11",
     "publishedAt": "2026-08-11T00:37:29Z",
     "durationSec": 2001,
-    "viewCount": 4591,
+    "viewCount": 4592,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -69670,7 +71168,7 @@
     "date": "2026-08-09",
     "publishedAt": "2026-08-09T05:00:09Z",
     "durationSec": 515,
-    "viewCount": 5089,
+    "viewCount": 5090,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -69838,7 +71336,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T23:00:11Z",
     "durationSec": 790,
-    "viewCount": 2022,
+    "viewCount": 2024,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -69994,7 +71492,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T05:00:18Z",
     "durationSec": 633,
-    "viewCount": 1703,
+    "viewCount": 1706,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70046,7 +71544,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T17:00:14Z",
     "durationSec": 387,
-    "viewCount": 1091,
+    "viewCount": 1092,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70098,7 +71596,7 @@
     "date": "2026-08-08",
     "publishedAt": "2026-08-08T20:12:21Z",
     "durationSec": 2357,
-    "viewCount": 10584,
+    "viewCount": 10589,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70208,7 +71706,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T05:00:23Z",
     "durationSec": 388,
-    "viewCount": 222,
+    "viewCount": 224,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70260,7 +71758,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T17:00:28Z",
     "durationSec": 431,
-    "viewCount": 588,
+    "viewCount": 589,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70312,7 +71810,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T23:00:27Z",
     "durationSec": 470,
-    "viewCount": 5654,
+    "viewCount": 5656,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70364,7 +71862,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T18:06:48Z",
     "durationSec": 4067,
-    "viewCount": 10401,
+    "viewCount": 10414,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70480,7 +71978,7 @@
     "date": "2026-08-07",
     "publishedAt": "2026-08-07T11:00:16Z",
     "durationSec": 468,
-    "viewCount": 863,
+    "viewCount": 864,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70648,7 +72146,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T17:00:23Z",
     "durationSec": 347,
-    "viewCount": 338,
+    "viewCount": 340,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -70752,7 +72250,7 @@
     "date": "2026-08-06",
     "publishedAt": "2026-08-06T11:00:20Z",
     "durationSec": 900,
-    "viewCount": 3718,
+    "viewCount": 3722,
     "era": "S1",
     "patch": "2026-08-06",
     "sides": [
@@ -71012,7 +72510,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T04:12:55Z",
     "durationSec": 2637,
-    "viewCount": 9942,
+    "viewCount": 9943,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71070,7 +72568,7 @@
     "date": "2026-08-05",
     "publishedAt": "2026-08-05T01:35:40Z",
     "durationSec": 2260,
-    "viewCount": 4788,
+    "viewCount": 4791,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71180,7 +72678,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T07:23:48Z",
     "durationSec": 2316,
-    "viewCount": 8755,
+    "viewCount": 8757,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71342,7 +72840,7 @@
     "date": "2026-08-04",
     "publishedAt": "2026-08-04T18:47:56Z",
     "durationSec": 769,
-    "viewCount": 9356,
+    "viewCount": 9368,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71510,7 +73008,7 @@
     "date": "2026-08-03",
     "publishedAt": "2026-08-03T16:27:44Z",
     "durationSec": 1391,
-    "viewCount": 362,
+    "viewCount": 363,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71562,7 +73060,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T22:56:29Z",
     "durationSec": 1378,
-    "viewCount": 376,
+    "viewCount": 380,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -71788,7 +73286,7 @@
     "date": "2026-08-02",
     "publishedAt": "2026-08-02T02:53:14Z",
     "durationSec": 4421,
-    "viewCount": 672,
+    "viewCount": 675,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -72216,7 +73714,7 @@
     "date": "2026-08-01",
     "publishedAt": "2026-08-01T02:36:25Z",
     "durationSec": 1395,
-    "viewCount": 2644,
+    "viewCount": 2645,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -72268,7 +73766,7 @@
     "date": "2026-07-31",
     "publishedAt": "2026-07-31T00:00:09Z",
     "durationSec": 242,
-    "viewCount": 142,
+    "viewCount": 144,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -72320,7 +73818,7 @@
     "date": "2026-07-31",
     "publishedAt": "2026-07-31T16:27:58Z",
     "durationSec": 914,
-    "viewCount": 5307,
+    "viewCount": 5335,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -72644,7 +74142,7 @@
     "date": "2026-07-30",
     "publishedAt": "2026-07-30T12:00:25Z",
     "durationSec": 280,
-    "viewCount": 514,
+    "viewCount": 522,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -73505,7 +75003,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T06:24:45Z",
     "durationSec": 1693,
-    "viewCount": 27415,
+    "viewCount": 27420,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -73563,7 +75061,7 @@
     "date": "2026-07-29",
     "publishedAt": "2026-07-29T19:12:27Z",
     "durationSec": 701,
-    "viewCount": 8282,
+    "viewCount": 8293,
     "era": "S1",
     "patch": "2026-07-29",
     "sides": [
@@ -74155,7 +75653,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:46:10Z",
     "durationSec": 425,
-    "viewCount": 111,
+    "viewCount": 114,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -74207,7 +75705,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T18:24:59Z",
     "durationSec": 4388,
-    "viewCount": 4906,
+    "viewCount": 4907,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -74740,7 +76238,7 @@
     "date": "2026-07-27",
     "publishedAt": "2026-07-27T23:55:49Z",
     "durationSec": 567,
-    "viewCount": 912,
+    "viewCount": 919,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -74947,7 +76445,7 @@
     "date": "2026-07-26",
     "publishedAt": "2026-07-26T15:26:24Z",
     "durationSec": 1046,
-    "viewCount": 13081,
+    "viewCount": 13084,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -76503,7 +78001,7 @@
     "date": "2026-07-25",
     "publishedAt": "2026-07-25T15:28:12Z",
     "durationSec": 978,
-    "viewCount": 7811,
+    "viewCount": 7813,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
@@ -76613,7 +78111,7 @@
     "date": "2026-07-24",
     "publishedAt": "2026-07-24T15:49:31Z",
     "durationSec": 3355,
-    "viewCount": 9461,
+    "viewCount": 9475,
     "era": "S1",
     "patch": "2026-07-23",
     "sides": [
